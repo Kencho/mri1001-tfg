@@ -26,7 +26,7 @@ namespace Platformer.Prueba
             }
             else
             {
-                if (PhisicsControllerPrueba.GetVelocity(player).y < 0)
+                if (PhisicsControllerPrueba.GetVelocity(player).y <= 0)
                 {
                     onAir = false;
                 }
@@ -37,7 +37,6 @@ namespace Platformer.Prueba
         {
             if (onAir)
             {
-                PhisicsControllerPrueba.SimulateGarvity(player);
                 MoveInAir();
             }
             else

@@ -14,14 +14,14 @@ namespace Platformer.Gameplay
     /// <typeparam name="EnemyCollision"></typeparam>
     public class PlayerEnemyCollision : Simulation.Event<PlayerEnemyCollision>
     {
-        public EnemyController enemy;
+        public Platformer.Prueba.EnemyController enemy;
         public PlayerController player;
 
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {
-            var willHurtEnemy = player.mycollider.bounds.center.y >= enemy.Bounds.max.y;
+            var willHurtEnemy = player.mycollider.bounds.center.y >= enemy.mycollider.bounds.max.y;
 
             if (willHurtEnemy)
             {

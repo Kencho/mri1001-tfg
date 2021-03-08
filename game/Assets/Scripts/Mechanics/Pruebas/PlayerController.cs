@@ -16,7 +16,6 @@ namespace Platformer.Prueba
         public float jumpImpulse = 5f;
         public float maxAirSpeed = 4f;
         public bool jumping = false;
-        public bool grounded = true;
 
         public Health health;
         public AudioSource audioSource;
@@ -44,8 +43,9 @@ namespace Platformer.Prueba
             AnimarMovimientoPlayer();
         }
 
-        void FixedUpdate()
+        protected override void FixedUpdate()
         {
+            base.FixedUpdate();
             playerState.FixedUpdateState();
         }
 

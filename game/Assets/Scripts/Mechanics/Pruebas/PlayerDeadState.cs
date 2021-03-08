@@ -12,6 +12,7 @@ namespace Platformer.Prueba
         public PlayerDeadState(PlayerController player)
         {
             this.player = player;
+            player.grounded = true;
             PhisicsControllerPrueba.SetVelocity(player, Vector2.zero);
         }
 

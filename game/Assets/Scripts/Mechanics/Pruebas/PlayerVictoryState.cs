@@ -11,6 +11,7 @@ namespace Platformer.Prueba
         public PlayerVictoryState(PlayerController player)
         {
             this.player = player;
+            player.grounded = true;
             PhisicsControllerPrueba.SetVelocity(player, Vector2.zero);
         }
 
