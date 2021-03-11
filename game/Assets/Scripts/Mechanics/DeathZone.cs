@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
-using Platformer.Prueba;
+using Platformer.Player;
 
 namespace Platformer.Mechanics
 {
@@ -15,7 +15,7 @@ namespace Platformer.Mechanics
     {
         void OnTriggerEnter2D(Collider2D collider)
         {
-            Platformer.Prueba.PlayerController p = collider.gameObject.GetComponent<Platformer.Prueba.PlayerController>();
+            PlayerController p = collider.gameObject.GetComponent<PlayerController>();
             if (p != null)
             {
                 var ev = Schedule<PlayerEnteredDeathZone>();

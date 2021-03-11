@@ -4,8 +4,9 @@ using UnityEngine;
 using Platformer.Mechanics;
 using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Physics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
 
     public class PlayerController : KinematicObject
@@ -54,11 +55,11 @@ namespace Platformer.Prueba
             animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / maxSpeed);
             animator.SetFloat("velocityY", rigidBody.velocity.y);
 
-            if(PhisicsControllerPrueba.GetVelocity(this).x < 0)
+            if(PhisicsController.GetVelocity(this).x < 0)
             {
                 spriteRenderer.flipX = true;
             }
-            else if(PhisicsControllerPrueba.GetVelocity(this).x > 0)
+            else if(PhisicsController.GetVelocity(this).x > 0)
             {
                 spriteRenderer.flipX = false;
             }

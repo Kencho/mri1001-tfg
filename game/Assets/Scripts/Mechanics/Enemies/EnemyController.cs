@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Mechanics;
+using Platformer.Player;
 
-namespace Platformer.Prueba
+namespace Platformer.Enemies
 {
     public class EnemyController : KinematicObject
     {
@@ -21,7 +23,6 @@ namespace Platformer.Prueba
         {
             if(LayerContactChecker.IsInContactWithLayer(this, "Floor"))
             {
-                print("Entro");
                 grounded = true;
             }
             else

@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Physics;
+using Platformer.Mechanics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
     public class PlayerMovingState : PlayerState
     {
@@ -72,11 +74,11 @@ namespace Platformer.Prueba
 
             if (-direction == direction)
             {
-                PhisicsControllerPrueba.SetVelocity(player, new Vector2(0, PhisicsControllerPrueba.GetVelocity(player).y));
+                PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
             } else if (Mathf.Abs(player.rigidBody.velocity.x) < player.maxSpeed){
 
                 //Si el incremento de velocidad del Player y la velocidad maxima no son multiplos es posible que el Player no tenga una velocidad maxima uniforme
-                PhisicsControllerPrueba.ApplyImpulse(player, directionVector * player.speedIncrement);
+                PhisicsController.ApplyImpulse(player, directionVector * player.speedIncrement);
             }
 
             lastDirection = direction;

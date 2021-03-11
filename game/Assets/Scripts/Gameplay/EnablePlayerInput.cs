@@ -1,6 +1,6 @@
 using Platformer.Core;
 using Platformer.Model;
-using Platformer.Prueba;
+using Platformer.Player;
 
 namespace Platformer.Gameplay
 {
@@ -13,7 +13,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            var player = model.player;
+            PlayerController player = model.player;
             player.playerState = new PlayerIdleState(player);
             //player.controlEnabled = true;
         }

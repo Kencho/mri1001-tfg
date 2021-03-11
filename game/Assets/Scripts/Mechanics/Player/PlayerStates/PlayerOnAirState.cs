@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Physics;
+using Platformer.Mechanics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
     public class PlayerOnAirState : PlayerState
     {
@@ -26,7 +28,7 @@ namespace Platformer.Prueba
             }
             else
             {
-                if (PhisicsControllerPrueba.GetVelocity(player).y <= 0)
+                if (PhisicsController.GetVelocity(player).y <= 0)
                 {
                     onAir = false;
                 }
@@ -49,13 +51,13 @@ namespace Platformer.Prueba
         private void MoveInAir()
         {
             int direction = Mathf.CeilToInt(Input.GetAxis("HorizontalMove"));
-            if(Mathf.Abs(PhisicsControllerPrueba.GetVelocity(player).x) >= player.maxAirSpeed)
+            if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= player.maxAirSpeed)
             {
-                PhisicsControllerPrueba.SetVelocity(player, new Vector2(player.maxAirSpeed * direction, PhisicsControllerPrueba.GetVelocity(player).y));
+                PhisicsController.SetVelocity(player, new Vector2(player.maxAirSpeed * direction, PhisicsController.GetVelocity(player).y));
             }
             else
             {
-                PhisicsControllerPrueba.ApplyImpulse(player, new Vector2(airSpeed * direction, 0));
+                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * direction, 0));
             }
             
             

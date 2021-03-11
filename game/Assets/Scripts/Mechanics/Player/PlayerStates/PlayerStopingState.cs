@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Physics;
+using Platformer.Mechanics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
 
     public class PlayerStopingState : PlayerState
@@ -33,7 +35,7 @@ namespace Platformer.Prueba
 
         public void FixedUpdateState()
         {
-            PhisicsControllerPrueba.ApplyFriction(player, friction);
+            PhisicsController.ApplyFriction(player, friction);
         }
     }
 }

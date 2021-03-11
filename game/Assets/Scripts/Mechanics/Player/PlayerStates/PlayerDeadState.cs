@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Physics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
-    public class PlayerVictoryState : PlayerState
+    public class PlayerDeadState : PlayerState
     {
-        public PlayerController player;
 
-        public PlayerVictoryState(PlayerController player)
+        private PlayerController player;
+
+        public PlayerDeadState(PlayerController player)
         {
             this.player = player;
             player.grounded = true;
-            PhisicsControllerPrueba.SetVelocity(player, Vector2.zero);
+            PhisicsController.SetVelocity(player, Vector2.zero);
         }
 
         public void FixedUpdateState()

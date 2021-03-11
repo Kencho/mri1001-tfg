@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Player;
 
-namespace Platformer.Prueba
+namespace Platformer.Mechanics
 {
     public class Wall : MonoBehaviour
     {

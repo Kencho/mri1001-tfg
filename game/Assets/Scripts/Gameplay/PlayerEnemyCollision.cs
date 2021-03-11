@@ -1,9 +1,11 @@
 using Platformer.Core;
 using Platformer.Mechanics;
-using Platformer.Prueba;
 using Platformer.Model;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using Platformer.Physics;
+using Platformer.Player;
+using Platformer.Enemies;
 
 namespace Platformer.Gameplay
 {
@@ -14,7 +16,7 @@ namespace Platformer.Gameplay
     /// <typeparam name="EnemyCollision"></typeparam>
     public class PlayerEnemyCollision : Simulation.Event<PlayerEnemyCollision>
     {
-        public Platformer.Prueba.EnemyController enemy;
+        public EnemyController enemy;
         public PlayerController player;
 
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -31,18 +33,18 @@ namespace Platformer.Gameplay
                     enemyHealth.Decrement();
                     if (!enemyHealth.IsAlive)
                     {
-                        PhisicsControllerPrueba.ApplyImpulse(player, Vector2.up * 7);
+                        PhisicsController.ApplyImpulse(player, Vector2.up * 7);
                         Schedule<EnemyDeath>().enemy = enemy;
                     }
                     else
                     {
-                        PhisicsControllerPrueba.ApplyImpulse(player, Vector2.up * 10);
+                        PhisicsController.ApplyImpulse(player, Vector2.up * 10);
                     }
                 }
                 else
                 {
                     Schedule<EnemyDeath>().enemy = enemy;
-                    PhisicsControllerPrueba.ApplyImpulse(player, Vector2.up * 7);
+                    PhisicsController.ApplyImpulse(player, Vector2.up * 7);
                 }
             }
             else

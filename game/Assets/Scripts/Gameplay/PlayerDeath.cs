@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Platformer.Core;
 using Platformer.Model;
-using Platformer.Prueba;
+using Platformer.Player;
 using UnityEngine;
 
 namespace Platformer.Gameplay

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
-using Platformer.Prueba;
+using Platformer.Physics;
 using System;
+using Platformer.Mechanics;
 
 namespace Platformer.Gameplay
 {
@@ -15,12 +16,12 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
             kineObj.disableMove(wallDirection);
-            PhisicsControllerPrueba.SetVelocity(kineObj, UpdadeVelocityKinObj());
+            PhisicsController.SetVelocity(kineObj, UpdadeVelocityKinObj());
         }
 
         private Vector2 UpdadeVelocityKinObj()
         {
-            Vector2 newVelocity = PhisicsControllerPrueba.GetVelocity(kineObj);
+            Vector2 newVelocity = PhisicsController.GetVelocity(kineObj);
 
             if(wallDirection.x != 0)
             {

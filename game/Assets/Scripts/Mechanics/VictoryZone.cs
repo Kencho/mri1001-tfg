@@ -1,5 +1,5 @@
 using Platformer.Gameplay;
-using Platformer.Prueba;
+using Platformer.Player;
 using UnityEngine;
 using static Platformer.Core.Simulation;
 
@@ -12,7 +12,7 @@ namespace Platformer.Mechanics
     {
         void OnTriggerEnter2D(Collider2D collider)
         {
-            var p = collider.gameObject.GetComponent<Platformer.Prueba.PlayerController>();
+            var p = collider.gameObject.GetComponent<PlayerController>();
             if (p != null)
             {
                 p.playerState = new PlayerVictoryState(p);

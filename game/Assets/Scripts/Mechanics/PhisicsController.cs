@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Mechanics;
 
 
-namespace Platformer.Prueba
+namespace Platformer.Physics
 {
-    public class PhisicsControllerPrueba
+    public class PhisicsController
     {
 
         public static void SimulateGarvity(KinematicObject kinematicObj)

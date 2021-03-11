@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Physics;
+using Platformer.Mechanics;
 
-namespace Platformer.Prueba
+namespace Platformer.Player
 {
     public class PlayerIdleState : PlayerState
     {
@@ -15,7 +17,7 @@ namespace Platformer.Prueba
         {
             this.player = player;
             player.animator.SetBool("grounded", true);
-            PhisicsControllerPrueba.SetVelocity(player, Vector2.zero);
+            PhisicsController.SetVelocity(player, Vector2.zero);
             player.grounded = true;
         }
 

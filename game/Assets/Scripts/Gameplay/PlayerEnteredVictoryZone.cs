@@ -1,6 +1,5 @@
 using Platformer.Core;
 using Platformer.Mechanics;
-using Platformer.Prueba;
 using Platformer.Model;
 using UnityEngine;
 

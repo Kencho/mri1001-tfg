@@ -1,6 +1,7 @@
 using Platformer.Core;
-using Platformer.Prueba;
 using UnityEngine;
+using Platformer.Physics;
+using Platformer.Player;
 
 namespace Platformer.Gameplay
 {
@@ -14,7 +15,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            PhisicsControllerPrueba.ApplyImpulse(player, Vector2.up * player.jumpImpulse);
+            PhisicsController.ApplyImpulse(player, Vector2.up * player.jumpImpulse);
             if (player.audioSource && player.jumpAudio)
                 player.audioSource.PlayOneShot(player.jumpAudio);
         }

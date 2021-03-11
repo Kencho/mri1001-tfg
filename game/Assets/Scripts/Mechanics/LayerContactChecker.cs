@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Prueba
+namespace Platformer.Mechanics
 {
     public class LayerContactChecker
     {

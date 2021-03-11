@@ -1,5 +1,5 @@
 using UnityEngine;
-using Platformer.Prueba;
+using Platformer.Player;
 
 namespace Platformer.Model
 {
