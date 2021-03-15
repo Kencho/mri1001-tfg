@@ -10,6 +10,7 @@ namespace Platformer.Mechanics
     public class Wall : MonoBehaviour
     {
         public Collider2D wallCollider;
+        public Vector2 moveDisabled;
 
         private void Awake()
         {
@@ -24,17 +25,18 @@ namespace Platformer.Mechanics
             {
                 KinematicObjectWallCollision ev = Simulation.Schedule<KinematicObjectWallCollision>();
                 ev.kineObj = kineObj;
-                ev.wallDirection = calculateWallDirection(collision, kineObj);
+                moveDisabled = calculateWallDirection(collision, kineObj);
+                ev.wallDirection = moveDisabled;
             }
         }
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            KinematicObject kineObj = collision.gameObject.GetComponent<KinematicObject>();
 
-            if (player != null)
+            if (kineObj != null)
             {
-                player.EnableAllMove();
+                kineObj.EnableMove(moveDisabled);
             }
         }
 

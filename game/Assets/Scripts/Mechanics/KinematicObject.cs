@@ -48,6 +48,27 @@ namespace Platformer.Mechanics
             downMoveRestriction = false;
         }
 
+        public void EnableMove(Vector2 disbleDirection)
+        {
+            if (disbleDirection.x < 0)
+            {
+                leftMoveRestriction = false;
+            }
+            if (disbleDirection.x > 0)
+            {
+                rightMoveRestriction = false;
+            }
+
+            if (disbleDirection.y < 0)
+            {
+                downMoveRestriction = false;
+            }
+            if (disbleDirection.y > 0)
+            {
+                upMoveRestriction = false;
+            }
+        }
+
         public void disableAllMove()
         {
             leftMoveRestriction = true;

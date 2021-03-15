@@ -17,43 +17,41 @@ namespace Platformer.Player
         {
             this.player = player;
             player.animator.SetBool("grounded", true);
-            PhisicsController.SetVelocity(player, Vector2.zero);
             player.grounded = true;
         }
 
         public void UpdateState()
         {
-            if (Input.GetButton("Jump"))
+            if (player.grounded == false)
             {
-                player.grounded = false;
-                player.jumping = true;
+                player.playerState = new PlayerOnAirState(player);
             }
-            else
-            {
-                if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
+            else { 
+                if (Input.GetButton("Jump"))
                 {
-                    player.grounded = false;
-                }        
-
-                float directionMove = Input.GetAxis("HorizontalMove");
-                if (Mathf.Abs(directionMove) > 0.001f)
-                {
-                    player.playerState = new PlayerMovingState(player, directionMove);
+                    player.jumping = true;
                 }
-            }
-            
-            
+                else
+                {
+                    if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
+                    {
+                        player.grounded = false;
+                    }
+
+                    float directionMove = Input.GetAxis("HorizontalMove");
+                    if (Mathf.Abs(directionMove) > 0.001f)
+                    {
+                        player.playerState = new PlayerMovingState(player, directionMove);
+                    }
+                }
+            } 
         }
 
         public void FixedUpdateState()
         {
-            if (!player.grounded)
+            if (player.jumping)
             {
-                if (player.jumping)
-                {
-                    player.jump();
-                }
-                player.playerState = new PlayerOnAirState(player);
+                player.jump();
             }
         }
 
