@@ -72,7 +72,7 @@ namespace Platformer.Player
                 directionVector += Vector2.left;
             }
 
-            if (-direction == direction)
+            if (-direction == lastDirection)
             {
                 PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
             } else if (Mathf.Abs(player.rigidBody.velocity.x) < player.maxSpeed){
