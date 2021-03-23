@@ -68,6 +68,7 @@ namespace Platformer.Player
 
         public void jump()
         {
+            jumping = false;
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = this;
         }
