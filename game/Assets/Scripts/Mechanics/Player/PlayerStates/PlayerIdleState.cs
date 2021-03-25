@@ -22,37 +22,43 @@ namespace Platformer.Player
 
         public void UpdateState()
         {
-            if (player.grounded == false)
+            if (Input.GetButton("Jump"))
             {
-                player.playerState = new PlayerOnAirState(player);
+                player.jumping = true;
             }
-            else { 
-                if (Input.GetButton("Jump"))
+            else
+            {
+                if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
                 {
-                    player.jumping = true;
+                    player.grounded = false;
                 }
-                else
-                {
-                    if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
-                    {
-                        player.grounded = false;
-                    }
-
-                    float directionMove = Input.GetAxis("HorizontalMove");
-                    if (Mathf.Abs(directionMove) > 0.001f)
-                    {
-                        player.playerState = new PlayerMovingState(player, directionMove);
-                    }
-                }
-            } 
+            }
         }
 
         public void FixedUpdateState()
         {
-            if (player.jumping)
+            if(player.grounded == false)
             {
-                player.jump();
+                player.playerState = new PlayerOnAirState(player);
             }
+            else
+            {
+                float directionMove = Input.GetAxis("HorizontalMove");
+                if (Mathf.Abs(directionMove) > 0.001f)
+                {
+                    PlayerController.print("entro");
+                    player.playerState = new PlayerMovingState(player, directionMove);
+                }
+                else
+                {
+                    if (player.jumping)
+                    {
+                        player.jump();
+                    }
+                }
+                
+            }
+            
         }
 
     }

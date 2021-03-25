@@ -10,34 +10,30 @@ namespace Platformer.Player
     {
 
         PlayerController player;
-        private bool onAir = true;
         private float airSpeed = 1f;
 
         public PlayerOnAirState(PlayerController player)
         {
-            player.grounded = false;
             this.player = player;
-            player.animator.SetBool("grounded", false);
+            this.player.grounded = false;
+            this.player.jumping = false;
+            this.player.animator.SetBool("grounded", false);
         }
 
         public void UpdateState()
         {
-            if(LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
-            {
-                onAir = true;
-            }
-            else
+            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == true)
             {
                 if (PhisicsController.GetVelocity(player).y <= 0)
                 {
-                    onAir = false;
+                    player.grounded = true;
                 }
             }
         }
 
         public void FixedUpdateState()
         {
-            if (onAir)
+            if (player.grounded == false)
             {
                 MoveInAir();
             }

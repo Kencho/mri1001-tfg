@@ -24,14 +24,10 @@ namespace Platformer.Player
         {
             if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
             {
-                player.playerState = new PlayerOnAirState(player);
+                player.grounded = false;
             }
             else
             {
-                if (Math.Abs(direction) < 0.001f)
-                {
-                    player.playerState = new PlayerStopingState(player);
-                }
                 if (Input.GetButtonDown("Jump"))
                 {
                     player.jumping = true;
@@ -42,16 +38,27 @@ namespace Platformer.Player
 
         public void FixedUpdateState()
         {
-            if (player.jumping)
+            if(player.grounded == false)
             {
-                player.jump();
                 player.playerState = new PlayerOnAirState(player);
             }
             else
             {
-                performMove();
+                if (player.jumping)
+                {
+                    player.jump();
+                    player.playerState = new PlayerOnAirState(player);
+                }
+                else
+                {
+                    performMove();
+
+                    if (Math.Abs(direction) < 0.001f)
+                    {
+                        player.playerState = new PlayerStopingState(player);
+                    }
+                }
             }
-            
         }
 
         private float getDirectionMovement()
@@ -75,7 +82,9 @@ namespace Platformer.Player
             if (-direction == lastDirection)
             {
                 PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
-            } else if (Mathf.Abs(player.rigidBody.velocity.x) < player.maxSpeed){
+            }
+            else if (Mathf.Abs(player.rigidBody.velocity.x) < player.maxSpeed)
+            {
 
                 //Si el incremento de velocidad del Player y la velocidad maxima no son multiplos es posible que el Player no tenga una velocidad maxima uniforme
                 PhisicsController.ApplyImpulse(player, directionVector * player.speedIncrement);
