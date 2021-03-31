@@ -46,7 +46,6 @@ namespace Platformer.Player
                 float directionMove = Input.GetAxis("HorizontalMove");
                 if (Mathf.Abs(directionMove) > 0.001f)
                 {
-                    PlayerController.print("entro");
                     player.playerState = new PlayerMovingState(player, directionMove);
                 }
                 else
