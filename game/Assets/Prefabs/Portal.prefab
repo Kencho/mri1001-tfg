@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b69528c92c9b5643bc87576a73f9732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalAbbled: 1
   partnerPortal: {fileID: 0}
 --- !u!58 &1877988913018844300
 CircleCollider2D:

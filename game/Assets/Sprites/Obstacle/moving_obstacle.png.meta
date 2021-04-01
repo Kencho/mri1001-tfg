@@ -1,0 +1,1436 @@
+fileFormatVersion: 2
+guid: 22174b8ece38ecd478b899ed920a6516
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7566471258687234594
+    second: moving_obstacle_0
+  - first:
+      213: -2505963489282906334
+    second: moving_obstacle_1
+  - first:
+      213: 6448877595595335712
+    second: moving_obstacle_2
+  - first:
+      213: -2307810023715340315
+    second: moving_obstacle_3
+  - first:
+      213: -6515084653999033335
+    second: moving_obstacle_4
+  - first:
+      213: 9102941746747548495
+    second: moving_obstacle_5
+  - first:
+      213: -2379595439578554915
+    second: moving_obstacle_6
+  - first:
+      213: 5595381821135943997
+    second: moving_obstacle_7
+  - first:
+      213: 245870923629771204
+    second: moving_obstacle_8
+  - first:
+      213: -5944592473372873445
+    second: moving_obstacle_9
+  - first:
+      213: -8808607316110174909
+    second: moving_obstacle_10
+  - first:
+      213: 1682445985137923368
+    second: moving_obstacle_11
+  - first:
+      213: 3083423251062171714
+    second: moving_obstacle_12
+  - first:
+      213: -1866364310513587782
+    second: moving_obstacle_13
+  - first:
+      213: -4138674190194060799
+    second: moving_obstacle_14
+  - first:
+      213: 5282002756635640536
+    second: moving_obstacle_15
+  - first:
+      213: 7024731925119512522
+    second: moving_obstacle_16
+  - first:
+      213: 168650130933232044
+    second: moving_obstacle_17
+  - first:
+      213: 232645754671351810
+    second: moving_obstacle_18
+  - first:
+      213: 3946581905308956231
+    second: moving_obstacle_19
+  - first:
+      213: 8901488285688488543
+    second: moving_obstacle_20
+  - first:
+      213: 8814690903292895332
+    second: moving_obstacle_21
+  - first:
+      213: -7793653708379967486
+    second: moving_obstacle_22
+  - first:
+      213: 1591910676484217455
+    second: moving_obstacle_23
+  - first:
+      213: 372570664400992878
+    second: moving_obstacle_24
+  - first:
+      213: 7821936487538074586
+    second: moving_obstacle_25
+  - first:
+      213: -92138523086431458
+    second: moving_obstacle_26
+  - first:
+      213: 7868766393082770522
+    second: moving_obstacle_27
+  - first:
+      213: 4866005334224824768
+    second: moving_obstacle_28
+  - first:
+      213: -5065277184752066585
+    second: moving_obstacle_29
+  - first:
+      213: 4386757608093759818
+    second: moving_obstacle_30
+  - first:
+      213: -5526566024876633680
+    second: moving_obstacle_31
+  - first:
+      213: 5925882381666014415
+    second: moving_obstacle_32
+  - first:
+      213: 2801058017685530165
+    second: moving_obstacle_33
+  - first:
+      213: 4836074439465320107
+    second: moving_obstacle_34
+  - first:
+      213: -2983388732403878147
+    second: moving_obstacle_35
+  - first:
+      213: 7081950258584216434
+    second: moving_obstacle_36
+  - first:
+      213: -6975701814575385753
+    second: moving_obstacle_37
+  - first:
+      213: 5246918246316618231
+    second: moving_obstacle_38
+  - first:
+      213: 1779465775347345715
+    second: moving_obstacle_39
+  - first:
+      213: -5103358161464784900
+    second: moving_obstacle_40
+  - first:
+      213: -453902550193540728
+    second: moving_obstacle_41
+  - first:
+      213: 2192809470416182184
+    second: moving_obstacle_42
+  - first:
+      213: 1280887190030785859
+    second: moving_obstacle_43
+  - first:
+      213: -6316790103204843220
+    second: moving_obstacle_44
+  - first:
+      213: 1487333258284807632
+    second: moving_obstacle_45
+  - first:
+      213: -6567263265904647965
+    second: moving_obstacle_46
+  - first:
+      213: -911441721268668385
+    second: moving_obstacle_47
+  - first:
+      213: -5453877910791807772
+    second: moving_obstacle_48
+  - first:
+      213: -8564813299073821218
+    second: moving_obstacle_49
+  - first:
+      213: -4369375550733310033
+    second: moving_obstacle_50
+  - first:
+      213: -4832967237553184897
+    second: moving_obstacle_51
+  - first:
+      213: -3145108864118174974
+    second: moving_obstacle_52
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: moving_obstacle_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 483
+        width: 87
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22261495581810960800000000000000
+      internalID: 7566471258687234594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 294
+        width: 120
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227a131db77093dd0800000000000000
+      internalID: -2505963489282906334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0286f6d61040f7950800000000000000
+      internalID: 6448877595595335712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 235
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef7c5fb20309ffd0800000000000000
+      internalID: -2307810023715340315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 236
+        width: 83
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904f9cc8605c595a0800000000000000
+      internalID: -6515084653999033335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 232
+        width: 97
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4326f90a45245e70800000000000000
+      internalID: 9102941746747548495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 227
+        width: 85
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddd7ca2e8af9fed0800000000000000
+      internalID: -2379595439578554915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 203
+        width: 111
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d397c77ee1ac6ad40800000000000000
+      internalID: 5595381821135943997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 221
+        width: 89
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9bc876d42896300800000000000000
+      internalID: 245870923629771204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_9
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 202
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d262a24a0908da0800000000000000
+      internalID: -5944592473372873445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 204
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3459855e05a81c580800000000000000
+      internalID: -8808607316110174909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_11
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 205
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8259de1a5bf395710800000000000000
+      internalID: 1682445985137923368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248adb33c158aca20800000000000000
+      internalID: 3083423251062171714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 202
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9ee5a4c875916e0800000000000000
+      internalID: -1866364310513587782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 203
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102d76c60c97096c0800000000000000
+      internalID: -4138674190194060799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_15
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 126
+        width: 9
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2c6eb95817d4940800000000000000
+      internalID: 5282002756635640536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_16
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 162
+        width: 85
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf281f977cdc7160800000000000000
+      internalID: 7024731925119512522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 168
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca13999866a275200800000000000000
+      internalID: 168650130933232044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 170
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20840bdc4168a3300800000000000000
+      internalID: 232645754671351810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 167
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746bcee355315c630800000000000000
+      internalID: 3946581905308956231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_20
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 170
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5263c80f60788b70800000000000000
+      internalID: 8901488285688488543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 172
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e3af9ca2145a70800000000000000
+      internalID: 8814690903292895332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_22
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 169
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2003b99ae3167d390800000000000000
+      internalID: -7793653708379967486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_23
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 135
+        width: 97
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a5ef1735a971610800000000000000
+      internalID: 1591910676484217455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_24
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 153
+        width: 8
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a3a599b03ab2500800000000000000
+      internalID: 372570664400992878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_25
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 115
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3af530bc91d8c60800000000000000
+      internalID: 7821936487538074586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_26
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 117
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bdd4d5088a8bef0800000000000000
+      internalID: -92138523086431458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_27
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 118
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54fa301859733d60800000000000000
+      internalID: 7868766393082770522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_28
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 116
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c960adf116878340800000000000000
+      internalID: 4866005334224824768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_29
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 118
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef56f9cc3584b9b0800000000000000
+      internalID: -5065277184752066585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_30
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 119
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49bb227dc4e0ec30800000000000000
+      internalID: 4386757608093759818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_31
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 117
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b15c7b3b71bd43b0800000000000000
+      internalID: -5526566024876633680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_32
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 83
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4d2f321a6fc3250800000000000000
+      internalID: 5925882381666014415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_33
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 85
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536e76b2d6b5fd620800000000000000
+      internalID: 2801058017685530165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_34
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 82
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae3daf74103d1340800000000000000
+      internalID: 4836074439465320107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_35
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 84
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6f92a21cfd896d0800000000000000
+      internalID: -2983388732403878147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_36
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 86
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273e5e70d34284260800000000000000
+      internalID: 7081950258584216434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_37
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 83
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763bf239824513f90800000000000000
+      internalID: -6975701814575385753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_38
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 8
+        width: 167
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1b73d785cc0d840800000000000000
+      internalID: 5246918246316618231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_39
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 77
+        width: 70
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3392b85d1bee1b810800000000000000
+      internalID: 1779465775347345715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf70d487aca3d29b0800000000000000
+      internalID: -5103358161464784900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_41
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 38
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881f115190a63b9f0800000000000000
+      internalID: -453902550193540728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_42
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 39
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abd448689c6e6e10800000000000000
+      internalID: 2192809470416182184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_43
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 35
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d1227ec10a6c110800000000000000
+      internalID: 1280887190030785859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_44
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 37
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21b5c17ed04658a0800000000000000
+      internalID: -6316790103204843220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_45
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 38
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5b0bad7b114a410800000000000000
+      internalID: 1487333258284807632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_46
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e02841cad46cd4a0800000000000000
+      internalID: -6567263265904647965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_47
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 6
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f187f426598e953f0800000000000000
+      internalID: -911441721268668385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_48
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 3
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec97ee9feeef44b0800000000000000
+      internalID: -5453877910791807772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 3
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5d92dceaba32980800000000000000
+      internalID: -8564813299073821218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_50
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 5
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7a348261cdc53c0800000000000000
+      internalID: -4369375550733310033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_51
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f9a8257e9ddecb0800000000000000
+      internalID: -4832967237553184897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_obstacle_52
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bcd4ec6245a54d0800000000000000
+      internalID: -3145108864118174974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
