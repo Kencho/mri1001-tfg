@@ -102,7 +102,7 @@ MonoBehaviour:
   - {fileID: -7793653708379967486, guid: 22174b8ece38ecd478b899ed920a6516, type: 3}
   - {fileID: 8901488285688488543, guid: 22174b8ece38ecd478b899ed920a6516, type: 3}
   frameRate: 10
-  rendererOfSprites: {fileID: 0}
+  rendererOfSprites: {fileID: 2158580552560452084}
 --- !u!70 &471229371
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

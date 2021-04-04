@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Physics;
 using Platformer.Mechanics;
+using Platformer.Resources;
 
 namespace Platformer.Player
 {

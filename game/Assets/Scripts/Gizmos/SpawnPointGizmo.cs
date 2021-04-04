@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPointGizmo : MonoBehaviour
+namespace Platformer.GizmosUI
 {
-    private void OnDrawGizmosSelected()
+    public class SpawnPointGizmo : MonoBehaviour
     {
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireCube(transform.position, new Vector3(0.8f,0.8f,0));
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireCube(transform.position, new Vector3(0.8f, 0.8f, 0));
+        }
     }
 }
+

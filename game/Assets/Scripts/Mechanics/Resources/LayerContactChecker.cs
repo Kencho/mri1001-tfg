@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Platformer.Mechanics;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Resources
 {
     public class LayerContactChecker
     {
