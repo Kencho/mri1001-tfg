@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Platformer.Enemies
 {
-    public class TriggerObstacleFabric : ObstacleFabric
+    public class TriggerObstacleFactory : ObstacleFactory
     {
         public PlayerTrigger trigger;
         private bool spawnable;

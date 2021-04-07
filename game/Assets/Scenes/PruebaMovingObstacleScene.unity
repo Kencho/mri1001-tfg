@@ -13051,7 +13051,7 @@ PrefabInstance:
     - target: {fileID: 8527105406001584451, guid: 07a6e1dc1c7ce7d4891f3e49117c36f0,
         type: 3}
       propertyPath: m_Name
-      value: ObstacleFabric
+      value: ObstacleFactory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07a6e1dc1c7ce7d4891f3e49117c36f0, type: 3}

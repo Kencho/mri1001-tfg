@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8527105406001584450}
   - component: {fileID: 8527105406001584448}
   m_Layer: 0
-  m_Name: ObstacleFabric
+  m_Name: ObstacleFactory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Platformer.Enemies
 {
-    public class ObstacleFabric : MonoBehaviour
+    public class ObstacleFactory : MonoBehaviour
     {
         public GameObject prefab;
 
