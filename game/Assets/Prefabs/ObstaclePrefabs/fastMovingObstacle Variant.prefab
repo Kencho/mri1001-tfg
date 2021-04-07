@@ -27,6 +27,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.0008528086
       objectReference: {fileID: 0}
+    - target: {fileID: 397617033543604242, guid: 17f3edef481e86240b075da1dc3c5004,
+        type: 3}
+      propertyPath: spriteSet.Array.data[0]
+      value: 
+      objectReference: {fileID: -8564813299073821218, guid: 22174b8ece38ecd478b899ed920a6516,
+        type: 3}
+    - target: {fileID: 397617033543604242, guid: 17f3edef481e86240b075da1dc3c5004,
+        type: 3}
+      propertyPath: spriteSet.Array.data[1]
+      value: 
+      objectReference: {fileID: -4832967237553184897, guid: 22174b8ece38ecd478b899ed920a6516,
+        type: 3}
     - target: {fileID: 2158580552560452083, guid: 17f3edef481e86240b075da1dc3c5004,
         type: 3}
       propertyPath: m_RootOrder
@@ -105,5 +117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fastMovingObstacle Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6068420229243018040, guid: 17f3edef481e86240b075da1dc3c5004,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8564813299073821218, guid: 22174b8ece38ecd478b899ed920a6516,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17f3edef481e86240b075da1dc3c5004, type: 3}

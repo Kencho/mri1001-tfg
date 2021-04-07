@@ -17,7 +17,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            var player = model.player;
+            PlayerController player = model.player;
             if (player.health.IsAlive)
             {
                 player.health.Die();
