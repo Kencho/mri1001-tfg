@@ -17,8 +17,13 @@ namespace Platformer.Player
         public PlayerIdleState(PlayerController player)
         {
             this.player = player;
-            player.animator.SetBool("grounded", true);
-            player.grounded = true;
+            if (PhisicsController.GetVelocity(player).x != 0)
+            {
+                this.player.playerState = new PlayerStopingState(this.player);
+            }
+            this.player.animator.SetBool("grounded", true);
+            this.player.grounded = true;
+            
         }
 
         public void UpdateState()

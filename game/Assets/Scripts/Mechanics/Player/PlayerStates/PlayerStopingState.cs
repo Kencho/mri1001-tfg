@@ -12,7 +12,7 @@ namespace Platformer.Player
     {
 
         private PlayerController player;
-        private float friction = 25f;
+        private float friction = 25;
 
         public PlayerStopingState(PlayerController player)
         {
@@ -22,21 +22,21 @@ namespace Platformer.Player
 
         public void UpdateState()
         {
-
-            if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
-            {
-                player.playerState = new PlayerIdleState(player);
-            }
-            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
-            {
-                player.playerState = new PlayerOnAirState(player);
-            }
             
         }
 
         public void FixedUpdateState()
         {
             PhisicsController.ApplyFriction(player, friction);
+            if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
+            {
+                PlayerController.print("quieto");
+                player.playerState = new PlayerIdleState(player);
+            }
+            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
+            {
+                player.playerState = new PlayerOnAirState(player);
+            }
         }
     }
 }

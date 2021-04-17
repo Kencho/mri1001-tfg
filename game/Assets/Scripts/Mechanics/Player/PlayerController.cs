@@ -5,6 +5,8 @@ using Platformer.Mechanics;
 using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Physics;
+using System;
+using Platformer.Resources;
 
 namespace Platformer.Player
 {
@@ -16,7 +18,12 @@ namespace Platformer.Player
         public float speedIncrement = 0.5f;
         public float jumpImpulse = 5f;
         public float maxAirSpeed = 4f;
+
         public bool jumping = false;
+        public bool dashable = true;
+        public bool dashing = false;
+        public const float DASH_COLDOWN = 0.7f;
+        public float timeWithOutFlash = 0;
 
         public Health health;
         public AudioSource audioSource;
@@ -42,12 +49,17 @@ namespace Platformer.Player
         {
             playerState.UpdateState();
             AnimarMovimientoPlayer();
+            if (Input.GetButtonDown("Dash"))
+            {
+                dashing = true;
+            }
         }
 
         protected override void FixedUpdate()
         {
             base.FixedUpdate();
             playerState.FixedUpdateState();
+            ManageDash(); 
         }
 
         private void AnimarMovimientoPlayer()
@@ -71,6 +83,42 @@ namespace Platformer.Player
             jumping = false;
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = this;
+        }
+
+        private void ManageDash()
+        {
+            if (dashing)
+            {
+                if (dashable)
+                {
+                    dash();
+                }
+                else
+                {
+                    dashing = false;
+                }
+            }
+            else
+            {
+                if (timeWithOutFlash < DASH_COLDOWN)
+                {
+                    timeWithOutFlash += Time.fixedDeltaTime;
+                }
+                else
+                {
+                    if(LayerContactChecker.IsInContactWithLayer(this, "Floor"))
+                    {
+                        dashable = true;
+                    }
+                }
+            }
+        }
+
+        private void dash()
+        {
+            dashable = false;
+            
+            playerState = new PlayerDashingState(this);
         }
 
     }

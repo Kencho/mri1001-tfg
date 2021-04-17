@@ -41,7 +41,7 @@ namespace Platformer.Player
             else
             {
                 player.rigidBody.velocity = new Vector2(player.rigidBody.velocity.x, 0);
-                player.playerState = new PlayerIdleState(player);
+                player.playerState = new PlayerStopingState(player);
             }
         }
 
