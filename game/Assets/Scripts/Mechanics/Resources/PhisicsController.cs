@@ -12,20 +12,20 @@ namespace Platformer.Physics
 
         public static void SimulateGarvity(KinematicObject kinematicObj)
         {
-            Vector2 gravity = ApplyKinematicRestrictions(Physics2D.gravity, kinematicObj);
-            kinematicObj.rigidBody.velocity += gravity * Time.deltaTime;
+            Vector2 restrictedGravity = ApplyKinematicRestrictions(Physics2D.gravity, kinematicObj);
+            kinematicObj.rigidBody.velocity += restrictedGravity * Time.deltaTime;
         }
 
         public static void ApplyForce(KinematicObject kinematicObj, Vector2 force)
         {
-            force = ApplyKinematicRestrictions(force, kinematicObj);
-            kinematicObj.rigidBody.velocity += force * Time.deltaTime;
+            Vector2 restirctedForce = ApplyKinematicRestrictions(force, kinematicObj);
+            kinematicObj.rigidBody.velocity += restirctedForce * Time.deltaTime;
         }
 
         public static void ApplyImpulse(KinematicObject kinematicObj, Vector2 impulse)
         {
-            impulse = ApplyKinematicRestrictions(impulse, kinematicObj);
-            kinematicObj.rigidBody.velocity += impulse;
+            Vector2 restrictedImpulse = ApplyKinematicRestrictions(impulse, kinematicObj);
+            kinematicObj.rigidBody.velocity += restrictedImpulse;
         }
 
         public static void ApplyFriction(KinematicObject kinematicObj, float friction)
@@ -42,6 +42,12 @@ namespace Platformer.Physics
                 }
             }
             
+        }
+
+        public static void SetVelocityWithRestrictions(KinematicObject kinematicObj, Vector2 newVelocity)
+        {
+            Vector2 restrictedVector = ApplyKinematicRestrictions(newVelocity, kinematicObj);
+            SetVelocity(kinematicObj, restrictedVector);
         }
 
         public static void SetVelocity(KinematicObject kinematicObj, Vector2 newVelocity)

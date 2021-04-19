@@ -24,6 +24,7 @@ namespace Platformer.Player
         public bool dashing = false;
         public const float DASH_COLDOWN = 0.7f;
         public float timeWithOutFlash = 0;
+        public bool controlEnabled = true;
 
         public Health health;
         public AudioSource audioSource;
@@ -59,7 +60,7 @@ namespace Platformer.Player
         {
             base.FixedUpdate();
             playerState.FixedUpdateState();
-            ManageDash(); 
+            ManageDash();
         }
 
         private void AnimarMovimientoPlayer()
@@ -80,9 +81,13 @@ namespace Platformer.Player
 
         public void jump()
         {
-            jumping = false;
-            PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
-            ev.player = this;
+            if (controlEnabled)
+            {
+                jumping = false;
+                PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
+                ev.player = this;
+            }
+            
         }
 
         private void ManageDash()
@@ -116,9 +121,11 @@ namespace Platformer.Player
 
         private void dash()
         {
-            dashable = false;
-            
-            playerState = new PlayerDashingState(this);
+            if (controlEnabled)
+            {
+                dashable = false;
+                playerState = new PlayerDashingState(this);
+            }
         }
 
     }

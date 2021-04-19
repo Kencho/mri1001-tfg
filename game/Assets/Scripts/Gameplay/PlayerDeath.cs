@@ -23,8 +23,7 @@ namespace Platformer.Gameplay
                 player.health.Die();
                 model.virtualCamera.m_Follow = null;
                 model.virtualCamera.m_LookAt = null;
-                // player.collider.enabled = false;
-                //player.controlEnabled = false;
+                player.controlEnabled = false;
                 player.playerState = new PlayerDeadState(player);
 
                 if (player.audioSource && player.ouchAudio)

@@ -16,7 +16,7 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
             kineObj.disableMove(wallDirection);
-            PhisicsController.SetVelocity(kineObj, UpdadeVelocityKinObj());
+            PhisicsController.SetVelocityWithRestrictions(kineObj, PhisicsController.GetVelocity(kineObj));
         }
 
         private Vector2 UpdadeVelocityKinObj()

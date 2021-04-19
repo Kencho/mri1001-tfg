@@ -12,6 +12,7 @@ namespace Platformer.Mechanics
 
         public Rigidbody2D rigidBody;
         public Collider2D mycollider;
+        public KinematicObjectCollisionManager collisionManager;
 
         public bool leftMoveRestriction = false;
         public bool rightMoveRestriction = false;
@@ -24,6 +25,7 @@ namespace Platformer.Mechanics
         {
             rigidBody = GetComponent<Rigidbody2D>();
             mycollider = GetComponent<Collider2D>();
+            collisionManager = new KinematicObjectCollisionManager(this);
         }
 
         protected virtual void FixedUpdate()
@@ -36,8 +38,8 @@ namespace Platformer.Mechanics
             {
                 downMoveRestriction = false;
             }
+            collisionManager.manageCollision();
             PhisicsController.SimulateGarvity(this);
-            
         }
 
         public void EnableAllMove()

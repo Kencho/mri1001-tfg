@@ -15,7 +15,7 @@ namespace Platformer.Gameplay
         {
             PlayerController player = model.player;
             player.playerState = new PlayerIdleState(player);
-            //player.controlEnabled = true;
+            player.controlEnabled = true;
         }
     }
 }

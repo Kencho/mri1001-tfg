@@ -28,7 +28,7 @@ namespace Platformer.Player
             if(timeDashed < DASH_TIME)
             {
                 timeDashed += Time.fixedDeltaTime;
-                PhisicsController.SetVelocity(player, new Vector2(dashSpeed, 0));
+                PhisicsController.SetVelocityWithRestrictions(player, new Vector2(dashSpeed, 0));
             }
             else
             {

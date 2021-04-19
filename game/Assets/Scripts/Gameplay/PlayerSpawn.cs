@@ -1,6 +1,7 @@
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
+using Platformer.Player;
 
 namespace Platformer.Gameplay
 {
@@ -13,9 +14,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            var player = model.player;
-            //player.collider2d.enabled = true;
-            //player.controlEnabled = false;
+            PlayerController player = model.player;
             if (player.audioSource && player.respawnAudio)
                 player.audioSource.PlayOneShot(player.respawnAudio);
             player.health.Increment();

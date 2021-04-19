@@ -30,7 +30,6 @@ namespace Platformer.Player
             PhisicsController.ApplyFriction(player, friction);
             if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
             {
-                PlayerController.print("quieto");
                 player.playerState = new PlayerIdleState(player);
             }
             if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
