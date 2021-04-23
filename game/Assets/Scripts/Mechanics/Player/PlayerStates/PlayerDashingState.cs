@@ -17,7 +17,6 @@ namespace Platformer.Player
         public PlayerDashingState(PlayerController player)
         {
             this.player = player;
-            this.player.timeWithOutFlash = 0;
             timeDashed = 0;
             dashSpeed = calcularDashSpeed();
             this.player.animator.SetBool("dashing", true);
@@ -28,7 +27,7 @@ namespace Platformer.Player
             if(timeDashed < DASH_TIME)
             {
                 timeDashed += Time.fixedDeltaTime;
-                PhisicsController.SetVelocityWithRestrictions(player, new Vector2(dashSpeed, 0));
+                PhisicsController.SetVelocity(player, new Vector2(dashSpeed, 0));
             }
             else
             {

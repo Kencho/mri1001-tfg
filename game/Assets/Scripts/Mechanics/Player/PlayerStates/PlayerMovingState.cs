@@ -18,59 +18,34 @@ namespace Platformer.Player
         public PlayerMovingState(PlayerController player, float direction)
         {
             this.player = player;
-            player.grounded = true;
         }
 
         public void UpdateState()
         {
-            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
-            {
-                player.grounded = false;
-            }
-            else
-            {
-                if (Input.GetButtonDown("Jump"))
-                {
-                    player.jumping = true;
-                }
-            }
 
         }
 
         public void FixedUpdateState()
         {
-            if(player.grounded == false)
+            if(player.Grounded == false)
             {
                 player.playerState = new PlayerOnAirState(player);
             }
             else
             {
-                if (player.jumping)
-                {
-                    player.jump();
-                    player.playerState = new PlayerOnAirState(player);
-                }
-                else
-                {
-                    performMove();
+                performMove();
 
-                    if (Math.Abs(direction) < 0.001f)
-                    {
-                        player.playerState = new PlayerStopingState(player);
-                    }
+                if (Math.Abs(direction) < 0.001f)
+                {
+                    player.playerState = new PlayerStopingState(player);
                 }
             }
-        }
-
-        private float getDirectionMovement()
-        {
-            return Input.GetAxis("HorizontalMove");
         }
 
         private void performMove()
         {
             Vector2 directionVector = Vector2.zero;
-            direction = getDirectionMovement();
+            direction = player.movingDirection;
             if (direction > 0)
             {
                 directionVector += Vector2.right;

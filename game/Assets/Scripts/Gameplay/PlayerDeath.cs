@@ -23,6 +23,7 @@ namespace Platformer.Gameplay
                 player.health.Die();
                 model.virtualCamera.m_Follow = null;
                 model.virtualCamera.m_LookAt = null;
+                player.simulatingPhysics = false;
                 player.controlEnabled = false;
                 player.playerState = new PlayerDeadState(player);
 

@@ -16,25 +16,16 @@ namespace Platformer.Player
         public PlayerOnAirState(PlayerController player)
         {
             this.player = player;
-            this.player.grounded = false;
-            this.player.jumping = false;
-            this.player.animator.SetBool("grounded", false);
         }
 
         public void UpdateState()
         {
-            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == true)
-            {
-                if (PhisicsController.GetVelocity(player).y <= 0)
-                {
-                    player.grounded = true;
-                }
-            }
+
         }
 
         public void FixedUpdateState()
         {
-            if (player.grounded == false)
+            if (player.Grounded == false)
             {
                 MoveInAir();
             }

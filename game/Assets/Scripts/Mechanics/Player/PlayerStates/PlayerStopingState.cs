@@ -17,7 +17,6 @@ namespace Platformer.Player
         public PlayerStopingState(PlayerController player)
         {
             this.player = player;
-            player.grounded = true;
         }
 
         public void UpdateState()
@@ -32,7 +31,7 @@ namespace Platformer.Player
             {
                 player.playerState = new PlayerIdleState(player);
             }
-            if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
+            if (player.Grounded == false)
             {
                 player.playerState = new PlayerOnAirState(player);
             }

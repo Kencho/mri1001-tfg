@@ -22,28 +22,16 @@ namespace Platformer.Player
                 this.player.playerState = new PlayerStopingState(this.player);
             }
             this.player.animator.SetBool("grounded", true);
-            this.player.grounded = true;
-            
         }
 
         public void UpdateState()
         {
-            if (Input.GetButton("Jump"))
-            {
-                player.jumping = true;
-            }
-            else
-            {
-                if (LayerContactChecker.IsInContactWithLayer(player, "Floor") == false)
-                {
-                    player.grounded = false;
-                }
-            }
+            
         }
 
         public void FixedUpdateState()
         {
-            if(player.grounded == false)
+            if(player.Grounded == false)
             {
                 player.playerState = new PlayerOnAirState(player);
             }

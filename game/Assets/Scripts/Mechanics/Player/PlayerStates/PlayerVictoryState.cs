@@ -12,7 +12,6 @@ namespace Platformer.Player
         public PlayerVictoryState(PlayerController player)
         {
             this.player = player;
-            player.grounded = true;
             PhisicsController.SetVelocity(player, Vector2.zero);
         }
 

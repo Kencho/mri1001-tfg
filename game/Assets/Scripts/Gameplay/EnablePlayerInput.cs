@@ -14,8 +14,8 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
             PlayerController player = model.player;
-            player.playerState = new PlayerIdleState(player);
             player.controlEnabled = true;
+            player.playerState = new PlayerIdleState(player);
         }
     }
 }

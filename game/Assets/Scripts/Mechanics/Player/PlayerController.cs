@@ -18,13 +18,15 @@ namespace Platformer.Player
         public float speedIncrement = 0.5f;
         public float jumpImpulse = 5f;
         public float maxAirSpeed = 4f;
-
-        public bool jumping = false;
-        public bool dashable = true;
-        public bool dashing = false;
         public const float DASH_COLDOWN = 0.7f;
-        public float timeWithOutFlash = 0;
+        private float timeWithOutFlash = 0;
+
         public bool controlEnabled = true;
+        public bool jumplable = true;
+        public bool dashable = true;
+        public bool jumping = false;
+        public bool dashing = false;
+        public float movingDirection = 0;
 
         public Health health;
         public AudioSource audioSource;
@@ -48,25 +50,77 @@ namespace Platformer.Player
 
         void Update()
         {
+            manageInputs();
             playerState.UpdateState();
             AnimarMovimientoPlayer();
-            if (Input.GetButtonDown("Dash"))
-            {
-                dashing = true;
-            }
         }
 
         protected override void FixedUpdate()
         {
+            if (controlEnabled)
+            {
+                playerState.FixedUpdateState();
+                manageFlags();
+                manageJump();
+                manageDash();
+                collisionManager.manageCollision();
+            }
             base.FixedUpdate();
-            playerState.FixedUpdateState();
-            ManageDash();
+        }
+
+        private void manageInputs()
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                print("entr0");
+                jumping = true;
+            }
+            else
+            {
+                jumping = false;
+            }
+
+            if (Input.GetButtonDown("Dash"))
+            {
+                dashing = true;
+            }
+            else
+            {
+                dashing = false;
+            }
+
+            movingDirection = Input.GetAxis("HorizontalMove");
+        }
+
+        private void manageFlags()
+        {
+            if (Grounded)
+            {
+                jumplable = true;
+                if (dashable == false)
+                {
+                    if (timeWithOutFlash < DASH_COLDOWN)
+                    {
+                        timeWithOutFlash += Time.fixedDeltaTime;
+                    }
+                    else
+                    {
+                        dashable = true;
+                        timeWithOutFlash = 0;
+                    }
+                }
+            }
+            else
+            {
+                jumplable = false;
+            }
         }
 
         private void AnimarMovimientoPlayer()
         {
             animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / maxSpeed);
             animator.SetFloat("velocityY", rigidBody.velocity.y);
+            animator.SetBool("grounded", Grounded);
 
             if(PhisicsController.GetVelocity(this).x < 0)
             {
@@ -79,53 +133,38 @@ namespace Platformer.Player
            
         }
 
+        private void manageJump()
+        {
+            if(jumping && jumplable)
+            {
+                jump();
+            }
+        }
+
         public void jump()
         {
-            if (controlEnabled)
+            if (jumplable)
             {
-                jumping = false;
                 PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
                 ev.player = this;
+                jumping = false;
+                jumplable = false;
             }
             
         }
 
-        private void ManageDash()
+        private void manageDash()
         {
-            if (dashing)
+            if(dashing && dashable)
             {
-                if (dashable)
-                {
-                    dash();
-                }
-                else
-                {
-                    dashing = false;
-                }
-            }
-            else
-            {
-                if (timeWithOutFlash < DASH_COLDOWN)
-                {
-                    timeWithOutFlash += Time.fixedDeltaTime;
-                }
-                else
-                {
-                    if(LayerContactChecker.IsInContactWithLayer(this, "Floor"))
-                    {
-                        dashable = true;
-                    }
-                }
+                dash();
             }
         }
 
         private void dash()
         {
-            if (controlEnabled)
-            {
-                dashable = false;
-                playerState = new PlayerDashingState(this);
-            }
+            dashable = false;
+            playerState = new PlayerDashingState(this);
         }
 
     }
