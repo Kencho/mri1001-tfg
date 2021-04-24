@@ -33,6 +33,14 @@ namespace Platformer.Mechanics
             {
                 PhisicsController.SimulateGarvity(this);
                 collisionManager.manageCollision();
+                if(PhisicsController.GetVelocity(this).y == 0)
+                {
+                    grounded = true;
+                }
+                else
+                {
+                    grounded = false;
+                }
             }
                 
         }

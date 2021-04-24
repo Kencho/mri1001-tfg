@@ -15,8 +15,6 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            PhisicsController.ApplyImpulse(player, Vector2.up * player.jumpImpulse);
-            MonoBehaviour.print(PhisicsController.GetVelocity(player));
             if (player.audioSource && player.jumpAudio)
                 player.audioSource.PlayOneShot(player.jumpAudio);
             player.playerState = new PlayerOnAirState(player);

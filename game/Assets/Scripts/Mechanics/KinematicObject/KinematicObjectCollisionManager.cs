@@ -59,6 +59,7 @@ namespace Platformer.Mechanics
                         PhisicsController.SetVelocity(kineObj, new Vector2(PhisicsController.GetVelocity(kineObj).x, 0));
                     }
                 }
+
             }
         }
     }

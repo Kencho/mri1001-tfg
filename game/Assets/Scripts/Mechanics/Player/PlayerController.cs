@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Mechanics;
 using Platformer.Core;
-using Platformer.Gameplay;
 using Platformer.Physics;
 using System;
 using Platformer.Resources;
+using Platformer.Gameplay;
 
 namespace Platformer.Player
 {
@@ -37,6 +37,7 @@ namespace Platformer.Player
         public AudioClip respawnAudio;
 
         public PlayerState playerState;
+        public float n = 0;
 
         protected override void Awake()
         {
@@ -70,9 +71,8 @@ namespace Platformer.Player
 
         private void manageInputs()
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButton("Jump"))
             {
-                print("entr0");
                 jumping = true;
             }
             else
@@ -80,7 +80,7 @@ namespace Platformer.Player
                 jumping = false;
             }
 
-            if (Input.GetButtonDown("Dash"))
+            if (Input.GetButton("Dash"))
             {
                 dashing = true;
             }
@@ -135,6 +135,7 @@ namespace Platformer.Player
 
         private void manageJump()
         {
+            
             if(jumping && jumplable)
             {
                 jump();
@@ -143,14 +144,11 @@ namespace Platformer.Player
 
         public void jump()
         {
-            if (jumplable)
-            {
-                PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
-                ev.player = this;
-                jumping = false;
-                jumplable = false;
-            }
-            
+            jumping = false;
+            jumplable = false;
+            PhisicsController.ApplyImpulse(this, Vector2.up * jumpImpulse);
+            PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
+            ev.player = this;
         }
 
         private void manageDash()
