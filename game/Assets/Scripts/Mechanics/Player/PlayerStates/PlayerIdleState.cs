@@ -37,17 +37,9 @@ namespace Platformer.Player
             }
             else
             {
-                float directionMove = Input.GetAxis("HorizontalMove");
-                if (Mathf.Abs(directionMove) > 0.001f)
+                if (Mathf.Abs(player.movingDirection) > 0.001f)
                 {
-                    player.playerState = new PlayerMovingState(player, directionMove);
-                }
-                else
-                {
-                    if (player.jumping)
-                    {
-                        player.jump();
-                    }
+                    player.playerState = new PlayerMovingState(player);
                 }
                 
             }

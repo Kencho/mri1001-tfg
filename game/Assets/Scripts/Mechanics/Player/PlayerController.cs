@@ -64,7 +64,6 @@ namespace Platformer.Player
                 manageFlags();
                 manageJump();
                 manageDash();
-                collisionManager.manageCollision();
             }
             base.FixedUpdate();
         }

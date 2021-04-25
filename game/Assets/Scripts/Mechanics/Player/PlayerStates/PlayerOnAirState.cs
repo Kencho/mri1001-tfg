@@ -31,21 +31,20 @@ namespace Platformer.Player
             }
             else
             {
-                player.rigidBody.velocity = new Vector2(player.rigidBody.velocity.x, 0);
+                player.dashable = true;
                 player.playerState = new PlayerStopingState(player);
             }
         }
 
         private void MoveInAir()
         {
-            int direction = Mathf.CeilToInt(Input.GetAxis("HorizontalMove"));
             if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= player.maxAirSpeed)
             {
-                PhisicsController.SetVelocity(player, new Vector2(player.maxAirSpeed * direction, PhisicsController.GetVelocity(player).y));
+                PhisicsController.SetVelocity(player, new Vector2(player.maxAirSpeed * player.movingDirection, PhisicsController.GetVelocity(player).y));
             }
             else
             {
-                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * direction, 0));
+                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * player.movingDirection, 0));
             }
             
             

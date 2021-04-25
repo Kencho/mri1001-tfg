@@ -15,7 +15,7 @@ namespace Platformer.Player
         float direction = 0f;
         float lastDirection = 0f;
 
-        public PlayerMovingState(PlayerController player, float direction)
+        public PlayerMovingState(PlayerController player)
         {
             this.player = player;
         }

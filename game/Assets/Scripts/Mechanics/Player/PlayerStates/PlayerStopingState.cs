@@ -26,15 +26,23 @@ namespace Platformer.Player
 
         public void FixedUpdateState()
         {
-            PhisicsController.ApplyFriction(player, friction);
-            if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
+            if(player.movingDirection != 0)
             {
-                player.playerState = new PlayerIdleState(player);
+                player.playerState = new PlayerMovingState(player);
             }
-            if (player.Grounded == false)
+            else
             {
-                player.playerState = new PlayerOnAirState(player);
+                PhisicsController.ApplyFriction(player, friction);
+                if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
+                {
+                    player.playerState = new PlayerIdleState(player);
+                }
+                if (player.Grounded == false)
+                {
+                    player.playerState = new PlayerOnAirState(player);
+                }
             }
+            
         }
     }
 }
