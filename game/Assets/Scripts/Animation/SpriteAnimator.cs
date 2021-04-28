@@ -10,7 +10,7 @@ namespace Platformer.Animation
         public float frameRate;
         public SpriteRenderer rendererOfSprites;
         private float nextFrameTime;
-        private int spriteIndex;
+        protected int spriteIndex;
 
         private void Awake()
         {
@@ -29,7 +29,7 @@ namespace Platformer.Animation
             UpdateSprite();
         }
 
-        private void UpdateSprite()
+        protected void UpdateSprite()
         {
             if (Time.time - nextFrameTime > (1f / frameRate))
             {
