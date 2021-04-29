@@ -12137,7 +12137,7 @@ PrefabInstance:
     - target: {fileID: 2167813311127056267, guid: 53128da9af373f849b5b532c09427af9,
         type: 3}
       propertyPath: m_Name
-      value: ImpulseAmplifier
+      value: ImpulseParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53128da9af373f849b5b532c09427af9, type: 3}
