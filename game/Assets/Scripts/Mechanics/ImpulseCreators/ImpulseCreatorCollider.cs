@@ -13,7 +13,7 @@ namespace Platformer.Mechanics
         private OneTimeAnimator animator;
         private AudioSource audioManager;
         public Vector2 impulseAplied;
-        public AudioClip ImpulsePlatformJumpAudio;
+        public AudioClip ImpulseCreatorAudio;
 
         private bool active;
         public const float inactivityTime = 0.5f;
@@ -52,7 +52,7 @@ namespace Platformer.Mechanics
                 {
                     active = false;
                     impulseCreator.ImpulseKinematicObject(kineObj);
-                    audioManager.PlayOneShot(ImpulsePlatformJumpAudio);
+                    audioManager.PlayOneShot(ImpulseCreatorAudio);
                     animator.animationReproducton = true;
                 }
             }

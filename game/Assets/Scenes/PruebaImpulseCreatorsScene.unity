@@ -12005,11 +12005,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200385793}
     m_Modifications:
-    - target: {fileID: 824925114344477689, guid: 41352750b4e4fe74eaf809e7155e697c,
-        type: 3}
-      propertyPath: impulseAplied.y
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 824925114344477693, guid: 41352750b4e4fe74eaf809e7155e697c,
         type: 3}
       propertyPath: m_Name

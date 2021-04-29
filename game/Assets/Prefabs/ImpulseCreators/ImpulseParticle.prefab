@@ -57,6 +57,21 @@ PrefabInstance:
       propertyPath: impulseAplied.y
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 824925114344477689, guid: 41352750b4e4fe74eaf809e7155e697c,
+        type: 3}
+      propertyPath: ImpulseCreatorAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: af5dbd6a85b567140b77c5bf1da3bb28, type: 3}
+    - target: {fileID: 824925114344477689, guid: 41352750b4e4fe74eaf809e7155e697c,
+        type: 3}
+      propertyPath: ImpulsePlatformJumpAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: af5dbd6a85b567140b77c5bf1da3bb28, type: 3}
+    - target: {fileID: 824925114344477691, guid: 41352750b4e4fe74eaf809e7155e697c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 824925114344477692, guid: 41352750b4e4fe74eaf809e7155e697c,
         type: 3}
       propertyPath: spriteSet.Array.size
@@ -149,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 824925114344477693, guid: 41352750b4e4fe74eaf809e7155e697c,
         type: 3}
       propertyPath: m_Name
-      value: ImpulseAmplifier
+      value: ImpulseParticle
       objectReference: {fileID: 0}
     - target: {fileID: 824925114344477694, guid: 41352750b4e4fe74eaf809e7155e697c,
         type: 3}
