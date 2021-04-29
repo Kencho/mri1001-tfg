@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 824925114344477688}
   - component: {fileID: 824925114344477689}
   - component: {fileID: 824925114344477691}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JumingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a1f347e90d2b438a2c5e9bda22350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulseAplied: {x: 0, y: 9}
+  impulseAplied: {x: 0, y: 2}
   ImpulsePlatformJumpAudio: {fileID: 8300000, guid: cc3b408d639d3d0499b0cc554e3207ea,
     type: 3}
 --- !u!82 &824925114344477691

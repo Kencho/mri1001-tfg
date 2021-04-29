@@ -23,11 +23,9 @@ namespace Platformer.Mechanics
             audioManager = GetComponent<AudioSource>();
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        public void ApplyKinematicObjectCollision(KinematicObject kineObj)
         {
-            KinematicObject kineObj = collision.collider.GetComponent<KinematicObject>();
-
-            if(kineObj != null)
+            if (kineObj != null)
             {
                 impulseCreator.ImpulseKinematicObject(kineObj);
                 audioManager.PlayOneShot(ImpulsePlatformJumpAudio);

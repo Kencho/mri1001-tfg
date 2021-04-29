@@ -2,6 +2,7 @@
 using Platformer.Gameplay;
 using Platformer.Physics;
 using Platformer.Resources;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace Platformer.Mechanics
         public void manageCollision()
         {
             manageWallCollision();
+            manageImpulseCreatorCollision();
         }
 
         public void manageWallCollision()
@@ -60,6 +62,19 @@ namespace Platformer.Mechanics
                     }
                 }
 
+            }
+        }
+
+        private void manageImpulseCreatorCollision()
+        {
+            Vector2 velocity = PhisicsController.GetVelocity(kineObj);
+            LayerMask layer = LayerMask.GetMask("ImpulseCreator");
+
+            RaycastHit2D[] impulseCreatorCollision = Physics2D.BoxCastAll(kineObj.mycollider.bounds.center, 2 * kineObj.mycollider.bounds.extents, 0f, velocity.normalized, 0, layer);
+            for (int i = 0; i < impulseCreatorCollision.Length; i++)
+            {
+                ImpulseCreatorCollider impulseCreator = impulseCreatorCollision[i].collider.GetComponent<ImpulseCreatorCollider>();
+                impulseCreator.ApplyKinematicObjectCollision(kineObj);
             }
         }
     }
