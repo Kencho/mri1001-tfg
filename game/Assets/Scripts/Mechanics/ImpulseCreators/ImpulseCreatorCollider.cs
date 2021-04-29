@@ -15,22 +15,48 @@ namespace Platformer.Mechanics
         public Vector2 impulseAplied;
         public AudioClip ImpulsePlatformJumpAudio;
 
+        private bool active;
+        public const float inactivityTime = 0.5f;
+        private float currentInactivityTime = 0f;
+
         private void Awake()
         {
             impulseCollider = GetComponent<Collider2D>();
             impulseCreator = new ImpulseParticle(impulseAplied);
             animator = GetComponent<OneTimeAnimator>();
             audioManager = GetComponent<AudioSource>();
+            active = true;
+        }
+
+        private void Update()
+        {
+            if(active == false)
+            {
+                if(currentInactivityTime < inactivityTime)
+                {
+                    currentInactivityTime += Time.deltaTime;
+                }
+                else
+                {
+                    active = true;
+                    currentInactivityTime = 0;
+                }
+            }
         }
 
         public void ApplyKinematicObjectCollision(KinematicObject kineObj)
         {
-            if (kineObj != null)
+            if (active)
             {
-                impulseCreator.ImpulseKinematicObject(kineObj);
-                audioManager.PlayOneShot(ImpulsePlatformJumpAudio);
-                animator.animationReproducton = true;
+                if (kineObj != null)
+                {
+                    active = false;
+                    impulseCreator.ImpulseKinematicObject(kineObj);
+                    audioManager.PlayOneShot(ImpulsePlatformJumpAudio);
+                    animator.animationReproducton = true;
+                }
             }
+            
         }
     }
 }
