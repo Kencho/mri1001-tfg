@@ -28,7 +28,9 @@ namespace Platformer.Physics
         public static void ApplyFriction(KinematicObject kinematicObj, float friction)
         {
             Vector2 newVelocity = kinematicObj.rigidBody.velocity;
-            if(newVelocity.x != 0)
+            float movingDirection = newVelocity.x;
+
+            if (newVelocity.x != 0)
             {
                 if (newVelocity.x < 0)
                 {
@@ -39,7 +41,13 @@ namespace Platformer.Physics
                     newVelocity += Vector2.left * friction * Time.deltaTime;
                 }
             }
-
+            if(movingDirection > 0 && newVelocity.x < 0)
+            {
+                newVelocity.x = 0;
+            }else if (movingDirection < 0 && newVelocity.x > 0)
+            {
+                newVelocity.x = 0;
+            }
             kinematicObj.rigidBody.velocity = newVelocity;
 
 
