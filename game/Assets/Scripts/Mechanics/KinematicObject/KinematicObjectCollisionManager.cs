@@ -75,6 +75,7 @@ namespace Platformer.Mechanics
             {
                 ImpulseCreatorCollider impulseCreator = impulseCreatorCollision[i].collider.GetComponent<ImpulseCreatorCollider>();
                 impulseCreator.ApplyKinematicObjectCollision(kineObj);
+                
             }
         }
     }

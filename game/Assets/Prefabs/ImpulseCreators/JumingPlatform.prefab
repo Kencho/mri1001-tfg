@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 824925114344477695}
   - component: {fileID: 824925114344477692}
   - component: {fileID: 824925114344477688}
-  - component: {fileID: 824925114344477689}
   - component: {fileID: 824925114344477691}
+  - component: {fileID: 4662401142145729919}
   m_Layer: 10
   m_Name: JumingPlatform
   m_TagString: Untagged
@@ -142,20 +142,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.62, y: 0.26689196}
   m_EdgeRadius: 0
---- !u!114 &824925114344477689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824925114344477693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1a1f347e90d2b438a2c5e9bda22350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impulseAplied: {x: 0, y: 8}
-  ImpulseCreatorAudio: {fileID: 8300000, guid: cc3b408d639d3d0499b0cc554e3207ea, type: 3}
 --- !u!82 &824925114344477691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -252,3 +238,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4662401142145729919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824925114344477693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61309ad70d10db9449dfd2c82c5048ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpulseCreatorAudio: {fileID: 8300000, guid: cc3b408d639d3d0499b0cc554e3207ea, type: 3}
+  impulseAplied: {x: 0, y: 8}

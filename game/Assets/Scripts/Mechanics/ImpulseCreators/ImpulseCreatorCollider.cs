@@ -1,4 +1,5 @@
 ﻿using Platformer.Animation;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,12 @@ using UnityEngine;
 namespace Platformer.Mechanics
 {
     [RequireComponent(typeof(Collider2D),typeof(OneTimeAnimator))]
-    public class ImpulseCreatorCollider : MonoBehaviour
+    public abstract class ImpulseCreatorCollider : MonoBehaviour
     {
         private Collider2D impulseCollider;
-        private ImpulseCreator impulseCreator;
+        protected ImpulseCreator impulseCreator;
         private OneTimeAnimator animator;
         private AudioSource audioManager;
-        public Vector2 impulseAplied;
         public AudioClip ImpulseCreatorAudio;
 
         private bool active;
@@ -22,10 +22,15 @@ namespace Platformer.Mechanics
         private void Awake()
         {
             impulseCollider = GetComponent<Collider2D>();
-            impulseCreator = new ImpulseParticle(impulseAplied);
+            SetImpulseCreator();
             animator = GetComponent<OneTimeAnimator>();
             audioManager = GetComponent<AudioSource>();
             active = true;
+        }
+
+        protected virtual void SetImpulseCreator()
+        {
+            throw new NotImplementedException();
         }
 
         private void Update()
