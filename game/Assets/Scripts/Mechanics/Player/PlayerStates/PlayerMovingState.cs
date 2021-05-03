@@ -12,8 +12,8 @@ namespace Platformer.Player
     {
 
         private PlayerController player;
-        float direction = 0f;
-        float lastDirection = 0f;
+        private float direction = 0f;
+        private float walkFriction = 5;
 
         public PlayerMovingState(PlayerController player)
         {
@@ -44,29 +44,29 @@ namespace Platformer.Player
 
         private void performMove()
         {
-            Vector2 directionVector = Vector2.zero;
             direction = player.movingDirection;
+            float newHorizontalVelocity = 0;
+
             if (direction > 0)
             {
-                directionVector += Vector2.right;
+                newHorizontalVelocity = Mathf.Min(direction * player.maxSpeed, player.maxSpeed);
             }
             if (direction < 0)
             {
-                directionVector += Vector2.left;
+                newHorizontalVelocity = Mathf.Max(direction * player.maxSpeed, -player.maxSpeed);
             }
 
-            if (-direction == lastDirection)
+            if(Math.Abs(PhisicsController.GetVelocity(player).x) <= player.maxSpeed)
             {
-                PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
+                
+                PhisicsController.SetVelocity(player, new Vector2(newHorizontalVelocity, PhisicsController.GetVelocity(player).y));
             }
-            else if (Mathf.Abs(player.rigidBody.velocity.x) < player.maxSpeed)
+            else
             {
-
-                //Si el incremento de velocidad del Player y la velocidad maxima no son multiplos es posible que el Player no tenga una velocidad maxima uniforme
-                PhisicsController.ApplyImpulse(player, directionVector * player.speedIncrement);
+                PhisicsController.ApplyFriction(player, walkFriction);
             }
-
-            lastDirection = direction;
+            
+            
         }
     }
 }
