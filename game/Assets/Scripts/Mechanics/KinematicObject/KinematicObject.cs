@@ -14,7 +14,7 @@ namespace Platformer.Mechanics
         public Rigidbody2D rigidBody;
         public Collider2D mycollider;
         private KinematicObjectCollisionManager collisionManager;
-        private GravityManager gravityManager;
+        private KinematicObjectGravityManager gravityManager;
 
         public bool simulatingPhysics = true;
         private bool grounded = true;
@@ -27,7 +27,7 @@ namespace Platformer.Mechanics
             rigidBody = GetComponent<Rigidbody2D>();
             mycollider = GetComponent<Collider2D>();
             collisionManager = new KinematicObjectCollisionManager(this);
-            gravityManager = new GravityManager(this);
+            gravityManager = new KinematicObjectGravityManager(this);
         }
 
         protected virtual void FixedUpdate()
@@ -44,6 +44,10 @@ namespace Platformer.Mechanics
                 {
                     grounded = false;
                 }
+            }
+            else
+            {
+                PhisicsController.SetVelocity(this, Vector2.zero);
             }
                 
         }

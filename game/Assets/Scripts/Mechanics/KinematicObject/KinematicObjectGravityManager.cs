@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace Platformer.Mechanics
 {
-    public class GravityManager
+    public class KinematicObjectGravityManager
     {
         private KinematicObject kineObj;
         private List<Vector2> gravityAltertions;
 
-        public GravityManager(KinematicObject kineObj)
+        public KinematicObjectGravityManager(KinematicObject kineObj)
         {
             this.kineObj = kineObj;
             gravityAltertions = new List<Vector2>();
