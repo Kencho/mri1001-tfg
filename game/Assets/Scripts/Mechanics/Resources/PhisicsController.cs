@@ -10,9 +10,10 @@ namespace Platformer.Physics
     public class PhisicsController
     {
 
-        public static void SimulateGarvity(KinematicObject kinematicObj)
+        public static void SimulateGarvity(KinematicObject kinematicObj, Vector2 gravityModifier)
         {
-            kinematicObj.rigidBody.velocity += Physics2D.gravity * Time.deltaTime;
+            Vector2 gravityEffect = Physics2D.gravity + gravityModifier;
+            kinematicObj.rigidBody.velocity += gravityEffect * Time.deltaTime;
         }
 
         public static void ApplyForce(KinematicObject kinematicObj, Vector2 force)
