@@ -44,19 +44,19 @@ namespace Platformer.Player
 
         private void performMove()
         {
-            direction = player.movingDirection;
+            direction = player.MovingDirection;
             float newHorizontalVelocity = 0;
 
             if (direction > 0)
             {
-                newHorizontalVelocity = Mathf.Min(direction * player.maxSpeed, player.maxSpeed);
+                newHorizontalVelocity = Mathf.Min(direction * PlayerController.MAX_SPEED, PlayerController.MAX_SPEED);
             }
             if (direction < 0)
             {
-                newHorizontalVelocity = Mathf.Max(direction * player.maxSpeed, -player.maxSpeed);
+                newHorizontalVelocity = Mathf.Max(direction * PlayerController.MAX_SPEED, -PlayerController.MAX_SPEED);
             }
 
-            if(Math.Abs(PhisicsController.GetVelocity(player).x) <= player.maxSpeed)
+            if(Math.Abs(PhisicsController.GetVelocity(player).x) <= PlayerController.MAX_SPEED)
             {
                 
                 PhisicsController.SetVelocity(player, new Vector2(newHorizontalVelocity, PhisicsController.GetVelocity(player).y));

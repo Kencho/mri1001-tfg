@@ -14,19 +14,18 @@ namespace Platformer.Player
     public class PlayerController : KinematicObject
     {
 
-        public float maxSpeed = 5f;
-        public float speedIncrement = 0.5f;
-        public float jumpImpulse = 5f;
-        public float maxAirSpeed = 4f;
+        public const float MAX_SPEED = 5f;
+        public const float JUMP_IMPULSE = 5f;
+        public const float MAX_AIR_SPEED = 4f;
         public const float DASH_COLDOWN = 0.7f;
         private float timeWithOutFlash = 0;
 
         public bool controlEnabled = true;
         public bool jumplable = true;
         public bool dashable = true;
-        public bool jumping = false;
-        public bool dashing = false;
-        public float movingDirection = 0;
+        private bool jumping = false;
+        private bool dashing = false;
+        private float movingDirection = 0;
 
         public Health health;
         public AudioSource audioSource;
@@ -37,7 +36,10 @@ namespace Platformer.Player
         public AudioClip respawnAudio;
 
         public PlayerState playerState;
-        public float n = 0;
+
+        public bool Jumping { get => jumping;}
+        public bool Dashing { get => dashing;}
+        public float MovingDirection { get => movingDirection;}
 
         protected override void Awake()
         {
@@ -117,7 +119,7 @@ namespace Platformer.Player
 
         private void AnimarMovimientoPlayer()
         {
-            animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / maxSpeed);
+            animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / MAX_SPEED);
             animator.SetFloat("velocityY", rigidBody.velocity.y);
             animator.SetBool("grounded", Grounded);
 
@@ -145,7 +147,7 @@ namespace Platformer.Player
         {
             jumping = false;
             jumplable = false;
-            PhisicsController.ApplyImpulse(this, Vector2.up * jumpImpulse);
+            PhisicsController.ApplyImpulse(this, Vector2.up * JUMP_IMPULSE);
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = this;
         }

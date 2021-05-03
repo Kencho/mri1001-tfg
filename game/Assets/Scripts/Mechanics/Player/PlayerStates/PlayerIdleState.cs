@@ -37,7 +37,7 @@ namespace Platformer.Player
             }
             else
             {
-                if (Mathf.Abs(player.movingDirection) > 0.001f)
+                if (Mathf.Abs(player.MovingDirection) > 0.001f)
                 {
                     player.playerState = new PlayerMovingState(player);
                 }

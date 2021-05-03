@@ -26,7 +26,7 @@ namespace Platformer.Player
 
         public void FixedUpdateState()
         {
-            if(player.movingDirection != 0)
+            if(player.MovingDirection != 0)
             {
                 player.playerState = new PlayerMovingState(player);
             }

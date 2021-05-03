@@ -38,13 +38,13 @@ namespace Platformer.Player
 
         private void MoveInAir()
         {
-            if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= player.maxAirSpeed)
+            if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= PlayerController.MAX_AIR_SPEED)
             {
-                PhisicsController.SetVelocity(player, new Vector2(player.maxAirSpeed * player.movingDirection, PhisicsController.GetVelocity(player).y));
+                PhisicsController.SetVelocity(player, new Vector2(PlayerController.MAX_AIR_SPEED * player.MovingDirection, PhisicsController.GetVelocity(player).y));
             }
             else
             {
-                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * player.movingDirection, 0));
+                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * player.MovingDirection, 0));
             }
             
             

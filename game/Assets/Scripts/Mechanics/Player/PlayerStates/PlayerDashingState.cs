@@ -55,7 +55,6 @@ namespace Platformer.Player
 
         private void exitDash()
         {
-            this.player.dashing = false;
             PhisicsController.SetVelocity(this.player, Vector2.zero);
             this.player.animator.SetBool("dashing", false);
             this.player.playerState = new PlayerStopingState(this.player);

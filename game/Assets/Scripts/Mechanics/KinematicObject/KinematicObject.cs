@@ -13,7 +13,7 @@ namespace Platformer.Mechanics
 
         public Rigidbody2D rigidBody;
         public Collider2D mycollider;
-        public KinematicObjectCollisionManager collisionManager;
+        private KinematicObjectCollisionManager collisionManager;
 
         public bool simulatingPhysics = true;
         private bool grounded = true;
