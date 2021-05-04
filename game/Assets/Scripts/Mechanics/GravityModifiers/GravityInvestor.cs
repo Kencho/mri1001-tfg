@@ -13,9 +13,14 @@ namespace Platformer.Mechanics
             KinematicObject kineObj = collision.gameObject.GetComponent<KinematicObject>();
             if (kineObj != null)
             {
-                gravityInvestorManager.InverGravityOfKinematicObject(kineObj);
+                InverGravityOfKinematicObject(kineObj);
                 kineObj.transform.Rotate(new Vector3(180, 0, 0));
             }
+        }
+
+        private void InverGravityOfKinematicObject(KinematicObject kineObj)
+        {
+            gravityInvestorManager.InverGravityOfKinematicObject(kineObj);
         }
     }
 }

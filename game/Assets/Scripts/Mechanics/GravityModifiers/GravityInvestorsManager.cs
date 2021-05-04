@@ -15,9 +15,14 @@ namespace Platformer.Mechanics
 
         private void FixedUpdate()
         {
-            foreach(KinematicObject kineObj in AfectedKineObjs)
+            ApplyGravityInvestedToAfectedKineObjs();
+        }
+
+        private void ApplyGravityInvestedToAfectedKineObjs()
+        {
+            foreach (KinematicObject kineObj in AfectedKineObjs)
             {
-                kineObj.ApplyGravityAlteration(-2*Physics2D.gravity); //from gravity to -gravity -> -2*gravity unities
+                kineObj.ApplyGravityAlteration(-2 * Physics2D.gravity); //from gravity to -gravity -> -2*gravity unities
             }
         }
 
