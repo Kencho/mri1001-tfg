@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics
 {
-    public class GravityInvestor : MonoBehaviour
+    public class GravityInverter : MonoBehaviour
     {
-        public GravityInvestorsManager gravityInvestorManager;
+        public GravityInverterManager gravityInverterManager;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -20,7 +20,7 @@ namespace Platformer.Mechanics
 
         private void InverGravityOfKinematicObject(KinematicObject kineObj)
         {
-            gravityInvestorManager.InverGravityOfKinematicObject(kineObj);
+            gravityInverterManager.InverGravityOfKinematicObject(kineObj);
         }
     }
 }

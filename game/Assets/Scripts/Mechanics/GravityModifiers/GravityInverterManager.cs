@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Platformer.Mechanics
 {
-    public class GravityInvestorsManager : MonoBehaviour
+    public class GravityInverterManager : MonoBehaviour
     {
         private List<KinematicObject> AfectedKineObjs;
 
@@ -15,10 +15,10 @@ namespace Platformer.Mechanics
 
         private void FixedUpdate()
         {
-            ApplyGravityInvestedToAfectedKineObjs();
+            ApplyGravityInversionToAfectedKineObjs();
         }
 
-        private void ApplyGravityInvestedToAfectedKineObjs()
+        private void ApplyGravityInversionToAfectedKineObjs()
         {
             foreach (KinematicObject kineObj in AfectedKineObjs)
             {

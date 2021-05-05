@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b432031bb44974a8b98136b2790570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityInvestorManager: {fileID: 0}
+  gravityInverterManager: {fileID: 0}
