@@ -15219,6 +15219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravityInverter
       objectReference: {fileID: 0}
+    - target: {fileID: 2716758706520416538, guid: dc6920cf6bae8aa408db0a32bbc15173,
+        type: 3}
+      propertyPath: m_Name
+      value: Gravity Inverter
+      objectReference: {fileID: 0}
     - target: {fileID: 5810682019088949320, guid: dc6920cf6bae8aa408db0a32bbc15173,
         type: 3}
       propertyPath: m_RootOrder
@@ -15273,6 +15278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351329948561622386, guid: dc6920cf6bae8aa408db0a32bbc15173,
+        type: 3}
+      propertyPath: m_Name
+      value: Gravity Inverter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc6920cf6bae8aa408db0a32bbc15173, type: 3}

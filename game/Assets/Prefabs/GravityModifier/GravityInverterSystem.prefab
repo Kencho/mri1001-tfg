@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5810682019088949320}
   - component: {fileID: 3629516202304796234}
   m_Layer: 0
-  m_Name: GravityInverter
+  m_Name: GravityInverterSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 9049888111344695600, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
       propertyPath: m_Name
-      value: Gravity Investor
+      value: Gravity Inverter
       objectReference: {fileID: 0}
     - target: {fileID: 9049888111344695612, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 9049888111344695600, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
       propertyPath: m_Name
-      value: Gravity Investor
+      value: Gravity Inverter
       objectReference: {fileID: 0}
     - target: {fileID: 9049888111344695612, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
