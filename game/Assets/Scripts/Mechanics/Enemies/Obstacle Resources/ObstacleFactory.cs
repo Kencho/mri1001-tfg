@@ -1,4 +1,6 @@
 ﻿using Platformer.Animation;
+using Platformer.Core;
+using Platformer.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +15,9 @@ namespace Platformer.Enemies
         public void SpawnObject()
         {
             GameObject prefabInstance = Instantiate(prefab, transform.position, Quaternion.identity);
-        }
+
+            PlatformerModel.gameController.AddInstancedObject(prefabInstance);
+    }
 
     }
 }

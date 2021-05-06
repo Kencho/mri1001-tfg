@@ -15,8 +15,6 @@ namespace Platformer.Gameplay
         public PlayerController player;
         public TokenInstance token;
 
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
-
         public override void Execute()
         {
             AudioSource.PlayClipAtPoint(token.tokenCollectAudio, token.transform.position);

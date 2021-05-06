@@ -1,5 +1,6 @@
 using UnityEngine;
 using Platformer.Player;
+using Platformer.Core;
 
 namespace Platformer.Model
 {
@@ -9,23 +10,25 @@ namespace Platformer.Model
     /// on the data. It is initialised with data in the GameController class.
     /// </summary>
     [System.Serializable]
-    public class PlatformerModel
+    public static class PlatformerModel
     {
         /// <summary>
         /// The virtual camera in the scene.
         /// </summary>
-        public Cinemachine.CinemachineVirtualCamera virtualCamera;
+        public static Cinemachine.CinemachineVirtualCamera virtualCamera;
 
         /// <summary>
         /// The main component which controls the player sprite, controlled 
         /// by the user.
         /// </summary>
-        public PlayerController player;
+        public static PlayerController player;
 
         /// <summary>
         /// The spawn point in the scene.
         /// </summary>
-        public Transform spawnPoint;
+        public static Transform spawnPoint;
+
+        public static GameController gameController;
 
     }
 }

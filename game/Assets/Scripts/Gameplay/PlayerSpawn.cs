@@ -12,20 +12,19 @@ namespace Platformer.Gameplay
     /// </summary>
     public class PlayerSpawn : Simulation.Event<PlayerSpawn>
     {
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {
-            PlayerController player = model.player;
+            PlayerController player = PlatformerModel.player;
             if (player.audioSource && player.respawnAudio)
                 player.audioSource.PlayOneShot(player.respawnAudio);
             player.health.Increment();
-            player.transform.position = model.spawnPoint.transform.position;
+            player.transform.position = PlatformerModel.spawnPoint.transform.position;
             player.animator.SetBool("dead", false);
             PhisicsController.SetVelocity(player, Vector2.zero);
 
-            model.virtualCamera.m_Follow = player.transform;
-            model.virtualCamera.m_LookAt = player.transform;
+            PlatformerModel.virtualCamera.m_Follow = player.transform;
+            PlatformerModel.virtualCamera.m_LookAt = player.transform;
 
             Simulation.Schedule<EnablePlayerInput>(2f);
             player.simulatingPhysics = true;

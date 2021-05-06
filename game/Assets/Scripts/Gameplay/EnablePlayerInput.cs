@@ -9,11 +9,10 @@ namespace Platformer.Gameplay
     /// </summary>
     public class EnablePlayerInput : Simulation.Event<EnablePlayerInput>
     {
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {
-            PlayerController player = model.player;
+            PlayerController player = PlatformerModel.player;
             player.simulatingPhysics = true;
             player.controlEnabled = true;
             player.playerState = new PlayerIdleState(player);

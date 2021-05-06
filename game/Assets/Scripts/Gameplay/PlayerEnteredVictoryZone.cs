@@ -14,12 +14,10 @@ namespace Platformer.Gameplay
     {
         public VictoryZone victoryZone;
 
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
-
         public override void Execute()
         {
-            model.player.animator.SetTrigger("victory");
-            model.player.controlEnabled = false;
+            PlatformerModel.player.animator.SetTrigger("victory");
+            PlatformerModel.player.controlEnabled = false;
         }
     }
 }

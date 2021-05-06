@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Platformer.Core;
 using Platformer.Model;
@@ -13,26 +14,34 @@ namespace Platformer.Gameplay
     /// <typeparam name="PlayerDeath"></typeparam>
     public class PlayerDeath : Simulation.Event<PlayerDeath>
     {
-        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
-
         public override void Execute()
         {
-            PlayerController player = model.player;
+            PlayerController player = PlatformerModel.player;
             if (player.health.IsAlive)
             {
-                player.health.Die();
-                model.virtualCamera.m_Follow = null;
-                model.virtualCamera.m_LookAt = null;
-                player.simulatingPhysics = false;
-                player.controlEnabled = false;
-                player.playerState = new PlayerDeadState(player);
-
-                if (player.audioSource && player.ouchAudio)
-                    player.audioSource.PlayOneShot(player.ouchAudio);
-                player.animator.SetTrigger("hurt");
-                player.animator.SetBool("dead", true);
+                SetDeathSettings(player);
+                PlatformerModel.virtualCamera.m_Follow = null;
+                PlatformerModel.virtualCamera.m_LookAt = null;
+                SetDeathAnimationAndSounds(player);
                 Simulation.Schedule<PlayerSpawn>(2);
+                Simulation.Schedule<SetGameInitialState>();
             }
+        }
+
+        private void SetDeathSettings(PlayerController player)
+        {
+            player.health.Die();
+            player.simulatingPhysics = false;
+            player.controlEnabled = false;
+            player.playerState = new PlayerDeadState(player);
+        }
+
+        private void SetDeathAnimationAndSounds(PlayerController player)
+        {
+            if (player.audioSource && player.ouchAudio)
+                player.audioSource.PlayOneShot(player.ouchAudio);
+            player.animator.SetTrigger("hurt");
+            player.animator.SetBool("dead", true);
         }
     }
 }
