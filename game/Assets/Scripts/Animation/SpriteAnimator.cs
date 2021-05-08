@@ -9,7 +9,7 @@ namespace Platformer.Animation
         public Sprite[] spriteSet;
         public float frameRate;
         public SpriteRenderer rendererOfSprites;
-        private float nextFrameTime;
+        private float lastFrameTime;
         protected int spriteIndex;
 
         private void Awake()
@@ -17,13 +17,11 @@ namespace Platformer.Animation
             rendererOfSprites = GetComponent<SpriteRenderer>();
         }
 
-        // Start is called before the first frame update
         void Start()
         {
             spriteIndex = 12;
         }
 
-        // Update is called once per frame
         void Update()
         {
             UpdateSprite();
@@ -31,11 +29,11 @@ namespace Platformer.Animation
 
         protected void UpdateSprite()
         {
-            if (Time.time - nextFrameTime > (1f / frameRate))
+            if (Time.time - lastFrameTime > (1f / frameRate))
             {
                 spriteIndex = ++spriteIndex % spriteSet.Length;
                 rendererOfSprites.sprite = spriteSet[spriteIndex];
-                nextFrameTime += 1f / frameRate;
+                lastFrameTime += 1f / frameRate;
             }
 
         }
