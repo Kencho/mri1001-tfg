@@ -25,20 +25,25 @@ namespace Platformer.Core
         private void Awake()
         {
             instancedObjects = new List<GameObject>();
+            gravityInverter = GetComponent<GravityInverterManager>();
+            SetStartingObjects();
+            SetStartingState();
+        }
+
+        private void SetPlatformerVariables()
+        {
             PlatformerModel.gameController = GetInstance();
             PlatformerModel.player = player;
             PlatformerModel.spawnPoint = spawnPoint;
             PlatformerModel.virtualCamera = virtualCamera;
-            gravityInverter = GetComponent<GravityInverterManager>();
             PlatformerModel.gravityInverterManager = gravityInverter;
-            SetStartingObjects();
-            SetStartingState();
         }
 
         public GameController GetInstance()
         {
             if (instance == null)
             {
+                SetPlatformerVariables();
                 instance = this;
             }
 
@@ -71,8 +76,8 @@ namespace Platformer.Core
         public void SetStartingState(float instantiateDelay = 0)
         {
             DestroyInstancedObjects();
-            StartCoroutine(InstanceStatingObjects(instantiateDelay));
             gravityInverter.ResetAfectedKineObjs();
+            StartCoroutine(InstanceStatingObjects(instantiateDelay));
         }
 
         private IEnumerator InstanceStatingObjects(float delay)
