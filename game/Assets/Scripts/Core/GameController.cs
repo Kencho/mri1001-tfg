@@ -1,5 +1,6 @@
 using Cinemachine;
 using Platformer.Core;
+using Platformer.Mechanics;
 using Platformer.Model;
 using Platformer.Player;
 using System;
@@ -14,6 +15,7 @@ namespace Platformer.Core
         public PlayerController player;
         public Transform spawnPoint;
         public CinemachineVirtualCamera virtualCamera;
+        private GravityInverterManager gravityInverter;
         private GameController instance;
 
         public List<GameObject> initialObjects;
@@ -27,6 +29,8 @@ namespace Platformer.Core
             PlatformerModel.player = player;
             PlatformerModel.spawnPoint = spawnPoint;
             PlatformerModel.virtualCamera = virtualCamera;
+            gravityInverter = GetComponent<GravityInverterManager>();
+            PlatformerModel.gravityInverterManager = gravityInverter;
             SetStartingObjects();
             SetStartingState();
         }
@@ -68,6 +72,7 @@ namespace Platformer.Core
         {
             DestroyInstancedObjects();
             StartCoroutine(InstanceStatingObjects(instantiateDelay));
+            gravityInverter.ResetAfectedKineObjs();
         }
 
         private IEnumerator InstanceStatingObjects(float delay)

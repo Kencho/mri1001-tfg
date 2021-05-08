@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5810682019088949320}
-  - component: {fileID: 3629516202304796234}
   m_Layer: 0
   m_Name: GravityInverterSystem
   m_TagString: Untagged
@@ -24,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316835044183694083}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.260467, y: -1.6267002, z: -34.672672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -33,18 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3629516202304796234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316835044183694083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e96ee00b6d1b84e94721db16370ee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2716758705519197250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,7 +48,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gravityInverterManager
       value: 
-      objectReference: {fileID: 3629516202304796234}
+      objectReference: {fileID: 0}
     - target: {fileID: 9049888111344695614, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
       propertyPath: m_RootOrder
@@ -141,7 +128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gravityInverterManager
       value: 
-      objectReference: {fileID: 3629516202304796234}
+      objectReference: {fileID: 0}
     - target: {fileID: 9049888111344695612, guid: 7b0c858cbc0a70544a4b04b175f64f33,
         type: 3}
       propertyPath: gravityInvestorManager

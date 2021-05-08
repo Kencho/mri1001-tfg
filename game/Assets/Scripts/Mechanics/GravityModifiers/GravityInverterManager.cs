@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,6 +41,10 @@ namespace Platformer.Mechanics
 
         public void ResetAfectedKineObjs()
         {
+            foreach(KinematicObject kineObj in AfectedKineObjs)
+            {
+                kineObj.transform.Rotate(new Vector3(180, 0, 0));
+            }
             AfectedKineObjs = new List<KinematicObject>();
         }
     }

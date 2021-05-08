@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 385364079736635841}
   - component: {fileID: 385364079736635842}
   - component: {fileID: 385364079736635840}
+  - component: {fileID: 414116802}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -161,3 +162,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   virtualCamera: {fileID: 0}
   initialObjects: []
+--- !u!114 &414116802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385364079736635843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e96ee00b6d1b84e94721db16370ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
