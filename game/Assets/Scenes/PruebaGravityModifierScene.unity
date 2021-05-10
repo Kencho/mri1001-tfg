@@ -1155,6 +1155,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1bd12ebb35d4dc997aa0c5494eda9b, type: 3}
+--- !u!114 &501306767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4009130065698333724, guid: 9a1bd12ebb35d4dc997aa0c5494eda9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 501306766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fa2f9ea4cb54f34aaac731aabe3733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &585788812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1493,6 +1505,11 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 889962065}
+    - target: {fileID: 385364079736635841, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
+        type: 3}
+      propertyPath: mainMenu
+      value: 
+      objectReference: {fileID: 501306767}
     - target: {fileID: 385364079736635843, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
         type: 3}
       propertyPath: m_Name

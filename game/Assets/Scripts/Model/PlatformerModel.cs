@@ -19,5 +19,7 @@ namespace Platformer.Model
         public static GameController gameController;
 
         public static GravityInverterManager gravityInverterManager;
+
+        public static TimeManager timeManager;
     }
 }

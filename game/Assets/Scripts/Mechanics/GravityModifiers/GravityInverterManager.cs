@@ -41,10 +41,14 @@ namespace Platformer.Mechanics
 
         public void ResetAfectedKineObjs()
         {
-            foreach(KinematicObject kineObj in AfectedKineObjs)
+            if(AfectedKineObjs != null)
             {
-                kineObj.transform.Rotate(new Vector3(180, 0, 0));
+                foreach (KinematicObject kineObj in AfectedKineObjs)
+                {
+                    kineObj.transform.Rotate(new Vector3(180, 0, 0));
+                }
             }
+            
             AfectedKineObjs = new List<KinematicObject>();
         }
     }

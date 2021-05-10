@@ -57,7 +57,8 @@ namespace Platformer.Mechanics
             Vector2 currentSection = path[currentPathSection];
             Vector2 nextSection = path[nextPathSection];
 
-            return ((nextSection - currentSection) * Time.deltaTime) / sectionsDuration[currentPathSection];
+            return ((nextSection - currentSection) * Time.deltaTime)/ sectionsDuration[currentPathSection];
+            
         }
 
         private bool isSectiontraveled(int nextSection)

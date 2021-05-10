@@ -16,6 +16,7 @@ namespace Platformer.Core
         public Transform spawnPoint;
         public CinemachineVirtualCamera virtualCamera;
         private GravityInverterManager gravityInverter;
+        private TimeManager timeManager;
         private GameController instance;
 
         public List<GameObject> initialObjects;
@@ -26,6 +27,7 @@ namespace Platformer.Core
         {
             instancedObjects = new List<GameObject>();
             gravityInverter = GetComponent<GravityInverterManager>();
+            timeManager = GetComponent<TimeManager>();
             SetStartingObjects();
             SetStartingState();
         }
@@ -37,6 +39,7 @@ namespace Platformer.Core
             PlatformerModel.spawnPoint = spawnPoint;
             PlatformerModel.virtualCamera = virtualCamera;
             PlatformerModel.gravityInverterManager = gravityInverter;
+            PlatformerModel.timeManager = timeManager;
         }
 
         public GameController GetInstance()

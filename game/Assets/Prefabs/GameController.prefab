@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 385364079736635842}
   - component: {fileID: 385364079736635840}
   - component: {fileID: 414116802}
+  - component: {fileID: 719802777}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -46,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f4a4ae3a36547dd915a91ceebed970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 4009130065698333724, guid: 9a1bd12ebb35d4dc997aa0c5494eda9b,
-    type: 3}
+  mainMenu: {fileID: 0}
   gamePlayCanvasii: []
   gameController: {fileID: 385364079736635840}
 --- !u!82 &385364079736635842
@@ -172,5 +172,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66e96ee00b6d1b84e94721db16370ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &719802777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385364079736635843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca76eb61a73857c4491386476fbfe9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

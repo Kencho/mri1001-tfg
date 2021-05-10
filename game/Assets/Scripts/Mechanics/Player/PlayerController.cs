@@ -7,6 +7,7 @@ using Platformer.Physics;
 using System;
 using Platformer.Resources;
 using Platformer.Gameplay;
+using Platformer.Model;
 
 namespace Platformer.Player
 {
@@ -18,13 +19,19 @@ namespace Platformer.Player
         public const float JUMP_IMPULSE = 5f;
         public const float MAX_AIR_SPEED = 4f;
         public const float DASH_COLDOWN = 0.7f;
+        public const float BULLET_TIME_COLDOWN = 5f;
+        public const float BULLET_TIME_DURATION = 1f;
+        public const float TIME_SCALE = 0.4f;
         private float timeWithOutFlash = 0;
+        private float timeWithOutBulletTime = 0;
 
         public bool controlEnabled = true;
         public bool jumplable = true;
         public bool dashable = true;
+        private bool bulletTimeAbble = true;
         private bool jumping = false;
         private bool dashing = false;
+        private bool applingBulletTime = false;
         private float movingDirection = 0;
 
         public Health health;
@@ -40,6 +47,7 @@ namespace Platformer.Player
         public bool Jumping { get => jumping;}
         public bool Dashing { get => dashing;}
         public float MovingDirection { get => movingDirection;}
+        public bool ApplingBulletTime { get => applingBulletTime;}
 
         protected override void Awake()
         {
@@ -66,6 +74,7 @@ namespace Platformer.Player
                 manageFlags();
                 manageJump();
                 manageDash();
+                manageBulletTime();
             }
             base.FixedUpdate();
         }
@@ -90,6 +99,15 @@ namespace Platformer.Player
                 dashing = false;
             }
 
+            if (Input.GetButton("BulletTime"))
+            {
+                applingBulletTime = true;
+            }
+            else
+            {
+                applingBulletTime = false;
+            }
+
             movingDirection = Input.GetAxis("HorizontalMove");
         }
 
@@ -110,10 +128,24 @@ namespace Platformer.Player
                         timeWithOutFlash = 0;
                     }
                 }
+
             }
             else
             {
                 jumplable = false;
+            }
+
+            if (bulletTimeAbble == false)
+            {
+                if (timeWithOutBulletTime < BULLET_TIME_COLDOWN)
+                {
+                    timeWithOutBulletTime += Time.fixedDeltaTime;
+                }
+                else
+                {
+                    bulletTimeAbble = true;
+                    timeWithOutBulletTime = 0;
+                }
             }
         }
 
@@ -166,6 +198,15 @@ namespace Platformer.Player
             playerState = new PlayerDashingState(this);
         }
 
+        private void manageBulletTime()
+        {
+            if(applingBulletTime && bulletTimeAbble)
+            {
+                PlatformerModel.timeManager.ScaleTime(TIME_SCALE, BULLET_TIME_DURATION);
+                bulletTimeAbble = false;
+            }
+            
+        }
     }
 
 }
