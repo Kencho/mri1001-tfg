@@ -41,10 +41,11 @@ namespace Platformer.Core
 
         public GameController GetInstance()
         {
+            
             if (instance == null)
             {
-                SetPlatformerVariables();
                 instance = this;
+                SetPlatformerVariables();
             }
 
             return instance;
