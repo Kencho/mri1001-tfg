@@ -8,4 +8,28 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: 2540a16722615684abb2db42167f6194
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: 6c983c83f251eae4aa3228355e52f7c5
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaPlayerScene.unity
+    guid: 4dbc00c92c658f1448ef604f9494a7ea
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaGravityModifierScene.unity
+    guid: 3e9252107b03e714ea166a6cc6838589
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaImpulseCreatorsScene.unity
+    guid: b6d84ed9d638c654d960966365a127ad
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaMovingObstacleScene.unity
+    guid: ee8605032692fa942ac80539c3751c29
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaPortalScene.unity
+    guid: d4604ce260e9f164ba2c70009e809def
+  - enabled: 1
+    path: Assets/Scenes/Levels/PruebaTimeModifiersScene.unity
+    guid: f6b9f56181e072646a4b458f0801db79
   m_configObjects: {}

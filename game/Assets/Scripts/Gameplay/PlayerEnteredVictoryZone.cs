@@ -18,6 +18,7 @@ namespace Platformer.Gameplay
         {
             PlatformerModel.player.animator.SetTrigger("victory");
             PlatformerModel.player.controlEnabled = false;
+            Simulation.Schedule<LoadGameMenu>(2f);
         }
     }
 }
