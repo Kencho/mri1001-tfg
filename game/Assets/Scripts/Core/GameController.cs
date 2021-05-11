@@ -82,6 +82,7 @@ namespace Platformer.Core
             DestroyInstancedObjects();
             gravityInverter.ResetAfectedKineObjs();
             timeManager.ResetTimeAfectedObjects();
+            timeManager.SetDefaultGlobalTime();
             StartCoroutine(InstanceStatingObjects(instantiateDelay));
         }
 

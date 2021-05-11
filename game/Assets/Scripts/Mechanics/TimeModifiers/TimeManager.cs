@@ -6,7 +6,7 @@ namespace Platformer.Mechanics
 {
     public class TimeManager : MonoBehaviour
     {
-        private const float ORIGINAL_TIME_SCALE = 1;
+        public const float DEFAULT_TIME_SCALE = 1;
         private List<TimeAfectedObject> timeAfectedObjects;
 
         private void Awake()
@@ -40,16 +40,21 @@ namespace Platformer.Mechanics
 
         public void ResetTimeScale(TimeAfectedObject timeAfectedObject)
         {
-            timeAfectedObject.SetTimeScale(ORIGINAL_TIME_SCALE);
+            timeAfectedObject.SetTimeScale(DEFAULT_TIME_SCALE);
         }
 
-        public void ScaleGlobalTime(float timeScale, float timeModificationDuration = 0)
+        public void ScaleGlobalTime(float timeScale, float timeModificationDuration = -1)
         {
             Time.timeScale *= timeScale;
-            if (timeModificationDuration != 0)
+            if (timeModificationDuration >= 0)
             {
                 StartCoroutine(UnscaleGlobalTime(timeScale, timeModificationDuration));
             }
+        }
+
+        public void SetDefaultGlobalTime()
+        {
+            Time.timeScale = DEFAULT_TIME_SCALE;
         }
 
         private IEnumerator UnscaleGlobalTime(float timeScale, float timeModificationDuration)

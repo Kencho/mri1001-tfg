@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+namespace Platformer.UI
 {
-    public void LoadScene(string scene)
+    public class MenuManager : MonoBehaviour
     {
-        SceneManager.LoadScene(scene);
-    }
+        public void LoadScene(string scene)
+        {
+            SceneManager.LoadScene(scene);
+        }
 
-    public void QuitAplication()
-    {
-        Application.Quit();
+        public void QuitAplication()
+        {
+            Application.Quit();
+        }
     }
 }
+
