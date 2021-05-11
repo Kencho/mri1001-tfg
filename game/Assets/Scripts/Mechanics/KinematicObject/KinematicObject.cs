@@ -8,7 +8,7 @@ namespace Platformer.Mechanics
 {
 
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-    public class KinematicObject : MonoBehaviour
+    public class KinematicObject : TimeAfectedObject
     {
 
         public Rigidbody2D rigidBody;
@@ -44,18 +44,39 @@ namespace Platformer.Mechanics
                 {
                     grounded = false;
                 }
+
+                Move();
             }
             else
             {
                 PhisicsController.SetVelocity(this, Vector2.zero);
             }
-                
+        }
+
+        protected override void Move()
+        {
+            Vector2 velocity = PhisicsController.GetVelocity(this);
+            Vector2 scaledVelocity = velocity * timeScale;
+            PhisicsController.SetVelocity(this, scaledVelocity);
+        }
+
+        public override void SetTimeScale(float timeScale)
+        {
+            base.SetTimeScale(timeScale);
+            Move();
+        }
+
+        public override void ResetTimeScale()
+        {
+            Vector2 velocity = PhisicsController.GetVelocity(this);
+            Vector2 unScaledVelocity = velocity / timeScale;
+            PhisicsController.SetVelocity(this, unScaledVelocity);
+            base.ResetTimeScale();
         }
 
         public void ApplyGravityAlteration(Vector2 gravityAlteration)
         {
             gravityManager.addGravityAlteration(gravityAlteration);
         }
-
     }
 }

@@ -9,17 +9,29 @@ namespace Platformer.Enemies
     {
         public List<Vector2> travelPath;
         public float pathTimeTravel; //in seconds
-        private PatrolPath path;
+        private TimeAfectedPatrolPath path;
 
         private void Start()
         {
-            path = new PatrolPath(travelPath, pathTimeTravel);
+            path = new TimeAfectedPatrolPath(travelPath, pathTimeTravel);
             transform.position = travelPath[0];
         }
 
-        private void Update()
+        protected override void Move()
         {
             transform.position = path.getNextPathPosition();
+        }
+
+        public override void SetTimeScale(float timeScale)
+        {
+            base.SetTimeScale(timeScale);
+            path.ScaleTime(timeScale);
+        }
+
+        public override void ResetTimeScale()
+        {
+            base.ResetTimeScale();
+            path.UnScaleTime();
         }
     }
 }

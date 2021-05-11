@@ -8,9 +8,11 @@ namespace Platformer.Enemies
     {
         public float speed = 5f;
 
-        private void FixedUpdate()
+        protected override void Move()
         {
-            this.transform.position += (Vector3) Vector2.left * speed * Time.fixedDeltaTime;
+            Vector3 traveledDistance = (Vector3)Vector2.left * speed * Time.fixedDeltaTime;
+            Vector3 timeAfectedTraveledDistance = traveledDistance * timeScale;
+            transform.position += timeAfectedTraveledDistance;
         }
     }
 }

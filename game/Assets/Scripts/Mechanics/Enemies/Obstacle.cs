@@ -8,13 +8,18 @@ using Platformer.Player;
 
 namespace Platformer.Enemies
 {
-    public class Obstacle : MonoBehaviour
+    public class Obstacle : TimeAfectedObject
     {
         private Collider2D obstacleCollider;
 
         private void Awake()
         {
             obstacleCollider = GetComponent<Collider2D>();
+        }
+
+        private void FixedUpdate()
+        {
+            Move();
         }
 
         void OnCollisionEnter2D(Collision2D collision)
@@ -25,6 +30,11 @@ namespace Platformer.Enemies
                 PlayerObstacleCollision ev = Simulation.Schedule<PlayerObstacleCollision>();
                 ev.player = player;
             }
+        }
+
+        protected override void Move()
+        {
+
         }
     }
 }

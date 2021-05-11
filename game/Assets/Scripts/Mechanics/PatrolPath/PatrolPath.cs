@@ -9,6 +9,7 @@ namespace Platformer.Mechanics
     {
         private List<Vector2> path;
         private List<float> sectionsDuration; //in seconds
+        protected float pathDuration;
         private int currentPathSection;
         private Vector2 currentPosition;
 
@@ -18,12 +19,13 @@ namespace Platformer.Mechanics
         public PatrolPath(List<Vector2> path, float pathDuration)
         {
             this.path = path;
+            this.pathDuration = pathDuration;
             AssignSectionsDuration(pathDuration);
             currentPathSection = 0;
             currentPosition = path[0];
         }
 
-        private void AssignSectionsDuration(float pathDuration)
+        protected void AssignSectionsDuration(float pathDuration)
         {
             float totalDistance = 0;
             float[] distances = new float[path.Count];

@@ -202,10 +202,22 @@ namespace Platformer.Player
         {
             if(applingBulletTime && bulletTimeAbble)
             {
-                PlatformerModel.timeManager.ScaleTime(TIME_SCALE, BULLET_TIME_DURATION);
+                PlatformerModel.timeManager.ScaleGlobalTime(TIME_SCALE, BULLET_TIME_DURATION);
                 bulletTimeAbble = false;
             }
             
+        }
+
+        public override void SetTimeScale(float timeScale)
+        {
+            base.SetTimeScale(timeScale);
+            animator.speed = timeScale;
+        }
+
+        public override void ResetTimeScale()
+        {
+            animator.speed = 1;
+            base.ResetTimeScale();
         }
     }
 
