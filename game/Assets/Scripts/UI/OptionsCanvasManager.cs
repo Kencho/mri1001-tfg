@@ -1,24 +1,22 @@
-﻿using Platformer.Core;
+﻿using System;
+using Platformer.Core;
 using Platformer.Gameplay;
-using Platformer.Mechanics;
-using Platformer.Model;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Platformer.UI
 {
     public class OptionsCanvasManager : MonoBehaviour
     {
-        public Canvas optionsPanel;
+        private Canvas optionsPanel;
+        public GameObject eventSystem;
         private bool panelActived;
         private float timeScaleBeforePanel;
 
         private void Awake()
         {
             InitialiceOptionsPanel();
-            timeScaleBeforePanel = 0;
+            panelActived = false;
             ResumeGameExecution();
         }
 
@@ -39,18 +37,18 @@ namespace Platformer.UI
                     PauseGameExecution();
                 }
             }
-
             
             if(panelActived == false)
             {
                 ResumeGameExecution();
             }
 
-            
+            eventSystem.SetActive(panelActived);
         }
 
         private void PauseGameExecution()
         {
+            Simulation.Schedule<DisablePlayerInput>();
             timeScaleBeforePanel = Time.timeScale;
             Time.timeScale = 0;
         }
@@ -62,6 +60,7 @@ namespace Platformer.UI
                 optionsPanel.enabled = panelActived;
                 Time.timeScale = timeScaleBeforePanel;
                 timeScaleBeforePanel = 0;
+                Simulation.Schedule<EnablePlayerInput>(0.2f);
             }
             
         }

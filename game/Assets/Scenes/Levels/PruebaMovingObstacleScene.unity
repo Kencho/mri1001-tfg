@@ -760,10 +760,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 31202203, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 31202203, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 320459073, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
       propertyPath: musicReproductor
       value: 
       objectReference: {fileID: 42973431}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8622084912490471386, guid: dd61af79478ff6847b547a3ca0c9d2b3,
         type: 3}
       propertyPath: m_Pivot.x
