@@ -190,6 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3846929833ff47749b911b26fa941bda, type: 3}
+--- !u!82 &42973431 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 645783805, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 723564737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &98198180
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +760,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320459073, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: musicReproductor
+      value: 
+      objectReference: {fileID: 42973431}
     - target: {fileID: 8622084912490471386, guid: dd61af79478ff6847b547a3ca0c9d2b3,
         type: 3}
       propertyPath: m_Pivot.x

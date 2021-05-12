@@ -831,11 +831,6 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 993155660}
-    - target: {fileID: 385364079736635841, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
-        type: 3}
-      propertyPath: mainMenu
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 385364079736635843, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
         type: 3}
       propertyPath: m_Name
@@ -896,8 +891,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 385364079736635841, guid: 7c3c35ff86c78a046b5c8a08dd5121a4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3c35ff86c78a046b5c8a08dd5121a4, type: 3}
 --- !u!1 &644331979
 GameObject:
@@ -1160,6 +1154,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!82 &645783805 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 645783805, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 567248651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &686924453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13381,6 +13381,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 31202203, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 31202203, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 320459073, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: musicReproductor
+      value: 
+      objectReference: {fileID: 645783805}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422890808, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8622084912490471386, guid: dd61af79478ff6847b547a3ca0c9d2b3,
         type: 3}
       propertyPath: m_Pivot.x

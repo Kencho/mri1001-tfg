@@ -758,6 +758,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320459073, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: musicReproductor
+      value: 
+      objectReference: {fileID: 1514481803}
     - target: {fileID: 8622084912490471386, guid: dd61af79478ff6847b547a3ca0c9d2b3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9711,6 +9715,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &1514481803 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 645783805, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590013210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1519809982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9924,7 +9934,7 @@ PrefabInstance:
     - target: {fileID: 385364079736635966, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 385364079736635966, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
         type: 3}
@@ -10421,7 +10431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
       propertyPath: m_LocalPosition.x

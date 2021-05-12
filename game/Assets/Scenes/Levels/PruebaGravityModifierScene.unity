@@ -997,11 +997,6 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 889962065}
-    - target: {fileID: 385364079736635841, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
-        type: 3}
-      propertyPath: mainMenu
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 385364079736635843, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
         type: 3}
       propertyPath: m_Name
@@ -14126,6 +14121,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1852339680 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 645783805, guid: 7c3c35ff86c78a046b5c8a08dd5121a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 870273879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1897035468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14400,6 +14401,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320459073, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
+      propertyPath: musicReproductor
+      value: 
+      objectReference: {fileID: 1852339680}
     - target: {fileID: 8622084912490471386, guid: dd61af79478ff6847b547a3ca0c9d2b3,
         type: 3}
       propertyPath: m_Pivot.x
