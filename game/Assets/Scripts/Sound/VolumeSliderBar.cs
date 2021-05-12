@@ -1,52 +1,48 @@
-﻿using System;
+﻿using Platformer.Sound;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeSliderBar : MonoBehaviour
+namespace Platformer.UI
 {
-    public AudioSource musicReproductor;
-    private Slider volumeSlider;
-    public Text volumeText;
-    private float volume;
-    private const string PATH = "Files/volume.txt";
-
-    private void Awake()
+    public class VolumeSliderBar : MonoBehaviour
     {
-        volumeSlider = GetComponent<Slider>();
-        LoadVolumeFromFile();
-        SetVolumeSettings();
-        volumeSlider.value = volume;
-    }
+        public AudioSource musicReproductor;
+        private Slider volumeSlider;
+        public Text volumeText;
+        private float volume;
 
-    private void Update()
-    {
-        volume = volumeSlider.value;
-        SetVolumeSettings();
-    }
+        private void Awake()
+        {
+            volume = VolumeManager.LoadVolume();
+            volumeSlider = GetComponent<Slider>();
+            volumeSlider.value = volume;
+        }
 
-    private void OnDisable()
-    {
-        SaveVolumeInFile();
-    }
+        private void Update()
+        {
+            volume = volumeSlider.value;
+            SetVolumeSettings();
+        }
 
-    private void SetVolumeSettings()
-    {
-        musicReproductor.volume = volume;
-        volumeText.text = ((int)(volume * 100)).ToString();
-    }
+        protected virtual void SetVolumeSettings()
+        {
+            musicReproductor.volume = volume;
+            volumeText.text = GetVolumeText();
+        }
 
-    private void LoadVolumeFromFile()
-    {
-        string volumeFileContent = File.ReadAllText(PATH);
-        volume = float.Parse(volumeFileContent);
-    }
+        protected string GetVolumeText()
+        {
+            return ((int)(volume * 100)).ToString();
+        }
 
-    private void SaveVolumeInFile()
-    {
-        File.Delete(PATH);
-        File.WriteAllText(PATH, volume.ToString());
+        private void OnDisable()
+        {
+            VolumeManager.SaveVolumeInFile(volume);
+        }
     }
 }
+
