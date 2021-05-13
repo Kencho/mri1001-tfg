@@ -12,6 +12,10 @@ namespace Platformer.Player
         public PlayerVictoryState(PlayerController player)
         {
             this.player = player;
+        }
+
+        public void EnterPlayerState()
+        {
             PhisicsController.SetVelocity(player, Vector2.zero);
         }
 
@@ -21,6 +25,11 @@ namespace Platformer.Player
         }
 
         public void UpdateState()
+        {
+            
+        }
+
+        public void ExitPlayerState()
         {
             
         }

@@ -56,7 +56,7 @@ namespace Platformer.Mechanics
         protected override void Move()
         {
             Vector2 velocity = PhisicsController.GetVelocity(this);
-            Vector2 scaledVelocity = velocity * timeScale;
+            Vector2 scaledVelocity = velocity * TimeScale;
             PhisicsController.SetVelocity(this, scaledVelocity);
         }
 
@@ -69,7 +69,7 @@ namespace Platformer.Mechanics
         public override void ResetTimeScale()
         {
             Vector2 velocity = PhisicsController.GetVelocity(this);
-            Vector2 unScaledVelocity = velocity / timeScale;
+            Vector2 unScaledVelocity = velocity / TimeScale;
             PhisicsController.SetVelocity(this, unScaledVelocity);
             base.ResetTimeScale();
         }

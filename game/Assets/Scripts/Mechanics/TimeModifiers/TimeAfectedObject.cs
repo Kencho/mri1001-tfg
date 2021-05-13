@@ -6,7 +6,9 @@ namespace Platformer.Mechanics
 {
     public abstract class TimeAfectedObject : MonoBehaviour
     {
-        protected float timeScale = 1;
+        private float timeScale = 1;
+
+        public float TimeScale { get => timeScale;}
 
         protected abstract void Move();
 

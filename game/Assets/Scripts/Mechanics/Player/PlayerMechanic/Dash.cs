@@ -26,18 +26,17 @@ namespace Platformer.Player
 
         public void ManageFlags()
         {
-            if (player.Grounded)
+            if(dashable == false)
             {
-                if(dashable == false)
+                if (timeWithOutFlash < dashColdown)
                 {
-                    if (timeWithOutFlash < dashColdown)
-                    {
-                        timeWithOutFlash += Time.fixedDeltaTime;
-                    }
-                    else
+                    timeWithOutFlash += Time.fixedDeltaTime;
+                }
+                else
+                {
+                    if (player.Grounded)
                     {
                         dashable = true;
-                        timeWithOutFlash = 0;
                     }
                 }
             }
@@ -66,7 +65,8 @@ namespace Platformer.Player
         private void ExecuteDash()
         {
             dashable = false;
-            player.playerState = new PlayerDashingState(player);
+            timeWithOutFlash = 0;
+            player.ChangeState(new PlayerDashingState(player));
         }
     }
 }

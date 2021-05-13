@@ -34,7 +34,7 @@ namespace Platformer.Player
         public AudioClip ouchAudio;
         public AudioClip respawnAudio;
 
-        public PlayerState playerState;
+        private PlayerState playerState;
 
         public bool Jumping { get => jump.Jumping;}
         public bool Dashing { get => dash.Dashing;}
@@ -49,7 +49,7 @@ namespace Platformer.Player
             audioSource = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
-            playerState = new PlayerIdleState(this);
+            ChangeState(new PlayerIdleState(this));
         }
 
         private void InstantiateMechanics()
@@ -92,6 +92,16 @@ namespace Platformer.Player
             jump.ManageFlags();
             dash.ManageFlags();
             bulletTime.ManageFlags();
+        }
+
+        public void ChangeState(PlayerState playerState)
+        {
+            if(this.playerState != null)
+            {
+                this.playerState.ExitPlayerState();
+            }
+            this.playerState = playerState;
+            this.playerState.EnterPlayerState();
         }
 
         private void AnimarMovimientoPlayer()

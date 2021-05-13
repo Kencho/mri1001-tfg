@@ -17,7 +17,7 @@ namespace Platformer.Gameplay
         {
             if (player.audioSource && player.jumpAudio)
                 player.audioSource.PlayOneShot(player.jumpAudio);
-            player.playerState = new PlayerOnAirState(player);
+            player.ChangeState(new PlayerOnAirState(player));
         }
     }
 }

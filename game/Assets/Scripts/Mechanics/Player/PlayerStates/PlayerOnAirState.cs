@@ -18,6 +18,11 @@ namespace Platformer.Player
             this.player = player;
         }
 
+        public void EnterPlayerState()
+        {
+            
+        }
+
         public void UpdateState()
         {
 
@@ -31,7 +36,7 @@ namespace Platformer.Player
             }
             else
             {
-                player.playerState = new PlayerStopingState(player);
+                player.ChangeState(new PlayerStopingState(player));
             }
         }
 
@@ -46,6 +51,11 @@ namespace Platformer.Player
                 PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * player.MovingDirection, 0));
             }
             
+            
+        }
+
+        public void ExitPlayerState()
+        {
             
         }
     }

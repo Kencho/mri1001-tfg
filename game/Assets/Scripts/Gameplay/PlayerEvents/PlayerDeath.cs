@@ -33,7 +33,7 @@ namespace Platformer.Gameplay
             player.health.Die();
             player.simulatingPhysics = false;
             player.controlEnabled = false;
-            player.playerState = new PlayerDeadState(player);
+            player.ChangeState(new PlayerDeadState(player));
         }
 
         private void SetDeathAnimationAndSounds(PlayerController player)

@@ -19,6 +19,11 @@ namespace Platformer.Player
             this.player = player;
         }
 
+        public void EnterPlayerState()
+        {
+            
+        }
+
         public void UpdateState()
         {
             
@@ -28,21 +33,26 @@ namespace Platformer.Player
         {
             if(player.MovingDirection != 0)
             {
-                player.playerState = new PlayerMovingState(player);
+                player.ChangeState(new PlayerMovingState(player));
             }
             else
             {
                 PhisicsController.ApplyFriction(player, friction);
                 if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
                 {
-                    player.playerState = new PlayerIdleState(player);
+                    player.ChangeState(new PlayerIdleState(player));
                 }
                 if (player.Grounded == false)
                 {
-                    player.playerState = new PlayerOnAirState(player);
+                    player.ChangeState(new PlayerOnAirState(player));
                 }
             }
             
+        }
+
+        public void ExitPlayerState()
+        {
+            PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
         }
     }
 }

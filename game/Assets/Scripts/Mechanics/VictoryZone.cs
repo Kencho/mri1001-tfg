@@ -12,11 +12,11 @@ namespace Platformer.Mechanics
     {
         void OnTriggerEnter2D(Collider2D collider)
         {
-            var p = collider.gameObject.GetComponent<PlayerController>();
+            PlayerController p = collider.gameObject.GetComponent<PlayerController>();
             if (p != null)
             {
-                p.playerState = new PlayerVictoryState(p);
-                var ev = Schedule<PlayerEnteredVictoryZone>();
+                p.ChangeState(new PlayerVictoryState(p));
+                PlayerEnteredVictoryZone ev = Schedule<PlayerEnteredVictoryZone>();
                 ev.victoryZone = this;
             }
         }

@@ -11,7 +11,7 @@ namespace Platformer.Enemies
         protected override void Move()
         {
             Vector3 traveledDistance = (Vector3)Vector2.left * speed * Time.fixedDeltaTime;
-            Vector3 timeAfectedTraveledDistance = traveledDistance * timeScale;
+            Vector3 timeAfectedTraveledDistance = traveledDistance * TimeScale;
             transform.position += timeAfectedTraveledDistance;
         }
     }

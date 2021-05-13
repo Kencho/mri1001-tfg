@@ -17,6 +17,10 @@ namespace Platformer.Player
         public PlayerDashingState(PlayerController player)
         {
             this.player = player;
+        }
+
+        public void EnterPlayerState()
+        {
             timeDashed = 0;
             dashSpeed = calcularDashSpeed();
             this.player.animator.SetBool("dashing", true);
@@ -31,7 +35,7 @@ namespace Platformer.Player
             }
             else
             {
-                ExitDash();
+                this.player.ChangeState(new PlayerStopingState(this.player));
             }
             
         }
@@ -54,11 +58,9 @@ namespace Platformer.Player
             }
         }
 
-        private void ExitDash()
+        public void ExitPlayerState()
         {
-            PhisicsController.SetVelocity(this.player, Vector2.zero);
             this.player.animator.SetBool("dashing", false);
-            this.player.playerState = new PlayerStopingState(this.player);
         }
     }
 }

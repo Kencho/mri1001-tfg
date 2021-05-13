@@ -17,11 +17,14 @@ namespace Platformer.Player
         public PlayerIdleState(PlayerController player)
         {
             this.player = player;
+        }
+
+        public void EnterPlayerState()
+        {
             if (PhisicsController.GetVelocity(player).x != 0)
             {
-                this.player.playerState = new PlayerStopingState(this.player);
+                this.player.ChangeState(new PlayerStopingState(this.player));
             }
-            this.player.animator.SetBool("grounded", true);
         }
 
         public void UpdateState()
@@ -33,18 +36,22 @@ namespace Platformer.Player
         {
             if(player.Grounded == false)
             {
-                player.playerState = new PlayerOnAirState(player);
+                player.ChangeState(new PlayerOnAirState(player));
             }
             else
             {
                 if (Mathf.Abs(player.MovingDirection) > 0.001f)
                 {
-                    player.playerState = new PlayerMovingState(player);
+                    player.ChangeState(new PlayerMovingState(player));
                 }
                 
             }
             
         }
 
+        public void ExitPlayerState()
+        {
+            
+        }
     }
 }

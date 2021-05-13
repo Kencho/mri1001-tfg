@@ -12,7 +12,7 @@ namespace Platformer.Gameplay
             PlayerController player = PlatformerModel.player;
             player.simulatingPhysics = true;
             player.controlEnabled = true;
-            player.playerState = new PlayerIdleState(player);
+            player.ChangeState(new PlayerIdleState(player));
         }
     }
 }

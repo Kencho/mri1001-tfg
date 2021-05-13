@@ -15,12 +15,22 @@ namespace Platformer.Player
             this.player = player;
         }
 
+        public void EnterPlayerState()
+        {
+            
+        }
+
         public void FixedUpdateState()
         {
             
         }
 
         public void UpdateState()
+        {
+            
+        }
+
+        public void ExitPlayerState()
         {
             
         }

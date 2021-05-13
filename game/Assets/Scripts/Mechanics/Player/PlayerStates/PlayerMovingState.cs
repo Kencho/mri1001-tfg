@@ -20,6 +20,11 @@ namespace Platformer.Player
             this.player = player;
         }
 
+        public void EnterPlayerState()
+        {
+            
+        }
+
         public void UpdateState()
         {
 
@@ -29,7 +34,7 @@ namespace Platformer.Player
         {
             if(player.Grounded == false)
             {
-                player.playerState = new PlayerOnAirState(player);
+                player.ChangeState(new PlayerOnAirState(player));
             }
             else
             {
@@ -37,7 +42,7 @@ namespace Platformer.Player
 
                 if (Math.Abs(direction) < 0.001f)
                 {
-                    player.playerState = new PlayerStopingState(player);
+                    player.ChangeState(new PlayerStopingState(player));
                 }
             }
         }
@@ -66,6 +71,11 @@ namespace Platformer.Player
                 PhisicsController.ApplyFriction(player, walkFriction);
             }
             
+            
+        }
+
+        public void ExitPlayerState()
+        {
             
         }
     }

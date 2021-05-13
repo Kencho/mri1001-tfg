@@ -9,6 +9,6 @@ public class DisablePlayerInput : Simulation.Event<DisablePlayerInput>
         PlayerController player = PlatformerModel.player;
         player.simulatingPhysics = false;
         player.controlEnabled = false;
-        player.playerState = new PlayerIdleState(player);
+        player.ChangeState(new PlayerIdleState(player));
     }
 }

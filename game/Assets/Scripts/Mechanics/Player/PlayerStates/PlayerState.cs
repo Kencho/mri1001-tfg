@@ -7,8 +7,12 @@ namespace Platformer.Player
 {
     public interface PlayerState
     {
+        void EnterPlayerState();
+
         void UpdateState();
 
         void FixedUpdateState();
+
+        void ExitPlayerState();
     }
 }

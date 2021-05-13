@@ -8,6 +8,7 @@ namespace Platformer.Mechanics
     {
         public const float DEFAULT_TIME_SCALE = 1;
         private List<TimeAfectedObject> timeAfectedObjects;
+        private Coroutine unscaledRoutine;
 
         private void Awake()
         {
@@ -48,12 +49,16 @@ namespace Platformer.Mechanics
             Time.timeScale *= timeScale;
             if (timeModificationDuration >= 0)
             {
-                StartCoroutine(UnscaleGlobalTime(timeScale, timeModificationDuration));
+                unscaledRoutine = StartCoroutine(UnscaleGlobalTime(timeScale, timeModificationDuration));
             }
         }
 
         public void SetDefaultGlobalTime()
         {
+            if(unscaledRoutine != null)
+            {
+                StopCoroutine(unscaledRoutine);
+            }
             Time.timeScale = DEFAULT_TIME_SCALE;
         }
 
