@@ -31,7 +31,6 @@ namespace Platformer.Player
             }
             else
             {
-                player.dashable = true;
                 player.playerState = new PlayerStopingState(player);
             }
         }

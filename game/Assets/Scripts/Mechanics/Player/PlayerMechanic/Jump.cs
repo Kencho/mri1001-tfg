@@ -62,7 +62,7 @@ namespace Platformer.Player
             jumpable = false;
             Vector2 jumpForce = vectorDirection * jumpImpulse;
             Vector2 forceApplied = PhisicsController.ApplyImpulse(player, jumpForce);
-            jumpForceApplied += forceApplied.magnitude * Time.timeScale;
+            jumpForceApplied += forceApplied.magnitude;
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = player;
             if(jumpForceApplied >= jumpImpulse)

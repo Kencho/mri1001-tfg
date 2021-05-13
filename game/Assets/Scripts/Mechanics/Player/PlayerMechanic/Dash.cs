@@ -13,6 +13,8 @@ namespace Platformer.Player
         private bool dashable;
         private float timeWithOutFlash;
 
+        public bool Dashing { get => dashing;}
+
         public Dash(float dashColdown, PlayerController player)
         {
             this.dashColdown = dashColdown;

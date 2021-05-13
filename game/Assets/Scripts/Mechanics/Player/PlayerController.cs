@@ -17,19 +17,15 @@ namespace Platformer.Player
         public const float DASH_COLDOWN = 0.7f;
         public const float BULLET_TIME_COLDOWN = 5f;
         public const float BULLET_TIME_DURATION = 1f;
-        public const float TIME_SCALE = 0.4f;
-        private float timeWithOutBulletTime = 0;
+        public const float BULLET_TIME_SCALE = 0.4f;
         private Vector2 JumpDirection = Vector2.up;
 
         public bool controlEnabled = true;
-        public bool dashable = true;
-        private bool bulletTimeAbble = true;
-        private bool dashing = false;
-        private bool applingBulletTime = false;
         private float movingDirection = 0;
 
         private Jump jump;
         private Dash dash;
+        private BulletTime bulletTime;
         public Health health;
         public AudioSource audioSource;
         public SpriteRenderer spriteRenderer;
@@ -41,20 +37,26 @@ namespace Platformer.Player
         public PlayerState playerState;
 
         public bool Jumping { get => jump.Jumping;}
-        public bool Dashing { get => dashing;}
+        public bool Dashing { get => dash.Dashing;}
         public float MovingDirection { get => movingDirection;}
-        public bool ApplingBulletTime { get => applingBulletTime;}
+        public bool ApplingBulletTime { get => bulletTime.ApplingBulletTime;}
 
         protected override void Awake()
         {
             base.Awake();
-            jump = new Jump(JUMP_IMPULSE, JumpDirection, this);
-            dash = new Dash(DASH_COLDOWN, this);
+            InstantiateMechanics();
             health = GetComponent<Health>();
             audioSource = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
             playerState = new PlayerIdleState(this);
+        }
+
+        private void InstantiateMechanics()
+        {
+            jump = new Jump(JUMP_IMPULSE, JumpDirection, this);
+            dash = new Dash(DASH_COLDOWN, this);
+            bulletTime = new BulletTime(BULLET_TIME_COLDOWN, BULLET_TIME_DURATION, BULLET_TIME_SCALE, this);
         }
 
         void Update()
@@ -72,7 +74,7 @@ namespace Platformer.Player
                 manageFlags();
                 jump.ExecuteMechanic();
                 dash.ExecuteMechanic();
-                manageBulletTime();
+                bulletTime.ExecuteMechanic();
             }
             base.FixedUpdate();
         }
@@ -81,16 +83,7 @@ namespace Platformer.Player
         {
             jump.ManageInput();
             dash.ManageInput();
-
-            if (Input.GetButton("BulletTime"))
-            {
-                applingBulletTime = true;
-            }
-            else
-            {
-                applingBulletTime = false;
-            }
-
+            bulletTime.ManageInput();
             movingDirection = Input.GetAxis("HorizontalMove");
         }
 
@@ -98,19 +91,7 @@ namespace Platformer.Player
         {
             jump.ManageFlags();
             dash.ManageFlags();
-
-            if (bulletTimeAbble == false)
-            {
-                if (timeWithOutBulletTime < BULLET_TIME_COLDOWN)
-                {
-                    timeWithOutBulletTime += Time.fixedDeltaTime;
-                }
-                else
-                {
-                    bulletTimeAbble = true;
-                    timeWithOutBulletTime = 0;
-                }
-            }
+            bulletTime.ManageFlags();
         }
 
         private void AnimarMovimientoPlayer()
@@ -128,16 +109,6 @@ namespace Platformer.Player
                 spriteRenderer.flipX = false;
             }
            
-        }
-
-        private void manageBulletTime()
-        {
-            if(applingBulletTime && bulletTimeAbble)
-            {
-                PlatformerModel.timeManager.ScaleGlobalTime(TIME_SCALE, BULLET_TIME_DURATION);
-                bulletTimeAbble = false;
-            }
-            
         }
 
         public override void SetTimeScale(float timeScale)
