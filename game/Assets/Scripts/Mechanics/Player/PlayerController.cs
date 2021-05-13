@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Platformer.Mechanics;
 using Platformer.Core;
 using Platformer.Physics;
-using System;
-using Platformer.Resources;
 using Platformer.Gameplay;
 using Platformer.Model;
 
@@ -22,18 +18,18 @@ namespace Platformer.Player
         public const float BULLET_TIME_COLDOWN = 5f;
         public const float BULLET_TIME_DURATION = 1f;
         public const float TIME_SCALE = 0.4f;
-        private float timeWithOutFlash = 0;
         private float timeWithOutBulletTime = 0;
+        private Vector2 JumpDirection = Vector2.up;
 
         public bool controlEnabled = true;
-        public bool jumplable = true;
         public bool dashable = true;
         private bool bulletTimeAbble = true;
-        private bool jumping = false;
         private bool dashing = false;
         private bool applingBulletTime = false;
         private float movingDirection = 0;
 
+        private Jump jump;
+        private Dash dash;
         public Health health;
         public AudioSource audioSource;
         public SpriteRenderer spriteRenderer;
@@ -44,7 +40,7 @@ namespace Platformer.Player
 
         public PlayerState playerState;
 
-        public bool Jumping { get => jumping;}
+        public bool Jumping { get => jump.Jumping;}
         public bool Dashing { get => dashing;}
         public float MovingDirection { get => movingDirection;}
         public bool ApplingBulletTime { get => applingBulletTime;}
@@ -52,6 +48,8 @@ namespace Platformer.Player
         protected override void Awake()
         {
             base.Awake();
+            jump = new Jump(JUMP_IMPULSE, JumpDirection, this);
+            dash = new Dash(DASH_COLDOWN, this);
             health = GetComponent<Health>();
             audioSource = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -72,8 +70,8 @@ namespace Platformer.Player
             {
                 playerState.FixedUpdateState();
                 manageFlags();
-                manageJump();
-                manageDash();
+                jump.ExecuteMechanic();
+                dash.ExecuteMechanic();
                 manageBulletTime();
             }
             base.FixedUpdate();
@@ -81,23 +79,8 @@ namespace Platformer.Player
 
         private void manageInputs()
         {
-            if (Input.GetButton("Jump"))
-            {
-                jumping = true;
-            }
-            else
-            {
-                jumping = false;
-            }
-
-            if (Input.GetButton("Dash"))
-            {
-                dashing = true;
-            }
-            else
-            {
-                dashing = false;
-            }
+            jump.ManageInput();
+            dash.ManageInput();
 
             if (Input.GetButton("BulletTime"))
             {
@@ -113,27 +96,8 @@ namespace Platformer.Player
 
         private void manageFlags()
         {
-            if (Grounded)
-            {
-                jumplable = true;
-                if (dashable == false)
-                {
-                    if (timeWithOutFlash < DASH_COLDOWN)
-                    {
-                        timeWithOutFlash += Time.fixedDeltaTime;
-                    }
-                    else
-                    {
-                        dashable = true;
-                        timeWithOutFlash = 0;
-                    }
-                }
-
-            }
-            else
-            {
-                jumplable = false;
-            }
+            jump.ManageFlags();
+            dash.ManageFlags();
 
             if (bulletTimeAbble == false)
             {
@@ -164,38 +128,6 @@ namespace Platformer.Player
                 spriteRenderer.flipX = false;
             }
            
-        }
-
-        private void manageJump()
-        {
-            
-            if(jumping && jumplable)
-            {
-                jump();
-            }
-        }
-
-        public void jump()
-        {
-            jumping = false;
-            jumplable = false;
-            PhisicsController.ApplyImpulse(this, Vector2.up * JUMP_IMPULSE);
-            PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
-            ev.player = this;
-        }
-
-        private void manageDash()
-        {
-            if(dashing && dashable)
-            {
-                dash();
-            }
-        }
-
-        private void dash()
-        {
-            dashable = false;
-            playerState = new PlayerDashingState(this);
         }
 
         private void manageBulletTime()

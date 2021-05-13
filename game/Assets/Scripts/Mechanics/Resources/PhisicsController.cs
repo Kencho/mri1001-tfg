@@ -16,14 +16,17 @@ namespace Platformer.Physics
             kinematicObj.rigidBody.velocity += gravityEffect * Time.deltaTime;
         }
 
-        public static void ApplyForce(KinematicObject kinematicObj, Vector2 force)
+        public static Vector2 ApplyForce(KinematicObject kinematicObj, Vector2 force)
         {
-            kinematicObj.rigidBody.velocity += force * Time.deltaTime;
+            Vector2 forceTick = force * Time.deltaTime;
+            kinematicObj.rigidBody.velocity += forceTick;
+            return forceTick;
         }
 
-        public static void ApplyImpulse(KinematicObject kinematicObj, Vector2 impulse)
+        public static Vector2 ApplyImpulse(KinematicObject kinematicObj, Vector2 impulse)
         {
             kinematicObj.rigidBody.velocity += impulse;
+            return impulse;
         }
 
         public static void ApplyFriction(KinematicObject kinematicObj, float friction)

@@ -24,15 +24,16 @@ namespace Platformer.Player
 
         public void FixedUpdateState()
         {
-            if(timeDashed < DASH_TIME)
+            if (timeDashed < DASH_TIME)
             {
                 timeDashed += Time.fixedDeltaTime;
                 PhisicsController.SetVelocity(player, new Vector2(dashSpeed, 0));
             }
             else
             {
-                exitDash();
+                ExitDash();
             }
+            
         }
 
         public void UpdateState()
@@ -53,7 +54,7 @@ namespace Platformer.Player
             }
         }
 
-        private void exitDash()
+        private void ExitDash()
         {
             PhisicsController.SetVelocity(this.player, Vector2.zero);
             this.player.animator.SetBool("dashing", false);
