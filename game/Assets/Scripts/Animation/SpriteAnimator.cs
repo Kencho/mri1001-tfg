@@ -22,7 +22,7 @@ namespace Platformer.Animation
             spriteIndex = 12;
         }
 
-        void Update()
+        protected virtual void Update()
         {
             UpdateSprite();
         }

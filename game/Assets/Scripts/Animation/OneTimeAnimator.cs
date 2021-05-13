@@ -8,7 +8,7 @@ namespace Platformer.Animation
     {
         public bool animationReproducton = false;
 
-        private void Update()
+        protected override void Update()
         {
             if (animationReproducton)
             {
