@@ -6,7 +6,7 @@ namespace Platformer.Mechanics
 {
     public abstract class TimeAfectedObject : MonoBehaviour
     {
-        private float timeScale = 1;
+        private float timeScale = TimeManager.DEFAULT_TIME_SCALE;
 
         public float TimeScale { get => timeScale;}
 
@@ -19,7 +19,7 @@ namespace Platformer.Mechanics
 
         public virtual void ResetTimeScale()
         {
-            timeScale = 1;
+            timeScale = TimeManager.DEFAULT_TIME_SCALE;
         }
     }
 }

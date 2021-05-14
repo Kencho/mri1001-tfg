@@ -32,9 +32,12 @@ namespace Platformer.Mechanics
 
         public void ResetTimeAfectedObjects()
         {
-            foreach (TimeAfectedObject timeAfectedObj in timeAfectedObjects)
+            if(timeAfectedObjects.Count > 0)
             {
-                UnScaleTime(timeAfectedObj);
+                foreach (TimeAfectedObject timeAfectedObj in timeAfectedObjects)
+                {
+                    ResetTimeScale(timeAfectedObj);
+                }
             }
             timeAfectedObjects = new List<TimeAfectedObject>();
         }
