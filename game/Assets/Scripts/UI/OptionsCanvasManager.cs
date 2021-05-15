@@ -75,7 +75,7 @@ namespace Platformer.UI
             panelActived = false;
         }
 
-        public void BackToMainMenu()
+        private void BackToMainMenu()
         {
             Simulation.Schedule<LoadGameMenu>();
         }
