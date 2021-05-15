@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7781508324486549686}
   - component: {fileID: 7781508324486549685}
   - component: {fileID: 7189750189084705776}
+  - component: {fileID: 2010344837500542801}
   m_Layer: 10
   m_Name: ImpulseParticle
   m_TagString: Untagged
@@ -241,3 +242,15 @@ CircleCollider2D:
   m_Offset: {x: -0.03907997, y: 0.023921741}
   serializedVersion: 2
   m_Radius: 0.3592701
+--- !u!114 &2010344837500542801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781508324486549684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec621e2be4d7e249a3b15f16f887d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7026185765388529923}
   - component: {fileID: 7705869790410011279}
   - component: {fileID: 7705869790410011278}
+  - component: {fileID: 3487748911775769024}
   m_Layer: 10
   m_Name: ImpulseAmplifier
   m_TagString: Untagged
@@ -267,3 +268,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImpulseCreatorAudio: {fileID: 8300000, guid: af5dbd6a85b567140b77c5bf1da3bb28, type: 3}
   velocityScale: 2
+--- !u!114 &3487748911775769024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026185765388529925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec621e2be4d7e249a3b15f16f887d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

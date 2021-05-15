@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6082575806313374961}
   - component: {fileID: 1824045667}
   - component: {fileID: 3354128741551544380}
+  - component: {fileID: 410954390}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -276,16 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 0}
   mycollider: {fileID: 0}
-  leftMoveRestriction: 0
-  rightMoveRestriction: 0
-  upMoveRestriction: 0
-  downMoveRestriction: 0
-  grounded: 1
-  maxSpeed: 5
-  speedIncrement: 0.5
-  jumpImpulse: 5
-  maxAirSpeed: 4
-  jumping: 0
+  simulatingPhysics: 1
+  controlEnabled: 1
   health: {fileID: 0}
   audioSource: {fileID: 0}
   spriteRenderer: {fileID: 0}
@@ -293,3 +286,15 @@ MonoBehaviour:
   jumpAudio: {fileID: 8300000, guid: 67975c08d56ceb147bad38572d805aa8, type: 3}
   ouchAudio: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
   respawnAudio: {fileID: 8300000, guid: e18959d46b63f3c4c8cc020a433cf848, type: 3}
+--- !u!114 &410954390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208144871472054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec621e2be4d7e249a3b15f16f887d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

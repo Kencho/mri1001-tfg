@@ -170,10 +170,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 354242741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b1fb30508933a147b5af396512e625d, type: 3}
+  m_Script: {fileID: 11500000, guid: 17dd5b0cf527afb4e9eb1b5940af21f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicReproductor: {fileID: 0}
   volumeText: {fileID: 1060963535}
 --- !u!114 &354242744
 MonoBehaviour:

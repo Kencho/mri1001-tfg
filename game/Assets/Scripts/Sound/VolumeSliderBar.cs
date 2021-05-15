@@ -10,7 +10,6 @@ namespace Platformer.UI
 {
     public class VolumeSliderBar : MonoBehaviour
     {
-        public AudioSource musicReproductor;
         private Slider volumeSlider;
         public Text volumeText;
         private float volume;
@@ -25,12 +24,13 @@ namespace Platformer.UI
         private void Update()
         {
             volume = volumeSlider.value;
+            VolumeManager.SetVolume(volume);
             SetVolumeSettings();
         }
 
         protected virtual void SetVolumeSettings()
         {
-            musicReproductor.volume = volume;
+            VolumeManager.SetVolume(volume);
             volumeText.text = GetVolumeText();
         }
 
@@ -41,7 +41,8 @@ namespace Platformer.UI
 
         private void OnDisable()
         {
-            VolumeManager.SaveVolumeInFile(volume);
+            VolumeManager.SetVolume(volume);
+            VolumeManager.SaveVolumeInFile();
         }
     }
 }

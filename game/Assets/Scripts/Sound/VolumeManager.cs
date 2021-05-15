@@ -7,7 +7,7 @@ namespace Platformer.Sound
 {
     public static class VolumeManager
     {
-        private static float volume;
+        private static float volume = LoadVolume();
         private const string PATH = "Files/volume.txt";
 
         public static float Volume { get => volume;}
@@ -19,10 +19,16 @@ namespace Platformer.Sound
             return volume;
         }
 
-        public static void SaveVolumeInFile(float volume)
+        public static void SaveVolumeInFile()
         {
             File.Delete(PATH);
             File.WriteAllText(PATH, volume.ToString());
+        }
+
+        public static void SetVolume(float volume)
+        {
+            VolumeManager.volume = volume;
+            SaveVolumeInFile();
         }
     }
 }
