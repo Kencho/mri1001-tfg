@@ -8,27 +8,25 @@ namespace Platformer.Sound
     public static class VolumeManager
     {
         private static float volume = LoadVolume();
-        private const string PATH = "Files/volume.txt";
+        private const string VARIABLE_NAME = "Volume";
 
         public static float Volume { get => volume;}
 
         public static float LoadVolume()
         {
-            string volumeFileContent = File.ReadAllText(PATH);
-            volume = float.Parse(volumeFileContent);
+            volume = PlayerPrefs.GetFloat(VARIABLE_NAME, 100);
             return volume;
-        }
-
-        public static void SaveVolumeInFile()
-        {
-            File.Delete(PATH);
-            File.WriteAllText(PATH, volume.ToString());
         }
 
         public static void SetVolume(float volume)
         {
             VolumeManager.volume = volume;
             SaveVolumeInFile();
+        }
+
+        public static void SaveVolumeInFile()
+        {
+            PlayerPrefs.SetFloat(VARIABLE_NAME, volume);
         }
     }
 }
