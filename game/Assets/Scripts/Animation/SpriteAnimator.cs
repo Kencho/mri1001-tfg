@@ -29,7 +29,7 @@ namespace Platformer.Animation
 
         protected void UpdateSprite()
         {
-            if (Time.time - lastFrameTime > (1f / frameRate))
+            if (Time.timeSinceLevelLoad - lastFrameTime > (1f / frameRate))
             {
                 spriteIndex = ++spriteIndex % spriteSet.Length;
                 rendererOfSprites.sprite = spriteSet[spriteIndex];
