@@ -4,18 +4,18 @@ using UnityEngine;
 
 namespace Platformer.Animation
 {
-    public class OneTimeAnimator : SpriteAnimator
+    public class OneShotAnimation : SpriteAnimator
     {
-        public bool animationReproducton = false;
+        public bool animationPlaying = false;
 
         protected override void Update()
         {
-            if (animationReproducton)
+            if (animationPlaying)
             {
                 UpdateSprite();
                 if(spriteIndex + 1 == spriteSet.Length)
                 {
-                    animationReproducton = false;
+                    animationPlaying = false;
                 }
             }
             else

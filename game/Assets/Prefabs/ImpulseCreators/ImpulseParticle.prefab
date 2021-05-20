@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7781508324486549685}
   - component: {fileID: 7189750189084705776}
   - component: {fileID: 2010344837500542801}
+  - component: {fileID: 1002539303516421217}
   m_Layer: 10
   m_Name: ImpulseParticle
   m_TagString: Untagged
@@ -114,8 +115,8 @@ MonoBehaviour:
   - {fileID: 890428931455860259, guid: 532653cbbdf2d1744b147e1428cca3d5, type: 3}
   - {fileID: 2632202139805028002, guid: dccb4c6badce8b445a720990617a0edf, type: 3}
   frameRate: 7
-  rendererOfSprites: {fileID: 0}
-  animationReproducton: 0
+  spriteRenderer: {fileID: 0}
+  animationPlaying: 0
 --- !u!82 &7781508324486549686
 AudioSource:
   m_ObjectHideFlags: 0
@@ -254,3 +255,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec621e2be4d7e249a3b15f16f887d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1002539303516421217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781508324486549684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88d90b6172282345af784abde695ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSet: []
+  frameRate: 0
+  spriteRenderer: {fileID: 0}
+  animationPlaying: 0

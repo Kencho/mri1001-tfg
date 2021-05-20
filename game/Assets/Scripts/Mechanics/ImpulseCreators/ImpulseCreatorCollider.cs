@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace Platformer.Mechanics
 {
-    [RequireComponent(typeof(Collider2D),typeof(OneTimeAnimator))]
+    [RequireComponent(typeof(Collider2D),typeof(OneShotAnimation))]
     public abstract class ImpulseCreatorCollider : MonoBehaviour
     {
         private Collider2D impulseCollider;
         protected ImpulseCreator impulseCreator;
-        private OneTimeAnimator animator;
+        private OneShotAnimation animator;
         private AudioSource audioManager;
         public AudioClip ImpulseCreatorAudio;
 
@@ -23,7 +23,7 @@ namespace Platformer.Mechanics
         {
             impulseCollider = GetComponent<Collider2D>();
             SetImpulseCreator();
-            animator = GetComponent<OneTimeAnimator>();
+            animator = GetComponent<OneShotAnimation>();
             audioManager = GetComponent<AudioSource>();
             active = true;
         }
@@ -58,7 +58,7 @@ namespace Platformer.Mechanics
                     active = false;
                     impulseCreator.ImpulseKinematicObject(kineObj);
                     audioManager.PlayOneShot(ImpulseCreatorAudio);
-                    animator.animationReproducton = true;
+                    animator.animationPlaying = true;
                 }
             }
             
