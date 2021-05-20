@@ -8,18 +8,18 @@ namespace Platformer.Animation
     {
         public Sprite[] spriteSet;
         public float frameRate;
-        public SpriteRenderer rendererOfSprites;
+        public SpriteRenderer spriteRenderer;
         private float lastFrameTime;
         protected int spriteIndex;
 
         private void Awake()
         {
-            rendererOfSprites = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         void Start()
         {
-            spriteIndex = 12;
+            spriteIndex = spriteSet.Length;
         }
 
         protected virtual void Update()
@@ -32,7 +32,7 @@ namespace Platformer.Animation
             if (Time.timeSinceLevelLoad - lastFrameTime > (1f / frameRate))
             {
                 spriteIndex = ++spriteIndex % spriteSet.Length;
-                rendererOfSprites.sprite = spriteSet[spriteIndex];
+                spriteRenderer.sprite = spriteSet[spriteIndex];
                 lastFrameTime += 1f / frameRate;
             }
 
