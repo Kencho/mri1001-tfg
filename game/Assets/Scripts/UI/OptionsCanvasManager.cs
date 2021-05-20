@@ -1,8 +1,7 @@
-﻿using System;
-using Platformer.Core;
+﻿using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Gameplay.PlayerEvents;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Platformer.UI
 {
