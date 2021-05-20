@@ -32,7 +32,7 @@ namespace Platformer.Core
             SetStartingState();
         }
 
-        private void SetPlatformerVariables()
+        private void SetModelAttributes()
         {
             PlatformerModel.gameController = GetInstance();
             PlatformerModel.player = player;
@@ -48,7 +48,7 @@ namespace Platformer.Core
             if (instance == null)
             {
                 instance = this;
-                SetPlatformerVariables();
+                SetModelAttributes();
             }
 
             return instance;
@@ -83,10 +83,10 @@ namespace Platformer.Core
             gravityInverter.ResetAfectedKineObjs();
             timeManager.ResetTimeAfectedObjects();
             timeManager.SetDefaultGlobalTime();
-            StartCoroutine(InstanceStatingObjects(instantiateDelay));
+            StartCoroutine(InstanceStartingObjects(instantiateDelay));
         }
 
-        private IEnumerator InstanceStatingObjects(float delay)
+        private IEnumerator InstanceStartingObjects(float delay)
         {
             yield return new WaitForSeconds(delay);
             PlatformerModel.player.transform.position = PlatformerModel.spawnPoint.position;
