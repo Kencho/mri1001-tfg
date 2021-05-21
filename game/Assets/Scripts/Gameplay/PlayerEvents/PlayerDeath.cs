@@ -12,6 +12,8 @@ namespace Platformer.Gameplay.PlayerEvents
     /// <typeparam name="PlayerDeath"></typeparam>
     public class PlayerDeath : Simulation.Event<PlayerDeath>
     {
+        private const float WAIT_TIME_UNTIL_PLAYER_SPAWN = 2f;
+
         public override void Execute()
         {
             PlayerController player = PlatformerModel.player;
@@ -21,7 +23,7 @@ namespace Platformer.Gameplay.PlayerEvents
                 PlatformerModel.virtualCamera.m_Follow = null;
                 PlatformerModel.virtualCamera.m_LookAt = null;
                 SetDeathAnimationAndSounds(player);
-                Simulation.Schedule<PlayerSpawn>(2);
+                Simulation.Schedule<PlayerSpawn>(WAIT_TIME_UNTIL_PLAYER_SPAWN);
                 Simulation.Schedule<SetGameInitialState>();
             }
         }

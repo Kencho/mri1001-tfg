@@ -11,6 +11,7 @@ namespace Platformer.Gameplay.PlayerEvents
     /// </summary>
     public class PlayerSpawn : Simulation.Event<PlayerSpawn>
     {
+        private const float WAIT_TIME_UNTIL_ENABLE_INPUT = 2f;
 
         public override void Execute()
         {
@@ -25,7 +26,7 @@ namespace Platformer.Gameplay.PlayerEvents
             PlatformerModel.virtualCamera.m_Follow = player.transform;
             PlatformerModel.virtualCamera.m_LookAt = player.transform;
 
-            Simulation.Schedule<EnablePlayerInput>(2f);
+            Simulation.Schedule<EnablePlayerInput>(WAIT_TIME_UNTIL_ENABLE_INPUT);
             player.simulatingPhysics = true;
         }
     }
