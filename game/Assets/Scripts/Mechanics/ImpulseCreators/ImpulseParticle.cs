@@ -1,4 +1,5 @@
-﻿using Platformer.Physics;
+﻿using Platformer.Mechanics.KinematicObjects;
+using Platformer.Physics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

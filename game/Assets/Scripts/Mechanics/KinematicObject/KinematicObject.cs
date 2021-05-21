@@ -4,7 +4,7 @@ using UnityEngine;
 using Platformer.Physics;
 using System;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.KinematicObjects
 {
 
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
