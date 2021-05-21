@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.GameEvents
 {
     public class SetGameInitialState : Simulation.Event<SetGameInitialState>
     {
