@@ -1,6 +1,7 @@
 ﻿using System;
 using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Gameplay.PlayerEvents;
 using Platformer.Physics;
 using UnityEngine;
 

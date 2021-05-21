@@ -3,7 +3,7 @@ using UnityEngine;
 using Platformer.Physics;
 using Platformer.Player;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     /// <summary>
     /// Fired when the player performs a Jump.
