@@ -8,12 +8,12 @@ namespace Platformer.Mechanics.Enemies
     public class PatrolObstacle : Obstacle
     {
         public List<Vector2> travelPath;
-        public float pathTimeTravel; //in seconds
+        public float travelDuration; //in seconds
         private TimeAfectedPatrolPath path;
 
         private void Start()
         {
-            path = new TimeAfectedPatrolPath(travelPath, pathTimeTravel);
+            path = new TimeAfectedPatrolPath(travelPath, travelDuration);
             transform.position = travelPath[0];
         }
 
