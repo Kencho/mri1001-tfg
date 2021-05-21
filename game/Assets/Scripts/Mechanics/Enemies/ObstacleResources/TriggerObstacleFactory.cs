@@ -1,4 +1,4 @@
-﻿using Platformer.Resources;
+﻿using Platformer.Mechanics.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace Platformer.Mechanics.Enemies.ObstacleResources
 
         private void Update()
         {
-            if (trigger.IsTrigger)
+            if (trigger.IsTriggered)
             {
                 if (spawnable)
                 {

@@ -2,7 +2,6 @@
 using Platformer.Gameplay;
 using Platformer.Mechanics.ImpulseCreators;
 using Platformer.Mechanics.Resources;
-using Platformer.Resources;
 using System;
 using System.Collections;
 using System.Collections.Generic;

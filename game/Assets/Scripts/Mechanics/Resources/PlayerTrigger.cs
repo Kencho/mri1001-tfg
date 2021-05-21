@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Resources
+namespace Platformer.Mechanics.Resources
 {
     public class PlayerTrigger : MonoBehaviour
     {
-        private bool isTrigger;
+        private bool isTriggered;
         private Collider2D triggerZone;
 
-        public bool IsTrigger { get => isTrigger; }
+        public bool IsTriggered { get => isTriggered; }
 
         private void Awake()
         {
-            isTrigger = false;
+            isTriggered = false;
             triggerZone = GetComponent<Collider2D>();
         }
 
@@ -22,13 +22,13 @@ namespace Platformer.Resources
         {
             if(collision.gameObject.GetComponent<PlayerController>() != null)
             {
-                isTrigger = true;
+                isTriggered = true;
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            isTrigger = false;
+            isTriggered = false;
         }
     }
 

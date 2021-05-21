@@ -4,7 +4,6 @@ using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Mechanics;
-using Platformer.Resources;
 using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
