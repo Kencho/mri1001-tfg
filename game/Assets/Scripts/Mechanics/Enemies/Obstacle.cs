@@ -6,6 +6,7 @@ using Platformer.Gameplay;
 using Platformer.Mechanics;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics.Player;
+using Platformer.Mechanics.TimeModifiers;
 
 namespace Platformer.Mechanics.Enemies
 {

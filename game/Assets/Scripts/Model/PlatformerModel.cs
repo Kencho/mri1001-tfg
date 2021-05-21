@@ -3,6 +3,7 @@ using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Mechanics.GravityModifiers;
 using Platformer.Mechanics.Player;
+using Platformer.Mechanics.TimeModifiers;
 
 namespace Platformer.Model
 {

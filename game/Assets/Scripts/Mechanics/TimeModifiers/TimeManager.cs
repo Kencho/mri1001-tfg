@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.TimeModifiers
 {
     public class TimeManager : MonoBehaviour
     {
