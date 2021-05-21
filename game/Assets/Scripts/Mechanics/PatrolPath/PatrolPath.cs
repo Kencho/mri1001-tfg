@@ -41,13 +41,13 @@ namespace Platformer.Mechanics.PatrolPath
             }
         }
 
-        public Vector2 getNextPathPosition()
+        public Vector2 GetNextPathPosition()
         {
             int nextPathSection = (currentPathSection + 1) % path.Count;
             Vector2 distanceMoved = CalculateDistanceMovedThisFrame(nextPathSection);
             Vector2 nextPosition = currentPosition + distanceMoved;
             currentPosition = nextPosition;
-            if (isSectiontraveled(nextPathSection))
+            if (IsSectionTraveled(nextPathSection))
             {
                 currentPathSection = (currentPathSection + 1) % path.Count;
             }
@@ -63,7 +63,7 @@ namespace Platformer.Mechanics.PatrolPath
             
         }
 
-        private bool isSectiontraveled(int nextSection)
+        private bool IsSectionTraveled(int nextSection)
         {
             if (Mathf.Abs(MathOperations.getEuclideanDistance(path[currentPathSection], currentPosition)) >= Mathf.Abs(MathOperations.getEuclideanDistance(path[currentPathSection], path[nextSection])))
             {

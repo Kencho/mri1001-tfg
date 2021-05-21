@@ -20,7 +20,7 @@ namespace Platformer.Mechanics.Enemies
 
         protected override void Move()
         {
-            transform.position = path.getNextPathPosition();
+            transform.position = path.GetNextPathPosition();
         }
 
         public override void SetTimeScale(float timeScale)
