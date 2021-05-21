@@ -1,5 +1,4 @@
 ﻿using Platformer.Mechanics.Player.PlayerStates;
-using Platformer.Player;
 using System;
 using System.Collections;
 using System.Collections.Generic;

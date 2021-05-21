@@ -3,7 +3,6 @@ using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Physics;
-using Platformer.Player;
 using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerMechanics

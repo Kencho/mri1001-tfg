@@ -4,8 +4,8 @@ using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Mechanics;
-using Platformer.Player;
 using Platformer.Gameplay.PlayerEvents;
+using Platformer.Mechanics.Player;
 
 namespace Platformer.Mechanics.Enemies
 {

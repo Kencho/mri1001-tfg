@@ -6,7 +6,6 @@ using Platformer.Gameplay;
 using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
-using Platformer.Player;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {

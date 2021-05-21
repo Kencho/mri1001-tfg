@@ -8,7 +8,7 @@ using Platformer.Mechanics.KinematicObjects;
 using Platformer.Mechanics.Player.PlayerMechanics;
 using Platformer.Mechanics.Player.PlayerStates;
 
-namespace Platformer.Player
+namespace Platformer.Mechanics.Player
 {
 
     public class PlayerController : KinematicObject
@@ -42,7 +42,7 @@ namespace Platformer.Player
         public bool Jumping { get => jump.Jumping;}
         public bool Dashing { get => dash.Dashing;}
         public float MovingDirection { get => movingDirection;}
-        public bool ApplingBulletTime { get => bulletTime.BulletTimeActive;}
+        public bool BulletTimeActive { get => bulletTime.BulletTimeActive;}
 
         protected override void Awake()
         {
@@ -64,9 +64,9 @@ namespace Platformer.Player
 
         void Update()
         {
-            manageInputs();
+            ManageInputs();
             playerState.UpdateState();
-            AnimarMovimientoPlayer();
+            AnimateMovement();
         }
 
         protected override void FixedUpdate()
@@ -74,7 +74,7 @@ namespace Platformer.Player
             if (controlEnabled)
             {
                 playerState.FixedUpdateState();
-                manageFlags();
+                ManageFlags();
                 jump.ExecuteMechanic();
                 dash.ExecuteMechanic();
                 bulletTime.ExecuteMechanic();
@@ -82,7 +82,7 @@ namespace Platformer.Player
             base.FixedUpdate();
         }
 
-        private void manageInputs()
+        private void ManageInputs()
         {
             jump.ManageInput();
             dash.ManageInput();
@@ -90,7 +90,7 @@ namespace Platformer.Player
             movingDirection = Input.GetAxis("HorizontalMove");
         }
 
-        private void manageFlags()
+        private void ManageFlags()
         {
             jump.ManageFlags();
             dash.ManageFlags();
@@ -107,7 +107,7 @@ namespace Platformer.Player
             this.playerState.EnterPlayerState();
         }
 
-        private void AnimarMovimientoPlayer()
+        private void AnimateMovement()
         {
             animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / MAX_SPEED);
             animator.SetFloat("velocityY", rigidBody.velocity.y);

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
-using Platformer.Player;
 using Platformer.Gameplay.PlayerEvents;
+using Platformer.Mechanics.Player;
 
 namespace Platformer.Mechanics
 {

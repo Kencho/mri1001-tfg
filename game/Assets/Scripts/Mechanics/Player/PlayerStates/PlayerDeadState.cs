@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Physics;
-using Platformer.Player;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {

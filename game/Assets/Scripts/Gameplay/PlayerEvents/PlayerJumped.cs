@@ -1,8 +1,8 @@
 using Platformer.Core;
 using UnityEngine;
 using Platformer.Physics;
-using Platformer.Player;
 using Platformer.Mechanics.Player.PlayerStates;
+using Platformer.Mechanics.Player;
 
 namespace Platformer.Gameplay.PlayerEvents
 {

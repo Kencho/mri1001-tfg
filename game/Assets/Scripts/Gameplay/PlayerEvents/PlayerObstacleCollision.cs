@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
-using Platformer.Player;
 using Platformer.Gameplay.PlayerEvents;
+using Platformer.Mechanics.Player;
 
 namespace Platformer.Gameplay.PlayerEvents
 {

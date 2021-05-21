@@ -1,4 +1,4 @@
-﻿using Platformer.Player;
+﻿using Platformer.Mechanics.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
