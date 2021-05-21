@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.SceneEvents
 {
     public class LoadGameMenu : Simulation.Event<PlayerDeath>
     {
