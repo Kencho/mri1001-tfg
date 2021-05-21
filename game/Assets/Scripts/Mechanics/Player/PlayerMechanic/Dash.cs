@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Platformer.Player;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Player.PlayerMechanics
+namespace Platformer.Mechanics.Player.PlayerMechanics
 {
     public class Dash : PlayerMechanic
     {

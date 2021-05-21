@@ -5,7 +5,7 @@ using Platformer.Physics;
 using Platformer.Gameplay;
 using Platformer.Model;
 using Platformer.Mechanics.KinematicObjects;
-using Platformer.Player.PlayerMechanics;
+using Platformer.Mechanics.Player.PlayerMechanics;
 
 namespace Platformer.Player
 {
