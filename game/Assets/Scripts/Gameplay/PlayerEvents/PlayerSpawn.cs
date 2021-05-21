@@ -5,7 +5,7 @@ using Platformer.Physics;
 using Platformer.Player;
 using UnityEngine;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     /// <summary>
     /// Fired when the player is spawned after dying.
