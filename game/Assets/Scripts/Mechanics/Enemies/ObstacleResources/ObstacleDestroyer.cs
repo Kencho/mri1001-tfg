@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Platformer.Mechanics.Enemies;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Enemies.ObstacleResources
+namespace Platformer.Mechanics.Enemies.ObstacleResources
 {
     public class ObstacleDestroyer : MonoBehaviour
     {
