@@ -10,17 +10,17 @@ namespace Platformer.UI
     {
         private Canvas optionsPanel;
         public GameObject eventSystem;
-        private bool panelActived;
+        private bool panelActivated;
         private float timeScaleBeforePanel;
 
         private void Awake()
         {
-            InitialiceOptionsPanel();
-            panelActived = false;
+            InitializeOptionsPanel();
+            panelActivated = false;
             ResumeGameExecution();
         }
 
-        private void InitialiceOptionsPanel()
+        private void InitializeOptionsPanel()
         {
             optionsPanel = GetComponent<Canvas>();
             optionsPanel.enabled = false;
@@ -30,20 +30,20 @@ namespace Platformer.UI
         {
             if (Input.GetButtonDown("Menu"))
             {
-                panelActived = !panelActived;
-                optionsPanel.enabled = panelActived;
-                if (panelActived)
+                panelActivated = !panelActivated;
+                optionsPanel.enabled = panelActivated;
+                if (panelActivated)
                 {
                     PauseGameExecution();
                 }
             }
             
-            if(panelActived == false)
+            if(panelActivated == false)
             {
                 ResumeGameExecution();
             }
 
-            eventSystem.SetActive(panelActived);
+            eventSystem.SetActive(panelActivated);
         }
 
         private void PauseGameExecution()
@@ -57,7 +57,7 @@ namespace Platformer.UI
         {
             if(timeScaleBeforePanel != 0)
             {
-                optionsPanel.enabled = panelActived;
+                optionsPanel.enabled = panelActivated;
                 Time.timeScale = timeScaleBeforePanel;
                 timeScaleBeforePanel = 0;
                 Simulation.Schedule<EnablePlayerInput>(0.2f);
@@ -65,14 +65,14 @@ namespace Platformer.UI
             
         }
 
-        public void ActivePanel()
+        public void ActivatePanel()
         {
-            panelActived = true;
+            panelActivated = true;
         }
 
-        public void DisactivePanel()
+        public void DeactivatePanel()
         {
-            panelActived = false;
+            panelActivated = false;
         }
 
         private void BackToMainMenu()
