@@ -1,11 +1,8 @@
 using Cinemachine;
-using Platformer.Core;
-using Platformer.Mechanics;
 using Platformer.Mechanics.GravityModifiers;
 using Platformer.Mechanics.Player;
 using Platformer.Mechanics.TimeModifiers;
 using Platformer.Model;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

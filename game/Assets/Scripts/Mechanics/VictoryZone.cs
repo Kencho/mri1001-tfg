@@ -1,4 +1,3 @@
-using Platformer.Gameplay;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics.Player;
 using Platformer.Mechanics.Player.PlayerStates;

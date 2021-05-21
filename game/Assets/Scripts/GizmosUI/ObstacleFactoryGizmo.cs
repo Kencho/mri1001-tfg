@@ -1,6 +1,4 @@
 ﻿using Platformer.Mechanics.Enemies.ObstacleResources;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Platformer.GizmosUI

@@ -1,6 +1,4 @@
-﻿using System;
-using Platformer.Core;
-using Platformer.Gameplay;
+﻿using Platformer.Core;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics.Resources;
 using UnityEngine;

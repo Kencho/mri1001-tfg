@@ -1,10 +1,5 @@
-﻿using Platformer.Core;
-using Platformer.Gameplay;
-using Platformer.Mechanics.ImpulseCreators;
+﻿using Platformer.Mechanics.ImpulseCreators;
 using Platformer.Mechanics.Resources;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Platformer.Mechanics.KinematicObjects

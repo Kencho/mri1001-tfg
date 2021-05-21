@@ -2,7 +2,6 @@ using Platformer.Core;
 using Platformer.Gameplay.SceneEvents;
 using Platformer.Mechanics;
 using Platformer.Model;
-using UnityEngine;
 
 namespace Platformer.Gameplay.PlayerEvents
 {

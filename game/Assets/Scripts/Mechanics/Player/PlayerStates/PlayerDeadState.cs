@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Platformer.Mechanics.Player.PlayerStates
+﻿namespace Platformer.Mechanics.Player.PlayerStates
 {
     public class PlayerDeadState : PlayerState
     {

@@ -1,7 +1,4 @@
-﻿using Platformer.Mechanics.Enemies;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Platformer.Mechanics.Enemies.ObstacleResources
 {

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Platformer.Core
+﻿namespace Platformer.Core
 {
     public static partial class Simulation
     {

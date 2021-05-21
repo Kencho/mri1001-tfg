@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Platformer.Animation
+﻿namespace Platformer.Animation
 {
     public class OneShotAnimation : SpriteAnimator
     {

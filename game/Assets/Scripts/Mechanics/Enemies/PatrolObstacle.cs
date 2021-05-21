@@ -1,6 +1,4 @@
-﻿using Platformer.Mechanics;
-using Platformer.Mechanics.PatrolPath;
-using System.Collections;
+﻿using Platformer.Mechanics.PatrolPath;
 using System.Collections.Generic;
 using UnityEngine;
 

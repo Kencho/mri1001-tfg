@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Platformer.Mechanics.Player.PlayerMechanics
+﻿namespace Platformer.Mechanics.Player.PlayerMechanics
 {
     public interface PlayerMechanic
     {

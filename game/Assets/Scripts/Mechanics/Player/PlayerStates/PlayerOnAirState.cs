@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Platformer.Mechanics.Resources;
 using UnityEngine;
-using Platformer.Mechanics;
-using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {

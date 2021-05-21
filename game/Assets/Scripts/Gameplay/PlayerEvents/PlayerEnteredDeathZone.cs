@@ -1,7 +1,5 @@
 using Platformer.Core;
-using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics;
-using Platformer.Model;
 
 namespace Platformer.Gameplay.PlayerEvents
 {

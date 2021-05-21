@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Platformer.Mechanics.ImpulseCreators
+﻿namespace Platformer.Mechanics.ImpulseCreators
 {
     public class ImpulseAmplifiedCollider : ImpulseCreatorCollider
     {

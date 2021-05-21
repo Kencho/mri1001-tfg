@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-using Platformer.Mechanics.Resources;
+﻿using Platformer.Mechanics.Resources;
 using Platformer.Mechanics.TimeModifiers;
+using UnityEngine;
 
 namespace Platformer.Mechanics.KinematicObjects
 {

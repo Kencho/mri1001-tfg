@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Platformer.Core;
-using Platformer.Gameplay.PlayerEvents;
+﻿using Platformer.Core;
 using Platformer.Mechanics.Player;
 
 namespace Platformer.Gameplay.PlayerEvents

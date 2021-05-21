@@ -1,5 +1,3 @@
-using System;
-using Platformer.Gameplay;
 using Platformer.Gameplay.PlayerEvents;
 using UnityEngine;
 using static Platformer.Core.Simulation;

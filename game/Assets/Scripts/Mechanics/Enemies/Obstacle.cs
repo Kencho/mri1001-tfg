@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Platformer.Core;
-using Platformer.Gameplay;
-using Platformer.Mechanics;
+﻿using Platformer.Core;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics.Player;
 using Platformer.Mechanics.TimeModifiers;
+using UnityEngine;
 
 namespace Platformer.Mechanics.Enemies
 {

@@ -1,12 +1,8 @@
-﻿using UnityEngine;
-using Platformer.Mechanics;
-using Platformer.Core;
-using Platformer.Gameplay;
-using Platformer.Model;
-using Platformer.Mechanics.KinematicObjects;
+﻿using Platformer.Mechanics.KinematicObjects;
 using Platformer.Mechanics.Player.PlayerMechanics;
 using Platformer.Mechanics.Player.PlayerStates;
 using Platformer.Mechanics.Resources;
+using UnityEngine;
 
 namespace Platformer.Mechanics.Player
 {

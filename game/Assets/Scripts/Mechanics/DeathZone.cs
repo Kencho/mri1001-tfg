@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Platformer.Gameplay;
+﻿using Platformer.Gameplay.PlayerEvents;
+using Platformer.Mechanics.Player;
 using UnityEngine;
 using static Platformer.Core.Simulation;
-using Platformer.Gameplay.PlayerEvents;
-using Platformer.Mechanics.Player;
 
 namespace Platformer.Mechanics
 {

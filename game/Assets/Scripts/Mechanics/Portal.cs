@@ -1,8 +1,4 @@
-﻿using Platformer.Mechanics;
-using Platformer.Mechanics.KinematicObjects;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Platformer.Mechanics.KinematicObjects;
 using UnityEngine;
 
 namespace Platformer.Mechanics
