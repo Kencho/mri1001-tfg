@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.PatrolPath
 {
-    public class TimeAfectedPatrolPath : PatrolPath
+    public class TimeAffectedPatrolPath : PatrolPath
     {
         private float timeScale;
 
-        public TimeAfectedPatrolPath(List<Vector2> path, float pathDuration) : base(path, pathDuration)
+        public TimeAffectedPatrolPath(List<Vector2> path, float pathDuration) : base(path, pathDuration)
         {
         }
 

@@ -10,11 +10,11 @@ namespace Platformer.Mechanics.Enemies
     {
         public List<Vector2> travelPath;
         public float travelDuration; //in seconds
-        private TimeAfectedPatrolPath path;
+        private TimeAffectedPatrolPath path;
 
         private void Start()
         {
-            path = new TimeAfectedPatrolPath(travelPath, travelDuration);
+            path = new TimeAffectedPatrolPath(travelPath, travelDuration);
             transform.position = travelPath[0];
         }
 
