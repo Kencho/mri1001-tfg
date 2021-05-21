@@ -1,4 +1,4 @@
-﻿using Platformer.Physics;
+﻿using Platformer.Mechanics.Resources;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,7 +31,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
             if (timeDashed < DASH_TIME)
             {
                 timeDashed += Time.fixedDeltaTime;
-                PhisicsController.SetVelocity(player, new Vector2(dashSpeed, 0));
+                PhysicsController.SetVelocity(player, new Vector2(dashSpeed, 0));
             }
             else
             {

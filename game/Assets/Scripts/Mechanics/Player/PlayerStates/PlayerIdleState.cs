@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
 using Platformer.Gameplay;
-using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
@@ -21,7 +21,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
 
         public void EnterPlayerState()
         {
-            if (PhisicsController.GetVelocity(player).x != 0)
+            if (PhysicsController.GetVelocity(player).x != 0)
             {
                 this.player.ChangeState(new PlayerStoppingState(this.player));
             }

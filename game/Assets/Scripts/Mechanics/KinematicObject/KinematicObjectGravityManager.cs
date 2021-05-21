@@ -1,4 +1,4 @@
-﻿using Platformer.Physics;
+﻿using Platformer.Mechanics.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +23,7 @@ namespace Platformer.Mechanics.KinematicObjects
             {
                 aggregatedGravityModifier += gravityAlteration;
             }
-            PhisicsController.SimulateGarvity(kineObj, aggregatedGravityModifier);
+            PhysicsController.SimulateGravity(kineObj, aggregatedGravityModifier);
             gravityAlterations = new List<Vector2>();
         }
 

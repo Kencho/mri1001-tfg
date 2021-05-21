@@ -1,5 +1,5 @@
 ﻿using Platformer.Mechanics.KinematicObjects;
-using Platformer.Physics;
+using Platformer.Mechanics.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +17,7 @@ namespace Platformer.Mechanics.ImpulseCreators
 
         public void ImpulseKinematicObject(KinematicObject kineObj)
         {
-            PhisicsController.ApplyImpulse(kineObj, impulseAplied);
+            PhysicsController.ApplyImpulse(kineObj, impulseAplied);
         }
     }
 }

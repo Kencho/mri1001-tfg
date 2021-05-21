@@ -1,5 +1,5 @@
 ﻿using Platformer.Mechanics.KinematicObjects;
-using Platformer.Physics;
+using Platformer.Mechanics.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +17,8 @@ namespace Platformer.Mechanics.ImpulseCreators
 
         public void ImpulseKinematicObject(KinematicObject kineObj)
         {
-            Vector2 newVelocity = PhisicsController.GetVelocity(kineObj) * velocityScale;
-            PhisicsController.SetVelocity(kineObj, newVelocity);
+            Vector2 newVelocity = PhysicsController.GetVelocity(kineObj) * velocityScale;
+            PhysicsController.SetVelocity(kineObj, newVelocity);
         }
     }
 }

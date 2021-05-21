@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
@@ -61,14 +61,14 @@ namespace Platformer.Mechanics.Player.PlayerStates
                 newHorizontalVelocity = Mathf.Max(direction * PlayerController.MAX_SPEED, -PlayerController.MAX_SPEED);
             }
 
-            if(Math.Abs(PhisicsController.GetVelocity(player).x) <= PlayerController.MAX_SPEED)
+            if(Math.Abs(PhysicsController.GetVelocity(player).x) <= PlayerController.MAX_SPEED)
             {
                 
-                PhisicsController.SetVelocity(player, new Vector2(newHorizontalVelocity, PhisicsController.GetVelocity(player).y));
+                PhysicsController.SetVelocity(player, new Vector2(newHorizontalVelocity, PhysicsController.GetVelocity(player).y));
             }
             else
             {
-                PhisicsController.ApplyFriction(player, walkFriction);
+                PhysicsController.ApplyFriction(player, walkFriction);
             }
             
             

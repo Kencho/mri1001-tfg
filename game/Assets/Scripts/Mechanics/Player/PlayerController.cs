@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using Platformer.Mechanics;
 using Platformer.Core;
-using Platformer.Physics;
 using Platformer.Gameplay;
 using Platformer.Model;
 using Platformer.Mechanics.KinematicObjects;
 using Platformer.Mechanics.Player.PlayerMechanics;
 using Platformer.Mechanics.Player.PlayerStates;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player
 {
@@ -113,11 +113,11 @@ namespace Platformer.Mechanics.Player
             animator.SetFloat("velocityY", rigidBody.velocity.y);
             animator.SetBool("grounded", Grounded);
 
-            if(PhisicsController.GetVelocity(this).x < 0)
+            if(PhysicsController.GetVelocity(this).x < 0)
             {
                 spriteRenderer.flipX = true;
             }
-            else if(PhisicsController.GetVelocity(this).x > 0)
+            else if(PhysicsController.GetVelocity(this).x > 0)
             {
                 spriteRenderer.flipX = false;
             }

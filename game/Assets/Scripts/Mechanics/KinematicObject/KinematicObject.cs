@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Platformer.Physics;
 using System;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.KinematicObjects
 {
@@ -36,7 +36,7 @@ namespace Platformer.Mechanics.KinematicObjects
             {
                 gravityManager.HandleGravity();
                 collisionManager.HandleCollision();
-                if(PhisicsController.GetVelocity(this).y == 0)
+                if(PhysicsController.GetVelocity(this).y == 0)
                 {
                     grounded = true;
                 }
@@ -49,15 +49,15 @@ namespace Platformer.Mechanics.KinematicObjects
             }
             else
             {
-                PhisicsController.SetVelocity(this, Vector2.zero);
+                PhysicsController.SetVelocity(this, Vector2.zero);
             }
         }
 
         protected override void Move()
         {
-            Vector2 velocity = PhisicsController.GetVelocity(this);
+            Vector2 velocity = PhysicsController.GetVelocity(this);
             Vector2 scaledVelocity = velocity * TimeScale;
-            PhisicsController.SetVelocity(this, scaledVelocity);
+            PhysicsController.SetVelocity(this, scaledVelocity);
         }
 
         public override void SetTimeScale(float timeScale)
@@ -68,9 +68,9 @@ namespace Platformer.Mechanics.KinematicObjects
 
         public override void ResetTimeScale()
         {
-            Vector2 velocity = PhisicsController.GetVelocity(this);
+            Vector2 velocity = PhysicsController.GetVelocity(this);
             Vector2 unScaledVelocity = velocity / TimeScale;
-            PhisicsController.SetVelocity(this, unScaledVelocity);
+            PhysicsController.SetVelocity(this, unScaledVelocity);
             base.ResetTimeScale();
         }
 

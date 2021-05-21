@@ -2,7 +2,7 @@
 using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Gameplay.PlayerEvents;
-using Platformer.Physics;
+using Platformer.Mechanics.Resources;
 using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerMechanics
@@ -62,7 +62,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
         {
             jumpable = false;
             Vector2 jumpForce = vectorDirection * jumpImpulse;
-            Vector2 forceApplied = PhisicsController.ApplyImpulse(player, jumpForce);
+            Vector2 forceApplied = PhysicsController.ApplyImpulse(player, jumpForce);
             jumpForceApplied += jumpImpulse * player.TimeScale;
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = player;

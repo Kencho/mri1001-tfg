@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
@@ -42,13 +42,13 @@ namespace Platformer.Mechanics.Player.PlayerStates
 
         private void AerialMovement()
         {
-            if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= PlayerController.MAX_AIR_SPEED)
+            if(Mathf.Abs(PhysicsController.GetVelocity(player).x) >= PlayerController.MAX_AIR_SPEED)
             {
-                PhisicsController.SetVelocity(player, new Vector2(PlayerController.MAX_AIR_SPEED * player.MovingDirection, PhisicsController.GetVelocity(player).y));
+                PhysicsController.SetVelocity(player, new Vector2(PlayerController.MAX_AIR_SPEED * player.MovingDirection, PhysicsController.GetVelocity(player).y));
             }
             else
             {
-                PhisicsController.ApplyImpulse(player, new Vector2(airSpeed * player.MovingDirection, 0));
+                PhysicsController.ApplyImpulse(player, new Vector2(airSpeed * player.MovingDirection, 0));
             }
             
             

@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
+using Platformer.Mechanics.Resources;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
@@ -37,7 +37,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
             }
             else
             {
-                PhisicsController.ApplyFriction(player, friction);
+                PhysicsController.ApplyFriction(player, friction);
                 if (Mathf.Abs(player.rigidBody.velocity.x) < 0.001f)
                 {
                     player.ChangeState(new PlayerIdleState(player));
@@ -52,7 +52,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
 
         public void ExitPlayerState()
         {
-            PhisicsController.SetVelocity(player, new Vector2(0, PhisicsController.GetVelocity(player).y));
+            PhysicsController.SetVelocity(player, new Vector2(0, PhysicsController.GetVelocity(player).y));
         }
     }
 }

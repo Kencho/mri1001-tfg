@@ -1,7 +1,7 @@
 ﻿using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Mechanics.ImpulseCreators;
-using Platformer.Physics;
+using Platformer.Mechanics.Resources;
 using Platformer.Resources;
 using System;
 using System.Collections;
@@ -27,7 +27,7 @@ namespace Platformer.Mechanics.KinematicObjects
 
         public void HandleWallCollision()
         {
-            Vector2 velocity = PhisicsController.GetVelocity(kineObj);
+            Vector2 velocity = PhysicsController.GetVelocity(kineObj);
             LayerMask layer = LayerMask.GetMask("Wall");
 
             RaycastHit2D[] wall_collision = Physics2D.BoxCastAll(kineObj.mycollider.bounds.center, 2*kineObj.mycollider.bounds.extents, 0f, velocity.normalized, 0, layer);
@@ -38,13 +38,13 @@ namespace Platformer.Mechanics.KinematicObjects
                 {
                     if(velocity.x < 0)
                     {
-                        PhisicsController.SetVelocity(kineObj, new Vector2(0, PhisicsController.GetVelocity(kineObj).y));
+                        PhysicsController.SetVelocity(kineObj, new Vector2(0, PhysicsController.GetVelocity(kineObj).y));
                     }
                 }else if (wall.normal.x == -1)
                 {
                     if(velocity.x > 0)
                     {
-                        PhisicsController.SetVelocity(kineObj, new Vector2(0, PhisicsController.GetVelocity(kineObj).y));
+                        PhysicsController.SetVelocity(kineObj, new Vector2(0, PhysicsController.GetVelocity(kineObj).y));
                     }
                 }
 
@@ -52,14 +52,14 @@ namespace Platformer.Mechanics.KinematicObjects
                 {
                     if (velocity.y < 0)
                     {
-                        PhisicsController.SetVelocity(kineObj, new Vector2(PhisicsController.GetVelocity(kineObj).x, 0));
+                        PhysicsController.SetVelocity(kineObj, new Vector2(PhysicsController.GetVelocity(kineObj).x, 0));
                     }
                 }
                 else if (wall.normal.y == -1)
                 {
                     if (velocity.y > 0)
                     {
-                        PhisicsController.SetVelocity(kineObj, new Vector2(PhisicsController.GetVelocity(kineObj).x, 0));
+                        PhysicsController.SetVelocity(kineObj, new Vector2(PhysicsController.GetVelocity(kineObj).x, 0));
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace Platformer.Mechanics.KinematicObjects
 
         private void HandleImpulseCreatorCollision()
         {
-            Vector2 velocity = PhisicsController.GetVelocity(kineObj);
+            Vector2 velocity = PhysicsController.GetVelocity(kineObj);
             LayerMask layer = LayerMask.GetMask("ImpulseCreator");
 
             RaycastHit2D[] impulseCreatorCollision = Physics2D.BoxCastAll(kineObj.mycollider.bounds.center, 2 * kineObj.mycollider.bounds.extents, 0f, velocity.normalized, 0, layer);

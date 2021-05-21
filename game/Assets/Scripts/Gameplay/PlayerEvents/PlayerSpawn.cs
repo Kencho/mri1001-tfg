@@ -1,8 +1,8 @@
 using Platformer.Core;
 using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics.Player;
+using Platformer.Mechanics.Resources;
 using Platformer.Model;
-using Platformer.Physics;
 using UnityEngine;
 
 namespace Platformer.Gameplay.PlayerEvents
@@ -21,7 +21,7 @@ namespace Platformer.Gameplay.PlayerEvents
             player.health.Increment();
             player.transform.position = PlatformerModel.spawnPoint.transform.position;
             player.animator.SetBool("dead", false);
-            PhisicsController.SetVelocity(player, Vector2.zero);
+            PhysicsController.SetVelocity(player, Vector2.zero);
 
             PlatformerModel.virtualCamera.m_Follow = player.transform;
             PlatformerModel.virtualCamera.m_LookAt = player.transform;

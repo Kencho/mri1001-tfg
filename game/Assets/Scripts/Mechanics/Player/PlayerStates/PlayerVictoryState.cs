@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using Platformer.Mechanics.Resources;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Platformer.Physics;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
@@ -16,7 +16,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
 
         public void EnterPlayerState()
         {
-            PhisicsController.SetVelocity(player, Vector2.zero);
+            PhysicsController.SetVelocity(player, Vector2.zero);
         }
 
         public void FixedUpdateState()

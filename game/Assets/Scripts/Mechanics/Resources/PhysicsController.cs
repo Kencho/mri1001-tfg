@@ -5,12 +5,12 @@ using UnityEngine;
 using Platformer.Mechanics;
 using Platformer.Mechanics.KinematicObjects;
 
-namespace Platformer.Physics
+namespace Platformer.Mechanics.Resources
 {
-    public class PhisicsController
+    public class PhysicsController
     {
 
-        public static void SimulateGarvity(KinematicObject kinematicObj, Vector2 gravityModifier)
+        public static void SimulateGravity(KinematicObject kinematicObj, Vector2 gravityModifier)
         {
             Vector2 gravityEffect = Physics2D.gravity + gravityModifier;
             kinematicObj.rigidBody.velocity += gravityEffect * Time.deltaTime;
