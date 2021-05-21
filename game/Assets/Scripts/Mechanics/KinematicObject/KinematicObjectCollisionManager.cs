@@ -1,5 +1,6 @@
 ﻿using Platformer.Core;
 using Platformer.Gameplay;
+using Platformer.Mechanics.ImpulseCreators;
 using Platformer.Physics;
 using Platformer.Resources;
 using System;

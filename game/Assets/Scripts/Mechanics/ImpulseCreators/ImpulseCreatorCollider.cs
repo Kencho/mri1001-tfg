@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.ImpulseCreators
 {
     [RequireComponent(typeof(Collider2D),typeof(OneShotAnimation))]
     public abstract class ImpulseCreatorCollider : MonoBehaviour
