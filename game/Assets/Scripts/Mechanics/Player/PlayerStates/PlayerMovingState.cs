@@ -43,7 +43,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
 
                 if (Math.Abs(direction) < 0.001f)
                 {
-                    player.ChangeState(new PlayerStopingState(player));
+                    player.ChangeState(new PlayerStoppingState(player));
                 }
             }
         }

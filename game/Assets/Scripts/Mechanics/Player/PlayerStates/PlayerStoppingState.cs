@@ -9,13 +9,13 @@ using Platformer.Player;
 namespace Platformer.Mechanics.Player.PlayerStates
 {
 
-    public class PlayerStopingState : PlayerState
+    public class PlayerStoppingState : PlayerState
     {
 
         private PlayerController player;
         private float friction = 25;
 
-        public PlayerStopingState(PlayerController player)
+        public PlayerStoppingState(PlayerController player)
         {
             this.player = player;
         }

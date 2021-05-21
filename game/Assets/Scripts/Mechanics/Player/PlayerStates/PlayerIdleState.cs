@@ -24,7 +24,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
         {
             if (PhisicsController.GetVelocity(player).x != 0)
             {
-                this.player.ChangeState(new PlayerStopingState(this.player));
+                this.player.ChangeState(new PlayerStoppingState(this.player));
             }
         }
 

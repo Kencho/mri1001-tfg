@@ -37,7 +37,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
             }
             else
             {
-                player.ChangeState(new PlayerStopingState(player));
+                player.ChangeState(new PlayerStoppingState(player));
             }
         }
 
