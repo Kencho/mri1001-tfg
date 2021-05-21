@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Enemies
+namespace Platformer.Mechanics.Enemies
 {
     public class PatrolObstacle : Obstacle
     {

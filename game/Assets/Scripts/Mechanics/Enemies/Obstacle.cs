@@ -7,7 +7,7 @@ using Platformer.Mechanics;
 using Platformer.Player;
 using Platformer.Gameplay.PlayerEvents;
 
-namespace Platformer.Enemies
+namespace Platformer.Mechanics.Enemies
 {
     public class Obstacle : TimeAfectedObject
     {
