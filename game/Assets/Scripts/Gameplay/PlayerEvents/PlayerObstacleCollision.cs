@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Core;
 using Platformer.Player;
+using Platformer.Gameplay.PlayerEvents;
 
 namespace Platformer.Gameplay
 {

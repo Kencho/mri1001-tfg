@@ -6,7 +6,7 @@ using Platformer.Model;
 using Platformer.Player;
 using UnityEngine;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     /// <summary>
     /// Fired when the player has died.
