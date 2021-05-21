@@ -6,8 +6,9 @@ using Platformer.Gameplay;
 using Platformer.Physics;
 using Platformer.Mechanics;
 using Platformer.Resources;
+using Platformer.Player;
 
-namespace Platformer.Player
+namespace Platformer.Mechanics.Player.PlayerStates
 {
     public class PlayerIdleState : PlayerState
     {

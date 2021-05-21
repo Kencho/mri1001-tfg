@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Platformer.Player
+namespace Platformer.Mechanics.Player.PlayerStates
 {
     public interface PlayerState
     {

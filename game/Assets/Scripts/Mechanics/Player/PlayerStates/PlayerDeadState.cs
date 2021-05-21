@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Physics;
+using Platformer.Player;
 
-namespace Platformer.Player
+namespace Platformer.Mechanics.Player.PlayerStates
 {
     public class PlayerDeadState : PlayerState
     {

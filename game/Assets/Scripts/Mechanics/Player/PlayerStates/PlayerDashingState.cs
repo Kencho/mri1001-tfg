@@ -1,10 +1,11 @@
 ﻿using Platformer.Physics;
+using Platformer.Player;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Player
+namespace Platformer.Mechanics.Player.PlayerStates
 {
     public class PlayerDashingState : PlayerState
     {
