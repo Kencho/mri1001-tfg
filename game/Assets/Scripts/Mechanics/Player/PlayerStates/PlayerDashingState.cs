@@ -23,7 +23,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
         public void EnterPlayerState()
         {
             timeDashed = 0;
-            dashSpeed = calcularDashSpeed();
+            dashSpeed = CalculateDashSpeed();
             this.player.animator.SetBool("dashing", true);
         }
 
@@ -46,7 +46,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
             
         }
 
-        private float calcularDashSpeed()
+        private float CalculateDashSpeed()
         {
             float speed = DISTANCE_OF_DASH / DASH_TIME;
             if(this.player.spriteRenderer.flipX == false)
