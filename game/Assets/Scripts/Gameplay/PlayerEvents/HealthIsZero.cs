@@ -3,7 +3,7 @@ using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics;
 using static Platformer.Core.Simulation;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     /// <summary>
     /// Fired when the player health reaches 0. This usually would result in a 
