@@ -32,7 +32,9 @@ namespace Platformer.Mechanics.PatrolPath
             sectionsDuration = new List<float>();
 
             for (int i = 0; i < path.Count; i++){
-                distances[i] = MathOperations.getEuclideanDistance(path[i], path[(i + 1) % path.Count]);
+                Vector2 posCurrentSection = path[i];
+                Vector2 posNextSection = path[(i + 1) % path.Count];
+                distances[i] = (posNextSection - posCurrentSection).magnitude;
                 totalDistance += distances[i];
             }
             foreach (float distance in distances)
@@ -65,7 +67,7 @@ namespace Platformer.Mechanics.PatrolPath
 
         private bool IsSectionTraveled(int nextSection)
         {
-            if (Mathf.Abs(MathOperations.getEuclideanDistance(path[currentPathSection], currentPosition)) >= Mathf.Abs(MathOperations.getEuclideanDistance(path[currentPathSection], path[nextSection])))
+            if (Mathf.Abs((currentPosition - path[currentPathSection]).magnitude) >= Mathf.Abs((path[nextSection] - path[currentPathSection]).magnitude))
             {
                 return true;
             }
