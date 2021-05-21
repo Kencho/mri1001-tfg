@@ -8,36 +8,36 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
 {
     public class Dash : PlayerMechanic
     {
-        private float dashColdown;
+        private float dashCooldown;
         private PlayerController player;
         private bool dashing;
-        private bool dashable;
-        private float timeWithOutFlash;
+        private bool dashAvailable;
+        private float timeWithoutDash;
 
         public bool Dashing { get => dashing;}
 
-        public Dash(float dashColdown, PlayerController player)
+        public Dash(float dashCooldown, PlayerController player)
         {
-            this.dashColdown = dashColdown;
+            this.dashCooldown = dashCooldown;
             this.player = player;
             dashing = false;
-            dashable = true;
-            timeWithOutFlash = 0;
+            dashAvailable = true;
+            timeWithoutDash = 0;
         }
 
         public void ManageFlags()
         {
-            if(dashable == false)
+            if(dashAvailable == false)
             {
-                if (timeWithOutFlash < dashColdown)
+                if (timeWithoutDash < dashCooldown)
                 {
-                    timeWithOutFlash += Time.fixedDeltaTime;
+                    timeWithoutDash += Time.fixedDeltaTime;
                 }
                 else
                 {
                     if (player.Grounded)
                     {
-                        dashable = true;
+                        dashAvailable = true;
                     }
                 }
             }
@@ -57,7 +57,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
 
         public void ExecuteMechanic()
         {
-            if (dashing & dashable)
+            if (dashing && dashAvailable)
             {
                 ExecuteDash();
             }
@@ -65,8 +65,8 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
 
         private void ExecuteDash()
         {
-            dashable = false;
-            timeWithOutFlash = 0;
+            dashAvailable = false;
+            timeWithoutDash = 0;
             player.ChangeState(new PlayerDashingState(player));
         }
     }
