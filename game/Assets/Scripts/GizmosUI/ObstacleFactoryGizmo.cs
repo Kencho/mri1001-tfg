@@ -1,4 +1,5 @@
 ﻿using Platformer.Enemies;
+using Platformer.Enemies.ObstacleResources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

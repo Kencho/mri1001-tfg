@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Enemies
+namespace Platformer.Enemies.ObstacleResources
 {
     public class ObstacleDestroyer : MonoBehaviour
     {
