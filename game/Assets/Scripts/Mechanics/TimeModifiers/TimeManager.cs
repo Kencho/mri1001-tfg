@@ -7,44 +7,44 @@ namespace Platformer.Mechanics.TimeModifiers
     public class TimeManager : MonoBehaviour
     {
         public const float DEFAULT_TIME_SCALE = 1;
-        private List<TimeAffectedObject> timeAfectedObjects;
+        private List<TimeAffectedObject> timeAffectedObjects;
         private Coroutine unscaledRoutine;
 
         private void Awake()
         {
-            timeAfectedObjects = new List<TimeAffectedObject>();
+            timeAffectedObjects = new List<TimeAffectedObject>();
         }
 
-        public void ScaleTime(TimeAffectedObject timeAfectedObject, float timeScale)
+        public void ScaleTime(TimeAffectedObject timeAffectedObject, float timeScale)
         {
-            timeAfectedObject.SetTimeScale(timeScale);
-            timeAfectedObjects.Add(timeAfectedObject);
+            timeAffectedObject.SetTimeScale(timeScale);
+            timeAffectedObjects.Add(timeAffectedObject);
         }
 
-        public void UnScaleTime(TimeAffectedObject timeAfectedObject)
+        public void UnScaleTime(TimeAffectedObject timeAffectedObject)
         {
-            if (timeAfectedObjects.Contains(timeAfectedObject))
+            if (timeAffectedObjects.Contains(timeAffectedObject))
             {
-                ResetTimeScale(timeAfectedObject);
-                timeAfectedObjects.Remove(timeAfectedObject);
+                ResetTimeScale(timeAffectedObject);
+                timeAffectedObjects.Remove(timeAffectedObject);
             }
         }
 
-        public void ResetTimeAfectedObjects()
+        public void ResetAffectedObjects()
         {
-            if(timeAfectedObjects.Count > 0)
+            if(timeAffectedObjects.Count > 0)
             {
-                foreach (TimeAffectedObject timeAfectedObj in timeAfectedObjects)
+                foreach (TimeAffectedObject timeAffectedObj in timeAffectedObjects)
                 {
-                    ResetTimeScale(timeAfectedObj);
+                    ResetTimeScale(timeAffectedObj);
                 }
             }
-            timeAfectedObjects = new List<TimeAffectedObject>();
+            timeAffectedObjects = new List<TimeAffectedObject>();
         }
 
-        public void ResetTimeScale(TimeAffectedObject timeAfectedObject)
+        public void ResetTimeScale(TimeAffectedObject timeAffectedObject)
         {
-            timeAfectedObject.SetTimeScale(DEFAULT_TIME_SCALE);
+            timeAffectedObject.SetTimeScale(DEFAULT_TIME_SCALE);
         }
 
         public void ScaleGlobalTime(float timeScale, float timeModificationDuration = -1)
