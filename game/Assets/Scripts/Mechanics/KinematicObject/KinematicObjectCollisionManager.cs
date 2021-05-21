@@ -19,13 +19,13 @@ namespace Platformer.Mechanics.KinematicObjects
             this.kineObj = kineObj;
         }
 
-        public void manageCollision()
+        public void HandleCollision()
         {
-            manageWallCollision();
-            manageImpulseCreatorCollision();
+            HandleWallCollision();
+            HandleImpulseCreatorCollision();
         }
 
-        public void manageWallCollision()
+        public void HandleWallCollision()
         {
             Vector2 velocity = PhisicsController.GetVelocity(kineObj);
             LayerMask layer = LayerMask.GetMask("Wall");
@@ -66,7 +66,7 @@ namespace Platformer.Mechanics.KinematicObjects
             }
         }
 
-        private void manageImpulseCreatorCollision()
+        private void HandleImpulseCreatorCollision()
         {
             Vector2 velocity = PhisicsController.GetVelocity(kineObj);
             LayerMask layer = LayerMask.GetMask("ImpulseCreator");

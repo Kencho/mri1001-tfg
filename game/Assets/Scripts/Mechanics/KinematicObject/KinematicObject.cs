@@ -35,7 +35,7 @@ namespace Platformer.Mechanics.KinematicObjects
             if (simulatingPhysics)
             {
                 gravityManager.ManageGravity();
-                collisionManager.manageCollision();
+                collisionManager.HandleCollision();
                 if(PhisicsController.GetVelocity(this).y == 0)
                 {
                     grounded = true;
