@@ -22,7 +22,7 @@ namespace Platformer.Mechanics.GravityModifiers
 
         private void InverGravityOfKinematicObject(KinematicObject kineObj)
         {
-            gravityInverterManager.InverGravityOfKinematicObject(kineObj);
+            gravityInverterManager.InvertGravityOfKinematicObject(kineObj);
         }
     }
 }

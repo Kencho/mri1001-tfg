@@ -2,6 +2,7 @@ using UnityEngine;
 using Platformer.Player;
 using Platformer.Core;
 using Platformer.Mechanics;
+using Platformer.Mechanics.GravityModifiers;
 
 namespace Platformer.Model
 {

@@ -3,53 +3,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.GravityModifiers
 {
     public class GravityInverterManager : MonoBehaviour
     {
-        private List<KinematicObject> AfectedKineObjs;
+        private List<KinematicObject> affectedKineObjs;
 
         private void Awake()
         {
-            AfectedKineObjs = new List<KinematicObject>();
+            affectedKineObjs = new List<KinematicObject>();
         }
 
         private void FixedUpdate()
         {
-            ApplyGravityInversionToAfectedKineObjs();
+            ApplyGravityInversionToAffectedKinematicObjects();
         }
 
-        private void ApplyGravityInversionToAfectedKineObjs()
+        private void ApplyGravityInversionToAffectedKinematicObjects()
         {
-            foreach (KinematicObject kineObj in AfectedKineObjs)
+            foreach (KinematicObject kineObj in affectedKineObjs)
             {
                 kineObj.ApplyGravityAlteration(-2 * Physics2D.gravity); //from gravity to -gravity -> -2*gravity unities
             }
         }
 
-        public void InverGravityOfKinematicObject(KinematicObject kineObj)
+        public void InvertGravityOfKinematicObject(KinematicObject kineObj)
         {
-            if (AfectedKineObjs.Contains(kineObj))
+            if (affectedKineObjs.Contains(kineObj))
             {
-                AfectedKineObjs.Remove(kineObj);
+                affectedKineObjs.Remove(kineObj);
             }
             else
             {
-                AfectedKineObjs.Add(kineObj);
+                affectedKineObjs.Add(kineObj);
             }
         }
 
-        public void ResetAfectedKineObjs()
+        public void ResetAffectedKinematicObjects()
         {
-            if(AfectedKineObjs != null)
+            if(affectedKineObjs != null)
             {
-                foreach (KinematicObject kineObj in AfectedKineObjs)
+                foreach (KinematicObject kineObj in affectedKineObjs)
                 {
                     kineObj.transform.Rotate(new Vector3(180, 0, 0));
                 }
             }
             
-            AfectedKineObjs = new List<KinematicObject>();
+            affectedKineObjs = new List<KinematicObject>();
         }
     }
 }

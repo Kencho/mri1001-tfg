@@ -1,6 +1,7 @@
 using Cinemachine;
 using Platformer.Core;
 using Platformer.Mechanics;
+using Platformer.Mechanics.GravityModifiers;
 using Platformer.Model;
 using Platformer.Player;
 using System;
@@ -80,7 +81,7 @@ namespace Platformer.Core
         public void SetStartingState(float instantiateDelay = 0)
         {
             DestroyInstancedObjects();
-            gravityInverter.ResetAfectedKineObjs();
+            gravityInverter.ResetAffectedKinematicObjects();
             timeManager.ResetTimeAfectedObjects();
             timeManager.SetDefaultGlobalTime();
             StartCoroutine(InstanceStartingObjects(instantiateDelay));
