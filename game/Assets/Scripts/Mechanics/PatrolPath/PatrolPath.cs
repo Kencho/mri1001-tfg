@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.PatrolPath
 {
     public partial class PatrolPath
     {
