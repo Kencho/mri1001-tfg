@@ -9,7 +9,7 @@ namespace Platformer.Mechanics
 {
     public class Portal : MonoBehaviour
     {
-        public bool portalAbbled = true;
+        public bool portalEnabled = true;
         public Portal partnerPortal;
         private Collider2D portalCollider;
 
@@ -25,16 +25,16 @@ namespace Platformer.Mechanics
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            portalAbbled = true;
+            portalEnabled = true;
         }
 
         private void manageColliderTeleport(Collision2D collision)
         {
             KinematicObject kineObj = collision.gameObject.GetComponent<KinematicObject>();
-            if (kineObj != null && portalAbbled)
+            if (kineObj != null && portalEnabled)
             {
-                partnerPortal.portalAbbled = false;
-                portalAbbled = false;
+                partnerPortal.portalEnabled = false;
+                portalEnabled = false;
                 kineObj.transform.position = partnerPortal.transform.position;
             }
         }
