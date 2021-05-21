@@ -1,4 +1,5 @@
 using Platformer.Gameplay;
+using Platformer.Gameplay.PlayerEvents;
 using Platformer.Player;
 using UnityEngine;
 using static Platformer.Core.Simulation;

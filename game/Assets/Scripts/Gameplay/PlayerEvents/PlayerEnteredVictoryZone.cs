@@ -3,7 +3,7 @@ using Platformer.Mechanics;
 using Platformer.Model;
 using UnityEngine;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
 
     /// <summary>
