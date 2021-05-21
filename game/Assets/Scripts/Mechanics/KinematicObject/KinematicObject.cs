@@ -34,7 +34,7 @@ namespace Platformer.Mechanics.KinematicObjects
         {
             if (simulatingPhysics)
             {
-                gravityManager.ManageGravity();
+                gravityManager.HandleGravity();
                 collisionManager.HandleCollision();
                 if(PhisicsController.GetVelocity(this).y == 0)
                 {
@@ -76,7 +76,7 @@ namespace Platformer.Mechanics.KinematicObjects
 
         public void ApplyGravityAlteration(Vector2 gravityAlteration)
         {
-            gravityManager.addGravityAlteration(gravityAlteration);
+            gravityManager.AddGravityAlteration(gravityAlteration);
         }
     }
 }

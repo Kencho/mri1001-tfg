@@ -8,28 +8,28 @@ namespace Platformer.Mechanics.KinematicObjects
     public class KinematicObjectGravityManager
     {
         private KinematicObject kineObj;
-        private List<Vector2> gravityAltertions;
+        private List<Vector2> gravityAlterations;
 
         public KinematicObjectGravityManager(KinematicObject kineObj)
         {
             this.kineObj = kineObj;
-            gravityAltertions = new List<Vector2>();
+            gravityAlterations = new List<Vector2>();
         }
 
-        public void ManageGravity()
+        public void HandleGravity()
         {
-            Vector2 gravityModifier = Vector2.zero;
-            foreach(Vector2 gravityAltertion in gravityAltertions)
+            Vector2 aggregatedGravityModifier = Vector2.zero;
+            foreach(Vector2 gravityAlteration in gravityAlterations)
             {
-                gravityModifier += gravityAltertion;
+                aggregatedGravityModifier += gravityAlteration;
             }
-            PhisicsController.SimulateGarvity(kineObj, gravityModifier);
-            gravityAltertions = new List<Vector2>();
+            PhisicsController.SimulateGarvity(kineObj, aggregatedGravityModifier);
+            gravityAlterations = new List<Vector2>();
         }
 
-        public void addGravityAlteration(Vector2 gravityAlteration)
+        public void AddGravityAlteration(Vector2 gravityAlteration)
         {
-            gravityAltertions.Add(gravityAlteration);
+            gravityAlterations.Add(gravityAlteration);
         }
     }
 }
