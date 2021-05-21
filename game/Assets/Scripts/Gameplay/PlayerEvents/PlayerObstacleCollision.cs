@@ -5,7 +5,7 @@ using Platformer.Core;
 using Platformer.Player;
 using Platformer.Gameplay.PlayerEvents;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     public class PlayerObstacleCollision : Simulation.Event<PlayerObstacleCollision>
     {

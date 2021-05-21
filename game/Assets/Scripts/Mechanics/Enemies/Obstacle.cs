@@ -5,6 +5,7 @@ using Platformer.Core;
 using Platformer.Gameplay;
 using Platformer.Mechanics;
 using Platformer.Player;
+using Platformer.Gameplay.PlayerEvents;
 
 namespace Platformer.Enemies
 {
