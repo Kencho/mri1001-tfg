@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.TimeModifiers
 {
-    public abstract class TimeAfectedObject : MonoBehaviour
+    public abstract class TimeAffectedObject : MonoBehaviour
     {
         private float timeScale = TimeManager.DEFAULT_TIME_SCALE;
 

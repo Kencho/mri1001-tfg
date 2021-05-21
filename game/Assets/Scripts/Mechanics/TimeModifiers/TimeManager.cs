@@ -7,21 +7,21 @@ namespace Platformer.Mechanics.TimeModifiers
     public class TimeManager : MonoBehaviour
     {
         public const float DEFAULT_TIME_SCALE = 1;
-        private List<TimeAfectedObject> timeAfectedObjects;
+        private List<TimeAffectedObject> timeAfectedObjects;
         private Coroutine unscaledRoutine;
 
         private void Awake()
         {
-            timeAfectedObjects = new List<TimeAfectedObject>();
+            timeAfectedObjects = new List<TimeAffectedObject>();
         }
 
-        public void ScaleTime(TimeAfectedObject timeAfectedObject, float timeScale)
+        public void ScaleTime(TimeAffectedObject timeAfectedObject, float timeScale)
         {
             timeAfectedObject.SetTimeScale(timeScale);
             timeAfectedObjects.Add(timeAfectedObject);
         }
 
-        public void UnScaleTime(TimeAfectedObject timeAfectedObject)
+        public void UnScaleTime(TimeAffectedObject timeAfectedObject)
         {
             if (timeAfectedObjects.Contains(timeAfectedObject))
             {
@@ -34,15 +34,15 @@ namespace Platformer.Mechanics.TimeModifiers
         {
             if(timeAfectedObjects.Count > 0)
             {
-                foreach (TimeAfectedObject timeAfectedObj in timeAfectedObjects)
+                foreach (TimeAffectedObject timeAfectedObj in timeAfectedObjects)
                 {
                     ResetTimeScale(timeAfectedObj);
                 }
             }
-            timeAfectedObjects = new List<TimeAfectedObject>();
+            timeAfectedObjects = new List<TimeAffectedObject>();
         }
 
-        public void ResetTimeScale(TimeAfectedObject timeAfectedObject)
+        public void ResetTimeScale(TimeAffectedObject timeAfectedObject)
         {
             timeAfectedObject.SetTimeScale(DEFAULT_TIME_SCALE);
         }

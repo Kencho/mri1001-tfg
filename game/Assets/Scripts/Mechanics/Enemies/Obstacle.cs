@@ -10,7 +10,7 @@ using Platformer.Mechanics.TimeModifiers;
 
 namespace Platformer.Mechanics.Enemies
 {
-    public class Obstacle : TimeAfectedObject
+    public class Obstacle : TimeAffectedObject
     {
         private Collider2D obstacleCollider;
 

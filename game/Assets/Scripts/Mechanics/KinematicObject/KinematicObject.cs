@@ -9,7 +9,7 @@ namespace Platformer.Mechanics.KinematicObjects
 {
 
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-    public class KinematicObject : TimeAfectedObject
+    public class KinematicObject : TimeAffectedObject
     {
 
         public Rigidbody2D rigidBody;

@@ -11,7 +11,7 @@ namespace Platformer.Mechanics.TimeModifiers
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            TimeAfectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAfectedObject>();
+            TimeAffectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
 
             if(timeAfectedObj != null)
             {
@@ -21,7 +21,7 @@ namespace Platformer.Mechanics.TimeModifiers
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            TimeAfectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAfectedObject>();
+            TimeAffectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
 
             if(timeAfectedObj != null)
             {
