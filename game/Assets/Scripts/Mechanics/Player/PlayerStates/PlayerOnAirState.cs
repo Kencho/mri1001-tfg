@@ -33,7 +33,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
         {
             if (player.Grounded == false)
             {
-                MoveInAir();
+                AerialMovement();
             }
             else
             {
@@ -41,7 +41,7 @@ namespace Platformer.Mechanics.Player.PlayerStates
             }
         }
 
-        private void MoveInAir()
+        private void AerialMovement()
         {
             if(Mathf.Abs(PhisicsController.GetVelocity(player).x) >= PlayerController.MAX_AIR_SPEED)
             {
