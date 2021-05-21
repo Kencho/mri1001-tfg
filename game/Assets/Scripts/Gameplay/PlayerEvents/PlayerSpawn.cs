@@ -1,5 +1,5 @@
 using Platformer.Core;
-using Platformer.Mechanics;
+using Platformer.Gameplay.PlayerEvents;
 using Platformer.Model;
 using Platformer.Physics;
 using Platformer.Player;
