@@ -41,7 +41,7 @@ namespace Platformer.Player
         public bool Jumping { get => jump.Jumping;}
         public bool Dashing { get => dash.Dashing;}
         public float MovingDirection { get => movingDirection;}
-        public bool ApplingBulletTime { get => bulletTime.ApplingBulletTime;}
+        public bool ApplingBulletTime { get => bulletTime.BulletTimeActive;}
 
         protected override void Awake()
         {

@@ -8,39 +8,39 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
 {
     public class BulletTime : PlayerMechanic
     {
-        private float bulletTimeColdonw;
+        private float bulletTimeCooldonw;
         private float bulletTimeDuration;
         private float timeScale;
         private PlayerController player;
-        private float timeWithOutBulletTime;
-        private bool bulletTimeAbble;
-        private bool applingBulletTime;
+        private float timeWithoutBulletTime;
+        private bool bulletTimeAvailable;
+        private bool bulletTimeActive;
 
-        public bool ApplingBulletTime { get => applingBulletTime;}
+        public bool BulletTimeActive { get => bulletTimeActive;}
 
-        public BulletTime(float bulletTimeColdonw, float bulletTimeDuration, float timeScale, PlayerController player)
+        public BulletTime(float bulletTimeCooldonw, float bulletTimeDuration, float timeScale, PlayerController player)
         {
-            this.bulletTimeColdonw = bulletTimeColdonw;
+            this.bulletTimeCooldonw = bulletTimeCooldonw;
             this.bulletTimeDuration = bulletTimeDuration;
             this.player = player;
             this.timeScale = timeScale;
-            timeWithOutBulletTime = 0;
-            bulletTimeAbble = true;
-            applingBulletTime = false;
+            timeWithoutBulletTime = 0;
+            bulletTimeAvailable = true;
+            bulletTimeActive = false;
         }
 
         public void ManageFlags()
         {
-            if (bulletTimeAbble == false)
+            if (bulletTimeAvailable == false)
             {
-                if (timeWithOutBulletTime < bulletTimeColdonw)
+                if (timeWithoutBulletTime < bulletTimeCooldonw)
                 {
-                    timeWithOutBulletTime += Time.fixedDeltaTime;
+                    timeWithoutBulletTime += Time.fixedDeltaTime;
                 }
                 else
                 {
-                    bulletTimeAbble = true;
-                    timeWithOutBulletTime = 0;
+                    bulletTimeAvailable = true;
+                    timeWithoutBulletTime = 0;
                 }
             }
         }
@@ -49,17 +49,17 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
         {
             if (Input.GetButton("BulletTime"))
             {
-                applingBulletTime = true;
+                bulletTimeActive = true;
             }
             else
             {
-                applingBulletTime = false;
+                bulletTimeActive = false;
             }
         }
 
         public void ExecuteMechanic()
         {
-            if (applingBulletTime && bulletTimeAbble)
+            if (bulletTimeActive && bulletTimeAvailable)
             {
                 ExecuteBulletTime();
             }
@@ -68,7 +68,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
         private void ExecuteBulletTime()
         {
             PlatformerModel.timeManager.ScaleGlobalTime(timeScale, bulletTimeDuration);
-            bulletTimeAbble = false;
+            bulletTimeAvailable = false;
         }
     }
 }
