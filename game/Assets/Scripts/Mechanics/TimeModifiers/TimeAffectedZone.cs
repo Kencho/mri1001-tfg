@@ -7,25 +7,25 @@ namespace Platformer.Mechanics.TimeModifiers
 {
     public class TimeAffectedZone : MonoBehaviour
     {
-        public float timeScaleAplied;
+        public float timeScaleApplied;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            TimeAffectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
+            TimeAffectedObject timeAffectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
 
-            if(timeAfectedObj != null)
+            if(timeAffectedObj != null)
             {
-                PlatformerModel.timeManager.ScaleTime(timeAfectedObj, timeScaleAplied);
+                PlatformerModel.timeManager.ScaleTime(timeAffectedObj, timeScaleApplied);
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            TimeAffectedObject timeAfectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
+            TimeAffectedObject timeAffectedObj = collision.gameObject.GetComponent<TimeAffectedObject>();
 
-            if(timeAfectedObj != null)
+            if(timeAffectedObj != null)
             {
-                PlatformerModel.timeManager.UnScaleTime(timeAfectedObj);
+                PlatformerModel.timeManager.UnScaleTime(timeAffectedObj);
             }
         }
     }
