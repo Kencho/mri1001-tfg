@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Player
+namespace Platformer.Player.PlayerMechanics
 {
     public class Dash : PlayerMechanic
     {

@@ -5,7 +5,7 @@ using Platformer.Gameplay.PlayerEvents;
 using Platformer.Physics;
 using UnityEngine;
 
-namespace Platformer.Player
+namespace Platformer.Player.PlayerMechanics
 {
     public class Jump : PlayerMechanic
     {
