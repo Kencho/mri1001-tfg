@@ -3,7 +3,7 @@ using Platformer.Gameplay.PlayerEvents;
 using Platformer.Mechanics;
 using Platformer.Model;
 
-namespace Platformer.Gameplay
+namespace Platformer.Gameplay.PlayerEvents
 {
     /// <summary>
     /// Fired when a player enters a trigger with a DeathZone component.
