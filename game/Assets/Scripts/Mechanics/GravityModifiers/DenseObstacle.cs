@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace Platformer.Mechanics.GravityModifiers
 {
     public class DenseObstacle : MonoBehaviour
     {
@@ -16,12 +16,12 @@ namespace Platformer.Mechanics
 
             if(kineObj != null)
             {
-                Vector2 kineObjDistance = calculateKineObjDirection(kineObj);
+                Vector2 kineObjDistance = CalculateKinematicObjectDirection(kineObj);
                 kineObj.ApplyGravityAlteration(kineObjDistance * -gravityInfluence + kineObjDistance * maxInfluence);
             }
         }
 
-        private Vector2 calculateKineObjDirection(KinematicObject kineObj)
+        private Vector2 CalculateKinematicObjectDirection(KinematicObject kineObj)
         {
             return (this.transform.position - kineObj.transform.position).normalized;
         }
