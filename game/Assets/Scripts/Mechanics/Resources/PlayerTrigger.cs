@@ -3,8 +3,14 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Resources
 {
+    /// <summary>
+    /// Class that checks if a PlayerController is located in the colliders area
+    /// </summary>
     public class PlayerTrigger : MonoBehaviour
     {
+        /// <summary>
+        /// true if PlayerController inside the collider; false if no PlayerController isnside the collider
+        /// </summary>
         private bool isTriggered;
         private Collider2D triggerZone;
 

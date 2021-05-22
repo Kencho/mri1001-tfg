@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Resources
 {
+    /// <summary>
+    /// Class formed by the methods that simulates the physics applied to KinematicObjects
+    /// </summary>
     public class PhysicsController
     {
 
@@ -12,6 +15,12 @@ namespace Platformer.Mechanics.Resources
             kinematicObj.rigidBody.velocity += gravityEffect * Time.deltaTime;
         }
 
+        /// <summary>
+        /// Changes velocity of KinematicObjects in a time period
+        /// </summary>
+        /// <param name="kinematicObj"></param>
+        /// <param name="force"></param>
+        /// <returns>fragment of the force applied this instant</returns>
         public static Vector2 ApplyForce(KinematicObject kinematicObj, Vector2 force)
         {
             Vector2 forceTick = force * Time.deltaTime;
@@ -19,12 +28,23 @@ namespace Platformer.Mechanics.Resources
             return forceTick;
         }
 
+        /// <summary>
+        /// Changes velocity of KinematicObjects instantly
+        /// </summary>
+        /// <param name="kinematicObj"></param>
+        /// <param name="impulse"></param>
+        /// <returns>velocity modification applied in this instant</returns>
         public static Vector2 ApplyImpulse(KinematicObject kinematicObj, Vector2 impulse)
         {
             kinematicObj.rigidBody.velocity += impulse;
             return impulse;
         }
 
+        /// <summary>
+        /// Reduces positive horizontal velocity of KinematicObjects in order to reduce it to zero
+        /// </summary>
+        /// <param name="kinematicObj"></param>
+        /// <param name="friction"></param>
         public static void ApplyFriction(KinematicObject kinematicObj, float friction)
         {
             Vector2 newVelocity = kinematicObj.rigidBody.velocity;
