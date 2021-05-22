@@ -6,7 +6,9 @@ using UnityEngine;
 
 namespace Platformer.Model
 {
-
+    /// <summary>
+    /// Class that stores data of the scene that will be consulted by other classes
+    /// </summary>
     [System.Serializable]
     public static class PlatformerModel
     {
