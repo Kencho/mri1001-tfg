@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Platformer.GizmosUI
 {
+    /// <summary>
+    /// Draws the path followed by the PatrolObstacle in the editor
+    /// </summary>
     public class PatrolObstacleGizmo : MonoBehaviour
     {
         private void OnDrawGizmos()
