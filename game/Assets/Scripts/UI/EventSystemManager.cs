@@ -3,6 +3,9 @@ using UnityEngine.EventSystems;
 
 namespace Platformer.UI
 {
+    /// <summary>
+    /// Wrapper class used to ensure EventSystem will do the requiered intructions when enabled
+    /// </summary>
     public class EventSystemManager : MonoBehaviour
     {
         public EventSystem eventSystem;
