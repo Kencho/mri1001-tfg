@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Enemies
 {
+    /// <summary>
+    /// Obstacle static in a location that kills PlayerController when collides with him
+    /// </summary>
     public class Obstacle : TimeAffectedObject
     {
         private Collider2D obstacleCollider;
