@@ -4,10 +4,19 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.TimeModifiers
 {
+    /// <summary>
+    /// Class which manages time modifications 
+    /// </summary>
     public class TimeManager : MonoBehaviour
     {
         public const float DEFAULT_TIME_SCALE = 1;
+        /// <summary>
+        /// List of TimeAfectedObjects that will recibe time modifciations
+        /// </summary>
         private List<TimeAffectedObject> timeAffectedObjects;
+        /// <summary>
+        /// Variable used to cancel the launch of Corourines
+        /// </summary>
         private Coroutine unscaledRoutine;
 
         private void Awake()

@@ -3,8 +3,14 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.TimeModifiers
 {
+    /// <summary>
+    /// Class with a collider. When a TimeAffectedObject enters the colliders zone TimeAffectedZone will scale its time
+    /// </summary>
     public class TimeAffectedZone : MonoBehaviour
     {
+        /// <summary>
+        /// Time modification applied to TimeAffectedObjects
+        /// </summary>
         public float timeScaleApplied;
 
         private void OnTriggerEnter2D(Collider2D collision)
