@@ -1,5 +1,8 @@
 ﻿namespace Platformer.Mechanics.Player.PlayerStates
 {
+    /// <summary>
+    /// State the PlayerController is in when it enters a DeathZone
+    /// </summary>
     public class PlayerDeadState : PlayerState
     {
 

@@ -3,7 +3,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
-
+    /// <summary>
+    /// State the player is in when PlayerController was performing a movement but now is going to stop moving
+    /// </summary>
     public class PlayerStoppingState : PlayerState
     {
 
@@ -25,6 +27,9 @@ namespace Platformer.Mechanics.Player.PlayerStates
             
         }
 
+        /// <summary>
+        /// Method that reduces PlayerController´s velocity until it is stopped
+        /// </summary>
         public void FixedUpdateState()
         {
             if(player.MovingDirection != 0)

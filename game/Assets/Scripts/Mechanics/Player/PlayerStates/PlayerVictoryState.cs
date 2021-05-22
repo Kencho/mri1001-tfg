@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
+    /// <summary>
+    /// State the player is in when PlayerController enter a VictoryZone
+    /// </summary>
     public class PlayerVictoryState : PlayerState
     {
         public PlayerController player;

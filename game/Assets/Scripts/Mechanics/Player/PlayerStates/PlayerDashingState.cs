@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
+    /// <summary>
+    /// State the PlayerController is in while it is performing dash
+    /// </summary>
     public class PlayerDashingState : PlayerState
     {
         private PlayerController player;
@@ -23,6 +26,19 @@ namespace Platformer.Mechanics.Player.PlayerStates
             this.player.animator.SetBool("dashing", true);
         }
 
+        private float CalculateDashSpeed()
+        {
+            float speed = DISTANCE_OF_DASH / DASH_TIME;
+            if (this.player.spriteRenderer.flipX == false)
+            {
+                return speed;
+            }
+            else
+            {
+                return -speed;
+            }
+        }
+
         public void FixedUpdateState()
         {
             if (timeDashed < DASH_TIME)
@@ -40,19 +56,6 @@ namespace Platformer.Mechanics.Player.PlayerStates
         public void UpdateState()
         {
             
-        }
-
-        private float CalculateDashSpeed()
-        {
-            float speed = DISTANCE_OF_DASH / DASH_TIME;
-            if(this.player.spriteRenderer.flipX == false)
-            {
-                return speed;
-            }
-            else
-            {
-                return -speed;
-            }
         }
 
         public void ExitPlayerState()

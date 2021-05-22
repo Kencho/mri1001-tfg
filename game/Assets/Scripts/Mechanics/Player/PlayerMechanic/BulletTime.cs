@@ -3,12 +3,24 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerMechanics
 {
+    /// <summary>
+    /// Class that manages the bullet time mechanic of the PlayerController
+    /// </summary>
     public class BulletTime : PlayerMechanic
     {
         private float bulletTimeCooldonw;
+        /// <summary>
+        /// How much secons bullet time is applied
+        /// </summary>
         private float bulletTimeDuration;
+        /// <summary>
+        /// time scale that applies bullet time
+        /// </summary>
         private float timeScale;
         private PlayerController player;
+        /// <summary>
+        /// Seconds that has passed with bullet time disabled
+        /// </summary>
         private float timeWithoutBulletTime;
         private bool bulletTimeAvailable;
         private bool bulletTimeActive;

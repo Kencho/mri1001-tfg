@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
+    /// <summary>
+    /// State the PlayerController is in when it is on Air
+    /// </summary>
     public class PlayerOnAirState : PlayerState
     {
 
@@ -36,6 +39,9 @@ namespace Platformer.Mechanics.Player.PlayerStates
             }
         }
 
+        /// <summary>
+        /// Performs the Movement in the air
+        /// </summary>
         private void AerialMovement()
         {
             if(Mathf.Abs(PhysicsController.GetVelocity(player).x) >= PlayerController.MAX_AIR_SPEED)

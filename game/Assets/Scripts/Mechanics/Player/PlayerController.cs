@@ -6,10 +6,11 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player
 {
-
+    /// <summary>
+    /// Class that manages Player behaviour
+    /// </summary>
     public class PlayerController : KinematicObject
     {
-
         public const float MAX_SPEED = 5f;
         public const float JUMP_IMPULSE = 5f;
         public const float MAX_AIR_SPEED = 4f;
@@ -78,6 +79,9 @@ namespace Platformer.Mechanics.Player
             base.FixedUpdate();
         }
 
+        /// <summary>
+        /// Checks if all the Inputs used are being pressed or not
+        /// </summary>
         private void ManageInputs()
         {
             jump.ManageInput();
@@ -86,6 +90,9 @@ namespace Platformer.Mechanics.Player
             movingDirection = Input.GetAxis("HorizontalMove");
         }
 
+        /// <summary>
+        /// Update flags relating to be performing a mechanic
+        /// </summary>
         private void ManageFlags()
         {
             jump.ManageFlags();
@@ -103,6 +110,9 @@ namespace Platformer.Mechanics.Player
             this.playerState.EnterPlayerState();
         }
 
+        /// <summary>
+        /// Update animations according to movement is being performed
+        /// </summary>
         private void AnimateMovement()
         {
             animator.SetFloat("velocityX", Mathf.Abs(rigidBody.velocity.x) / MAX_SPEED);

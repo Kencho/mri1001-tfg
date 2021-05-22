@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerStates
 {
+    /// <summary>
+    /// State the PlayerController is in when it is moving in the ground
+    /// </summary>
     public class PlayerMovingState : PlayerState
     {
 

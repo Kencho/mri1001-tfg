@@ -5,13 +5,25 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerMechanics
 {
+    /// <summary>
+    /// Class that manages the jump of the PlayerController
+    /// </summary>
     public class Jump : PlayerMechanic
     {
+        /// <summary>
+        /// Total impulse applied when jumping
+        /// </summary>
         private float jumpImpulse;
+        /// <summary>
+        /// Current impulse aplied during jumping
+        /// </summary>
         private float jumpForceApplied;
         private bool jumping;
-        private bool jumpable;
+        private bool jumpAvailable;
         private PlayerController player;
+        /// <summary>
+        /// Direction of the jump
+        /// </summary>
         private Vector2 vectorDirection;
 
         public bool Jumping { get => jumping;}
@@ -21,24 +33,24 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
             this.jumpImpulse = jumpImpulse;
             this.vectorDirection = vectorDirection;
             this.player = player;
-            jumpable = true;
+            jumpAvailable = true;
         }
 
         public void ManageFlags()
         {
             if (player.Grounded)
             {
-                jumpable = true;
+                jumpAvailable = true;
             }
             else
             {
-                jumpable = false;
+                jumpAvailable = false;
             }
         }
 
         public void ManageInput()
         {
-            if(jumpable == true)
+            if(jumpAvailable == true)
             {
                 if (Input.GetButtonDown("Jump"))
                 {
@@ -56,12 +68,15 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
             }
         }
 
+        /// <summary>
+        /// Execute all the instructions needed to perform jump on each loop of FixedUpdate
+        /// </summary>
         private void ExecuteJump()
         {
-            jumpable = false;
+            jumpAvailable = false;
             Vector2 jumpForce = vectorDirection * jumpImpulse;
             Vector2 forceApplied = PhysicsController.ApplyImpulse(player, jumpForce);
-            jumpForceApplied += jumpImpulse * player.TimeScale;
+            jumpForceApplied += forceApplied.magnitude * player.TimeScale;
             PlayerJumped ev = Simulation.Schedule<PlayerJumped>();
             ev.player = player;
             if (jumpForceApplied >= jumpImpulse)

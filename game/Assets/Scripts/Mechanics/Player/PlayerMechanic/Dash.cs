@@ -3,12 +3,18 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Player.PlayerMechanics
 {
+    /// <summary>
+    /// Class that manages the Dash of the PlayerController
+    /// </summary>
     public class Dash : PlayerMechanic
     {
         private float dashCooldown;
         private PlayerController player;
         private bool dashing;
         private bool dashAvailable;
+        /// <summary>
+        /// Counts how much seconds dash has been disabled
+        /// </summary>
         private float timeWithoutDash;
 
         public bool Dashing { get => dashing;}
