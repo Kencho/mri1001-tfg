@@ -3,12 +3,27 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.PatrolPath
 {
+    /// <summary>
+    /// Class that calculates the position of a object that follows a path in a instance of time
+    /// </summary>
     public partial class PatrolPath
     {
+        /// <summary>
+        /// List of points the object is going to go to
+        /// </summary>
         private List<Vector2> path;
-        private List<float> sectionsDuration; //in seconds
+        /// <summary>
+        /// List of the seconds that is goint to take move between points
+        /// </summary>
+        private List<float> sectionsDuration;
+        /// <summary>
+        /// Total time in seconds that takes travel all the path
+        /// </summary>
         protected float pathDuration;
         private int currentPathSection;
+        /// <summary>
+        /// Actual position of the object
+        /// </summary>
         private Vector2 currentPosition;
 
         public List<float> SectionsDuration { get => sectionsDuration;}
@@ -23,6 +38,10 @@ namespace Platformer.Mechanics.PatrolPath
             currentPosition = path[0];
         }
 
+        /// <summary>
+        /// Calculates the time that will take travel each section 
+        /// </summary>
+        /// <param name="pathDuration"></param>
         protected void AssignSectionsDuration(float pathDuration)
         {
             float totalDistance = 0;
@@ -41,6 +60,9 @@ namespace Platformer.Mechanics.PatrolPath
             }
         }
 
+        /// <summary>
+        /// </summary>
+        /// <returns>next position of the object</returns>
         public Vector2 GetNextPathPosition()
         {
             int nextPathSection = (currentPathSection + 1) % path.Count;
