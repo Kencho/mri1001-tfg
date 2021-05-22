@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 namespace Platformer.UI
 {
+    /// <summary>
+    /// Slider bar that modifies the volume based on the value of the slider bar
+    /// </summary>
     public class VolumeSliderBar : MonoBehaviour
     {
         private Slider volumeSlider;
@@ -24,6 +27,9 @@ namespace Platformer.UI
             SetVolumeSettings();
         }
 
+        /// <summary>
+        /// Changes the volume of the game accord to the variable volume
+        /// </summary>
         protected virtual void SetVolumeSettings()
         {
             VolumeManager.SetVolume(volume);

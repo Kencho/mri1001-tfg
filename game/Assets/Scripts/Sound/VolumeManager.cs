@@ -2,6 +2,9 @@
 
 namespace Platformer.Sound
 {
+    /// <summary>
+    /// Class that manages the volume of the game
+    /// </summary>
     public static class VolumeManager
     {
         private static float volume = LoadVolume();
@@ -9,6 +12,10 @@ namespace Platformer.Sound
 
         public static float Volume { get => volume;}
 
+        /// <summary>
+        /// Set volume based in the value stored in a file 
+        /// </summary>
+        /// <returns>volume stored</returns>
         public static float LoadVolume()
         {
             volume = PlayerPrefs.GetFloat(VARIABLE_NAME, 100);
