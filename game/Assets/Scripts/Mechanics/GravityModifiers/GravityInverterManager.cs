@@ -4,8 +4,14 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.GravityModifiers
 {
+    /// <summary>
+    /// Class wich modifies gravity of the KinematicObjects
+    /// </summary>
     public class GravityInverterManager : MonoBehaviour
     {
+        /// <summary>
+        /// List of KinematicObjects whose gravities will be inverted
+        /// </summary>
         private List<KinematicObject> affectedKineObjs;
 
         private void Awake()
@@ -13,6 +19,9 @@ namespace Platformer.Mechanics.GravityModifiers
             affectedKineObjs = new List<KinematicObject>();
         }
 
+        /// <summary>
+        /// Invert gravity of affectedKineObjs every FixedUpdate loop
+        /// </summary>
         private void FixedUpdate()
         {
             ApplyGravityInversionToAffectedKinematicObjects();
@@ -26,6 +35,10 @@ namespace Platformer.Mechanics.GravityModifiers
             }
         }
 
+        /// <summary>
+        /// If "kineObj" in affectedKineObjs removes it, if not adds it
+        /// </summary>
+        /// <param name="kineObj"></param>
         public void InvertGravityOfKinematicObject(KinematicObject kineObj)
         {
             if (affectedKineObjs.Contains(kineObj))
@@ -38,6 +51,9 @@ namespace Platformer.Mechanics.GravityModifiers
             }
         }
 
+        /// <summary>
+        /// Cancel gravity inversion on every inverted KinematicObject
+        /// </summary>
         public void ResetAffectedKinematicObjects()
         {
             if(affectedKineObjs != null)
