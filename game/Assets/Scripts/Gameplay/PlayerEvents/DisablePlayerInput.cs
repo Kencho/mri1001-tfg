@@ -5,6 +5,9 @@ using Platformer.Model;
 
 namespace Platformer.Gameplay.PlayerEvents
 {
+    /// <summary>
+    /// Event that disables the simulating of the physics and the capture of the controller inputs
+    /// </summary>
     public class DisablePlayerInput : Simulation.Event<DisablePlayerInput>
     {
         public override void Execute()
