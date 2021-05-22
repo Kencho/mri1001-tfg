@@ -13520,6 +13520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8622084913222823824, guid: dd61af79478ff6847b547a3ca0c9d2b3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeactivatePanel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd61af79478ff6847b547a3ca0c9d2b3, type: 3}
 --- !u!1001 &9018494041834941287
@@ -13529,6 +13534,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9018494041905129610, guid: 11c22c511de5a264c8d86a1e171482f9,
+        type: 3}
+      propertyPath: timeScaleApplied
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9018494041905129611, guid: 11c22c511de5a264c8d86a1e171482f9,
         type: 3}
       propertyPath: m_RootOrder
