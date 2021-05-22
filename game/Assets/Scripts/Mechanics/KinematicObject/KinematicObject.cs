@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.KinematicObjects
 {
-
+    /// <summary>
+    /// Class associated to objects tah simulates physics
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class KinematicObject : TimeAffectedObject
     {
@@ -14,7 +16,13 @@ namespace Platformer.Mechanics.KinematicObjects
         private KinematicObjectCollisionManager collisionManager;
         private KinematicObjectGravityManager gravityManager;
 
+        /// <summary>
+        /// Boolean that specify if simulate or not physics
+        /// </summary>
         public bool simulatingPhysics = true;
+        /// <summary>
+        /// Boolean that specify if KinematicObject is in contact with floor or not
+        /// </summary>
         private bool grounded = true;
 
 
@@ -28,6 +36,9 @@ namespace Platformer.Mechanics.KinematicObjects
             gravityManager = new KinematicObjectGravityManager(this);
         }
 
+        /// <summary>
+        /// Method that manages all the intructions that has to happen every FixedUpdate loop
+        /// </summary>
         protected virtual void FixedUpdate()
         {
             if (simulatingPhysics)
@@ -51,6 +62,9 @@ namespace Platformer.Mechanics.KinematicObjects
             }
         }
 
+        /// <summary>
+        /// Methods that perform the movement according with TimeAffectedObject features
+        /// </summary>
         protected override void Move()
         {
             Vector2 velocity = PhysicsController.GetVelocity(this);

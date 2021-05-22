@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.KinematicObjects
 {
+    /// <summary>
+    /// Class in charge of manage the interactions that happend when the KinematicObject collides with other object
+    /// </summary>
     public class KinematicObjectCollisionManager
     {
         private KinematicObject kineObj;
@@ -19,6 +22,9 @@ namespace Platformer.Mechanics.KinematicObjects
             HandleImpulseCreatorCollision();
         }
 
+        /// <summary>
+        /// Manages collision with walls
+        /// </summary>
         public void HandleWallCollision()
         {
             Vector2 velocity = PhysicsController.GetVelocity(kineObj);
@@ -60,6 +66,9 @@ namespace Platformer.Mechanics.KinematicObjects
             }
         }
 
+        /// <summary>
+        /// Manages collision with ImpulseCreators
+        /// </summary>
         private void HandleImpulseCreatorCollision()
         {
             Vector2 velocity = PhysicsController.GetVelocity(kineObj);
