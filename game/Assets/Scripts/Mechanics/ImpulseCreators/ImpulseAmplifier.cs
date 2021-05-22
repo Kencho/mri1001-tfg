@@ -4,8 +4,14 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.ImpulseCreators
 {
+    /// <summary>
+    /// Impulse creator that applies a multiplier to KinematicObject´s velocity
+    /// </summary>
     public class ImpulseAmplifier : ImpulseCreator
     {
+        /// <summary>
+        /// Multipier applier to KinematicObject´s velocity
+        /// </summary>
         private float velocityScale;
 
         public ImpulseAmplifier(float velocityScale)
