@@ -52,7 +52,7 @@ namespace Platformer.Core
         /// </summary>
         private List<GameObject> instancedObjects;
 
-        private void Awake()
+        private void Start()
         {
             instancedObjects = new List<GameObject>();
             gravityInverter = GetComponent<GravityInverterManager>();
