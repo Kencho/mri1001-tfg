@@ -14,12 +14,7 @@ Los requisitos funcionales especificarán cual es el funcionamiento que se esper
 
 \begin{itemize}
 \item
-\textbf{RF-1.1 Desplazarse entre botones:} El jugador debe de ser capaz de desplazarse entre los botones de los menús pulsando los botones establecidos para desplazarse entre botones.
-\end{itemize}
-
-\begin{itemize}
-\item
-\textbf{RF-1.2 Interactuar con los elementos UI:} Debe ser posible pulsar los botones de la interfaz con unos controles establecidos; y estos deben activar la funcionalidad que se le asocia.
+\textbf{RF-1.1 Navegación entre pantallas:} Las pantallas deben de permitir navegar a otras pantallas (de manera directa o indirecta).
 \end{itemize}
 
 \item
@@ -41,113 +36,75 @@ Los requisitos funcionales especificarán cual es el funcionamiento que se esper
 \end{itemize}
 
 \item
-\textbf{RF-3 Gestión del menú de opciones:} Deberá haber un menú de opciones que permita modificar aspectos generales del juego.
-
-\begin{itemize}
-\item
-\textbf{RF-3.1 Vuelta al menú principal:} Debe de poderse ir desde el menú de opciones al menú principal.
-\end{itemize}
-
-\begin{itemize}
-\item
-\textbf{RF-3.2 Modificar el volumen general del juego:} Se debe poder modificar el volumen general del juego desde el menú de opciones.
-\end{itemize}
+\textbf{RF-3 Gestión del menú de opciones:} Deberá haber un menú de opciones que permita modificar aspectos generales del juego. Desde el menú de opciones se debe poder volver al menú principal.
 
 \item
 \textbf{RF-4 Gestión de niveles:} Los niveles deben de contener todos los elementos necesarios y obligatorios de un nivel.
 
 \begin{itemize}
 \item
-\textbf{RF-4.1 Mantener el control de la escena:} El nivel debe de mantener siempre un estado de juego controlado y predecible.
+\textbf{RF-4.1 Controlar un avatar:} Debe de haber un avatar controlable por el jugador que realice las operaciones que le indique el jugador.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.2 Controlar un avatar:} Debe de haber un avatar controlable por el jugador que realice las operaciones que le indique el jugador.
+\textbf{RF-4.2 Zonas de muerte:} Debe haber zonas que maten al avatar del jugador cuando entre en contacto con ellas y devuelvan el nivel a un estado inicial.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.3 Revivir al jugador:} Debe de haber una forma de devolver el nivel a un estado inicial cuando muera el jugador.
+\textbf{RF-4.3 Zonas de victoria (meta):} Debe haber zonas en las que, al entrar, se considere el nivel terminado y se vuelva al menú principal.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.4 Gestión de cámaras:} Debe de haber un sistema de gestión de cámaras cuyo objetivo sea que el jugador pueda ver en pantalla a su avatar el más tiempo posible.
+\textbf{RF-4.4 Gestión del menú de pausa:} Se debe poder acceder al menú de pausa, que parará la ejecución del nivel.
+
+\begin{itemize}
+\item
+\textbf{RF-4.4.1 Abrir el menú de pausa:} Se deberá de poder abrir el menú de pausa, lo que pausara la ejecución del nivel.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.5 Zonas de muerte:} Debe haber zonas que maten al avatar del jugador cuando entre en contacto con ellas y devuelva el nivel a un estado inicial.
+\textbf{RF-4.4.2 Operaciones del menú de pausa:} Se deben de poder realizar las mismas operaciones que en el menú de opciones.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.6 Zonas de victoria:} Debe haber zonas en las que, al entrar, se considere el nivel terminado y se vuelva al menú principal.
+\textbf{RF-4.4.3 Cerrar el menú de pausa:} Se deberá poder cerrar el menú de pausa, lo que reanudará la ejecución del nivel.
+\end{itemize}
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.7 Gestión del menú de pausa:} Se debe poder acceder al menú de pausa, que parará la ejecución del nivel.
-
-\begin{itemize}
-\item
-\textbf{RF-4.7.1 Abrir el menú de pausa:} Se deberá de poder abrir el menú de pausa, lo que pausara la ejecución del nivel.
+\textbf{RF-4.5 Manipulación de la gravedad:} Debe de ser posible manipular la gravedad del nivel.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.7.2 Operaciones del menú de pausa:} Se deben de poder realizar las mismas operaciones que en el menú de opciones.
+\textbf{RF-4.6 Manipulación del tiempo:} Debe de ser posible modificar la escala de tiempo que afecta al nivel.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-4.7.3 Cerrar el menú de pausa:} Se deberá poder cerrar el menú de pausa, lo que reanudará la ejecución del nivel.
-\end{itemize}
-\end{itemize}
-
-\item
-\textbf{RF-5 Gestión del avatar del jugador:} El jugador debe contar con un avatar controlable por el jugador.
-
-\begin{itemize}
-\item
-\textbf{RF-5.1 Saltar:} El avatar debe ser capaz de saltar cuando el jugador se lo ordene (respetando los límites de la mecánica).
+\textbf{RF-4.7 Aplicación de impulsos:} Se debe poder aplicar impulsos que varíen la trayectoria que lleva un objeto.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-5.2 Moverse:} El avatar debe de ser capaz de desplazarse en el eje horizontal cuando el jugador se lo ordene.
+\textbf{RF-4.8 Obstáculos:} Puede haber obstáculos que maten al avatar jugable cuando entre en contacto con ellos.
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-5.3 Realizar acelerón:} El avatar debe ser capaz de realizar un acelerón (un desplazamiento más rápido de los normal en el eje horizontal) cuando el jugador se lo ordene (respetando los límites de la mecánica).
+\textbf{RF-4.9 Portales:} Puede haber portales que teletransporten al avatar jugable desde el punto en el que se encuentra a otro que corresponderá con otro portal.
+\end{itemize}
 \end{itemize}
 
 \begin{itemize}
 \item
-\textbf{RF-5.4 Activar tiempo bala:} El avatar debe ser capaz de modificar el tiempo del nivel cuando el jugador se lo ordene (respetando los límites de la mecánica).
-\end{itemize}
-
-\item
-\textbf{RF-6 Gestión de los obstáculos:} Los obstáculos deben matar al avatar jugable cuando entren en contacto con él.
-
-\item
-\textbf{RF-7 Gestión de los portales:} El avatar jugable debe cambiar su posición a otro portal cuando este entra en contacto con un portal.
-
-\item
-\textbf{RF-8 Gestión de los creadores de impulsos:} Se debe aplicar un impulso al avatar jugable cuando este entre en contacto con un creador de impulso.
-
-\item
-\textbf{RF-9 Gestión de las zonas de tiempo escalado:} Habrá zonas en las que la escala temporal cambia.
-
-\begin{itemize}
-\item
-\textbf{RF-9.1 Establecer objetos afectados por el tiempo:} Será necesario establecer que objetos se verán afectados por los cambios en la escala temporal y cuales no.
-\end{itemize}
-
-\item
-\textbf{RF-10 Gestión de los modificadores de gravedad:} Se deberá cambiar como afecta la gravedad al avatar jugable cuando este entre en contacto con un modificador de gravedad.
+\textbf{RF-5 Gestión del avatar del jugador:} El jugador debe contar con un avatar controlable por el este. El avatar debe ser capaz de: saltar, moverse, realizar un acelerón y activar el tiempo bala.
 \end{itemize}
 
 \subsection{Requisitos no funcionales}
@@ -161,10 +118,10 @@ Al ser el producto a entregar un videojuego (un software de ocio), resulta clave
 \textbf{Soporte:} Los cambios y actualizaciones del videojuego tienen que ser trasparentes al usuario, pues no tiene necesidad de conocer como funciona internamente el juego, sino solo abrir el ejecutable y disfrutar del juego.
 
 \item
-\textbf{Hardware:} Es lógico anuncia los requisitos hardware mínimos necesarios para ejecutar el juego y que este funcione como se espera.
+\textbf{Apariencia o interfaz externa (\textit{look and feel}):} No se ha especificado un diseño de interfaz, sin embargo en el mundo de los videojuegos hay un modelo general muy establecido. Es lógico adoptarlo para ofrecerle al jugador una experiencia que le resulte familiar.
 
 \item
-\textbf{Apariencia o interfaz externa:} No se ha especificado un diseño de interfaz, sin embargo en el mundo de los videojuegos hay un modelo general muy establecido. Es lógico adoptarlo para ofrecerle al jugador una experiencia que le resulte familiar.
+\textbf{Escalabilidad:} En un videojuego se van a ir añadiendo continuamente funcionalidades sobre el código para poder implementar todas las mecánicas, tanto definidas como que puedan surgir en el futuro. Por ello el código debe ser fácil de mantener y extender.
 \end{itemize}
 
 
