@@ -8,7 +8,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
     /// </summary>
     public class BulletTime : PlayerMechanic
     {
-        private float bulletTimeCooldonw;
+        private float bulletTimeCooldown;
         /// <summary>
         /// How much secons bullet time is applied
         /// </summary>
@@ -27,9 +27,9 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
 
         public bool BulletTimeActive { get => bulletTimeActive;}
 
-        public BulletTime(float bulletTimeCooldonw, float bulletTimeDuration, float timeScale, PlayerController player)
+        public BulletTime(float bulletTimeCooldown, float bulletTimeDuration, float timeScale, PlayerController player)
         {
-            this.bulletTimeCooldonw = bulletTimeCooldonw;
+            this.bulletTimeCooldown = bulletTimeCooldown;
             this.bulletTimeDuration = bulletTimeDuration;
             this.player = player;
             this.timeScale = timeScale;
@@ -42,7 +42,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
         {
             if (bulletTimeAvailable == false)
             {
-                if (timeWithoutBulletTime < bulletTimeCooldonw)
+                if (timeWithoutBulletTime < bulletTimeCooldown)
                 {
                     timeWithoutBulletTime += Time.fixedDeltaTime;
                 }
