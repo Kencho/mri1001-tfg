@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Platformer.Mechanics.Enemies
 {
+    /// <summary>
+    /// Obstacle that follows a path determined by points ad infinitum
+    /// </summary>
     public class PatrolObstacle : Obstacle
     {
         /// <summary>

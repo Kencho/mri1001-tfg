@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Platformer.GizmosUI
 {
+    /// <summary>
+    /// Gizmo that shows factory in the editor and trigger associated with it when selected
+    /// </summary>
     public class ObstacleFactoryGizmo : MonoBehaviour
     {
         /// <summary>

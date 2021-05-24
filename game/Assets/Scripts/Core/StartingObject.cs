@@ -2,6 +2,9 @@
 
 namespace Platformer.Core
 {
+    /// <summary>
+    /// Class that clones objects that have to be intantiated when setting starting game state.
+    /// </summary>
     public class StartingObject
     {
         /// <summary>
