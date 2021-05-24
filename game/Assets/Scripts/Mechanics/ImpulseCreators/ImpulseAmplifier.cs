@@ -1,5 +1,8 @@
 ﻿using Platformer.Mechanics.KinematicObjects;
+using Platformer.Mechanics.Player;
+using Platformer.Mechanics.Player.PlayerStates;
 using Platformer.Mechanics.Resources;
+using Platformer.Model;
 using UnityEngine;
 
 namespace Platformer.Mechanics.ImpulseCreators
@@ -22,7 +25,18 @@ namespace Platformer.Mechanics.ImpulseCreators
         public void ImpulseKinematicObject(KinematicObject kineObj)
         {
             Vector2 newVelocity = PhysicsController.GetVelocity(kineObj) * velocityScale;
+            PhysicsController.SetVelocity(kineObj, Vector2.zero);
             PhysicsController.SetVelocity(kineObj, newVelocity);
+            if (kineObj.GetType() == typeof(PlayerController))
+            {
+                ChangePlayerState();
+            }
+        }
+
+        private void ChangePlayerState()
+        {
+            PlayerController player = PlatformerModel.player;
+            player.ChangeState(new PlayerIdleState(player));
         }
     }
 }
