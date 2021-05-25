@@ -20,6 +20,17 @@ namespace Platformer.UI
             eventSystem.SetSelectedGameObject(eventSystem.firstSelectedGameObject);
         }
 
+        public void EnableInput()
+        {
+            eventSystem.SetSelectedGameObject(eventSystem.firstSelectedGameObject);
+            eventSystem.sendNavigationEvents = true;
+        }
+
+        public void DisableInput()
+        {
+            eventSystem.sendNavigationEvents = false;
+        }
+
     }
 
 }

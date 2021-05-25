@@ -17,7 +17,7 @@ namespace Platformer.UI
         /// <summary>
         /// EventSystem that manages menu inputs
         /// </summary>
-        public GameObject eventSystem;
+        public EventSystemManager eventSystem;
         /// <summary>
         /// ¿Is the pause menu shown?
         /// </summary>
@@ -27,7 +27,7 @@ namespace Platformer.UI
         /// </summary>
         private float timeScaleBeforePanel;
 
-        private void Awake()
+        private void Start()
         {
             InitializeOptionsPanel();
             panelActivated = false;
@@ -60,7 +60,6 @@ namespace Platformer.UI
                 ResumeGameExecution();
             }
 
-            eventSystem.SetActive(panelActivated);
         }
 
         private void PauseGameExecution()
@@ -68,6 +67,8 @@ namespace Platformer.UI
             Simulation.Schedule<DisablePlayerInput>();
             timeScaleBeforePanel = Time.timeScale;
             Time.timeScale = 0;
+            eventSystem.EnableInput();
+
         }
 
         private void ResumeGameExecution()
@@ -79,6 +80,7 @@ namespace Platformer.UI
                 timeScaleBeforePanel = 0;
                 Simulation.Schedule<EnablePlayerInput>(0.2f);
             }
+            eventSystem.DisableInput();
             
         }
 
