@@ -137,5 +137,27 @@ Al ser el producto a entregar un videojuego (un software de ocio), resulta clave
 
 
 \section{Especificación de requisitos}
+\subsection{Diagramas de casos de uso}
+\subsection{Actores}
+Solo habrá un actor: el jugador del videojuego.
+\subsection{Casos de uso}
 
+\begin{longtable}{lll}
+\textbf{CU-01}                                   & \multicolumn{2}{l}{Gestión del menú principal}                                                                                       \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario seleccionar escena, cerrar el juego y acceder al menú de opciones.}                            \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-1, RF-1.1, RF-2, RF-2.1, RF-2.2, RF-2.3}                                                                       \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Haber ejecutado el juego}                                                                                         \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                  & \textbf{Operación}                                                                  \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                              & Mostrar todos los niveles que se pueden jugar.                                      \\
+\multicolumn{1}{l|}{}                            & 2                                              & Mostrar el botón de transición al menú de opciones.                                 \\
+\multicolumn{1}{l|}{}                            & 3                                              & Mostrar el botón cierre del programa.                                               \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber transicionado a otra escena}                                                                                \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{Si se pulsa el botón de cierre del programa parar la ejecución del programa em vez de transicionar a otra escena} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                         \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                             \\ \hline
+\end{longtable}
 
