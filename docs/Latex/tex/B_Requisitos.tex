@@ -142,6 +142,7 @@ Al ser el producto a entregar un videojuego (un software de ocio), resulta clave
 Solo habrá un actor: el jugador del videojuego.
 \subsection{Casos de uso}
 
+\subsubsection{Caso de uso 01}
 \begin{longtable}{lll}
 \textbf{CU-01}                                   & \multicolumn{2}{l}{Gestión del menú principal}                                                                                       \\ \hline
 \endfirsthead
@@ -161,3 +162,140 @@ Solo habrá un actor: el jugador del videojuego.
 \textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                             \\ \hline
 \end{longtable}
 
+\subsubsection{Caso de uso 02}
+\begin{longtable}{lll}
+\textbf{CU-02}                                 & \multicolumn{2}{l}{Navegación entre pantallas}                                           \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario cambiar de la escena actual a la escena escogida.} \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-1, RF-1.1, RF-2.1, RF-2.3, RF-3, RF-4.3, RF-4.4.3}                                                         \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Tener una escena a la que se desea cambiar.}                          \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}             & \textbf{Operación}                                           \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                         & Cargar la escena a la que se va a transicionar               \\
+\multicolumn{1}{l|}{}                            & 2                         & Inicializar la escena                                        \\
+\multicolumn{1}{l|}{}                            & 3                         & Cambiar a la escena a la que se ha transicionado             \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber transicionado a otra escena}                                    \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                           \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                             \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                 \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 03}
+\begin{longtable}{lll}
+\textbf{CU-03}                                   & \multicolumn{2}{l}{Selección de nivel}                                                                                                                                                                               \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario elegir que nivel desea jugar}                                                                                                                                                  \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.1}                                                                                                                                                                                     \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                                                                                                                                                       \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                          & \textbf{Operación}                                                                                                                          \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                                                      & Se muestra al jugador todos los niveles que se puede jugar                                                                                  \\
+\multicolumn{1}{l|}{}                            & 2                                                                      & El usuario puede desplazarse entre los botones de selección de nivel                                                                        \\
+\multicolumn{1}{l|}{}                            & 3                                                                      & El jugador se sitúa sobre el botón de selección del nivel del nivel que desea jugar                                                         \\
+\multicolumn{1}{l|}{}                            & 4                                                                      & El jugador pulsa el botón de acceso al nivel que desea jugar                                                                                \\
+\multicolumn{1}{l|}{}                            & 5                                                                      & Se inicializa el nivel seleccionado                                                                                                         \\
+\multicolumn{1}{l|}{}                            & 6                                                                      & El jugador entra al nivel seleccionado                                                                                                      \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber inicializado el nivel correctamente.}                                                                                                                                                       \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el nivel no se ha inicializado correctamente.\\ Si no se ha asignado ninguna escena a la que transicionar al pulsar el botón de selección de niveles.\end{tabular}} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                                                                                                         \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                             \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 04}
+\begin{longtable}{lll}
+\textbf{CU-04}                                   & \multicolumn{2}{l}{Cerrar la aplicación}                                              \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario cerrar el juego desde el menú principal}       \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.2}                                                      \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                        \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso} & \textbf{Operación}                                                    \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1             & Se muestra al jugador todos los botones con los que puede interactuar \\
+\multicolumn{1}{l|}{}                            & 2             & El usuario se desplaza al botón de cierre del juego                   \\
+\multicolumn{1}{l|}{}                            & 3             & El jugador pulsa el botón de cierre del juego                         \\
+\multicolumn{1}{l|}{}                            & 4             & El juego se cierra                                                    \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber parado la ejecución del programa}                            \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                        \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada}                                                          \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                              \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 05}
+\begin{longtable}{lll}
+\textbf{CU-05}                                   & \multicolumn{2}{l}{Viajar al menú de opciones}                                             \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario viajar al menú de opciones desde el menú principal} \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.3}                                                           \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                             \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}    & \textbf{Operación}                                                      \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                & Se muestra al jugador todos los botones con los que puede interactuar   \\
+\multicolumn{1}{l|}{}                            & 2                & El usuario se desplaza al botón del menú de opciones                    \\
+\multicolumn{1}{l|}{}                            & 3                & El jugador pulsa el botón del menú de opciones                          \\
+\multicolumn{1}{l|}{}                            & 4                & Inicializar la escena del menú de opciones                              \\
+\multicolumn{1}{l|}{}                                                 & 5                & Cambiar a la escena del menú de opciones                                \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Estar en la escena del menú de opciones}                                \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                             \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                          \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                   \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 06}
+\begin{longtable}{lll}
+\textbf{CU-06}                                   & \multicolumn{2}{l}{Modificar opción}                                                                                                                                               \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario modificar características generales del juego}                                                                                              \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-3}                                                                                                                                                   \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú de opciones o el menú de pausa}                                                                                                                \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                        & \textbf{Operación}                                                                                          \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                                                    & Se muestra al jugador todas las opciones que modificar                                                      \\
+\multicolumn{1}{l|}{}                            & 2                                                                    & Seleccionar la opción que se desea modificar                                                                \\
+\multicolumn{1}{l|}{}                            & 3                                                                    & Modificar el valor asociado a esa opción                                                                    \\
+\multicolumn{1}{l|}{}                            & 4                                                                    & Hacer el cambio persistente                                                                                 \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber modificado esa característica general y como afecta al juego}                                                                                             \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{A la hora de mostrar las opciones, si el jugador no le ha dado un valor concreto previamente, se le asignará  a la característica general un valor por defecto} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                  \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                           \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 07}
+\begin{longtable}{lll}
+\textbf{CU-07}                                   & \multicolumn{2}{l}{Gestión de niveles}                                                                                                         \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\hline
+\endfoot
+%
+\endlastfoot
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{El usuario manejará con un avatar en un nivel seleccionado hasta salir de él interactuando con los elementos que contriene} \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4, RF-4.1, RF-4.2, RF-4.3, RF-4.4, RF-4.5, RF-4.6, RF-4.7, RF-4.8, RF-4.9, RF-5}                                         \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Haber inicializado correctamente el nivel}                                                                                  \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                         & \textbf{Operación}                                                                                     \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                     & Se inicializan los objetos de la escena                                                                \\
+\multicolumn{1}{l|}{}                            & 2                                     & Se muestra el avatar jugable y su posición en el nivel                                                 \\
+\multicolumn{1}{l|}{}                            & 3                                     & Se le da el control del avatar jugable al jugador                                                      \\
+\multicolumn{1}{l|}{}                            & 4                                     & Se le da la opción al jugador de interactuar con el avatar jugable                                     \\
+\multicolumn{1}{l|}{}                            & 5                                     & Se le da la opción al jugador de interactuar con distintos elementos del nivel                         \\
+\multicolumn{1}{l|}{}                            & 6                                     & El avatar jugable podrá morir                                                                          \\
+\multicolumn{1}{l|}{}                            & 7                                     & Se puede abrir el menú de pausa                                                                        \\
+\multicolumn{1}{l|}{}                            & 8                                     & Llegar a la zona de victoria                                                                           \\
+\multicolumn{1}{l|}{}                            & 9                                     & Volver al menú principal                                                                               \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber vuelto al menú principal}                                                                                             \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{Se puede volver al menú de pausa sin haber pasado por las operaciones 4, 5, 6, 7 y 8}                                       \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy alta}                                                                                                                   \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Muy Alta}                                                                                                                   \\ \hline
+\end{longtable}
