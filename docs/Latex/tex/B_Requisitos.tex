@@ -299,3 +299,91 @@ Solo habrá un actor: el jugador del videojuego.
 \textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy alta}                                                                                                                   \\ \hline
 \textbf{Importancia}                             & \multicolumn{2}{l}{Muy Alta}                                                                                                                   \\ \hline
 \end{longtable}
+
+\subsubsection{Caso de uso 08}
+\begin{longtable}{lll}
+\textbf{CU-08}                                   & \multicolumn{2}{l}{Gestión del menú de pausa}                                                              \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{El usuario podrá abrir un menú de pausa similar al de opciones desde el nivel}          \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.4, RF-4.4.1, RF-4.4.2, RF-4.4.3}                                                   \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel}                                                                      \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}             & \textbf{Operación}                                                             \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                         & Pulsar el botón de apertura del menú de pausa                                  \\
+\multicolumn{1}{l|}{}                            & 2                         & Pausar la ejecución del juego                                                  \\
+\multicolumn{1}{l|}{}                            & 3                         & Abrir el menú del nivel                                                        \\
+\multicolumn{1}{l|}{}                            & 4                         & El usuario podrá interactuar con menú de opciones                              \\
+\multicolumn{1}{l|}{}                            & 5                         & El usuario podrá volver al menú principal desde el menú de opciónes            \\
+\multicolumn{1}{l|}{}                            & 6                         & Pulsar el botón de cierre del menú de pausa                                    \\
+\multicolumn{1}{l|}{}                            & 7                         & Cerrar el menú de pausa                                                        \\
+\multicolumn{1}{l|}{}                            & 8                         & Reanudar la ejecución del nivel                                                \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber vuelto al nivel, que se estará ejecutando con normalidad}                         \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{En caso de pulsar el botón de volver al menú principal se volverá a este y no al nivel} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Alta}                                                                          \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                   \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 09}
+\begin{longtable}{lll}
+\textbf{CU-09}                                   & \multicolumn{2}{l}{Manipulación de la gravedad}                                                                                                              \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Los objetos manipuladores de gravedad interactuarán con el avatar jugable}                                                                \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.5}                                                                                                                                   \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con objetos manipuladores de gravedad}                                                                                  \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                             & \textbf{Operación}                                                                                               \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                         & El avatar jugable entra en contacto con un objeto manipulador de gravedad                                        \\
+\multicolumn{1}{l|}{}                            & 2                                         & El objeto manipulador de gravedad modifica como afecta la gravedad al avatar jugable                             \\
+\multicolumn{1}{l|}{}                            & 3                                         & El avatar jugable deja de estar en contacto con el objeto manipulador de gravedad                                \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{No las hay}                                                                                                                               \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{Es posible que el objeto manipulador de gravedad deje de modificar la gravedad cuando el avatar jugable deje de estar en contacto con él} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                            \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                     \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 10}
+\begin{longtable}{lll}
+\textbf{CU-10}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel global}                                                                                                                                                                                                                       \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Los objetos modificadores del tiempo podrán modificar la escala de tiempo que afecta a los objetos a nivel global}                                                                                                                                            \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.6}                                                                                                                                                                                                                                                       \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con un avatar jugable}                                                                                                                                                                                                                      \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                                                  & \textbf{Operación}                                                                                                                                                              \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                                                                              & El usuario pulsará el botón de escalado de tiempo                                                                                                                               \\
+\multicolumn{1}{l|}{}                            & 2                                                                                              & La escala de tiempo global será modificada mientras dure el efecto                                                                                                              \\
+\multicolumn{1}{l|}{}                            & 3                                                                                              & El efecto de dejará de aplicarse                                                                                                                                                \\
+\multicolumn{1}{l|}{}                            & 4                                                                                              & La escala de tiempo global volverá al estado en el que se encontraba antes de aplicar el efecto                                                                                 \\
+\multicolumn{1}{l|}{}                            & 5                                                                                              & El usuario deberá esperar un tiempo antes de volver a activar este efecto                                                                                                       \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{El escala de tiempo tiene que ser la misma que antes de aplicar el efecto}                                                                                                                                                                                    \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el usuario intenta activar este efecto durante el tiempo que esta deshabilitado el efecto no se aplicará\\ Si el usuario intenta activar este efecto mientras ya se esta llevando a cabo el efecto no se aplicará\end{tabular}} \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                                                                                                                \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                                                                                         \\ \hline
+\end{longtable}
+
+\subsubsection{Caso de uso 11}
+\begin{longtable}{lll}
+\textbf{CU-11}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel particular}                                                                                                                                                 \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\textbf{Descripción}                             & \multicolumn{2}{l}{Los objetos modificadores del tiempo podrán modificar la escala de tiempo que afecta a un objeto en particular}                                                                             \\ \hline
+\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.6}                                                                                                                                                                                     \\ \hline
+\textbf{Precondición}                            & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Estar en un nivel con modificadores de tiempo a nivel particular\\ Estar en un nivel con objetos a los que les afecte el tiempo a nivel particular\end{tabular}} \\ \hline
+\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                          & \textbf{Operación}                                                                                                                                    \\ \cline{2-3} 
+\multicolumn{1}{l|}{}                            & 1                                                      & Un objeto al que le afecte el tiempo entra en contacto con el objeto modificador de tiempo a nivel particular                                         \\
+\multicolumn{1}{l|}{}                            & 2                                                      & Se modifica la escala de tiempo del objeto al que le afecta el tiempo                                                                                 \\
+\multicolumn{1}{l|}{}                            & 3                                                      & El objeto al que le afecta el tiempo deja de estar en contacto con el objeto modificador de tiempo                                                    \\
+\multicolumn{1}{l|}{}                            & 4                                                      & Se cancela la modificación sobre escala de tiempo que efectúa el modificador de tiempo a nivel particular                                             \\ \hline
+\textbf{Postcondiciones}                         & \multicolumn{2}{l}{La escala de tiempo provocada por el modificador de tiempo a nivel particular se tiene que haber cancelado}                                                                                 \\ \hline
+\textbf{Excepciones}                             & \multicolumn{2}{l}{Si un objeto al que le afecte el tiempo esta en contacto con varios modificadores de tiempo particulares se aplicarán todas las modificaciones superponiéndose entre ellas}                 \\ \hline
+\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                                              \\ \hline
+\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                       \\ \hline
+\end{longtable}
