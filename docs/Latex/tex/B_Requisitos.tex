@@ -143,398 +143,1696 @@ Solo habrá un actor: el jugador del videojuego.
 \subsection{Casos de uso}
 
 \subsubsection{Caso de uso 01}
-\begin{longtable}{lll}
-\textbf{CU-01}                                   & \multicolumn{2}{l}{Gestión del menú principal}                                                                                       \\ \hline
-\endfirsthead
-\textbf{CU-01}                                   & \multicolumn{2}{l}{Gestión del menú principal}                                                                                       \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario seleccionar escena, cerrar el juego y acceder al menú de opciones.}                            \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-1, RF-1.1, RF-2, RF-2.1, RF-2.2, RF-2.3}                                                                       \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Haber ejecutado el juego}                                                                                         \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                  & \textbf{Operación}                                                                  \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                              & Mostrar todos los niveles que se pueden jugar.                                      \\
-\multicolumn{1}{l|}{}                            & 2                                              & Mostrar el botón de transición al menú de opciones.                                 \\
-\multicolumn{1}{l|}{}                            & 3                                              & Mostrar el botón cierre del programa.                                               \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber transicionado a otra escena}                                                                                \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{Si se pulsa el botón de cierre del programa parar la ejecución del programa em vez de transicionar a otra escena} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                         \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                             \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-01} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Gestión del menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite al usuario seleccionar escena, cerrar el juego y acceder al menú de opciones
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-1, RF-1.1, RF-2, RF-2.1, RF-2.2, RF-2.3                                                                                                                    
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber ejecutado el juego
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Mostrar todos los niveles que se pueden jugar
+\item
+Mostrar el botón de transición al menú de opciones
+\item
+Mostrar el botón cierre del programa
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber transicionado a otra escena
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si se pulsa el botón de cierre del programa parar la ejecución del programa en vez de transicionar a otra escena
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 02}
-\begin{longtable}{lll}
-\textbf{CU-02}                                 & \multicolumn{2}{l}{Navegación entre pantallas}                                           \\ \hline
-\endfirsthead
-\textbf{CU-02}                                 & \multicolumn{2}{l}{Navegación entre pantallas}                                           \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario cambiar de la escena actual a la escena escogida.} \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-1, RF-1.1, RF-2.1, RF-2.3, RF-3, RF-4.3, RF-4.4.3}                                                         \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Tener una escena a la que se desea cambiar.}                          \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}             & \textbf{Operación}                                           \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                         & Cargar la escena a la que se va a transicionar               \\
-\multicolumn{1}{l|}{}                            & 2                         & Inicializar la escena                                        \\
-\multicolumn{1}{l|}{}                            & 3                         & Cambiar a la escena a la que se ha transicionado             \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber transicionado a otra escena}                                    \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                           \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                             \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                 \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-02} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Navegación entre pantallas
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite al usuario cambiar de la escena actual a la escena escogida
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-1, RF-1.1, RF-2.1, RF-2.3, RF-3, RF-4.3, RF-4.4.3
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Tener una escena a la que se desea cambiar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Cargar la escena a la que se va a transicionar
+\item
+Inicializar la escena
+\item
+Cambiar a la escena a la que se ha transicionado
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber transicionado a otra escena
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+No las hay
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 03}
-\begin{longtable}{lll}
-\textbf{CU-03}                                   & \multicolumn{2}{l}{Selección de nivel}                                                                                                                                                                               \\ \hline
-\endfirsthead
-\textbf{CU-03}                                   & \multicolumn{2}{l}{Selección de nivel}                                                                                                                                                                               \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permite al usuario elegir que nivel desea jugar}                                                                                                                                                  \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.1}                                                                                                                                                                                     \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                                                                                                                                                       \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                          & \textbf{Operación}                                                                                                                          \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                                                      & Se muestra al jugador todos los niveles que se puede jugar                                                                                  \\
-\multicolumn{1}{l|}{}                            & 2                                                                      & El usuario puede desplazarse entre los botones de selección de nivel                                                                        \\
-\multicolumn{1}{l|}{}                            & 3                                                                      & El jugador se sitúa sobre el botón de selección del nivel del nivel que desea jugar                                                         \\
-\multicolumn{1}{l|}{}                            & 4                                                                      & El jugador pulsa el botón de acceso al nivel que desea jugar                                                                                \\
-\multicolumn{1}{l|}{}                            & 5                                                                      & Se inicializa el nivel seleccionado                                                                                                         \\
-\multicolumn{1}{l|}{}                            & 6                                                                      & El jugador entra al nivel seleccionado                                                                                                      \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber inicializado el nivel correctamente.}                                                                                                                                                       \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el nivel no se ha inicializado correctamente.\\ Si no se ha asignado ninguna escena a la que transicionar al pulsar el botón de selección de niveles.\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                                                                                                         \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                             \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-03} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Selección de nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite al usuario elegir el nivel que desea jugar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-1, RF-2, RF-2.1
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en el menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Se muestra al jugador todos los niveles que se puede jugar
+\item
+El usuario puede desplazarse entre los botones de selección de nivel
+\item
+El jugador se sitúa sobre el botón de selección del nivel del nivel que desea jugar
+\item
+El jugador pulsa el botón de acceso al nivel que desea jugar
+\item
+Se inicializa el nivel seleccionado
+\item
+El jugador entra al nivel seleccionado
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber inicializado el nivel correctamente
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el nivel no se ha inicializado correctamente.
+\\Si no se ha asignado ninguna escena a la que transicionar al pulsar el botón de selección de niveles
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 04}
-\begin{longtable}{lll}
-\textbf{CU-04}                                   & \multicolumn{2}{l}{Cerrar la aplicación}                                              \\ \hline
-\endfirsthead
-\textbf{CU-04}                                   & \multicolumn{2}{l}{Cerrar la aplicación}                                              \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario cerrar el juego desde el menú principal}       \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.2}                                                      \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                        \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso} & \textbf{Operación}                                                    \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1             & Se muestra al jugador todos los botones con los que puede interactuar \\
-\multicolumn{1}{l|}{}                            & 2             & El usuario se desplaza al botón de cierre del juego                   \\
-\multicolumn{1}{l|}{}                            & 3             & El jugador pulsa el botón de cierre del juego                         \\
-\multicolumn{1}{l|}{}                            & 4             & El juego se cierra                                                    \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber parado la ejecución del programa}                            \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                        \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada}                                                          \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                              \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-04} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Cerrar la aplicación
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permitir al usuario cerrar el juego desde el menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-1, RF-2, RF-2.2
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en el menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Se muestra al jugador todos los botones con los que puede interactuar
+\item
+El usuario se desplaza al botón de cierre del juego
+\item
+El jugador pulsa el botón de cierre del juego
+\item
+El juego se cierra
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber parado la ejecución del programa
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+No las hay
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 05}
-\begin{longtable}{lll}
-\textbf{CU-05}                                   & \multicolumn{2}{l}{Viajar al menú de opciones}                                             \\ \hline
-\endfirsthead
-\textbf{CU-05}                                   & \multicolumn{2}{l}{Viajar al menú de opciones}                                             \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario viajar al menú de opciones desde el menú principal} \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-2, RF-2.3}                                                           \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú principal}                                             \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}    & \textbf{Operación}                                                      \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                & Se muestra al jugador todos los botones con los que puede interactuar   \\
-\multicolumn{1}{l|}{}                            & 2                & El usuario se desplaza al botón del menú de opciones                    \\
-\multicolumn{1}{l|}{}                            & 3                & El jugador pulsa el botón del menú de opciones                          \\
-\multicolumn{1}{l|}{}                            & 4                & Inicializar la escena del menú de opciones                              \\
-\multicolumn{1}{l|}{}                                                 & 5                & Cambiar a la escena del menú de opciones                                \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Estar en la escena del menú de opciones}                                \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                             \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                          \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                   \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-05} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Viajar al menú de opciones
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permitir al usuario viajar al menú de opciones desde el menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-1, RF-2, RF-2.3
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en el menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Se muestra al jugador todos los botones con los que puede interactuar
+\item
+El usuario se desplaza al botón del menú de opciones
+\item
+El jugador pulsa el botón del menú de opciones
+\item
+Inicializar la escena del menú de opciones
+\item
+Cambiar a la escena del menú de opciones
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en la escena del menú de opciones
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+No las hay
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 06}
-\begin{longtable}{lll}
-\textbf{CU-06}                                   & \multicolumn{2}{l}{Modificar opción}                                                                                                                                               \\ \hline
-\endfirsthead
-\textbf{CU-06}                                   & \multicolumn{2}{l}{Modificar opción}                                                                                                                                               \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Permitir al usuario modificar características generales del juego}                                                                                              \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-3}                                                                                                                                                   \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en el menú de opciones o el menú de pausa}                                                                                                                \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                        & \textbf{Operación}                                                                                          \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                                                    & Se muestra al jugador todas las opciones que modificar                                                      \\
-\multicolumn{1}{l|}{}                            & 2                                                                    & Seleccionar la opción que se desea modificar                                                                \\
-\multicolumn{1}{l|}{}                            & 3                                                                    & Modificar el valor asociado a esa opción                                                                    \\
-\multicolumn{1}{l|}{}                            & 4                                                                    & Hacer el cambio persistente                                                                                 \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber modificado esa característica general y como afecta al juego}                                                                                             \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{A la hora de mostrar las opciones, si el jugador no le ha dado un valor concreto previamente, se le asignará  a la característica general un valor por defecto} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                  \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                           \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-06} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Modificar opción
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permitir al usuario modificar características generales del juego
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-3
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en el menú de opciones o el menú de pausa
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Se muestra al jugador todas las opciones que modificar
+\item
+Seleccionar la opción que se desea modificar
+\item
+Modificar el valor asociado a esa opción
+\item
+Hacer el cambio persistente
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber modificado esa característica general y como afecta al juego
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+A la hora de mostrar las opciones, si el jugador no le ha dado un valor concreto previamente, se le asignará  a la característica general un valor por defecto
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 07}
-\begin{longtable}{lll}
-\textbf{CU-07}                                   & \multicolumn{2}{l}{Gestión de niveles}                                                                                                         \\ \hline
-\endfirsthead
-\textbf{CU-07}                                   & \multicolumn{2}{l}{Gestión de niveles}                                                                                                         \\ \hline
-\endhead
-%
-\hline
-\endfoot
-%
-\endlastfoot
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{El usuario manejará con un avatar en un nivel seleccionado hasta salir de él interactuando con los elementos que contriene} \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4, RF-4.1, RF-4.2, RF-4.3, RF-4.4, RF-4.5, RF-4.6, RF-4.7, RF-4.8, RF-4.9, RF-5}                                         \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Haber inicializado correctamente el nivel}                                                                                  \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                         & \textbf{Operación}                                                                                     \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                     & Se inicializan los objetos de la escena                                                                \\
-\multicolumn{1}{l|}{}                            & 2                                     & Se muestra el avatar jugable y su posición en el nivel                                                 \\
-\multicolumn{1}{l|}{}                            & 3                                     & Se le da el control del avatar jugable al jugador                                                      \\
-\multicolumn{1}{l|}{}                            & 4                                     & Se le da la opción al jugador de interactuar con el avatar jugable                                     \\
-\multicolumn{1}{l|}{}                            & 5                                     & Se le da la opción al jugador de interactuar con distintos elementos del nivel                         \\
-\multicolumn{1}{l|}{}                            & 6                                     & El avatar jugable podrá morir                                                                          \\
-\multicolumn{1}{l|}{}                            & 7                                     & Se puede abrir el menú de pausa                                                                        \\
-\multicolumn{1}{l|}{}                            & 8                                     & Llegar a la zona de victoria                                                                           \\
-\multicolumn{1}{l|}{}                            & 9                                     & Volver al menú principal                                                                               \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber vuelto al menú principal}                                                                                             \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{Se puede volver al menú de pausa sin haber pasado por las operaciones 4, 5, 6, 7 y 8}                                       \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy alta}                                                                                                                   \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Muy Alta}                                                                                                                   \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-07} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Gestión de niveles
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El usuario manejará con un avatar en un nivel seleccionado hasta salir de él interactuando con los elementos que contiene
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4, RF-4.1, RF-4.2, RF-4.3, RF-4.4, RF-4.5, RF-4.6, RF-4.7, RF-4.8, RF-4.9, RF-5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber inicializado correctamente el nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Se inicializan los objetos de la escena
+\item
+Se muestra el avatar jugable y su posición en el nivel
+\item
+Se le da el control del avatar jugable al jugador
+\item
+Se le da la opción al jugador de interactuar con el avatar jugable
+\item
+Se le da la opción al jugador de interactuar con distintos elementos
+\item
+El avatar jugable podrá morir
+\item
+Se puede abrir el menú de pausa
+\item
+Llegar a la zona de victoria
+\item
+Volver al menú principal
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber vuelto al menú principal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Se puede volver al menú de pausa sin haber pasado por las operaciones 4, 5, 6, 7 y 8
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 08}
-\begin{longtable}{lll}
-\textbf{CU-08}                                   & \multicolumn{2}{l}{Gestión del menú de pausa}                                                              \\ \hline
-\endfirsthead
-\textbf{CU-08}                                   & \multicolumn{2}{l}{Gestión del menú de pausa}                                                              \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{El usuario podrá abrir un menú de pausa similar al de opciones desde el nivel}          \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.4, RF-4.4.1, RF-4.4.2, RF-4.4.3}                                                   \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel}                                                                      \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}             & \textbf{Operación}                                                             \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                         & Pulsar el botón de apertura del menú de pausa                                  \\
-\multicolumn{1}{l|}{}                            & 2                         & Pausar la ejecución del juego                                                  \\
-\multicolumn{1}{l|}{}                            & 3                         & Abrir el menú del nivel                                                        \\
-\multicolumn{1}{l|}{}                            & 4                         & El usuario podrá interactuar con menú de opciones                              \\
-\multicolumn{1}{l|}{}                            & 5                         & El usuario podrá volver al menú principal desde el menú de opciónes            \\
-\multicolumn{1}{l|}{}                            & 6                         & Pulsar el botón de cierre del menú de pausa                                    \\
-\multicolumn{1}{l|}{}                            & 7                         & Cerrar el menú de pausa                                                        \\
-\multicolumn{1}{l|}{}                            & 8                         & Reanudar la ejecución del nivel                                                \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{Haber vuelto al nivel, que se estará ejecutando con normalidad}                         \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{En caso de pulsar el botón de volver al menú principal se volverá a este y no al nivel} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Alta}                                                                          \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                   \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-08} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Gestión del menú de pausa
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El usuario podrá abrir un menú de pausa similar al de opciones desde el nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.4, RF-4.4.1, RF-4.4.2, RF-4.4.3
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Pulsar el botón de apertura del menú de pausa
+\item
+Pausar la ejecución del juego
+\item
+Abrir el menú del nivel
+\item
+El usuario podrá interactuar con menú de opciones
+\item
+El usuario podrá volver al menú principal desde el menú de opciónes
+\item
+Pulsar el botón de cierre del menú de pausa
+\item
+Cerrar el menú de pausa
+\item
+Reanudar la ejecución del nivel
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Haber vuelto al nivel, que se estará ejecutando con normalidad
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+En caso de pulsar el botón de volver al menú principal se volverá a este y no al nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 09}
-\begin{longtable}{lll}
-\textbf{CU-09}                                   & \multicolumn{2}{l}{Manipulación de la gravedad}                                                                                                              \\ \hline
-\endfirsthead
-\textbf{CU-09}                                   & \multicolumn{2}{l}{Manipulación de la gravedad}                                                                                                              \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Los objetos manipuladores de gravedad interactuarán con el avatar jugable}                                                                \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.5}                                                                                                                                   \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con objetos manipuladores de gravedad}                                                                                  \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                             & \textbf{Operación}                                                                                               \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                         & El avatar jugable entra en contacto con un objeto manipulador de gravedad                                        \\
-\multicolumn{1}{l|}{}                            & 2                                         & El objeto manipulador de gravedad modifica como afecta la gravedad al avatar jugable                             \\
-\multicolumn{1}{l|}{}                            & 3                                         & El avatar jugable deja de estar en contacto con el objeto manipulador de gravedad                                \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{No las hay}                                                                                                                               \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{Es posible que el objeto manipulador de gravedad deje de modificar la gravedad cuando el avatar jugable deje de estar en contacto con él} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                            \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                     \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-09} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Manipulación de la gravedad
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Los objetos manipuladores de gravedad interactuarán con el avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con objetos manipuladores de gravedad
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El avatar jugable entra en contacto con un objeto manipulador de gravedad
+\item
+El objeto manipulador de gravedad modifica como afecta la gravedad al avatar jugable
+\item
+El avatar jugable deja de estar en contacto con el objeto manipulador de gravedad
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+No las hay
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Es posible que el objeto manipulador de gravedad deje de modificar la gravedad cuando el avatar 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 10}
-\begin{longtable}{lll}
-\textbf{CU-10}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel global}                                                                                                                                                                                                                       \\ \hline
-\endfirsthead
-\textbf{CU-10}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel global}                                                                                                                                                                                                                       \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{Los objetos modificadores del tiempo podrán modificar la escala de tiempo que afecta a los objetos a nivel global}                                                                                                                                            \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.6}                                                                                                                                                                                                                                                       \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con un avatar jugable}                                                                                                                                                                                                                      \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                                                                  & \textbf{Operación}                                                                                                                                                              \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                                                                              & El usuario pulsará el botón de escalado de tiempo                                                                                                                               \\
-\multicolumn{1}{l|}{}                            & 2                                                                                              & La escala de tiempo global será modificada mientras dure el efecto                                                                                                              \\
-\multicolumn{1}{l|}{}                            & 3                                                                                              & El efecto de dejará de aplicarse                                                                                                                                                \\
-\multicolumn{1}{l|}{}                            & 4                                                                                              & La escala de tiempo global volverá al estado en el que se encontraba antes de aplicar el efecto                                                                                 \\
-\multicolumn{1}{l|}{}                            & 5                                                                                              & El usuario deberá esperar un tiempo antes de volver a activar este efecto                                                                                                       \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{El escala de tiempo tiene que ser la misma que antes de aplicar el efecto}                                                                                                                                                                                    \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el usuario intenta activar este efecto durante el tiempo que esta deshabilitado el efecto no se aplicará\\ Si el usuario intenta activar este efecto mientras ya se esta llevando a cabo el efecto no se aplicará\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                                                                                                                \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                                                                                         \\ \hline
-\end{longtable}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-10} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Modificación del tiempo a nivel global
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Los objetos modificadores del tiempo podrán modificar la escala de tiempo que afecta a los objetos a nivel global jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.6
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El usuario pulsará el botón de escalado de tiempo
+\item
+La escala de tiempo global será modificada mientras dure el efecto
+\item
+El efecto de dejará de aplicarse
+\item
+La escala de tiempo global volverá al estado en el que se encontraba antes de aplicar el efecto
+\item
+El usuario deberá esperar un tiempo antes de volver a activar este efecto
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El escala de tiempo tiene que ser la misma que antes de aplicar el efecto
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el usuario intenta activar este efecto durante el tiempo que esta deshabilitado el efecto no se aplicará\\Si el usuario intenta activar este efecto mientras ya se esta llevando a cabo el efecto no se aplicará 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 11}
-% Please add the following required packages to your document preamble:
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}{lll}
-\textbf{CU-11}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel particular}                                                                                                                                                                               \\ \hline
-\endfirsthead
-\textbf{CU-11}                                   & \multicolumn{2}{l}{Modificación del tiempo a nivel particular}                                                                                                                                                                               \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Los objetos modificadores del tiempo podrán \\ modificar la escala de tiempo que afecta a un \\ objeto en particular\end{tabular}}                                                             \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.6}                                                                                                                                                                                                                   \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Estar en un nivel con modificadores de tiempo a nivel particular\\ Estar en un nivel con objetos a los que les afecte el tiempo a nivel \\ particular\end{tabular}}                            \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                    & \textbf{Operación}                                                                                                                                                                        \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                                & \begin{tabular}[c]{@{}l@{}}Un objeto al que le afecte el tiempo entra en contacto con \\ el objeto modificador de tiempo a nivel particular\end{tabular}                                  \\
-\multicolumn{1}{l|}{}                            & 2                                                & \begin{tabular}[c]{@{}l@{}}Se modifica la escala de tiempo del objeto al que le afecta\\ el tiempo\end{tabular}                                                                           \\
-\multicolumn{1}{l|}{}                            & 3                                                & \begin{tabular}[c]{@{}l@{}}Se cancela la modificación sobre escala de tiempo que \\ efectúa el modificador de tiempo a nivel particular\end{tabular}                                      \\
-\multicolumn{1}{l|}{}                            & 4                                                & \begin{tabular}[c]{@{}l@{}}La escala de tiempo provocada por el modificador de \\ tiempo a nivel particular se tiene que haber cancelado\end{tabular}                                     \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}La escala de tiempo provocada por el modificador de tiempo a \\ nivel particular se tiene que haber cancelado\end{tabular}}                                                                    \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si un objeto al que le afecte el tiempo esta en contacto con varios \\ modificadores de tiempo particulares se aplicarán todas las \\ modificaciones superponiéndose entre ellas\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                                                                            \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                                                     \\ \hline
-\end{longtable}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-11} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Modificación del tiempo a nivel particular
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Los objetos modificadores del tiempo podrán modificar la escala de tiempo que afecta a un objeto en particular
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.6
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con modificadores de tiempo a nivel particular\\ Estar en un nivel con objetos a los que les afecte el tiempo a nivel particular
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+Un objeto al que le afecte el tiempo entra en contacto con el objeto modificador de tiempo a nivel particular
+\item
+Se modifica la escala de tiempo del objeto al que le afecta el tiempo
+\item
+Se cancela la modificación sobre escala de tiempo que efectúa el modificador de tiempo a nivel particular
+\item
+La escala de tiempo provocada por el modificador de tiempo a nivel particular se tiene que haber cancelado
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+La escala de tiempo provocada por el modificador de tiempo a nivel particular se tiene que haber cancelado
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si un objeto al que le afecte el tiempo esta en contacto con varios modificadores de tiempo particulares se aplicarán todas las modificaciones superponiéndose entre ellas 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 12}
-\begin{longtable}{lll}
-\textbf{CU-12}                                   & \multicolumn{2}{l}{Aplicación de impulsos}                                                                                                                                                                                \\ \hline
-\endfirsthead
-\textbf{CU-12}                                   & \multicolumn{2}{l}{Aplicación de impulsos}                                                                                                                                                                                \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Los objetos aplicadores de impulsos aplicarán impulsos\\ sobre el avatar jugable\end{tabular}}                                                                              \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.7}                                                                                                                                                                                                \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Estar en un nivel con objetos aplicadores de impulso\\ Estar en un nivel con un avatar jugable\end{tabular}}                                                                \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                             & \textbf{Operación}                                                                                                                                            \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                                         & \begin{tabular}[c]{@{}l@{}}El avatar jugable entra en contacto con el \\ objeto aplicador de impulso\end{tabular}                                             \\
-\multicolumn{1}{l|}{}                            & 2                                                         & \begin{tabular}[c]{@{}l@{}}El objeto aplicador de impulso aplica un \\ impulso sobre el avatar jugable\end{tabular}                                           \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{La velocidad que lleva el avatar debe de haber variado}                                                                                                                                                \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Un modificador de impulso que aplique un impulso \\ que sea un multiplicador de impulso que lleva un \\ avatar jugable quieto no variará la velocidad de este\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                                                                         \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                                                                                  \\ \hline
-\end{longtable}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-12} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Aplicación de impulsos
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Los objetos aplicadores de impulsos aplicarán impulsos sobre el avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.7
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con objetos aplicadores de impulso\\ Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El avatar jugable entra en contacto con el objeto aplicador de impulso
+\item
+El objeto aplicador de impulso aplica un impulso sobre el avatar jugable
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+La velocidad que lleva el avatar debe de haber variado
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Un modificador de impulso que aplique un impulso que sea un multiplicador de impulso que lleva un avatar jugable quieto no variará la velocidad de este 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 13}
-\begin{longtable}{lll}
-\textbf{CU-13}                                   & \multicolumn{2}{l}{Colisión con obstáculos}                                                                                        \\ \hline
-\endfirsthead
-\textbf{CU-13}                                   & \multicolumn{2}{l}{Colisión con obstáculos}                                                                                        \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{El avatar podrá colisionar con obstaculos}                                                                      \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.8}                                                                                                         \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Estar en un nivel con obstáculos\\ Estar en un nivel con un avatar jugable\end{tabular}} \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                                & \textbf{Operación}                                                                  \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                                            & El avatar jugable entra en contacto con el obstáculo                                \\
-\multicolumn{1}{l|}{}                            & 2                                            & El avatar jugable muere                                                             \\
-\multicolumn{1}{l|}{}                            & 3                                            & El avatar jugable reaparece                                                         \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{El avatar se encuentra en la posición de inicio del nivel}                                                      \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{No las hay}                                                                                                     \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                  \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Moderada-Alta}                                                                                                  \\ \hline
-\end{longtable}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-13} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Colisión con obstáculos
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El avatar podrá colisionar con obstáculos
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.8
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con obstáculos\\ Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El avatar jugable entra en contacto con el obstáculo
+\item
+El avatar jugable muere
+\item
+El avatar jugable reaparece
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El avatar se encuentra en la posición de inicio del nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+No las hay 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 14}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-14} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Colisión con portales
+\end{minipage}
+\\ \hline
 
-\begin{longtable}{lll}
-\textbf{CU-14}                                   & \multicolumn{2}{l}{Colisión con portales}                                                                                                                               \\ \hline
-\endfirsthead
-\textbf{CU-14}                                   & \multicolumn{2}{l}{Colisión con portales}                                                                                                                               \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}El avatar jugable se teletransportará al colisionar con un \\ portal\end{tabular}}                                        \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-4.9}                                                                                                                                              \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Estar en un nivel con al menos 2 portales\\ Estar en un nivel con un avatar jugable\end{tabular}}                             \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}        & \textbf{Operación}                                                                                                                               \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                    & El avatar jugable entra en contacto con un portal                                                                                                \\
-\multicolumn{1}{l|}{}                            & 2                    & \begin{tabular}[c]{@{}l@{}}El avatar jugable cambiará su posición a la del \\ portal pareja de aquel con el que ha colisionado\end{tabular}      \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}La posición del avatar será la misma que la del \\ portal pareja de aquel con el que se ha colisionado\end{tabular}}      \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el portal no tiene un portal parejo el avatar \\ jugable no cambiará su posición cuando colisione con él\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Baja}                                                                                                                                       \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Moderada-Alta}                                                                                                                                       \\ \hline
-\end{longtable}
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El avatar jugable se teletransportará al colisionar con un portal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-4.9
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con al menos 2 portales\\ Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El avatar jugable entra en contacto con un portal
+\item
+El avatar jugable cambiará su posición con la del portal pareja de aquel con el que ha colisionado
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+La posición del avatar será la misma que la del portal pareja de aquel con el que se ha colisionado
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el portal no tiene un portal parejo el avatar jugable no cambiará su posición cuando colisione con él 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Baja
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 15}
-\begin{longtable}{lll}
-\textbf{CU-15}                                   & \multicolumn{2}{l}{Movimiento del avatar}                                                                                                           \\ \hline
-\endfirsthead
-\textbf{CU-15}                                   & \multicolumn{2}{l}{Movimiento del avatar}                                                                                                           \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Permite usuario ordenarle al avatar jugable realizar \\ un movimiento horizontal\end{tabular}}        \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-5}                                                                                                                            \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con un avatar jugable}                                                                                             \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}     & \textbf{Operación}                                                                                                              \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                 & \begin{tabular}[c]{@{}l@{}}El usuario pulsa el botón de desplazamiento\\ del avatar jugable hacia la derecha\end{tabular}       \\
-\multicolumn{1}{l|}{}                            & 2                 & \begin{tabular}[c]{@{}l@{}}El avatar jugable se desplaza hacia la \\ derecha\end{tabular}                                       \\
-\multicolumn{1}{l|}{}                            & 3                 & \begin{tabular}[c]{@{}l@{}}El usuario pulsa el botón de desplazamiento \\ del avatar jugable hacia la izquierda\end{tabular}    \\
-\multicolumn{1}{l|}{}                            & 4                 & \begin{tabular}[c]{@{}l@{}}El avatar jugable se desplaza hacia la \\ izquierda\end{tabular}                                     \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{La velocidad del avatar jugable ha variado}                                                                                      \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el avatar jugable esta en contacto con una pared no\\ podrá moverse en esa dirección\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                                        \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Muy Alta}                                                                                                                        \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-15} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Movimiento del avatar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite usuario ordenarle al avatar jugable realizar un movimiento horizontal
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El usuario pulsa el botón de desplazamiento del avatar jugable hacia la derecha
+\item
+El avatar jugable se desplaza hacia la derecha
+\item
+El usuario pulsa el botón de desplazamiento del avatar jugable hacia la izquierda
+\item
+El avatar jugable se desplaza hacia la izquierda
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+La velocidad del avatar jugable ha variado
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el avatar jugable esta en contacto con una pared no\\ podrá moverse en esa dirección 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 16}
-% Please add the following required packages to your document preamble:
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}{lll}
-\textbf{CU-16}                                   & \multicolumn{2}{l}{Salto del avatar}                                                                                              \\ \hline
-\endfirsthead
-\textbf{CU-16}                                   & \multicolumn{2}{l}{Salto del avatar}                                                                                              \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Permite usuario ordenarle al avatar jugable \\ realizar un salto\end{tabular}}      \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-5}                                                                                                          \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel un con avatar jugable}                                                                           \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}           & \textbf{Operación}                                                                                      \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                       & \begin{tabular}[c]{@{}l@{}}El usuario pulsa el botón de salto\\ del avatar jugable\end{tabular}         \\
-\multicolumn{1}{l|}{}                            & 2                       & El avatar jugable realiza el salto                                                                      \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{El avatar se encontrará en el aire}                                                                            \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el avatar jugable se encuentra en el aire no realizará \\ el salto\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Muy Alta}                                                                                                      \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Muy Alta}                                                                                                      \\ \hline
-\end{longtable}
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-16} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Salto del avatar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite usuario ordenarle al avatar jugable realizar un salto
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El usuario pulsa el botón de salto\\ del avatar jugable
+\item
+El avatar jugable realiza el salto
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El avatar se encontrará en el aire
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el avatar jugable se encuentra en el aire no realizará el salto 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Muy Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 17}
-\begin{longtable}{lll}
-\textbf{CU-17}                                   & \multicolumn{2}{l}{Acelerón del avatar}                                                                                                                \\ \hline
-\endfirsthead
-\textbf{CU-17}                                   & \multicolumn{2}{l}{Acelerón del avatar}                                                                                                                \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Permite usuario ordenarle al avatar jugable \\ realizar un acelerón\end{tabular}}                        \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-5}                                                                                                                               \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con un avatar jugable}                                                                                                \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}                & \textbf{Operación}                                                                                                      \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                            & \begin{tabular}[c]{@{}l@{}}El usuario pulsa el botón de acelerón\\ del avatar jugable\end{tabular}                      \\
-\multicolumn{1}{l|}{}                            & 2                            & El avatar jugable empieza a realizar el acelerón                                                                        \\
-\multicolumn{1}{l|}{}                            & 3                            & \begin{tabular}[c]{@{}l@{}}El avatar jugable de desplaza en una dirección\\ durante un tiempo\end{tabular}              \\
-\multicolumn{1}{l|}{}                            & 4                            & \begin{tabular}[c]{@{}l@{}}Al acabar el tiempo el jugador deja de realizar el\\ acelerón\end{tabular}                   \\
-\multicolumn{1}{l|}{}                            & 5                            & Desactivar temporalmente el acelerón                                                                                    \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{El avatar ha variado su posición}                                                                                                   \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el usuario intenta utilizar el acelerón mientras esta\\ desactivado no podrá utilizarlo\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada-Alta}                                                                                                                      \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                               \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-17} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Acelerón del avatar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite usuario ordenarle al avatar jugable realizar un acelerón
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El usuario pulsa el botón de acelerón del avatar jugable
+\item
+El avatar jugable empieza a realizar el acelerón
+\item
+El avatar jugable de desplaza en una dirección durante un tiempo
+\item
+Al acabar el tiempo el jugador deja de realizar el acelerón
+\item
+Desactivar temporalmente el acelerón
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+El avatar ha variado su posición
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el usuario intenta utilizar el acelerón mientras esta desactivado no podrá utilizarlo 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada-Alta
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
 
 \subsubsection{Caso de uso 18}
-% Please add the following required packages to your document preamble:
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{longtable}{lll}
-\textbf{CU-18}                                   & \multicolumn{2}{l}{Modificación temporal del avatar}                                                                                                                \\ \hline
-\endfirsthead
-\textbf{CU-18}                                   & \multicolumn{2}{l}{Modificación temporal del avatar}                                                                                                                \\ \hline
-\endhead
-%
-\textbf{Descripción}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Permite usuario ordenarle al avatar jugable \\ realizar modificar el tiempo global del nivel\end{tabular}}            \\ \hline
-\textbf{Requisitos funcionales}                  & \multicolumn{2}{l}{RF-5}                                                                                                                                            \\ \hline
-\textbf{Precondición}                            & \multicolumn{2}{l}{Estar en un nivel con un avatar jugable}                                                                                                         \\ \hline
-\multicolumn{1}{l|}{\textbf{Secuencia de pasos}} & \textbf{Paso}              & \textbf{Operación}                                                                                                                     \\ \cline{2-3} 
-\multicolumn{1}{l|}{}                            & 1                          & \begin{tabular}[c]{@{}l@{}}El usuario pulsa el botón de modificación \\ temporal del avatar jugable\end{tabular}                       \\
-\multicolumn{1}{l|}{}                            & 2                          & La escala de tiempo global cambia                                                                                                      \\
-\multicolumn{1}{l|}{}                            & 3                          & \begin{tabular}[c]{@{}l@{}}Pasado un determinado tiempo la escala de\\ tiempo global vuelve a su valor inicial\end{tabular}            \\
-\multicolumn{1}{l|}{}                            & 4                          & \begin{tabular}[c]{@{}l@{}}Se desactiva la modificación temporal del\\ avatar jugable\end{tabular}                                     \\ \hline
-\textbf{Postcondiciones}                         & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}La escala temporal global vuelve a ser la misma que\\ antes de aplicar la modificación temporal global\end{tabular}}  \\ \hline
-\textbf{Excepciones}                             & \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}Si el usuario intenta utilizar la modificación temporal\\ mientras esta desactivado no podrá utilizarlo\end{tabular}} \\ \hline
-\textbf{Frecuencia}                              & \multicolumn{2}{l}{Moderada}                                                                                                                                        \\ \hline
-\textbf{Importancia}                             & \multicolumn{2}{l}{Alta}                                                                                                                                            \\ \hline
-\end{longtable}
+
+\begin{tabularx}{\columnwidth}{l|l}
+\begin{minipage}{0.25\columnwidth}
+\textbf{CU-18} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Modificación temporal del avatar
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Descripción} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Permite al usuario ordenarle al avatar jugable realizar modificar el tiempo global del nivel
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Requisitos funcionales} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+RF-5
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Precondición} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Estar en un nivel con un avatar jugable
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Secuencia de pasos} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+\begin{enumerate}
+\item
+El usuario pulsa el botón de modificación temporal del avatar jugable
+\item
+La escala de tiempo global cambia
+\item
+Pasado un determinado tiempo la escala de tiempo global vuelve a su valor inicial
+\item
+Se desactiva la modificación temporal del avatar jugable
+\end{enumerate}
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Postcondiciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+La escala temporal global vuelve a ser la misma que antes de aplicar la modificación temporal global
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Excepciones} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Si el usuario intenta utilizar la modificación temporal mientras esta desactivado no podrá utilizarlo 
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Frecuencia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Moderada
+\end{minipage}
+\\ \hline
+
+\begin{minipage}{0.25\columnwidth}
+\textbf{Importancia} 
+\end{minipage}
+&
+\begin{minipage}{0.65\columnwidth}
+Alta
+\end{minipage}
+\\ \hline
+\end{tabularx}
