@@ -70,6 +70,7 @@ namespace Platformer.Mechanics.Player.PlayerMechanics
         {
             dashAvailable = false;
             timeWithoutDash = 0;
+            player.audioSource.PlayOneShot(player.dashAudio);
             player.ChangeState(new PlayerDashingState(player));
         }
     }

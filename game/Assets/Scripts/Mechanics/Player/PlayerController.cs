@@ -33,6 +33,7 @@ namespace Platformer.Mechanics.Player
         public AudioClip jumpAudio;
         public AudioClip ouchAudio;
         public AudioClip respawnAudio;
+        public AudioClip dashAudio;
 
         private PlayerState playerState;
 
