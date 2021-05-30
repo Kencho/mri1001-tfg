@@ -14,10 +14,13 @@ namespace Platformer.Mechanics
         /// </summary>
         public Portal partnerPortal;
         private Collider2D portalCollider;
+        private AudioSource audioSource;
+        public AudioClip portalAudio;
 
         private void Awake()
         {
             portalCollider = GetComponent<Collider2D>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -41,6 +44,7 @@ namespace Platformer.Mechanics
             {
                 partnerPortal.portalEnabled = false;
                 portalEnabled = false;
+                audioSource.PlayOneShot(portalAudio);
                 kineObj.transform.position = partnerPortal.transform.position;
             }
         }
