@@ -1,4 +1,5 @@
-﻿using Platformer.Sound;
+﻿using System;
+using Platformer.Sound;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,13 +12,18 @@ namespace Platformer.UI
     {
         private Slider volumeSlider;
         public Text volumeText;
+        private float lastVolume;
         private float volume;
+        private AudioSource audioSource;
+        public AudioClip valueChangeAudio;
 
         private void Awake()
         {
             volume = VolumeManager.LoadVolume();
+            lastVolume = volume;
             volumeSlider = GetComponent<Slider>();
             volumeSlider.value = volume;
+            audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -25,6 +31,7 @@ namespace Platformer.UI
             volume = volumeSlider.value;
             VolumeManager.SetVolume(volume);
             SetVolumeSettings();
+            HandleAudioReproduction();
         }
 
         /// <summary>
@@ -35,6 +42,19 @@ namespace Platformer.UI
             VolumeManager.SetVolume(volume);
             volumeText.text = GetVolumeText();
         }
+
+        /// <summary>
+        /// If volume changed reproduce valueChangeSound.
+        /// </summary>
+        private void HandleAudioReproduction()
+        {
+            if(lastVolume != volume)
+            {
+                audioSource.PlayOneShot(valueChangeAudio);
+            }
+            lastVolume = volume;
+        }
+
 
         protected string GetVolumeText()
         {
