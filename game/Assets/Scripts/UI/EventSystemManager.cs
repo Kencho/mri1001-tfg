@@ -9,10 +9,24 @@ namespace Platformer.UI
     public class EventSystemManager : MonoBehaviour
     {
         public EventSystem eventSystem;
+        private GameObject lastFrameSelectedObject;
+        private AudioSource audioSource;
+        public AudioClip changeButtonSound;
 
         private void Awake()
         {
             eventSystem = GetComponent<EventSystem>();
+            audioSource = GetComponent<AudioSource>();
+            lastFrameSelectedObject = eventSystem.firstSelectedGameObject; ;
+        }
+
+        private void Update()
+        {
+            if(lastFrameSelectedObject != eventSystem.currentSelectedGameObject)
+            {
+                audioSource.PlayOneShot(changeButtonSound);
+            }
+            lastFrameSelectedObject = eventSystem.currentSelectedGameObject;
         }
 
         private void OnEnable()
