@@ -7,7 +7,7 @@ namespace Platformer.Sound.MusicReproductor
     /// </summary>
     public class MusicReproductorInterScenes : MusicReproductor
     {
-        private const string SONG_TIME_VARIABLE_NAME = "SongTime";
+        private static float songTime = 0;
 
         protected override void Awake()
         {
@@ -18,12 +18,12 @@ namespace Platformer.Sound.MusicReproductor
 
         public void SaveSongTime()
         {
-            PlayerPrefs.SetFloat(SONG_TIME_VARIABLE_NAME, audioSource.time);
+            songTime = audioSource.time;
         }
 
         private void LoadSongTime()
         {
-            audioSource.time = PlayerPrefs.GetFloat(SONG_TIME_VARIABLE_NAME, 0);
+            audioSource.time = songTime;
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace Platformer.Sound.MusicReproductor
         /// </summary>
         public void ResetSongTime()
         {
-            PlayerPrefs.DeleteKey(SONG_TIME_VARIABLE_NAME);
+            songTime = 0;
         }
     }
 }

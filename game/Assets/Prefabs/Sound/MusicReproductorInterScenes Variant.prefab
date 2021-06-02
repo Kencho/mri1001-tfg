@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5d0562eb8591a408e21d3a0d305201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6090596707505977984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195520966460078582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266fd284a8be88c4caa6b446e648d803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5808652358832583765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,7 +34,7 @@ PrefabInstance:
     - target: {fileID: 5920786290697899427, guid: 837bb7ed1e88a784fa15e6d2db0a9ea9,
         type: 3}
       propertyPath: m_Name
-      value: MusicReproductorInterScenes
+      value: MusicReproductorInterScenes Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5920786290697899430, guid: 837bb7ed1e88a784fa15e6d2db0a9ea9,
         type: 3}
@@ -81,6 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5920786290697899431, guid: 837bb7ed1e88a784fa15e6d2db0a9ea9, type: 3}
+    - {fileID: 5920786290697899428, guid: 837bb7ed1e88a784fa15e6d2db0a9ea9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 837bb7ed1e88a784fa15e6d2db0a9ea9, type: 3}
 --- !u!1 &195520966460078582 stripped
 GameObject:
