@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Platformer.UI
+namespace Platformer.Sound
 {
     /// <summary>
     /// Class that contains the methods called by buttons of the main menu

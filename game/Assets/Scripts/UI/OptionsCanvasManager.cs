@@ -3,7 +3,7 @@ using Platformer.Gameplay.PlayerEvents;
 using Platformer.Gameplay.SceneEvents;
 using UnityEngine;
 
-namespace Platformer.UI
+namespace Platformer.Sound
 {
     /// <summary>
     /// Class used to build pause menu

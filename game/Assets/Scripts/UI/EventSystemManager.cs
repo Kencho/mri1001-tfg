@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Platformer.UI
+namespace Platformer.Sound
 {
     /// <summary>
     /// Wrapper class used to ensure EventSystem will do the requiered intructions when enabled

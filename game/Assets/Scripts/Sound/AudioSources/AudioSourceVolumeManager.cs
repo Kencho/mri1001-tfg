@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace Platformer.Sound
+namespace Platformer.Sound.AudioSources
 {
     /// <summary>
     /// Class wrapper of AudioSources wich ensures AudioSources volume corresponds to game volume
     /// </summary>
     public class AudioSourceVolumeManager : MonoBehaviour
     {
-        private float volume;
+        protected float volume;
         private AudioSource audioSource;
 
         private void Awake()
@@ -24,9 +24,9 @@ namespace Platformer.Sound
             audioSource.volume = volume;
         }
 
-        private void UpdateVolume()
+        protected virtual void UpdateVolume()
         {
-            volume = VolumeManager.Volume;
+            volume = VolumeManager.GeneralVolume;
         }
     }
 }

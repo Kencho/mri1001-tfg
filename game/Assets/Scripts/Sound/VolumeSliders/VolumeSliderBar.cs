@@ -1,25 +1,24 @@
 ﻿using System;
-using Platformer.Sound;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Platformer.UI
+namespace Platformer.Sound.VolumeSliders
 {
     /// <summary>
     /// Slider bar that modifies the volume based on the value of the slider bar
     /// </summary>
-    public class VolumeSliderBar : MonoBehaviour
+    public abstract class VolumeSliderBar : MonoBehaviour
     {
         private Slider volumeSlider;
         public Text volumeText;
         private float lastVolume;
-        private float volume;
+        protected float volume;
         private AudioSource audioSource;
         public AudioClip valueChangeAudio;
 
         private void Awake()
         {
-            volume = VolumeManager.LoadVolume();
+            LoadVolume();
             lastVolume = volume;
             volumeSlider = GetComponent<Slider>();
             volumeSlider.value = volume;
@@ -29,7 +28,6 @@ namespace Platformer.UI
         private void Update()
         {
             volume = volumeSlider.value;
-            VolumeManager.SetVolume(volume);
             SetVolumeSettings();
             HandleAudioReproduction();
         }
@@ -39,8 +37,7 @@ namespace Platformer.UI
         /// </summary>
         protected virtual void SetVolumeSettings()
         {
-            VolumeManager.SetVolume(volume);
-            volumeText.text = GetVolumeText();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -55,16 +52,22 @@ namespace Platformer.UI
             lastVolume = volume;
         }
 
+        /// <summary>
+        /// Gets the volume value saved in file
+        /// </summary>
+        protected virtual void LoadVolume()
+        {
+            throw new NotImplementedException();
+        }
 
-        protected string GetVolumeText()
+        public string GetVolumeText()
         {
             return ((int)(volume * 100)).ToString();
         }
 
         private void OnDisable()
         {
-            VolumeManager.SetVolume(volume);
-            VolumeManager.SaveVolumeInFile();
+            SetVolumeSettings();
         }
     }
 }

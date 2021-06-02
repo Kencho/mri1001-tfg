@@ -264,6 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 2145977789}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 2145977789}
@@ -499,9 +504,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 2061951096}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1224394877}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 163512781}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
       propertyPath: m_Navigation.m_SelectOnRight
@@ -705,6 +720,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 2061951096}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 901162539}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
       propertyPath: m_Navigation.m_SelectOnRight
@@ -1309,6 +1329,11 @@ PrefabInstance:
       objectReference: {fileID: 2145977789}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 1224394877}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1612,6 +1637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 1455286544}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 901162539}
@@ -1620,6 +1650,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnLeft
       value: 
       objectReference: {fileID: 576506931}
+    - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnRight
+      value: 
+      objectReference: {fileID: 394373830}
     - target: {fileID: 1938513368852137813, guid: a4a50e217e5a4f44bb3347d21d697911,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
