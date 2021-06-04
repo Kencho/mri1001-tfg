@@ -1,6 +1,23 @@
 \capitulo{4}{Técnicas y herramientas}
 
-Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
-No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
+\section{Motor gráfico}
+Para la creación del videojuego se planteó apoyarse en un motor gráfico ya creado frente a implementar todo el proyecto desde 0. Se planteó utilizar Unity (hacer uso de un motor gráfico) frente a la librería de Python pygames (no hacer uso de un motor gráfico).
 
+\subsection{Unity}
+Para el desarrollo del videojuego se ha considerado utilizar Unity como motor gráfico, ya que es un motor gráfico gratuito de fácil uso (aunque limitado en algunos aspectos), pero que ofrece los recursos necesarios para el desarrollo. Esta herramienta trae elementos ya implementados que ahorran mucho tiempo de trabajo tales como los Colliders (clases encargadas del manejo de las colisiones entre objetos) y clases encargadas de simular las físicas e interactuar entre estas y los objetos en la escena. Además, Unity ofrece una interfaz que facilite la visualización de los niveles del videojuego.
+
+El argumento final para elegir este motor gráfico y no otros como, por ejemplo, Unreal Engine 4 ha sido completamente subjetivo. Ya se tiene experiencia previa y se ahorrará mucho tiempo del que se invertiría en el proceso de aprendizaje de otro motor gráfico.
+
+\subsection{Pygames (librería de Python)}
+Pygames es una herramienta que ofrece una serie de clases que ofrecen una solución intermedia entre construir desde cero todo el código relativo al desarrollo de un videojuego y un motor gráfico que ofrece bastantes elementos de un videojuego ya implementados. 
+
+Construir desde cero el videojuego podría llevar demasiado tiempo y probablemente no diese tiempo a desarrollar el videojuego entero como un elemento funcional. Sin embargo, hacerlo desde cero ofrece una libertad absoluta en el desarrollo y la funcionalidad.
+Utilizar un motor gráfico para el desarrollo del videojuego facilita mucho el desarrollo, sin embargo obliga a ceñirse al modelo que sigue el motor gráfico.
+
+La librería de pygames ofrece una solución intermedia, ofreciendo bastante libertad y una estructura de clases que limita muy poco ofreciendo las funcionalidades justas y necesarias (creación de la ventana donde se mostrará el juego, visualización de sprites y elementos visuales y poco más.).
+
+\subsection{Decisión final}
+Finalmente se ha optado por el uso del motor gráfico Unity en lugar de la librería pygames porque es un entorno con el que se está más familiarizado (teniéndose un conocimiento mucho más profundo de Unity que de pygames). Como ya se ha mencionado anteriormente el proceso de aprendizaje puede llevar demasiado tiempo (siendo que para pygames se posee un conocimiento muy básico). Adicionalmente se teme que, al ser pygames demasiado abierto (una de sus ventajas), no se tenga tiempo suficiente para desarrollar un videojuego con el nivel de acabado que se ha propuesto para este proyecto en el tiempo del que se dispone.
+
+Debido a su facilidad de uso y los elementos que ya trae por defecto se ha elegido Unity para el desarrollo del videojuego.
 
