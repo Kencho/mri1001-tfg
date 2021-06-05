@@ -51,6 +51,10 @@ La clase MonoBehaviour es la clase general que ofrece Unity para los objetos afe
 
 Otra de las características de MonoBehaviour es que su constructor funciona de forma anómala llamándose varias veces a pesar de haberse construido (además de la llamada al constructor que se da cada vez que se entra al editor o se vuelve a este desde la ejecución de prueba del juego), convirtiendo al constructor en un método poco fiable el cometido que le corresponde. Este comportamiento tan extraño se soluciona llamando a los métodos Awake y Start en vez de al constructor, pero a costa de dejar de lado el constructor. En lineas generales estos métodos solucionan por completo el problema, pero ha habido clases en las que se ha intentado aplicar el patrón de diseño Singelton resultando imposible su implementación de manera limpia. Debido a esto las clases a las que se aplicó el patrón de diseño Singleton si que pueden tener varias instancias de esa clase pero se fuerza que solo se pueda tener acceso a una de ellas. Esto provoca que haya varias instancias de una clase realizando operaciones pero que solo una de ellas tenga relevancia en la ejecución del programa. Es una solución poco eficiente y no completamente segura, pero es la única solución viable si se desea implementar un Singleton.
 
+\subsection{Acceder a ficheros con Unity}
+Trabajar sobre ficheros con Unity es extraño, ya que si quieres poder trabajar con ficheros tienes que guardarlos en la ruta marcada por la variable de Unity Application.persistentDataPath. Si no lo haces al exportar el juego no funcionará correctamente, pues no se puede trabajar con ficheros fuera de esa ruta.
+No afecta a la funcionalidad o el desarrollo del programa, pero es un funcionamiento anómalo y hasta cierto punto molesto.
+
 \subsection{¿Se recomienda el uso de Unity?}
 Unity es una herramienta cuyo principal atractivo es la cantidad de elementos que te ofrece por defecto. Sin embargo, como ya se ha mencionado, no ofrece flexibilidad alguna.
 
@@ -68,6 +72,8 @@ Plantear a necesidad de añadir una historia al juego (aunque en un juego de est
 Crear más niveles jugables ya que 6 no son contenido suficiente para considerar el videojuego terminado.
 \item
 Barajar la necesidad de generar variantes sencillas de las mecánicas ya implementadas que den variabilidad al juego (como por ejemplo que los obstáculos móviles puedan ir en más direcciones que de derecha a izquierda como de arriba a abajo o que puedan realizar movimientos sinusoidales que hagan más difícil de predecir la ruta que siguen).
+\item
+Añadir varios idiomas y la opción de cambiar entre ellos en el menú de opciones. Hay poco texto en el juego y será sencillo y rápido realizar la traducción, detalle que los jugadores agradecerán.
 \end{itemize}
 
 A pesar de lo dicho anteriormente si que hay una serie de líneas de trabajo futuras en base a mejorar el producto y reducir la probabilidad de aparición de bugs:
