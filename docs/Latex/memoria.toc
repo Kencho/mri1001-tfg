@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.3}Anexos}{3}{section.1.3}%
 \contentsline {chapter}{Objetivos del proyecto}{5}{chapter*.5}%
 \contentsline {chapter}{Conceptos teóricos}{7}{chapter*.6}%
-\contentsline {section}{\numberline {3.1}Unity \cite {Unity}}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Unity}{7}{section.3.1}%
 \contentsline {subsection}{MonoBehaviour \cite {ClaseMonobehaviour}}{7}{section*.7}%
 \contentsline {subsection}{GameObject \cite {ClaseGameObject}}{10}{section*.8}%
 \contentsline {subsection}{Escenas}{11}{section*.9}%
@@ -66,33 +66,33 @@
 \contentsline {subsection}{Sistema de gestión de cámaras final}{57}{section*.47}%
 \contentsline {chapter}{Trabajos relacionados}{61}{chapter*.48}%
 \contentsline {section}{\numberline {6.1}Juegos similares en género y mecánicas}{61}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Evaluación de Plataformer Microgame \cite {PlatformerMicrogame}}{63}{section.6.2}%
-\contentsline {subsection}{Grid}{63}{section*.49}%
+\contentsline {section}{\numberline {6.2}Evaluación de Plataformer Microgame \cite {PlatformerMicrogame}}{64}{section.6.2}%
+\contentsline {subsection}{Grid}{64}{section*.49}%
 \contentsline {subsection}{UI Canvas}{64}{section*.50}%
 \contentsline {subsection}{Enemies}{64}{section*.51}%
-\contentsline {subsection}{Tokens}{64}{section*.52}%
-\contentsline {subsection}{Zones}{64}{section*.53}%
-\contentsline {subsection}{GameController}{64}{section*.54}%
-\contentsline {subsection}{Player}{64}{section*.55}%
+\contentsline {subsection}{Tokens}{65}{section*.52}%
+\contentsline {subsection}{Zones}{65}{section*.53}%
+\contentsline {subsection}{GameController}{65}{section*.54}%
+\contentsline {subsection}{Player}{65}{section*.55}%
 \contentsline {subsection}{Simulation}{65}{section*.56}%
-\contentsline {subsection}{Pegas}{65}{section*.57}%
-\contentsline {subsubsection}{AnimationController}{65}{section*.58}%
+\contentsline {subsection}{Pegas}{66}{section*.57}%
+\contentsline {subsubsection}{AnimationController}{66}{section*.58}%
 \contentsline {subsubsection}{Health}{66}{section*.59}%
-\contentsline {subsubsection}{SpawnPoint}{66}{section*.60}%
-\contentsline {subsubsection}{JumpState}{66}{section*.61}%
+\contentsline {subsubsection}{SpawnPoint}{67}{section*.60}%
+\contentsline {subsubsection}{JumpState}{67}{section*.61}%
 \contentsline {subsubsection}{Rigidbody2D.Cast}{67}{section*.62}%
 \contentsline {subsubsection}{PatrolPath.Mover}{67}{section*.63}%
-\contentsline {subsection}{Conclusiones}{67}{section*.64}%
-\contentsline {chapter}{Conclusiones y Líneas de trabajo futuras}{69}{chapter*.65}%
-\contentsline {section}{\numberline {7.1}¿Qué he aprendido sobre el desarrollo de videojuegos (como producto software)?}{69}{section.7.1}%
-\contentsline {subsection}{Pruebas}{69}{section*.66}%
-\contentsline {subsection}{Tiempo de desarrollo}{70}{section*.67}%
-\contentsline {subsection}{Calidad del código}{71}{section*.68}%
-\contentsline {section}{\numberline {7.2}Opinión sobre Unity}{71}{section.7.2}%
-\contentsline {subsection}{Pruebas}{72}{section*.69}%
-\contentsline {subsection}{GameObject}{72}{section*.70}%
-\contentsline {subsection}{MonoBehaviour}{73}{section*.71}%
-\contentsline {subsection}{Acceder a ficheros con Unity}{73}{section*.72}%
-\contentsline {subsection}{¿Se recomienda el uso de Unity?}{74}{section*.73}%
-\contentsline {section}{\numberline {7.3}Líneas de trabajo futuras}{74}{section.7.3}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{77}{chapter*.74}%
+\contentsline {subsection}{Conclusiones}{68}{section*.64}%
+\contentsline {chapter}{Conclusiones y Líneas de trabajo futuras}{71}{chapter*.65}%
+\contentsline {section}{\numberline {7.1}¿Qué he aprendido sobre el desarrollo de videojuegos (como producto software)?}{71}{section.7.1}%
+\contentsline {subsection}{Pruebas}{71}{section*.66}%
+\contentsline {subsection}{Tiempo de desarrollo}{72}{section*.67}%
+\contentsline {subsection}{Calidad del código}{73}{section*.68}%
+\contentsline {section}{\numberline {7.2}Opinión sobre Unity}{73}{section.7.2}%
+\contentsline {subsection}{Pruebas}{74}{section*.69}%
+\contentsline {subsection}{GameObject}{74}{section*.70}%
+\contentsline {subsection}{MonoBehaviour}{75}{section*.71}%
+\contentsline {subsection}{Acceder a ficheros con Unity}{75}{section*.72}%
+\contentsline {subsection}{¿Se recomienda el uso de Unity?}{76}{section*.73}%
+\contentsline {section}{\numberline {7.3}Líneas de trabajo futuras}{76}{section.7.3}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{79}{chapter*.74}%
