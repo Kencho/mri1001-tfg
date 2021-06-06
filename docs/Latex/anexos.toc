@@ -48,56 +48,56 @@
 \contentsline {appendix}{\chapternumberline {D}Documentación técnica de programación}{25}{appendix.Alph4}%
 \contentsline {section}{\numberline {D.1}Introducción}{25}{section.Alph4.1}%
 \contentsline {section}{\numberline {D.2}Estructura de directorios}{25}{section.Alph4.2}%
-\contentsline {section}{\numberline {D.3}Manual del programador}{25}{section.Alph4.3}%
-\contentsline {section}{\numberline {D.4}Compilación, instalación y ejecución del proyecto}{25}{section.Alph4.4}%
-\contentsline {section}{\numberline {D.5}Pruebas del sistema}{25}{section.Alph4.5}%
-\contentsline {appendix}{\chapternumberline {E}Documentación de usuario}{27}{appendix.Alph5}%
-\contentsline {section}{\numberline {E.1}Introducción}{27}{section.Alph5.1}%
-\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{27}{section.Alph5.2}%
-\contentsline {section}{\numberline {E.3}Instalación}{27}{section.Alph5.3}%
-\contentsline {section}{\numberline {E.4}Manual del usuario}{27}{section.Alph5.4}%
-\contentsline {appendix}{\chapternumberline {F}Documento de diseño del juego}{29}{appendix.Alph6}%
-\contentsline {section}{\numberline {F.1}Introducción}{29}{section.Alph6.1}%
-\contentsline {subsection}{Plataforma:}{29}{section*.32}%
-\contentsline {subsection}{Versión:}{29}{section*.33}%
-\contentsline {subsection}{Jugabilidad y contenido:}{29}{section*.34}%
-\contentsline {subsection}{Categoría:}{29}{section*.35}%
-\contentsline {subsection}{Mecánica:}{30}{section*.36}%
-\contentsline {subsection}{Tecnología:}{30}{section*.37}%
-\contentsline {subsection}{Visión general del juego:}{30}{section*.38}%
-\contentsline {section}{\numberline {F.2}Mecánicas del juego}{31}{section.Alph6.2}%
-\contentsline {subsection}{Jugador}{31}{section*.39}%
-\contentsline {subsection}{Enemigos}{31}{section*.40}%
-\contentsline {subsection}{Portal}{32}{section*.41}%
-\contentsline {subsection}{Creador de impulso}{32}{section*.42}%
-\contentsline {subsection}{Modificadores de gravedad}{33}{section*.43}%
-\contentsline {subsection}{Tiempo bala}{33}{section*.44}%
-\contentsline {section}{\numberline {F.3}Niveles}{34}{section.Alph6.3}%
-\contentsline {subsection}{Niveles de prueba}{34}{section*.45}%
-\contentsline {subsection}{Niveles tutorial}{34}{section*.46}%
-\contentsline {subsection}{Niveles desafiantes}{35}{section*.47}%
-\contentsline {subsection}{Pantallas implementadas}{35}{section*.48}%
-\contentsline {subsubsection}{PruebaPlayerScene}{36}{section*.49}%
-\contentsline {subsubsection}{PruebaPortalScene}{36}{section*.50}%
-\contentsline {subsubsection}{PruebaMovingObstacleScene}{36}{section*.51}%
-\contentsline {subsubsection}{PruebaImpulseCreatorsScene}{37}{section*.52}%
-\contentsline {subsubsection}{PruebaGravityModifierScene}{37}{section*.53}%
-\contentsline {subsubsection}{PruebaTimeModifierScene}{38}{section*.54}%
-\contentsline {section}{\numberline {F.4}Interfaces}{38}{section.Alph6.4}%
-\contentsline {subsection}{Pantalla de elección de nivel}{38}{section*.55}%
-\contentsline {subsection}{Pantalla de opciones}{39}{section*.56}%
-\contentsline {section}{\numberline {F.5}Entidades}{39}{section.Alph6.5}%
-\contentsline {subsection}{Elementos}{40}{section*.57}%
-\contentsline {subsubsection}{Player}{40}{section*.58}%
-\contentsline {subsubsection}{Enemigos}{41}{section*.59}%
-\contentsline {subsubsection}{Escenarios}{44}{section*.60}%
-\contentsline {subsection}{Mecánicas}{44}{section*.61}%
-\contentsline {subsubsection}{Portal}{44}{section*.62}%
-\contentsline {subsubsection}{Creador de impulso}{45}{section*.63}%
-\contentsline {subsubsection}{Tiempo bala}{48}{section*.64}%
-\contentsline {subsubsection}{Acelerón}{48}{section*.65}%
-\contentsline {subsubsection}{Modificadores de gravedad}{48}{section*.66}%
-\contentsline {section}{\numberline {F.6}Controles}{50}{section.Alph6.6}%
-\contentsline {subsubsection}{Mando}{50}{section*.67}%
-\contentsline {subsubsection}{Teclado}{50}{section*.68}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{53}{appendix*.69}%
+\contentsline {section}{\numberline {D.3}Manual del programador}{27}{section.Alph4.3}%
+\contentsline {section}{\numberline {D.4}Compilación, instalación y ejecución del proyecto}{27}{section.Alph4.4}%
+\contentsline {section}{\numberline {D.5}Pruebas del sistema}{27}{section.Alph4.5}%
+\contentsline {appendix}{\chapternumberline {E}Documentación de usuario}{29}{appendix.Alph5}%
+\contentsline {section}{\numberline {E.1}Introducción}{29}{section.Alph5.1}%
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{29}{section.Alph5.2}%
+\contentsline {section}{\numberline {E.3}Instalación}{29}{section.Alph5.3}%
+\contentsline {section}{\numberline {E.4}Manual del usuario}{29}{section.Alph5.4}%
+\contentsline {appendix}{\chapternumberline {F}Documento de diseño del juego}{31}{appendix.Alph6}%
+\contentsline {section}{\numberline {F.1}Introducción}{31}{section.Alph6.1}%
+\contentsline {subsection}{Plataforma:}{31}{section*.32}%
+\contentsline {subsection}{Versión:}{31}{section*.33}%
+\contentsline {subsection}{Jugabilidad y contenido:}{31}{section*.34}%
+\contentsline {subsection}{Categoría:}{31}{section*.35}%
+\contentsline {subsection}{Mecánica:}{32}{section*.36}%
+\contentsline {subsection}{Tecnología:}{32}{section*.37}%
+\contentsline {subsection}{Visión general del juego:}{32}{section*.38}%
+\contentsline {section}{\numberline {F.2}Mecánicas del juego}{33}{section.Alph6.2}%
+\contentsline {subsection}{Jugador}{33}{section*.39}%
+\contentsline {subsection}{Enemigos}{33}{section*.40}%
+\contentsline {subsection}{Portal}{34}{section*.41}%
+\contentsline {subsection}{Creador de impulso}{34}{section*.42}%
+\contentsline {subsection}{Modificadores de gravedad}{35}{section*.43}%
+\contentsline {subsection}{Tiempo bala}{35}{section*.44}%
+\contentsline {section}{\numberline {F.3}Niveles}{36}{section.Alph6.3}%
+\contentsline {subsection}{Niveles de prueba}{36}{section*.45}%
+\contentsline {subsection}{Niveles tutorial}{36}{section*.46}%
+\contentsline {subsection}{Niveles desafiantes}{37}{section*.47}%
+\contentsline {subsection}{Pantallas implementadas}{37}{section*.48}%
+\contentsline {subsubsection}{PruebaPlayerScene}{38}{section*.49}%
+\contentsline {subsubsection}{PruebaPortalScene}{38}{section*.50}%
+\contentsline {subsubsection}{PruebaMovingObstacleScene}{38}{section*.51}%
+\contentsline {subsubsection}{PruebaImpulseCreatorsScene}{39}{section*.52}%
+\contentsline {subsubsection}{PruebaGravityModifierScene}{39}{section*.53}%
+\contentsline {subsubsection}{PruebaTimeModifierScene}{40}{section*.54}%
+\contentsline {section}{\numberline {F.4}Interfaces}{40}{section.Alph6.4}%
+\contentsline {subsection}{Pantalla de elección de nivel}{40}{section*.55}%
+\contentsline {subsection}{Pantalla de opciones}{41}{section*.56}%
+\contentsline {section}{\numberline {F.5}Entidades}{41}{section.Alph6.5}%
+\contentsline {subsection}{Elementos}{42}{section*.57}%
+\contentsline {subsubsection}{Player}{42}{section*.58}%
+\contentsline {subsubsection}{Enemigos}{43}{section*.59}%
+\contentsline {subsubsection}{Escenarios}{46}{section*.60}%
+\contentsline {subsection}{Mecánicas}{46}{section*.61}%
+\contentsline {subsubsection}{Portal}{46}{section*.62}%
+\contentsline {subsubsection}{Creador de impulso}{47}{section*.63}%
+\contentsline {subsubsection}{Tiempo bala}{50}{section*.64}%
+\contentsline {subsubsection}{Acelerón}{50}{section*.65}%
+\contentsline {subsubsection}{Modificadores de gravedad}{50}{section*.66}%
+\contentsline {section}{\numberline {F.6}Controles}{52}{section.Alph6.6}%
+\contentsline {subsubsection}{Mando}{52}{section*.67}%
+\contentsline {subsubsection}{Teclado}{52}{section*.68}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{55}{appendix*.69}%

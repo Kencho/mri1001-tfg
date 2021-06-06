@@ -13,26 +13,26 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {F.1}{\ignorespaces Nivel tutorial de los portales}}{35}{figure.Alph6.1}%
-\contentsline {figure}{\numberline {F.2}{\ignorespaces Pantalla de prueba de mecánicas básicas }}{36}{figure.Alph6.2}%
-\contentsline {figure}{\numberline {F.3}{\ignorespaces Pantalla de prueba de los portales }}{36}{figure.Alph6.3}%
-\contentsline {figure}{\numberline {F.4}{\ignorespaces Pantalla de prueba de los obstáculos móviles }}{36}{figure.Alph6.4}%
-\contentsline {figure}{\numberline {F.5}{\ignorespaces Pantalla de prueba de los creadores de impulso }}{37}{figure.Alph6.5}%
-\contentsline {figure}{\numberline {F.6}{\ignorespaces Pantalla de prueba de los modificadores de gravedad }}{37}{figure.Alph6.6}%
-\contentsline {figure}{\numberline {F.7}{\ignorespaces Pantalla de prueba de los modificadores temporales}}{38}{figure.Alph6.7}%
-\contentsline {figure}{\numberline {F.8}{\ignorespaces Idea inicial de la pantalla de selección de nivel}}{38}{figure.Alph6.8}%
-\contentsline {figure}{\numberline {F.9}{\ignorespaces Idea inicial de la pantalla de opciones}}{39}{figure.Alph6.9}%
-\contentsline {figure}{\numberline {F.10}{\ignorespaces Sprite utilizado para el Player}}{40}{figure.Alph6.10}%
-\contentsline {figure}{\numberline {F.11}{\ignorespaces Sprite utilizado para el obstáculo estático}}{41}{figure.Alph6.11}%
-\contentsline {figure}{\numberline {F.12}{\ignorespaces Sprite utilizado para el obstáculo que sigue una rutina}}{42}{figure.Alph6.12}%
-\contentsline {figure}{\numberline {F.13}{\ignorespaces Obstáculo móvil rápido}}{42}{figure.Alph6.13}%
-\contentsline {figure}{\numberline {F.14}{\ignorespaces Obstáculo móvil (velocidad intermedia)}}{43}{figure.Alph6.14}%
-\contentsline {figure}{\numberline {F.15}{\ignorespaces Obstáculo móvil lento}}{43}{figure.Alph6.15}%
-\contentsline {figure}{\numberline {F.16}{\ignorespaces Sprite utilizado para los portales}}{44}{figure.Alph6.16}%
-\contentsline {figure}{\numberline {F.17}{\ignorespaces Sprite utilizado para la partícula de impulso}}{45}{figure.Alph6.17}%
-\contentsline {figure}{\numberline {F.18}{\ignorespaces Sprite utilizado para el amplificador de impulso}}{46}{figure.Alph6.18}%
-\contentsline {figure}{\numberline {F.19}{\ignorespaces Sprite utilizado para el amplificador de impulso}}{47}{figure.Alph6.19}%
-\contentsline {figure}{\numberline {F.20}{\ignorespaces Sprite utilizado para la zona de tiempo escalado}}{48}{figure.Alph6.20}%
-\contentsline {figure}{\numberline {F.21}{\ignorespaces Sprite utilizado para el inversor de gravedad}}{49}{figure.Alph6.21}%
-\contentsline {figure}{\numberline {F.22}{\ignorespaces Sprite utilizado para el obstáculo superdenso}}{49}{figure.Alph6.22}%
-\contentsline {figure}{\numberline {F.23}{\ignorespaces Nomenclatura de los mandos de PlayStation}}{50}{figure.Alph6.23}%
+\contentsline {figure}{\numberline {F.1}{\ignorespaces Nivel tutorial de los portales}}{37}{figure.Alph6.1}%
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Pantalla de prueba de mecánicas básicas }}{38}{figure.Alph6.2}%
+\contentsline {figure}{\numberline {F.3}{\ignorespaces Pantalla de prueba de los portales }}{38}{figure.Alph6.3}%
+\contentsline {figure}{\numberline {F.4}{\ignorespaces Pantalla de prueba de los obstáculos móviles }}{38}{figure.Alph6.4}%
+\contentsline {figure}{\numberline {F.5}{\ignorespaces Pantalla de prueba de los creadores de impulso }}{39}{figure.Alph6.5}%
+\contentsline {figure}{\numberline {F.6}{\ignorespaces Pantalla de prueba de los modificadores de gravedad }}{39}{figure.Alph6.6}%
+\contentsline {figure}{\numberline {F.7}{\ignorespaces Pantalla de prueba de los modificadores temporales}}{40}{figure.Alph6.7}%
+\contentsline {figure}{\numberline {F.8}{\ignorespaces Idea inicial de la pantalla de selección de nivel}}{40}{figure.Alph6.8}%
+\contentsline {figure}{\numberline {F.9}{\ignorespaces Idea inicial de la pantalla de opciones}}{41}{figure.Alph6.9}%
+\contentsline {figure}{\numberline {F.10}{\ignorespaces Sprite utilizado para el Player}}{42}{figure.Alph6.10}%
+\contentsline {figure}{\numberline {F.11}{\ignorespaces Sprite utilizado para el obstáculo estático}}{43}{figure.Alph6.11}%
+\contentsline {figure}{\numberline {F.12}{\ignorespaces Sprite utilizado para el obstáculo que sigue una rutina}}{44}{figure.Alph6.12}%
+\contentsline {figure}{\numberline {F.13}{\ignorespaces Obstáculo móvil rápido}}{44}{figure.Alph6.13}%
+\contentsline {figure}{\numberline {F.14}{\ignorespaces Obstáculo móvil (velocidad intermedia)}}{45}{figure.Alph6.14}%
+\contentsline {figure}{\numberline {F.15}{\ignorespaces Obstáculo móvil lento}}{45}{figure.Alph6.15}%
+\contentsline {figure}{\numberline {F.16}{\ignorespaces Sprite utilizado para los portales}}{46}{figure.Alph6.16}%
+\contentsline {figure}{\numberline {F.17}{\ignorespaces Sprite utilizado para la partícula de impulso}}{47}{figure.Alph6.17}%
+\contentsline {figure}{\numberline {F.18}{\ignorespaces Sprite utilizado para el amplificador de impulso}}{48}{figure.Alph6.18}%
+\contentsline {figure}{\numberline {F.19}{\ignorespaces Sprite utilizado para el amplificador de impulso}}{49}{figure.Alph6.19}%
+\contentsline {figure}{\numberline {F.20}{\ignorespaces Sprite utilizado para la zona de tiempo escalado}}{50}{figure.Alph6.20}%
+\contentsline {figure}{\numberline {F.21}{\ignorespaces Sprite utilizado para el inversor de gravedad}}{51}{figure.Alph6.21}%
+\contentsline {figure}{\numberline {F.22}{\ignorespaces Sprite utilizado para el obstáculo superdenso}}{51}{figure.Alph6.22}%
+\contentsline {figure}{\numberline {F.23}{\ignorespaces Nomenclatura de los mandos de PlayStation}}{52}{figure.Alph6.23}%
