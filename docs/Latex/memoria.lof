@@ -1,0 +1,55 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Jerarquía de herencia de PlayerController}}{16}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama de transición entre estados de PlayerController}}{17}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagrama de transición entre estados de PlayerController}}{19}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagrama de transición entre estados de PlayerController}}{19}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Diagrama UML de la implementación de las mecánicas en PlayerController mediante composición}}{20}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Simulación del proceso de detección de colisiones}}{22}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Vector normal del muro en función de la posición del KinematicObject}}{23}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Diagrama UML del sistema de colisiones}}{23}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Diagrama UML de la clase encargada de la gestión de la gravedad del KinematicObject}}{24}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Pseudocódigo del proceso de modificación de la gravedad del KinematicObject}}{24}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Estructura del GameObject asociado al obstáculo superdenso (Dense Obstacle)}}{25}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Gráfica que representa la influencia gravitatoria para una influencia máxima de 20, una influencia de 10 y un radio de región de influencia de 2 ($y = -10|X| + 20$)}}{25}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Diagrama UML de la estructura del inversor de gravedad}}{26}{figure.5.13}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Pseudocódigo del método llamado cada vez que un KinematicObject entra en contacto con un inversor de gravedad}}{26}{figure.5.14}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Pseudocódigo del proceso de inversión de gravedad de los KinematicObject en el FixedUpdate}}{27}{figure.5.15}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Estructura del prefab GravityInverterSystem}}{27}{figure.5.16}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Estructura del GameObject asociado al obstáculo estático}}{28}{figure.5.17}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Jerarquía de herencia en la que el obstáculo móvil y el obstáculo que sigue una rutina heredan del obstáculo estático.}}{28}{figure.5.18}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Diagrama UML de la clase PatrolObstacle}}{29}{figure.5.19}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Pseudocódigo de cálculo del tiempo que lleva recorrer cada sección}}{29}{figure.5.20}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Cálculo del tiempo que se tarda en atravesar cada sección}}{30}{figure.5.21}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Calcular la siguiente posición a la que debe moverse el obstáculo que sigue una rutina}}{31}{figure.5.22}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Diagrama UML de la estructura de las fábricas de obstáculos}}{32}{figure.5.23}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Diagrama UML de la clase Portal}}{33}{figure.5.24}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Estructura de relaciones del GameObject PortalCouple}}{33}{figure.5.25}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Estructura de relaciones del GameObject PortalCouple}}{34}{figure.5.26}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Estructura del prefab asociado a la partícula de impulso}}{35}{figure.5.27}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Estructura del prefab asociado a la plataforma de impulso}}{35}{figure.5.28}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Estructura del prefab asociado al amplificador de impulso}}{35}{figure.5.29}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Estructura de herencia de los animadores de sprites}}{36}{figure.5.30}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Pseudocódigo de UpdateSprite}}{37}{figure.5.31}%
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Diseño de la clase GameController}}{38}{figure.5.32}%
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Pseudocódigo que refleja todas las operaciones que hay que realizar para establecer un estado de juego inicial estable}}{39}{figure.5.33}%
+\contentsline {figure}{\numberline {5.34}{\ignorespaces Diagrama que representa un ejemplo de las operaciones llevadas a cabo en la llamada al método Tick}}{41}{figure.5.34}%
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Diagrama UML de la clase TimeManager}}{42}{figure.5.35}%
+\contentsline {figure}{\numberline {5.36}{\ignorespaces Estructura del GameObject asociado a las zonas de tiempo escalado}}{43}{figure.5.36}%
+\contentsline {figure}{\numberline {5.37}{\ignorespaces Estructura de herencia de TimeAfectedObject}}{44}{figure.5.37}%
+\contentsline {figure}{\numberline {5.38}{\ignorespaces Pseudocódigo del método llamado para resetear los TimeAfectedObject}}{44}{figure.5.38}%
+\contentsline {figure}{\numberline {5.39}{\ignorespaces Diagrama de viaje entre los distintos menús y escenas}}{45}{figure.5.39}%
+\contentsline {figure}{\numberline {5.40}{\ignorespaces Diagrama de la estructura de GameObject asociado al menú de pausa}}{46}{figure.5.40}%
+\contentsline {figure}{\numberline {5.41}{\ignorespaces Pseudocódigo de las operaciones llevadas a cabo al abrir el menú de pausa}}{47}{figure.5.41}%
+\contentsline {figure}{\numberline {5.42}{\ignorespaces Pseudocódigo de la operaciones llevadas a cabo al cerrar el menú de pausa}}{47}{figure.5.42}%
+\contentsline {figure}{\numberline {5.43}{\ignorespaces Patrón de colores utilizado para la UI}}{48}{figure.5.43}%
+\contentsline {figure}{\numberline {5.44}{\ignorespaces Diagrama UML que representa la relación entre VolumeManager y AudioSourceVolumeManager}}{49}{figure.5.44}%
+\contentsline {figure}{\numberline {5.45}{\ignorespaces Escena PruebaPortalScene}}{52}{figure.5.45}%
+\contentsline {figure}{\numberline {5.46}{\ignorespaces Escena PruebaPlayerScene}}{53}{figure.5.46}%
+\contentsline {figure}{\numberline {5.47}{\ignorespaces Visión de la escena PruebaPlayerScene desde la cámara.}}{54}{figure.5.47}%
+\contentsline {figure}{\numberline {5.48}{\ignorespaces Distintas regiones que tiene en cuenta Cinemachine virtual camera.}}{56}{figure.5.48}%
+\contentsline {figure}{\numberline {5.49}{\ignorespaces Sistema de gestión de cámaras de Platformer Microgames}}{58}{figure.5.49}%
+\contentsline {figure}{\numberline {5.50}{\ignorespaces Sistema de gestión de cámaras final aplicado}}{59}{figure.5.50}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Captura de pantalla de un nivel del videojuego Celeste}}{61}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Captura de pantalla de un nivel del videojuego Super meat boy}}{62}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Nivel de presentación de Platformer Microgame}}{63}{figure.6.3}%
