@@ -18,6 +18,7 @@ Es muy compatible con la integración continua.
 \end{itemize}
 
 \section{Planificación temporal}
+\subsection{Tablero Kanban}
 El tablero Kanban diseñado para este proyecto es uno en el que las tareas pueden estar en cuatro posibles fases de desarrollo:
 \begin{itemize}
 \item
@@ -25,19 +26,43 @@ El tablero Kanban diseñado para este proyecto es uno en el que las tareas puede
 \item
 \textbf{In progress:} La tarea esta siendo llevada a cabo.
 \item
-\textbf{QA/Testing:} Fase de revisión de la tarea. Se comprueba que se ha realizado correctamente. Una tarea también puede llegar a esta fase debido a que se desee una revisión de esta tarea, pero no con la intención de darla por completada, sino para que de esta revisión surjan soluciones a problemas surgidos durante la realización de la tarea o debatir sobre lo que pide implementar la tarea (como por ejemplo no estar de acuerdo en la necesidad de utilizar una herramienta para llevar a cabo la tarea).
+\textbf{QA/Testing:} Fase de revisión de la tarea. Se comprueba que se ha realizado correctamente.
 \item
 \textbf{Done} Esta es la fase final del tablero. Todas las tareas que llegan a esta fase se dan por terminadas.
 \end{itemize} 
 
 El tablero Kanban se puede encontrar en el repositorio de Github del proyecto en el apartado de "Projects" (\url{https://github.com/Kencho/mri1001-tfg/projects/1})
 
-\clearpage
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{Anexos/Anexo_A/Tablero_Kanban}
 \caption{Captura de pantalla del tablero Kanban utilizado}
 \end{figure}
+\clearpage
+
+\subsection{Fases del desarrollo}
+Proyecto consta de tres fases separadas del desarrollo:
+\begin{itemize}
+\item
+La fase de desarrollo del proyecto en la que se implementarán las mecánicas y los elementos del juego. Esta fase es la que más tiempo llevará, durando desde el 1 de febrero de 2021 hasta el 16 de mayo de 2021. Salvo por algunos bugs que quedaron pendientes de solucionar, los objetivos planteados para esta fase se cumplió satisfactoriamente.
+\item
+La fase de beta en la que se considera que el juego ya ha tomado forma como producto software y se entra a una fase centrada en la solución de bugs y documentación de la memoria. Esta fase duró desde el 17 de mayo de 2021 hasta el 6 de junio de 2021.\\
+Durante esta fase se realizaron refactorizaciones (facilitan encontrar cambios), corrigieron bugs, se documentó la memoria y se añadieron recursos estéticos para mejorar la sensación de juego (principalmente sonidos).\\
+Se invirtió demasiado tiempo en la implementación de los recursos que mejorasen la sensación de fuego (sobre todo la opción de modificación del volumen de la música) dedicándose poco tiempo a la memoria y ralentizando el cierre del proyecto.
+\item
+La fase de "Release candidate" que durará una semana donde comprobará que el desarrollo está listo, el código es accesible y el proyecti se puede descargar y ejecutar satisfactoriamente. Esta fase requerirá más trabajo del esperado ya que el retraso generado en la fase de beta obliga  arrastrar algunas de las tareas de esta a la "Release candidate". Sin embargo este retraso es más asumible debido a que se ha hecho la planificación temporal contando con un colchón de tiempo por si algún contratiempo retrasaba el proyecto.
+\end{itemize}
+
+\subsection{Cuellos de botellas}
+Durante el desarrollo del proyecto se han encontrado tres cuellos de botellas en los que la realización de ciertas tareas ha llevado más tiempo del esperado:
+\begin{itemize}
+\item
+La implementación del Player: La implementación del Player y todas las mecánicas relativas a este se tenía la percepción de que en 25-30 horas estarían implementadas. Sin embargo este proceso se alargó hasta las 48 horas.
+\item
+La implementación del sistema de colisiones estaba planeada para durar una semana de trabajo. Sin embargo se alargó hasta las dos.
+\item
+No estaba planeado añadir la opción de modificación del volumen de la música. Añadir esta tarea improvisada sobre la marcha, requirió de dos días que estaba planeado se dedicasen a tareas no improvisadas.
+\end{itemize} 
 
 \section{Estudio de viabilidad}
 A continuación se va a proceder a realizar el estudio de viabilidad del proyecto. Dejar claro que este estudio de viabilidad no va a ser representativo de un estudio de viabilidad de un videojuego, ya que este TFG se ha centrado sobre todo en el punto de vista del programador obviando el resto de vertientes del proyecto como el apartado artístico o sonoro en los cuales se ha hecho uso de recursos de la comunidad gratuitos, de manera que los sueldos y otros gastos asociados a estos trabajadores no van a constar en el estudio de viabilidad económica.
@@ -78,22 +103,22 @@ Dejar claro también que con un 2 meses de producción (centrados en generar con
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{Anexos/Anexo_A/Balance_actual}
+\includegraphics[scale=0.45]{Anexos/Anexo_A/Balance_actual}
 \caption{Tabla de Excel con el balance del proyecto}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{Anexos/Anexo_A/Balance_2meses}
+\includegraphics[scale=0.45]{Anexos/Anexo_A/Balance_2meses}
 \caption{Tabla de Excel con el balance del proyecto con 3 meses más de desarrollo}
 \end{figure}
 
-\clearpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{Anexos/Anexo_A/Balance_4meses}
+\includegraphics[scale=0.45]{Anexos/Anexo_A/Balance_4meses}
 \caption{Tabla de Excel con el balance del proyecto con 6 meses más de desarrollo}
 \end{figure}
+\clearpage
 
 \subsection{Viabilidad legal}
 En cuanto a la viabilidad legal, afortunadamente para este proyecto es sencillo el marco legal.
