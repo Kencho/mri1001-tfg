@@ -2,98 +2,102 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{\'{I}ndice general}{\es@scroman {i}}{section*.1}%
 \contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {iii}}{section*.2}%
-\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {iv}}{section*.3}%
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {v}}{section*.3}%
 \contentsline {appendix}{\chapternumberline {A}Plan de Proyecto Software}{1}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Introducción}{1}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Planificación temporal}{1}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{1}{section.Alph1.3}%
-\contentsline {subsection}{Viabilidad económica}{1}{section*.4}%
-\contentsline {subsection}{Viabilidad legal}{1}{section*.5}%
-\contentsline {appendix}{\chapternumberline {B}Especificación de Requisitos}{3}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Introducción}{3}{section.Alph2.1}%
-\contentsline {section}{\numberline {B.2}Objetivos generales}{3}{section.Alph2.2}%
-\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{3}{section.Alph2.3}%
-\contentsline {subsection}{Requisitos funcionales}{3}{section*.6}%
-\contentsline {subsection}{Requisitos no funcionales}{5}{section*.7}%
-\contentsline {section}{\numberline {B.4}Especificación de requisitos}{6}{section.Alph2.4}%
-\contentsline {subsection}{Diagramas de casos de uso}{6}{section*.8}%
-\contentsline {subsection}{Actores}{6}{section*.9}%
-\contentsline {subsection}{Casos de uso}{7}{section*.10}%
-\contentsline {subsubsection}{Caso de uso 01}{7}{section*.11}%
-\contentsline {subsubsection}{Caso de uso 02}{7}{section*.12}%
-\contentsline {subsubsection}{Caso de uso 03}{7}{section*.13}%
-\contentsline {subsubsection}{Caso de uso 04}{8}{section*.14}%
-\contentsline {subsubsection}{Caso de uso 05}{9}{section*.15}%
-\contentsline {subsubsection}{Caso de uso 06}{9}{section*.16}%
-\contentsline {subsubsection}{Caso de uso 07}{10}{section*.17}%
-\contentsline {subsubsection}{Caso de uso 08}{11}{section*.18}%
-\contentsline {subsubsection}{Caso de uso 09}{12}{section*.19}%
-\contentsline {subsubsection}{Caso de uso 10}{13}{section*.20}%
-\contentsline {subsubsection}{Caso de uso 11}{13}{section*.21}%
-\contentsline {subsubsection}{Caso de uso 12}{14}{section*.22}%
-\contentsline {subsubsection}{Caso de uso 13}{15}{section*.23}%
-\contentsline {subsubsection}{Caso de uso 14}{15}{section*.24}%
-\contentsline {subsubsection}{Caso de uso 15}{16}{section*.25}%
-\contentsline {subsubsection}{Caso de uso 16}{16}{section*.26}%
-\contentsline {subsubsection}{Caso de uso 17}{17}{section*.27}%
-\contentsline {subsubsection}{Caso de uso 18}{18}{section*.28}%
-\contentsline {appendix}{\chapternumberline {C}Especificación de diseño}{19}{appendix.Alph3}%
-\contentsline {section}{\numberline {C.1}Introducción}{19}{section.Alph3.1}%
-\contentsline {section}{\numberline {C.2}Diseño de datos}{19}{section.Alph3.2}%
-\contentsline {section}{\numberline {C.3}Diseño procedimental}{19}{section.Alph3.3}%
-\contentsline {section}{\numberline {C.4}Diseño arquitectónico}{19}{section.Alph3.4}%
-\contentsline {appendix}{\chapternumberline {D}Documentación técnica de programación}{21}{appendix.Alph4}%
-\contentsline {section}{\numberline {D.1}Introducción}{21}{section.Alph4.1}%
-\contentsline {section}{\numberline {D.2}Estructura de directorios}{21}{section.Alph4.2}%
-\contentsline {section}{\numberline {D.3}Manual del programador}{21}{section.Alph4.3}%
-\contentsline {section}{\numberline {D.4}Compilación, instalación y ejecución del proyecto}{21}{section.Alph4.4}%
-\contentsline {section}{\numberline {D.5}Pruebas del sistema}{21}{section.Alph4.5}%
-\contentsline {appendix}{\chapternumberline {E}Documentación de usuario}{23}{appendix.Alph5}%
-\contentsline {section}{\numberline {E.1}Introducción}{23}{section.Alph5.1}%
-\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{23}{section.Alph5.2}%
-\contentsline {section}{\numberline {E.3}Instalación}{23}{section.Alph5.3}%
-\contentsline {section}{\numberline {E.4}Manual del usuario}{23}{section.Alph5.4}%
-\contentsline {appendix}{\chapternumberline {F}Documento de diseño del juego}{25}{appendix.Alph6}%
-\contentsline {section}{\numberline {F.1}Introducción}{25}{section.Alph6.1}%
-\contentsline {subsection}{Plataforma:}{25}{section*.29}%
-\contentsline {subsection}{Versión:}{25}{section*.30}%
-\contentsline {subsection}{Jugabilidad y contenido:}{25}{section*.31}%
-\contentsline {subsection}{Categoría:}{25}{section*.32}%
-\contentsline {subsection}{Mecánica:}{26}{section*.33}%
-\contentsline {subsection}{Tecnología:}{26}{section*.34}%
-\contentsline {subsection}{Visión general del juego:}{26}{section*.35}%
-\contentsline {section}{\numberline {F.2}Mecánicas del juego}{27}{section.Alph6.2}%
-\contentsline {subsection}{Jugador}{27}{section*.36}%
-\contentsline {subsection}{Enemigos}{27}{section*.37}%
-\contentsline {subsection}{Portal}{28}{section*.38}%
-\contentsline {subsection}{Creador de impulso}{28}{section*.39}%
-\contentsline {subsection}{Modificadores de gravedad}{29}{section*.40}%
-\contentsline {subsection}{Tiempo bala}{29}{section*.41}%
-\contentsline {section}{\numberline {F.3}Niveles}{30}{section.Alph6.3}%
-\contentsline {subsection}{Niveles de prueba}{30}{section*.42}%
-\contentsline {subsection}{Niveles tutorial}{30}{section*.43}%
-\contentsline {subsection}{Niveles desafiantes}{31}{section*.44}%
-\contentsline {subsection}{Pantallas implementadas}{31}{section*.45}%
-\contentsline {subsubsection}{PruebaPlayerScene}{32}{section*.46}%
-\contentsline {subsubsection}{PruebaPortalScene}{32}{section*.47}%
-\contentsline {subsubsection}{PruebaMovingObstacleScene}{32}{section*.48}%
-\contentsline {subsubsection}{PruebaImpulseCreatorsScene}{33}{section*.49}%
-\contentsline {subsubsection}{PruebaGravityModifierScene}{33}{section*.50}%
-\contentsline {subsubsection}{PruebaTimeModifierScene}{34}{section*.51}%
-\contentsline {section}{\numberline {F.4}Interfaces}{34}{section.Alph6.4}%
-\contentsline {subsection}{Pantalla de elección de nivel}{34}{section*.52}%
-\contentsline {subsection}{Pantalla de opciones}{35}{section*.53}%
-\contentsline {section}{\numberline {F.5}Entidades}{35}{section.Alph6.5}%
-\contentsline {subsection}{Elementos}{36}{section*.54}%
-\contentsline {subsubsection}{Player}{36}{section*.55}%
-\contentsline {subsubsection}{Enemigos}{37}{section*.56}%
-\contentsline {subsubsection}{Escenarios}{40}{section*.57}%
-\contentsline {subsection}{Mecánicas}{40}{section*.58}%
-\contentsline {subsubsection}{Portal}{40}{section*.59}%
-\contentsline {subsubsection}{Creador de impulso}{41}{section*.60}%
-\contentsline {subsubsection}{Tiempo bala}{44}{section*.61}%
-\contentsline {subsubsection}{Acelerón}{44}{section*.62}%
-\contentsline {subsubsection}{Modificadores de gravedad}{44}{section*.63}%
-\contentsline {section}{\numberline {F.6}Controles}{46}{section.Alph6.6}%
-\contentsline {subsubsection}{Mando}{46}{section*.64}%
-\contentsline {subsubsection}{Teclado}{46}{section*.65}%
+\contentsline {section}{\numberline {A.2}Planificación temporal}{2}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{3}{section.Alph1.3}%
+\contentsline {subsection}{Viabilidad económica}{3}{section*.4}%
+\contentsline {subsubsection}{Costes}{4}{section*.5}%
+\contentsline {subsubsection}{Beneficios}{4}{section*.6}%
+\contentsline {subsubsection}{Balance}{5}{section*.7}%
+\contentsline {subsection}{Viabilidad legal}{6}{section*.8}%
+\contentsline {appendix}{\chapternumberline {B}Especificación de Requisitos}{7}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Introducción}{7}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}Objetivos generales}{7}{section.Alph2.2}%
+\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{7}{section.Alph2.3}%
+\contentsline {subsection}{Requisitos funcionales}{7}{section*.9}%
+\contentsline {subsection}{Requisitos no funcionales}{9}{section*.10}%
+\contentsline {section}{\numberline {B.4}Especificación de requisitos}{10}{section.Alph2.4}%
+\contentsline {subsection}{Diagramas de casos de uso}{10}{section*.11}%
+\contentsline {subsection}{Actores}{10}{section*.12}%
+\contentsline {subsection}{Casos de uso}{11}{section*.13}%
+\contentsline {subsubsection}{Caso de uso 01}{11}{section*.14}%
+\contentsline {subsubsection}{Caso de uso 02}{11}{section*.15}%
+\contentsline {subsubsection}{Caso de uso 03}{11}{section*.16}%
+\contentsline {subsubsection}{Caso de uso 04}{12}{section*.17}%
+\contentsline {subsubsection}{Caso de uso 05}{13}{section*.18}%
+\contentsline {subsubsection}{Caso de uso 06}{13}{section*.19}%
+\contentsline {subsubsection}{Caso de uso 07}{14}{section*.20}%
+\contentsline {subsubsection}{Caso de uso 08}{15}{section*.21}%
+\contentsline {subsubsection}{Caso de uso 09}{16}{section*.22}%
+\contentsline {subsubsection}{Caso de uso 10}{17}{section*.23}%
+\contentsline {subsubsection}{Caso de uso 11}{17}{section*.24}%
+\contentsline {subsubsection}{Caso de uso 12}{18}{section*.25}%
+\contentsline {subsubsection}{Caso de uso 13}{19}{section*.26}%
+\contentsline {subsubsection}{Caso de uso 14}{19}{section*.27}%
+\contentsline {subsubsection}{Caso de uso 15}{20}{section*.28}%
+\contentsline {subsubsection}{Caso de uso 16}{20}{section*.29}%
+\contentsline {subsubsection}{Caso de uso 17}{21}{section*.30}%
+\contentsline {subsubsection}{Caso de uso 18}{22}{section*.31}%
+\contentsline {appendix}{\chapternumberline {C}Especificación de diseño}{23}{appendix.Alph3}%
+\contentsline {section}{\numberline {C.1}Introducción}{23}{section.Alph3.1}%
+\contentsline {section}{\numberline {C.2}Diseño de datos}{23}{section.Alph3.2}%
+\contentsline {section}{\numberline {C.3}Diseño procedimental}{23}{section.Alph3.3}%
+\contentsline {section}{\numberline {C.4}Diseño arquitectónico}{23}{section.Alph3.4}%
+\contentsline {appendix}{\chapternumberline {D}Documentación técnica de programación}{25}{appendix.Alph4}%
+\contentsline {section}{\numberline {D.1}Introducción}{25}{section.Alph4.1}%
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{25}{section.Alph4.2}%
+\contentsline {section}{\numberline {D.3}Manual del programador}{25}{section.Alph4.3}%
+\contentsline {section}{\numberline {D.4}Compilación, instalación y ejecución del proyecto}{25}{section.Alph4.4}%
+\contentsline {section}{\numberline {D.5}Pruebas del sistema}{25}{section.Alph4.5}%
+\contentsline {appendix}{\chapternumberline {E}Documentación de usuario}{27}{appendix.Alph5}%
+\contentsline {section}{\numberline {E.1}Introducción}{27}{section.Alph5.1}%
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{27}{section.Alph5.2}%
+\contentsline {section}{\numberline {E.3}Instalación}{27}{section.Alph5.3}%
+\contentsline {section}{\numberline {E.4}Manual del usuario}{27}{section.Alph5.4}%
+\contentsline {appendix}{\chapternumberline {F}Documento de diseño del juego}{29}{appendix.Alph6}%
+\contentsline {section}{\numberline {F.1}Introducción}{29}{section.Alph6.1}%
+\contentsline {subsection}{Plataforma:}{29}{section*.32}%
+\contentsline {subsection}{Versión:}{29}{section*.33}%
+\contentsline {subsection}{Jugabilidad y contenido:}{29}{section*.34}%
+\contentsline {subsection}{Categoría:}{29}{section*.35}%
+\contentsline {subsection}{Mecánica:}{30}{section*.36}%
+\contentsline {subsection}{Tecnología:}{30}{section*.37}%
+\contentsline {subsection}{Visión general del juego:}{30}{section*.38}%
+\contentsline {section}{\numberline {F.2}Mecánicas del juego}{31}{section.Alph6.2}%
+\contentsline {subsection}{Jugador}{31}{section*.39}%
+\contentsline {subsection}{Enemigos}{31}{section*.40}%
+\contentsline {subsection}{Portal}{32}{section*.41}%
+\contentsline {subsection}{Creador de impulso}{32}{section*.42}%
+\contentsline {subsection}{Modificadores de gravedad}{33}{section*.43}%
+\contentsline {subsection}{Tiempo bala}{33}{section*.44}%
+\contentsline {section}{\numberline {F.3}Niveles}{34}{section.Alph6.3}%
+\contentsline {subsection}{Niveles de prueba}{34}{section*.45}%
+\contentsline {subsection}{Niveles tutorial}{34}{section*.46}%
+\contentsline {subsection}{Niveles desafiantes}{35}{section*.47}%
+\contentsline {subsection}{Pantallas implementadas}{35}{section*.48}%
+\contentsline {subsubsection}{PruebaPlayerScene}{36}{section*.49}%
+\contentsline {subsubsection}{PruebaPortalScene}{36}{section*.50}%
+\contentsline {subsubsection}{PruebaMovingObstacleScene}{36}{section*.51}%
+\contentsline {subsubsection}{PruebaImpulseCreatorsScene}{37}{section*.52}%
+\contentsline {subsubsection}{PruebaGravityModifierScene}{37}{section*.53}%
+\contentsline {subsubsection}{PruebaTimeModifierScene}{38}{section*.54}%
+\contentsline {section}{\numberline {F.4}Interfaces}{38}{section.Alph6.4}%
+\contentsline {subsection}{Pantalla de elección de nivel}{38}{section*.55}%
+\contentsline {subsection}{Pantalla de opciones}{39}{section*.56}%
+\contentsline {section}{\numberline {F.5}Entidades}{39}{section.Alph6.5}%
+\contentsline {subsection}{Elementos}{40}{section*.57}%
+\contentsline {subsubsection}{Player}{40}{section*.58}%
+\contentsline {subsubsection}{Enemigos}{41}{section*.59}%
+\contentsline {subsubsection}{Escenarios}{44}{section*.60}%
+\contentsline {subsection}{Mecánicas}{44}{section*.61}%
+\contentsline {subsubsection}{Portal}{44}{section*.62}%
+\contentsline {subsubsection}{Creador de impulso}{45}{section*.63}%
+\contentsline {subsubsection}{Tiempo bala}{48}{section*.64}%
+\contentsline {subsubsection}{Acelerón}{48}{section*.65}%
+\contentsline {subsubsection}{Modificadores de gravedad}{48}{section*.66}%
+\contentsline {section}{\numberline {F.6}Controles}{50}{section.Alph6.6}%
+\contentsline {subsubsection}{Mando}{50}{section*.67}%
+\contentsline {subsubsection}{Teclado}{50}{section*.68}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{53}{appendix*.69}%

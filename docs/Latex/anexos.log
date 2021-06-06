@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  1 JUN 2021 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  6 JUN 2021 18:36
 entering extended mode
 **./anexos.tex
 (anexos.tex
@@ -838,7 +838,7 @@ LaTeX Info: Redefining \nameref on input line 366.
 \@outlinefile=\write4
 \openout4 = `anexos.out'.
 
-<./img//cabecera.pdf, id=143, 617.67549pt x 135.51413pt>
+<./img//cabecera.pdf, id=147, 617.67549pt x 135.51413pt>
 File: ./img//cabecera.pdf Graphic file (type pdf)
 <use ./img//cabecera.pdf>
 Package pdftex.def Info: ./img//cabecera.pdf  used on input line 368.
@@ -872,7 +872,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 368.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 368.
-<./img//escudoInfor.pdf, id=144, 618.11432pt x 737.07487pt>
+<./img//escudoInfor.pdf, id=148, 618.11432pt x 737.07487pt>
 File: ./img//escudoInfor.pdf Graphic file (type pdf)
 <use ./img//escudoInfor.pdf>
 Package pdftex.def Info: ./img//escudoInfor.pdf  used on input line 368.
@@ -937,14 +937,24 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-) [3
+ [3
 
-] (anexos.lot
+])
+LaTeX Info: Redefining \. on input line 392.
+LaTeX Info: Redefining \% on input line 392.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[4] (anexos.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-) [4
+) [5
+
+] [6
+
 
 ]
 \openout2 = `./tex/A_Plan_proyecto.aux'.
@@ -952,43 +962,160 @@ LaTeX Info: Redefining \% on input line 2.
  (tex/A_Plan_proyecto.tex
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.402 \include{./tex/A_Plan_proyecto}
-                                      [1
-
-
+l.18 \end{itemize}
+                   [1
 
 
 ]
-\openout2 = `./tex/B_Requisitos.aux'.
-
- (tex/B_Requisitos.texpdfTeX warning (ext4): destination with the same identifi
-er (name{page.2}) has been already used, duplicate ignored
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+3.
+ (D:\Latex\MikTex\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \apendice{Especificación de Requisitos}
-                                             [2
+l.35 \clearpage
+                [2]
+<./img//Anexos/Anexo_A/Tablero_Kanban.png, id=664, 1422.81563pt x 508.14844pt>
+File: ./img//Anexos/Anexo_A/Tablero_Kanban.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Tablero_Kanban.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Tablero_Kanban.png  used on inpu
+t line 38.
+(pdftex.def)             Requested size: 426.84798pt x 152.4457pt.
 
+Overfull \hbox (43.84798pt too wide) in paragraph at lines 38--39
+ [][] 
+ []
 
-
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-8.
-
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+3.
 (D:\Latex\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3]
+)
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+ [3
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
+1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.54 
+      <./img//Anexos/Anexo_A/Tablero_Kanban.png>]
+<./img//Anexos/Anexo_A/Sueldo_trabajador.png, id=673, 679.94025pt x 51.7935pt>
+File: ./img//Anexos/Anexo_A/Sueldo_trabajador.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Sueldo_trabajador.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Sueldo_trabajador.png  used on i
+nput line 57.
+(pdftex.def)             Requested size: 407.96729pt x 31.07632pt.
+
+Overfull \hbox (24.96729pt too wide) in paragraph at lines 57--58
+ [][] 
+ []
+
+<./img//Anexos/Anexo_A/Activos.png, id=675, 186.6975pt x 181.27725pt>
+File: ./img//Anexos/Anexo_A/Activos.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Activos.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Activos.png  used on input line 
+68.
+(pdftex.def)             Requested size: 186.69704pt x 181.27681pt.
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+1.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.75 \subsubsection
+                   {Balance}pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.Alph1.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.75 \subsubsection
+                   {Balance} <./img//Anexos/Anexo_A/Sueldo_trabajador.png> <./i
+mg//Anexos/Anexo_A/Activos.png>]
+<./img//Anexos/Anexo_A/Balance_actual.png, id=688, 717.27975pt x 250.536pt>
+File: ./img//Anexos/Anexo_A/Balance_actual.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Balance_actual.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Balance_actual.png  used on inpu
+t line 81.
+(pdftex.def)             Requested size: 358.63899pt x 125.26768pt.
+<./img//Anexos/Anexo_A/Balance_2meses.png, id=689, 716.07526pt x 248.72925pt>
+File: ./img//Anexos/Anexo_A/Balance_2meses.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Balance_2meses.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Balance_2meses.png  used on inpu
+t line 87.
+(pdftex.def)             Requested size: 358.03674pt x 124.36432pt.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h1.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.91 \clearpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.Alph1.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.91 \clearpage
+                <./img//Anexos/Anexo_A/Balance_actual.png> <./img//Anexos/Anexo
+_A/Balance_2meses.png>]
+<./img//Anexos/Anexo_A/Balance_4meses.png, id=698, 718.48425pt x 249.3315pt>
+File: ./img//Anexos/Anexo_A/Balance_4meses.png Graphic file (type png)
+<use ./img//Anexos/Anexo_A/Balance_4meses.png>
+Package pdftex.def Info: ./img//Anexos/Anexo_A/Balance_4meses.png  used on inpu
+t line 94.
+(pdftex.def)             Requested size: 359.24124pt x 124.66544pt.
+
+Overfull \hbox (23.44551pt too wide) in paragraph at lines 106--108
+[]\T1/lmr/m/n/12 (-20) Attribution 4.0 In-ter-na-tio-nal ([][]$\T1/lmtt/m/n/12 
+https : / / creativecommons . org / licenses /
+ []
+
+
+Overfull \hbox (6.18556pt too wide) in paragraph at lines 108--110
+[]\T1/lmr/m/n/12 (-20) Attribution 3.0 Un-por-ted ([][]$\T1/lmtt/m/n/12 https :
+ / / creativecommons . org / licenses /
+ []
+
+)
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+ [6
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
+6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.402 \include{./tex/A_Plan_proyecto}
+                                      <./img//Anexos/Anexo_A/Balance_4meses.png
+>]
+\openout2 = `./tex/B_Requisitos.aux'.
+
+ (tex/B_Requisitos.tex [7
+
+
+
+
+]
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
- [4]
+ [8]
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
- [5]
-<./img//Anexos/Anexo_B/casos_de_uso.png, id=649, 1684.2925pt x 1212.53pt>
+ [9]
+<./img//Anexos/Anexo_B/casos_de_uso.png, id=731, 1684.2925pt x 1212.53pt>
 File: ./img//Anexos/Anexo_B/casos_de_uso.png Graphic file (type png)
 <use ./img//Anexos/Anexo_B/casos_de_uso.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_B/casos_de_uso.png  used on input 
@@ -1006,8 +1133,8 @@ Underfull \hbox (badness 3250) in paragraph at lines 173--174
 
 LaTeX Info: Redefining \. on input line 241.
 LaTeX Info: Redefining \% on input line 241.
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
-2.1}) has been already used, duplicate ignored
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+h2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.241 \end{longtable}
@@ -1023,14 +1150,14 @@ Underfull \hbox (badness 3250) in paragraph at lines 357--358
 
 LaTeX Info: Redefining \. on input line 432.
 LaTeX Info: Redefining \% on input line 432.
-[7]
+[11]
 Underfull \hbox (badness 3250) in paragraph at lines 456--457
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
 
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
-[8]
+[12]
 Underfull \hbox (badness 3250) in paragraph at lines 550--551
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
@@ -1042,28 +1169,28 @@ Underfull \hbox (badness 3250) in paragraph at lines 646--647
 
 LaTeX Info: Redefining \. on input line 716.
 LaTeX Info: Redefining \% on input line 716.
-[9]
+[13]
 Underfull \hbox (badness 3250) in paragraph at lines 740--741
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
 
 LaTeX Info: Redefining \. on input line 818.
 LaTeX Info: Redefining \% on input line 818.
-[10]
+[14]
 Underfull \hbox (badness 3250) in paragraph at lines 842--843
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
 
 LaTeX Info: Redefining \. on input line 920.
 LaTeX Info: Redefining \% on input line 920.
-[11]
+[15]
 Underfull \hbox (badness 3250) in paragraph at lines 944--945
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
 
 LaTeX Info: Redefining \. on input line 1012.
 LaTeX Info: Redefining \% on input line 1012.
-[12]
+[16]
 Underfull \hbox (badness 3250) in paragraph at lines 1035--1036
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
@@ -1075,14 +1202,14 @@ Underfull \hbox (badness 3250) in paragraph at lines 1130--1131
 
 LaTeX Info: Redefining \. on input line 1200.
 LaTeX Info: Redefining \% on input line 1200.
-[13]
+[17]
 Underfull \hbox (badness 3250) in paragraph at lines 1223--1224
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
 
 LaTeX Info: Redefining \. on input line 1289.
 LaTeX Info: Redefining \% on input line 1289.
-[14]
+[18]
 Underfull \hbox (badness 3250) in paragraph at lines 1312--1313
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
@@ -1094,7 +1221,7 @@ Underfull \hbox (badness 3250) in paragraph at lines 1403--1404
 
 LaTeX Info: Redefining \. on input line 1469.
 LaTeX Info: Redefining \% on input line 1469.
-[15]
+[19]
 Underfull \hbox (badness 3250) in paragraph at lines 1493--1494
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
@@ -1106,7 +1233,7 @@ Underfull \hbox (badness 3250) in paragraph at lines 1586--1587
 
 LaTeX Info: Redefining \. on input line 1652.
 LaTeX Info: Redefining \% on input line 1652.
-[16]
+[20]
 Underfull \hbox (badness 3250) in paragraph at lines 1676--1677
 []\T1/lmr/bx/sc/12 (+20) Requisitos fun-
  []
@@ -1121,14 +1248,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 1842.
 LaTeX Info: Redefining \% on input line 1842.
- [17])
+ [21])
 LaTeX Info: Redefining \. on input line 403.
 LaTeX Info: Redefining \% on input line 403.
 
-[18]
+[22]
 \openout2 = `./tex/C_Diseno.aux'.
 
- (tex/C_Diseno.tex) [19
+ (tex/C_Diseno.tex) [23
 
 
 
@@ -1136,43 +1263,43 @@ LaTeX Info: Redefining \% on input line 403.
 ]
 \openout2 = `./tex/D_Manual_programador.aux'.
 
- (tex/D_Manual_programador.tex [20
+ (tex/D_Manual_programador.tex [24
 
 
 
 
-]) [21]
+]) [25]
 \openout2 = `./tex/E_Manual_usuario.aux'.
 
 
-(tex/E_Manual_usuario.tex [22
+(tex/E_Manual_usuario.tex [26
 
 
 
 
-]) [23]
+]) [27]
 \openout2 = `./tex/F_Documento_de_diseno.aux'.
 
- (tex/F_Documento_de_diseno.tex [24
+ (tex/F_Documento_de_diseno.tex [28
 
 
 
 
 ]
-[25]
+[29]
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
- [26]
+ [30]
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
- [27]
+ [31]
 LaTeX Info: Redefining \. on input line 80.
 LaTeX Info: Redefining \% on input line 80.
- [28]
+ [32]
 LaTeX Info: Redefining \. on input line 98.
 LaTeX Info: Redefining \% on input line 98.
- [29]
-<./img//Anexos/Anexo_F/Nivel_portales.png, id=879, 426.84468pt x 80.55093pt>
+ [33]
+<./img//Anexos/Anexo_F/Nivel_portales.png, id=960, 426.84468pt x 80.55093pt>
 File: ./img//Anexos/Anexo_F/Nivel_portales.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Nivel_portales.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Nivel_portales.png  used on inpu
@@ -1184,8 +1311,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
-[30]
-<./img//Anexos/Anexo_F/PruebaPlayerScene.png, id=886, 426.84468pt x 117.43875pt
+[34]
+<./img//Anexos/Anexo_F/PruebaPlayerScene.png, id=967, 426.84468pt x 117.43875pt
 >
 File: ./img//Anexos/Anexo_F/PruebaPlayerScene.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/PruebaPlayerScene.png>
@@ -1200,7 +1327,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 131--132
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/PruebaPortalScene.png, id=887, 426.84468pt x 80.55093pt>
+<./img//Anexos/Anexo_F/PruebaPortalScene.png, id=968, 426.84468pt x 80.55093pt>
 
 File: ./img//Anexos/Anexo_F/PruebaPortalScene.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/PruebaPortalScene.png>
@@ -1215,7 +1342,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 138--139
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/PruebaMovingObstacleScene.png, id=888, 791.20593pt x 173
+<./img//Anexos/Anexo_F/PruebaMovingObstacleScene.png, id=969, 791.20593pt x 173
 .14688pt>
 File: ./img//Anexos/Anexo_F/PruebaMovingObstacleScene.png Graphic file (type pn
 g)
@@ -1231,7 +1358,7 @@ Overfull \hbox (52.1646pt too wide) in paragraph at lines 145--146
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/PruebaImpulseCreatorsScene.png, id=889, 823.57687pt x 18
+<./img//Anexos/Anexo_F/PruebaImpulseCreatorsScene.png, id=970, 823.57687pt x 18
 7.45032pt>
 File: ./img//Anexos/Anexo_F/PruebaImpulseCreatorsScene.png Graphic file (type p
 ng)
@@ -1247,7 +1374,7 @@ Overfull \hbox (69.96867pt too wide) in paragraph at lines 152--153
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/PruebaGravityModifierScene.png, id=890, 800.9925pt x 249
+<./img//Anexos/Anexo_F/PruebaGravityModifierScene.png, id=971, 800.9925pt x 249
 .93375pt>
 File: ./img//Anexos/Anexo_F/PruebaGravityModifierScene.png Graphic file (type p
 ng)
@@ -1265,7 +1392,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 162.
 LaTeX Info: Redefining \% on input line 162.
-[31pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h6.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1273,7 +1400,7 @@ l.162 \clearpage
                  <./img//Anexos/Anexo_F/Nivel_portales.png>]
 LaTeX Info: Redefining \. on input line 162.
 LaTeX Info: Redefining \% on input line 162.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1293,7 +1420,7 @@ nexo_F/PruebaPortalScene.png> <./img//Anexos/Anexo_F/PruebaMovingObstacleScene.
 png>]
 LaTeX Info: Redefining \. on input line 162.
 LaTeX Info: Redefining \% on input line 162.
- [33pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [37pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1305,7 +1432,7 @@ me{figure.Alph6.6}) has been already used, duplicate ignored
 l.162 \clearpage
                  <./img//Anexos/Anexo_F/PruebaImpulseCreatorsScene.png> <./img/
 /Anexos/Anexo_F/PruebaGravityModifierScene.png>]
-<./img//Anexos/Anexo_F/PruebaTimeModifierScene.png, id=914, 800.23969pt x 178.4
+<./img//Anexos/Anexo_F/PruebaTimeModifierScene.png, id=995, 800.23969pt x 178.4
 1656pt>
 File: ./img//Anexos/Anexo_F/PruebaTimeModifierScene.png Graphic file (type png)
 
@@ -1318,7 +1445,7 @@ Overfull \hbox (57.1332pt too wide) in paragraph at lines 167--168
  [][] 
  []
 
-<./img//Anexos/Anexo_F/Pantalla_de_elección_de_nivel.png, id=915, 426.84468pt 
+<./img//Anexos/Anexo_F/Pantalla_de_elección_de_nivel.png, id=996, 426.84468pt 
 x 175.40532pt>
 File: ./img//Anexos/Anexo_F/Pantalla_de_elección_de_nivel.png Graphic file (ty
 pe png)
@@ -1326,15 +1453,6 @@ pe png)
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Pantalla_de_elección_de_nivel.p
 ng  used on input line 177.
 (pdftex.def)             Requested size: 344.69766pt x 141.6573pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-79.
-(D:\Latex\MikTex\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
@@ -1342,7 +1460,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[34
+[38
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
 7}) has been already used, duplicate ignored
@@ -1356,8 +1474,8 @@ Alph6.8}) has been already used, duplicate ignored
 l.181 
        <./img//Anexos/Anexo_F/PruebaTimeModifierScene.png> <./img//Anexos/Anexo
 _F/Pantalla_de_elección_de_nivel.png>]
-<./img//Anexos/Anexo_F/Pnatalla_de_opciones.png, id=926, 426.84468pt x 178.4165
-6pt>
+<./img//Anexos/Anexo_F/Pnatalla_de_opciones.png, id=1007, 426.84468pt x 178.416
+56pt>
 File: ./img//Anexos/Anexo_F/Pnatalla_de_opciones.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Pnatalla_de_opciones.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Pnatalla_de_opciones.png  used o
@@ -1365,13 +1483,13 @@ n input line 185.
 (pdftex.def)             Requested size: 344.69766pt x 144.08919pt.
 LaTeX Info: Redefining \. on input line 196.
 LaTeX Info: Redefining \% on input line 196.
- [35pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [39pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.196 \subsection
                  {Elementos} <./img//Anexos/Anexo_F/Pnatalla_de_opciones.png>]
-<./img//Anexos/Anexo_F/Sprite_Player.png, id=939, 161.10187pt x 201.75375pt>
+<./img//Anexos/Anexo_F/Sprite_Player.png, id=1020, 161.10187pt x 201.75375pt>
 File: ./img//Anexos/Anexo_F/Sprite_Player.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Sprite_Player.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Sprite_Player.png  used on input
@@ -1380,21 +1498,21 @@ Package pdftex.def Info: ./img//Anexos/Anexo_F/Sprite_Player.png  used on input
 LaTeX Info: Redefining \. on input line 211.
 LaTeX Info: Redefining \% on input line 211.
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h6.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.211 \clearpage
                  <./img//Anexos/Anexo_F/Sprite_Player.png>]
-<./img//Anexos/Anexo_F/Obstaculos_estaticos.png, id=948, 155.07938pt x 149.0568
-7pt>
+<./img//Anexos/Anexo_F/Obstaculos_estaticos.png, id=1029, 155.07938pt x 149.056
+87pt>
 File: ./img//Anexos/Anexo_F/Obstaculos_estaticos.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculos_estaticos.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculos_estaticos.png  used o
 n input line 220.
 (pdftex.def)             Requested size: 155.07898pt x 149.0565pt.
-<./img//Anexos/Anexo_F/Obstaculo_en_rutina.png, id=950, 184.43906pt x 167.12437
-pt>
+<./img//Anexos/Anexo_F/Obstaculo_en_rutina.png, id=1031, 184.43906pt x 167.1243
+7pt>
 File: ./img//Anexos/Anexo_F/Obstaculo_en_rutina.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculo_en_rutina.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_en_rutina.png  used on
@@ -1404,8 +1522,8 @@ Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_en_rutina.png  used on
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png, id=952, 134.75343pt x 101.62
-968pt>
+<./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png, id=1033, 134.75343pt x 101.6
+2968pt>
 File: ./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png  used
@@ -1414,7 +1532,8 @@ Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_movil_rapido.png  used
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/Obstaculo_movil.png, id=953, 119.69719pt x 103.13531pt>
+<./img//Anexos/Anexo_F/Obstaculo_movil.png, id=1034, 119.69719pt x 103.13531pt>
+
 File: ./img//Anexos/Anexo_F/Obstaculo_movil.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculo_movil.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_movil.png  used on inp
@@ -1423,8 +1542,8 @@ ut line 250.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/Obstaculo_movil_lento.png, id=954, 143.03438pt x 103.135
-31pt>
+<./img//Anexos/Anexo_F/Obstaculo_movil_lento.png, id=1035, 143.03438pt x 103.13
+531pt>
 File: ./img//Anexos/Anexo_F/Obstaculo_movil_lento.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculo_movil_lento.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Obstaculo_movil_lento.png  used 
@@ -1435,7 +1554,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 261.
 LaTeX Info: Redefining \% on input line 261.
-[37
+[41
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
 11}) has been already used, duplicate ignored
@@ -1445,7 +1564,7 @@ l.261 \clearpage
                  <./img//Anexos/Anexo_F/Obstaculos_estaticos.png>]
 LaTeX Info: Redefining \. on input line 261.
 LaTeX Info: Redefining \% on input line 261.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1459,7 +1578,7 @@ l.261 \clearpage
 /Anexo_F/Obstaculo_movil_rapido.png>]
 LaTeX Info: Redefining \. on input line 261.
 LaTeX Info: Redefining \% on input line 261.
- [39pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [43pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1471,14 +1590,14 @@ me{figure.Alph6.15}) has been already used, duplicate ignored
 l.261 \clearpage
                  <./img//Anexos/Anexo_F/Obstaculo_movil.png> <./img//Anexos/Ane
 xo_F/Obstaculo_movil_lento.png>]
-<./img//Anexos/Anexo_F/Portal.png, id=975, 232.61906pt x 196.48407pt>
+<./img//Anexos/Anexo_F/Portal.png, id=1056, 232.61906pt x 196.48407pt>
 File: ./img//Anexos/Anexo_F/Portal.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Portal.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Portal.png  used on input line 2
 81.
 (pdftex.def)             Requested size: 186.09549pt x 157.18745pt.
-<./img//Anexos/Anexo_F/Particula_de_impulso.png, id=980, 191.9672pt x 190.46156
-pt>
+<./img//Anexos/Anexo_F/Particula_de_impulso.png, id=1061, 191.9672pt x 190.4615
+6pt>
 File: ./img//Anexos/Anexo_F/Particula_de_impulso.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Particula_de_impulso.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Particula_de_impulso.png  used o
@@ -1486,7 +1605,7 @@ n input line 300.
 (pdftex.def)             Requested size: 191.96672pt x 190.46107pt.
 LaTeX Info: Redefining \. on input line 307.
 LaTeX Info: Redefining \% on input line 307.
- [40
+ [44
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
 16}) has been already used, duplicate ignored
@@ -1494,8 +1613,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
                                                   
 l.307 
        <./img//Anexos/Anexo_F/Portal.png>]
-<./img//Anexos/Anexo_F/Amplificador_de_impulso.png, id=992, 322.20375pt x 258.9
-675pt>
+<./img//Anexos/Anexo_F/Amplificador_de_impulso.png, id=1073, 322.20375pt x 258.
+9675pt>
 File: ./img//Anexos/Anexo_F/Amplificador_de_impulso.png Graphic file (type png)
 
 <use ./img//Anexos/Anexo_F/Amplificador_de_impulso.png>
@@ -1506,8 +1625,8 @@ d on input line 314.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Anexos/Anexo_F/Plataforma_de_salto.png, id=995, 188.20313pt x 174.6525p
-t>
+<./img//Anexos/Anexo_F/Plataforma_de_salto.png, id=1076, 188.20313pt x 174.6525
+pt>
 File: ./img//Anexos/Anexo_F/Plataforma_de_salto.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Plataforma_de_salto.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Plataforma_de_salto.png  used on
@@ -1518,7 +1637,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 336.
 LaTeX Info: Redefining \% on input line 336.
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.Alp
 h6.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1526,7 +1645,7 @@ l.336 \clearpage
                  <./img//Anexos/Anexo_F/Particula_de_impulso.png>]
 LaTeX Info: Redefining \. on input line 336.
 LaTeX Info: Redefining \% on input line 336.
- [42pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1534,26 +1653,26 @@ l.336 \clearpage
                  <./img//Anexos/Anexo_F/Amplificador_de_impulso.png>]
 LaTeX Info: Redefining \. on input line 336.
 LaTeX Info: Redefining \% on input line 336.
- [43pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [47pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.336 \clearpage
                  <./img//Anexos/Anexo_F/Plataforma_de_salto.png>]
-<./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png, id=1016, 218.31563pt x 226.59
+<./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png, id=1097, 218.31563pt x 226.59
 656pt>
 File: ./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png  used 
 on input line 348.
 (pdftex.def)             Requested size: 218.31508pt x 226.596pt.
-<./img//Anexos/Anexo_F/Inversor_gravedad.png, id=1018, 225.84375pt x 120.45pt>
+<./img//Anexos/Anexo_F/Inversor_gravedad.png, id=1099, 225.84375pt x 120.45pt>
 File: ./img//Anexos/Anexo_F/Inversor_gravedad.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Inversor_gravedad.png>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Inversor_gravedad.png  used on i
 nput line 365.
 (pdftex.def)             Requested size: 225.84319pt x 120.44969pt.
-<./img//Anexos/Anexo_F/Obstaculo_superdenso.png, id=1020, 234.8775pt x 234.1247
+<./img//Anexos/Anexo_F/Obstaculo_superdenso.png, id=1101, 234.8775pt x 234.1247
 pt>
 File: ./img//Anexos/Anexo_F/Obstaculo_superdenso.png Graphic file (type png)
 <use ./img//Anexos/Anexo_F/Obstaculo_superdenso.png>
@@ -1569,7 +1688,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 383.
 LaTeX Info: Redefining \% on input line 383.
-[44
+[48
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
 20}) has been already used, duplicate ignored
@@ -1579,7 +1698,7 @@ l.383 \clearpage
                  <./img//Anexos/Anexo_F/Zonas_tiempo_escalado.png>]
 LaTeX Info: Redefining \. on input line 383.
 LaTeX Info: Redefining \% on input line 383.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.Al
 ph6.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1591,7 +1710,7 @@ me{figure.Alph6.22}) has been already used, duplicate ignored
 l.383 \clearpage
                  <./img//Anexos/Anexo_F/Inversor_gravedad.png> <./img//Anexos/A
 nexo_F/Obstaculo_superdenso.png>]
-<./img//Anexos/Anexo_F/Mando_play.jpg, id=1037, 357.58594pt x 201.00093pt>
+<./img//Anexos/Anexo_F/Mando_play.jpg, id=1118, 357.58594pt x 201.00093pt>
 File: ./img//Anexos/Anexo_F/Mando_play.jpg Graphic file (type jpg)
 <use ./img//Anexos/Anexo_F/Mando_play.jpg>
 Package pdftex.def Info: ./img//Anexos/Anexo_F/Mando_play.jpg  used on input li
@@ -1599,7 +1718,7 @@ ne 390.
 (pdftex.def)             Requested size: 357.58505pt x 201.00043pt.
 LaTeX Info: Redefining \. on input line 419.
 LaTeX Info: Redefining \% on input line 419.
- [46
+ [50
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph6.
 23}) has been already used, duplicate ignored
@@ -1609,14 +1728,21 @@ l.419 \end{itemize}
                     <./img//Anexos/Anexo_F/Mando_play.jpg>])
 LaTeX Info: Redefining \. on input line 407.
 LaTeX Info: Redefining \% on input line 407.
- [47]
-No file anexos.bbl.
+ [51] (anexos.bbl
+[52
+
+
+
+]
+bibitemlist
+)
 
 Class memoir Warning: The material used in the headers is too large
 (15.35403pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 413.
 
+[53]
 \tf@toc=\write5
 \openout5 = `anexos.toc'.
 
@@ -1626,26 +1752,26 @@ either increase the head height or redesign the header
 \tf@lot=\write7
 \openout7 = `anexos.lot'.
 
-(anexos.aux
+ (anexos.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
- (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux) (tex/C_Diseno.aux) (tex/D_Man
-ual_programador.aux) (tex/E_Manual_usuario.aux)
+ (tex/A_Plan_proyecto.aux) (tex/B_Requisitos.aux)
+(tex/C_Diseno.aux) (tex/D_Manual_programador.aux) (tex/E_Manual_usuario.aux)
 (tex/F_Documento_de_diseno.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `anexos.out' has not changed.
-(rerunfilecheck)             Checksum: 14716D65754B7A7038CE95FE66F39346;5688.
+(rerunfilecheck)             Checksum: F4BE33C0C6B3A8079586CE615735BEAF;5798.
  ) 
 Here is how much of TeX's memory you used:
- 16457 strings out of 479334
- 243862 string characters out of 2870772
- 645521 words of memory out of 3000000
- 33132 multiletter control sequences out of 15000+200000
- 486556 words of font info for 162 fonts, out of 3000000 for 9000
+ 16563 strings out of 479334
+ 246418 string characters out of 2870772
+ 646719 words of memory out of 3000000
+ 33194 multiletter control sequences out of 15000+200000
+ 487193 words of font info for 167 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,12n,74p,769b,714s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Latex/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Latex/MikTex/fonts/enc/dvip
@@ -1656,10 +1782,11 @@ nts/type1/public/lm/lmr12.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmr17.pfb>
 <D:/Latex/MikTex/fonts/type1/public/lm/lmri12.pfb><D:/Latex/MikTex/fonts/type1/
 public/lm/lmro12.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/La
 tex/MikTex/fonts/type1/public/lm/lmsso17.pfb><D:/Latex/MikTex/fonts/type1/publi
-c/lm/lmsy10.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmtti10.pfb>
-Output written on anexos.pdf (53 pages, 1979915 bytes).
+c/lm/lmsy10.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmtt12.pfb><D:/Latex/Mik
+Tex/fonts/type1/public/lm/lmtti10.pfb>
+Output written on anexos.pdf (61 pages, 2173126 bytes).
 PDF statistics:
- 1147 PDF objects out of 1200 (max. 8388607)
- 266 named destinations out of 1000 (max. 500000)
- 48027 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1245 PDF objects out of 1440 (max. 8388607)
+ 290 named destinations out of 1000 (max. 500000)
+ 48577 words of extra memory for PDF output out of 51595 (max. 10000000)
 
