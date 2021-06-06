@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  6 JUN 2021 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  6 JUN 2021 11:13
 entering extended mode
 **./3_Conceptos_teoricos.tex
 (3_Conceptos_teoricos.tex
@@ -611,7 +611,7 @@ Overfull \hbox (5.00002pt too wide) in paragraph at lines 8--9
 
 ! Undefined control sequence.
 l.10 \subsection
-                {MonoBehaviour}
+                {MonoBehaviour \cite{ClaseMonobehaviour}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -626,7 +626,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.10 \subsection{M
-                  onoBehaviour}
+                  onoBehaviour \cite{ClaseMonobehaviour}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -643,6 +643,24 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{ClaseMonobehaviour}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.10 ...on{MonoBehaviour \cite{ClaseMonobehaviour}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `ClaseMonobehaviour' on page  undefined on input line 1
+0.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -864,6 +882,11 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 10--12
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 10--12
 []
  []
 
@@ -9869,7 +9892,7 @@ Missing character: There is no . in font nullfont!
 Here is how much of TeX's memory you used:
  39 strings out of 479334
  707 string characters out of 2870772
- 294625 words of memory out of 3000000
+ 294626 words of memory out of 3000000
  17590 multiletter control sequences out of 15000+200000
  403738 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191

@@ -10,8 +10,8 @@
 \contentsline {chapter}{Objetivos del proyecto}{5}{chapter*.5}%
 \contentsline {chapter}{Conceptos teóricos}{7}{chapter*.6}%
 \contentsline {section}{\numberline {3.1}Unity \cite {Unity}}{7}{section.3.1}%
-\contentsline {subsection}{MonoBehaviour}{7}{section*.7}%
-\contentsline {subsection}{GameObject}{10}{section*.8}%
+\contentsline {subsection}{MonoBehaviour \cite {ClaseMonobehaviour}}{7}{section*.7}%
+\contentsline {subsection}{GameObject \cite {ClaseGameObject}}{10}{section*.8}%
 \contentsline {subsection}{Escenas}{11}{section*.9}%
 \contentsline {subsection}{Físicas en Unity}{11}{section*.10}%
 \contentsline {subsection}{Colisión entre objetos}{11}{section*.11}%
@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {5.1}Arquitectura del Player}{15}{section.5.1}%
 \contentsline {subsection}{Estados del Player}{17}{section*.17}%
 \contentsline {subsection}{Interfaz PlayerMechanic}{20}{section*.18}%
-\contentsline {section}{\numberline {5.2}Sistema de colisiones}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Sistema de colisiones \cite {ContinuousCollision}\cite {UnderstandingConstraints}}{20}{section.5.2}%
 \contentsline {subsection}{Solución propuesta para el sistema de colisiones}{21}{section*.19}%
 \contentsline {section}{\numberline {5.3}Sistema de gestión de las modificaciones gravitatorias}{23}{section.5.3}%
 \contentsline {subsection}{Obstáculos superdensos}{25}{section*.20}%
@@ -66,7 +66,7 @@
 \contentsline {subsection}{Sistema de gestión de cámaras final}{57}{section*.47}%
 \contentsline {chapter}{Trabajos relacionados}{61}{chapter*.48}%
 \contentsline {section}{\numberline {6.1}Juegos similares en género y mecánicas}{61}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Evaluación de Plataformer Microgame}{63}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Evaluación de Plataformer Microgame \cite {PlatformerMicrogame}}{63}{section.6.2}%
 \contentsline {subsection}{Grid}{63}{section*.49}%
 \contentsline {subsection}{UI Canvas}{64}{section*.50}%
 \contentsline {subsection}{Enemies}{64}{section*.51}%
@@ -74,13 +74,13 @@
 \contentsline {subsection}{Zones}{64}{section*.53}%
 \contentsline {subsection}{GameController}{64}{section*.54}%
 \contentsline {subsection}{Player}{64}{section*.55}%
-\contentsline {subsection}{Simulation}{64}{section*.56}%
+\contentsline {subsection}{Simulation}{65}{section*.56}%
 \contentsline {subsection}{Pegas}{65}{section*.57}%
 \contentsline {subsubsection}{AnimationController}{65}{section*.58}%
 \contentsline {subsubsection}{Health}{66}{section*.59}%
 \contentsline {subsubsection}{SpawnPoint}{66}{section*.60}%
 \contentsline {subsubsection}{JumpState}{66}{section*.61}%
-\contentsline {subsubsection}{Rigidbody2D.Cast}{66}{section*.62}%
+\contentsline {subsubsection}{Rigidbody2D.Cast}{67}{section*.62}%
 \contentsline {subsubsection}{PatrolPath.Mover}{67}{section*.63}%
 \contentsline {subsection}{Conclusiones}{67}{section*.64}%
 \contentsline {chapter}{Conclusiones y Líneas de trabajo futuras}{69}{chapter*.65}%

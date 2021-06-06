@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  6 JUN 2021 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.19)  6 JUN 2021 11:43
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1090,7 +1090,7 @@ LaTeX Info: Redefining \% on input line 465.
 
 ]
 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Jerarqui_herencia_Playe
-rController.png, id=802, 380.92313pt x 377.15906pt>
+rController.png, id=812, 380.92313pt x 377.15906pt>
 File: ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Jerarqui_herencia_
 PlayerController.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Jerarqui_herencia_P
@@ -1108,7 +1108,7 @@ LaTeX Info: Redefining \% on input line 26.
  <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Jerarqui_herencia_Play
 erController.png>]
 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estados.png
-, id=808, 426.84468pt x 264.99pt>
+, id=818, 426.84468pt x 264.99pt>
 File: ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estado
 s.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estados
@@ -1124,7 +1124,7 @@ LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
  [18]
 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player.png, id=
-820, 472.76625pt x 100.12407pt>
+830, 472.76625pt x 100.12407pt>
 File: ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player.png
  Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player.png>
@@ -1138,7 +1138,7 @@ Overfull \hbox (89.76509pt too wide) in paragraph at lines 53--54
  []
 
 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_estado.pn
-g, id=821, 266.1945pt x 113.223pt>
+g, id=831, 266.1945pt x 113.223pt>
 File: ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_esta
 do.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_estad
@@ -1155,7 +1155,7 @@ LaTeX Info: Redefining \% on input line 69.
 > <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_estado.
 png>]
 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/PlayerMechanics.png, id
-=829, 389.95688pt x 215.30438pt>
+=839, 389.95688pt x 215.30438pt>
 File: ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/PlayerMechanics.pn
 g Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Arquitectura_Player/PlayerMechanics.png
@@ -1168,15 +1168,32 @@ Overfull \hbox (6.95592pt too wide) in paragraph at lines 72--73
  [][] 
  []
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 76.
+
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
 [20 <./img//Memoria/Aspectos_relevantes/Arquitectura_Player/PlayerMechanics.png
 >]
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
- [21]
+
+
+LaTeX Warning: Citation `CONTINUOUSCOLLISION' on page 21 undefined on input lin
+e 90.
+
+
+LaTeX Warning: Citation `UNDERSTANDINGCONSTRAINTS' on page 21 undefined on inpu
+t line 90.
+
+[21]
 <./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Detección_colisiones.pn
-g, id=841, 307.90031pt x 243.91125pt>
+g, id=853, 307.90031pt x 243.91125pt>
 File: ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Detección_colision
 es.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Detección_colisione
@@ -1190,8 +1207,8 @@ LaTeX Info: Redefining \% on input line 103.
 
  <./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Detección_colisiones.p
 ng>]
-<./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Vector_normal.png, id=84
-7, 426.84468pt x 179.92218pt>
+<./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Vector_normal.png, id=85
+9, 426.84468pt x 179.92218pt>
 File: ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Vector_normal.png G
 raphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/Vector_normal.png>
@@ -1204,7 +1221,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 106--107
  []
 
 <./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/KinematicObjectCollision
-Manager_UML.png, id=848, 339.51843pt x 67.75313pt>
+Manager_UML.png, id=860, 339.51843pt x 67.75313pt>
 File: ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/KinematicObjectColl
 isionManager_UML.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/KinematicObjectColli
@@ -1213,7 +1230,7 @@ Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Sistema_Colisiones/
 KinematicObjectCollisionManager_UML.png  used on input line 114.
 (pdftex.def)             Requested size: 339.5176pt x 67.75294pt.
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/KinematicObjec
-tGravityManager_UML.png, id=849, 426.84468pt x 85.06781pt>
+tGravityManager_UML.png, id=861, 426.84468pt x 85.06781pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Kinematic
 ObjectGravityManager_UML.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/KinematicO
@@ -1247,7 +1264,7 @@ Overfull \vbox (15.35403pt too high) has occurred while \output is active []
 mg//Memoria/Aspectos_relevantes/Sistema_Colisiones/KinematicObjectCollisionMana
 ger_UML.png>]
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodigo_m
-odificadores_gravedad.png, id=857, 410.2828pt x 216.05719pt>
+odificadores_gravedad.png, id=869, 410.2828pt x 216.05719pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocod
 igo_modificadores_gravedad.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodi
@@ -1266,7 +1283,7 @@ LaTeX Info: Redefining \% on input line 139.
 bjectGravityManager_UML.png> <./img//Memoria/Aspectos_relevantes/Modificaciones
 _gravitatorias/Pseudocodigo_modificadores_gravedad.png>]
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GameObject_obs
-táculo_superdenso.png, id=864, 414.79968pt x 81.30376pt>
+táculo_superdenso.png, id=876, 414.79968pt x 81.30376pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GameObjec
 t_obstáculo_superdenso.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GameObject
@@ -1280,7 +1297,7 @@ Overfull \hbox (31.79868pt too wide) in paragraph at lines 144--145
  []
 
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Grafica_obstac
-ulo_superdenso.png, id=865, 426.84468pt x 176.91093pt>
+ulo_superdenso.png, id=877, 426.84468pt x 176.91093pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Grafica_o
 bstaculo_superdenso.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Grafica_ob
@@ -1298,7 +1315,7 @@ Overfull \vbox (15.35403pt too high) has occurred while \output is active []
 _obstáculo_superdenso.png> <./img//Memoria/Aspectos_relevantes/Modificaciones_
 gravitatorias/Grafica_obstaculo_superdenso.png>]
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Inversor_grave
-dad_UML.png, id=873, 426.84468pt x 61.73062pt>
+dad_UML.png, id=885, 426.84468pt x 61.73062pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Inversor_
 gravedad_UML.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Inversor_g
@@ -1312,7 +1329,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 170--171
  []
 
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodigo_i
-nversor_gravedad.png, id=874, 426.84468pt x 94.10156pt>
+nversor_gravedad.png, id=886, 426.84468pt x 94.10156pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocod
 igo_inversor_gravedad.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodi
@@ -1326,7 +1343,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 176--177
  []
 
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodigo_i
-nverion_gravedad.png, id=875, 426.84468pt x 113.67468pt>
+nverion_gravedad.png, id=887, 426.84468pt x 113.67468pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocod
 igo_inverion_gravedad.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodi
@@ -1343,7 +1360,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 182--183
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GravityInverte
-r_UML.png, id=876, 292.09125pt x 136.25906pt>
+r_UML.png, id=888, 292.09125pt x 136.25906pt>
 File: ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GravityIn
 verter_UML.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/GravityInv
@@ -1359,7 +1376,7 @@ LaTeX Info: Redefining \% on input line 192.
 edad_UML.png> <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/
 Pseudocodigo_inversor_gravedad.png>]
 <./img//Memoria/Aspectos_relevantes/Obstáculos/GameObject_obstaculo_estatico.p
-ng, id=884, 414.79968pt x 100.87688pt>
+ng, id=896, 414.79968pt x 100.87688pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/GameObject_obstaculo_estat
 ico.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Obstáculos/GameObject_obstaculo_estati
@@ -1384,7 +1401,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 [27 <./img//Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodi
 go_inverion_gravedad.png> <./img//Memoria/Aspectos_relevantes/Modificaciones_gr
 avitatorias/GravityInverter_UML.png>]
-<./img//Memoria/Aspectos_relevantes/Obstáculos/Herencia_obstaculos.png, id=892
+<./img//Memoria/Aspectos_relevantes/Obstáculos/Herencia_obstaculos.png, id=904
 , 332.74312pt x 187.45032pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/Herencia_obstaculos.png Gr
 aphic file (type png)
@@ -1392,7 +1409,7 @@ aphic file (type png)
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Obstáculos/Herenci
 a_obstaculos.png  used on input line 212.
 (pdftex.def)             Requested size: 332.7423pt x 187.44984pt.
-<./img//Memoria/Aspectos_relevantes/Obstáculos/PatrolPath_UML.png, id=893, 426
+<./img//Memoria/Aspectos_relevantes/Obstáculos/PatrolPath_UML.png, id=905, 426
 .84468pt x 177.66376pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/PatrolPath_UML.png Graphic
  file (type png)
@@ -1411,7 +1428,7 @@ LaTeX Info: Redefining \% on input line 225.
 co.png> <./img//Memoria/Aspectos_relevantes/Obstáculos/Herencia_obstaculos.png
 >]
 <./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_asignar_duraciones
-.png, id=901, 426.84468pt x 126.4725pt>
+.png, id=913, 426.84468pt x 126.4725pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_asignar_durac
 iones.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_asignar_duraci
@@ -1433,7 +1450,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 [29 <./img//Memoria/Aspectos_relevantes/Obstáculos/PatrolPath_UML.png> <./img/
 /Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_asignar_duraciones.png>]
 <./img//Memoria/Aspectos_relevantes/Obstáculos/Diagrama_distancias_recorridas.
-png, id=909, 426.84468pt x 268.00125pt>
+png, id=921, 426.84468pt x 268.00125pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/Diagrama_distancias_recorr
 idas.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Obstáculos/Diagrama_distancias_recorri
@@ -1453,7 +1470,7 @@ LaTeX Info: Redefining \% on input line 250.
  <./img//Memoria/Aspectos_relevantes/Obstáculos/Diagrama_distancias_recorridas
 .png>]
 <./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_siguiente_posicion
-.png, id=915, 426.84468pt x 130.98938pt>
+.png, id=927, 426.84468pt x 130.98938pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_siguiente_pos
 icion.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_siguiente_posi
@@ -1472,7 +1489,7 @@ Overfull \hbox (38.04015pt too wide) in paragraph at lines 262--263
 eed * Ti-me.fixedDeltaTime; 
  []
 
-<./img//Memoria/Aspectos_relevantes/Obstáculos/ObstacleFabric_UML.png, id=916,
+<./img//Memoria/Aspectos_relevantes/Obstáculos/ObstacleFabric_UML.png, id=928,
  459.21562pt x 168.63pt>
 File: ./img//Memoria/Aspectos_relevantes/Obstáculos/ObstacleFabric_UML.png Gra
 phic file (type png)
@@ -1493,7 +1510,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
  <./img//Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_siguiente_posicio
 n.png>]
-<./img//Memoria/Aspectos_relevantes/Portales/Portales_UML.png, id=924, 166.3715
+<./img//Memoria/Aspectos_relevantes/Portales/Portales_UML.png, id=936, 166.3715
 7pt x 126.4725pt>
 File: ./img//Memoria/Aspectos_relevantes/Portales/Portales_UML.png Graphic file
  (type png)
@@ -1505,7 +1522,7 @@ ML.png  used on input line 288.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img//Memoria/Aspectos_relevantes/Portales/Couple_portals.png, id=925, 191.21
+<./img//Memoria/Aspectos_relevantes/Portales/Couple_portals.png, id=937, 191.21
 437pt x 104.64093pt>
 File: ./img//Memoria/Aspectos_relevantes/Portales/Couple_portals.png Graphic fi
 le (type png)
@@ -1522,7 +1539,7 @@ LaTeX Info: Redefining \% on input line 304.
 [33 <./img//Memoria/Aspectos_relevantes/Portales/Portales_UML.png> <./img//Memo
 ria/Aspectos_relevantes/Portales/Couple_portals.png>]
 <./img//Memoria/Aspectos_relevantes/Creadores_impulso/Creadores_impulso_UML.png
-, id=938, 482.55281pt x 226.59656pt>
+, id=950, 482.55281pt x 226.59656pt>
 File: ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Creadores_impulso_UM
 L.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Creadores_impulso_UML
@@ -1536,7 +1553,7 @@ Overfull \hbox (3.04276pt too wide) in paragraph at lines 307--308
  []
 
 <./img//Memoria/Aspectos_relevantes/Creadores_impulso/Particula_impulso.png, id
-=939, 286.82156pt x 39.14626pt>
+=951, 286.82156pt x 39.14626pt>
 File: ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Particula_impulso.pn
 g Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Particula_impulso.png
@@ -1554,7 +1571,7 @@ LaTeX Info: Redefining \% on input line 324.
  <./img//Memoria/Aspectos_relevantes/Creadores_impulso/Creadores_impulso_UML.pn
 g>]
 <./img//Memoria/Aspectos_relevantes/Creadores_impulso/Plataforma_salto.png, id=
-946, 286.82156pt x 39.14626pt>
+958, 286.82156pt x 39.14626pt>
 File: ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Plataforma_salto.png
  Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Plataforma_salto.png>
@@ -1563,7 +1580,7 @@ Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Creadores_impulso/P
 lataforma_salto.png  used on input line 330.
 (pdftex.def)             Requested size: 229.45755pt x 31.31703pt.
 <./img//Memoria/Aspectos_relevantes/Creadores_impulso/Amplificador_impulso.png,
- id=947, 286.82156pt x 39.14626pt>
+ id=959, 286.82156pt x 39.14626pt>
 File: ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Amplificador_impulso
 .png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Creadores_impulso/Amplificador_impulso.
@@ -1576,7 +1593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
-<./img//Memoria/Aspectos_relevantes/Animadores/Herencia_animators.png, id=948, 
+<./img//Memoria/Aspectos_relevantes/Animadores/Herencia_animators.png, id=960, 
 265.74281pt x 444.91219pt>
 File: ./img//Memoria/Aspectos_relevantes/Animadores/Herencia_animators.png Grap
 hic file (type png)
@@ -1603,7 +1620,7 @@ LaTeX Info: Redefining \. on input line 356.
 LaTeX Info: Redefining \% on input line 356.
  [36 <./img//Memoria/Aspectos_relevantes/Animadores/Herencia_animators.png>]
 <./img//Memoria/Aspectos_relevantes/Animadores/Pseudocodigo_UpdateSprite.png, i
-d=966, 426.84468pt x 77.53969pt>
+d=978, 426.84468pt x 77.53969pt>
 File: ./img//Memoria/Aspectos_relevantes/Animadores/Pseudocodigo_UpdateSprite.p
 ng Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Animadores/Pseudocodigo_UpdateSprite.pn
@@ -1620,7 +1637,7 @@ LaTeX Info: Redefining \. on input line 370.
 LaTeX Info: Redefining \% on input line 370.
 [37 <./img//Memoria/Aspectos_relevantes/Animadores/Pseudocodigo_UpdateSprite.pn
 g>]
-<./img//Memoria/Aspectos_relevantes/GameController/GameController.png, id=975, 
+<./img//Memoria/Aspectos_relevantes/GameController/GameController.png, id=987, 
 165.61874pt x 225.84375pt>
 File: ./img//Memoria/Aspectos_relevantes/GameController/GameController.png Grap
 hic file (type png)
@@ -1632,7 +1649,7 @@ LaTeX Info: Redefining \. on input line 382.
 LaTeX Info: Redefining \% on input line 382.
  [38 <./img//Memoria/Aspectos_relevantes/GameController/GameController.png>]
 <./img//Memoria/Aspectos_relevantes/GameController/Pseudocodigo_starting_object
-s.png, id=982, 426.84468pt x 152.06813pt>
+s.png, id=994, 426.84468pt x 152.06813pt>
 File: ./img//Memoria/Aspectos_relevantes/GameController/Pseudocodigo_starting_o
 bjects.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/GameController/Pseudocodigo_starting_ob
@@ -1660,8 +1677,8 @@ Overfull \hbox (4.7406pt too wide) in paragraph at lines 398--400
 LaTeX Info: Redefining \. on input line 411.
 LaTeX Info: Redefining \% on input line 411.
 [40]
-<./img//Memoria/Aspectos_relevantes/GameController/Flujo_simulation.png, id=994
-, 338.01282pt x 283.81032pt>
+<./img//Memoria/Aspectos_relevantes/GameController/Flujo_simulation.png, id=100
+6, 338.01282pt x 283.81032pt>
 File: ./img//Memoria/Aspectos_relevantes/GameController/Flujo_simulation.png Gr
 aphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/GameController/Flujo_simulation.png>
@@ -1677,7 +1694,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 [41
 
  <./img//Memoria/Aspectos_relevantes/GameController/Flujo_simulation.png>]
-<./img//Memoria/Aspectos_relevantes/Tiempo_bala/TimeManager_UML.png, id=1001, 2
+<./img//Memoria/Aspectos_relevantes/Tiempo_bala/TimeManager_UML.png, id=1013, 2
 00.24812pt x 278.54062pt>
 File: ./img//Memoria/Aspectos_relevantes/Tiempo_bala/TimeManager_UML.png Graphi
 c file (type png)
@@ -1692,7 +1709,7 @@ LaTeX Info: Redefining \% on input line 437.
 
  <./img//Memoria/Aspectos_relevantes/Tiempo_bala/TimeManager_UML.png>]
 <./img//Memoria/Aspectos_relevantes/Tiempo_bala/GameObject_zona_tiempo_escalado
-.png, id=1008, 426.84468pt x 127.97812pt>
+.png, id=1020, 426.84468pt x 127.97812pt>
 File: ./img//Memoria/Aspectos_relevantes/Tiempo_bala/GameObject_zona_tiempo_esc
 alado.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Tiempo_bala/GameObject_zona_tiempo_esca
@@ -1714,7 +1731,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 [43 <./img//Memoria/Aspectos_relevantes/Tiempo_bala/GameObject_zona_tiempo_esca
 lado.png>]
 <./img//Memoria/Aspectos_relevantes/Tiempo_bala/Herencia_TimeAffectedObject.png
-, id=1015, 426.84468pt x 277.035pt>
+, id=1027, 426.84468pt x 277.035pt>
 File: ./img//Memoria/Aspectos_relevantes/Tiempo_bala/Herencia_TimeAffectedObjec
 t.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Tiempo_bala/Herencia_TimeAffectedObject
@@ -1728,7 +1745,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 449--450
  []
 
 <./img//Memoria/Aspectos_relevantes/Tiempo_bala/Pseudocodigo_TimeAffectedObject
-.png, id=1016, 426.84468pt x 88.07906pt>
+.png, id=1028, 426.84468pt x 88.07906pt>
 File: ./img//Memoria/Aspectos_relevantes/Tiempo_bala/Pseudocodigo_TimeAffectedO
 bject.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Tiempo_bala/Pseudocodigo_TimeAffectedOb
@@ -1741,7 +1758,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 456--457
 [][] 
  []
 
-<./img//Memoria/Aspectos_relevantes/Menus/Transición_entre_menus.png, id=1017,
+<./img//Memoria/Aspectos_relevantes/Menus/Transición_entre_menus.png, id=1029,
  426.99525pt x 220.4235pt>
 File: ./img//Memoria/Aspectos_relevantes/Menus/Transición_entre_menus.png Grap
 hic file (type png)
@@ -1768,7 +1785,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [45 <./img//Memoria/Aspectos_relevantes/Menus/Transición_entre_menus.png>]
-<./img//Memoria/Aspectos_relevantes/Menus/GameObject_menu_pausa.png, id=1030, 4
+<./img//Memoria/Aspectos_relevantes/Menus/GameObject_menu_pausa.png, id=1042, 4
 26.84468pt x 305.64188pt>
 File: ./img//Memoria/Aspectos_relevantes/Menus/GameObject_menu_pausa.png Graphi
 c file (type png)
@@ -1782,7 +1799,7 @@ Overfull \hbox (43.84364pt too wide) in paragraph at lines 477--478
  []
 
 <./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_abrir_menu_pausa.png, id
-=1031, 396.7322pt x 127.97812pt>
+=1043, 396.7322pt x 127.97812pt>
 File: ./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_abrir_menu_pausa.pn
 g Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_abrir_menu_pausa.png
@@ -1799,7 +1816,7 @@ Overfull \hbox (13.73122pt too wide) in paragraph at lines 486--487
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_cerrar_menu_pausa.png, i
-d=1032, 363.60844pt x 122.70844pt>
+d=1044, 363.60844pt x 122.70844pt>
 File: ./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_cerrar_menu_pausa.p
 ng Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_cerrar_menu_pausa.pn
@@ -1824,7 +1841,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 [47 <./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_abrir_menu_pausa.png
 > <./img//Memoria/Aspectos_relevantes/Menus/Pseudocodigo_cerrar_menu_pausa.png>
 ]
-<./img//Memoria/Aspectos_relevantes/Menus/Patron_colores.png, id=1047, 324.4621
+<./img//Memoria/Aspectos_relevantes/Menus/Patron_colores.png, id=1059, 324.4621
 9pt x 224.33812pt>
 File: ./img//Memoria/Aspectos_relevantes/Menus/Patron_colores.png Graphic file 
 (type png)
@@ -1838,7 +1855,7 @@ LaTeX Info: Redefining \% on input line 512.
 
  <./img//Memoria/Aspectos_relevantes/Menus/Patron_colores.png>]
 <./img//Memoria/Aspectos_relevantes/Volumen_persistente/VolumeManager_UML.png, 
-id=1053, 426.84468pt x 218.31563pt>
+id=1065, 426.84468pt x 218.31563pt>
 File: ./img//Memoria/Aspectos_relevantes/Volumen_persistente/VolumeManager_UML.
 png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Volumen_persistente/VolumeManager_UML.p
@@ -1859,135 +1876,129 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 [49 <./img//Memoria/Aspectos_relevantes/Volumen_persistente/VolumeManager_UML.p
 ng>]
-Overfull \hbox (9.15565pt too wide) in paragraph at lines 528--529
-\T1/lmr/m/n/12 (-20) tra(1): [][]$\T1/lmtt/m/n/12 https : / / www . gamasutra .
- com / blogs / ItayKeren / 20150511 / 243083 /
+Overfull \hbox (17.75769pt too wide) in paragraph at lines 528--530
+[][]$\T1/lmtt/m/n/12 https : / / www . gamasutra . com / blogs / ItayKeren / 20
+150511 / 243083 / Scroll _
  []
 
-
-Overfull \hbox (7.87769pt too wide) in paragraph at lines 528--529
-\T1/lmtt/m/n/12 Scroll _ Back _ The _ Theory _ and _ Practice _ of _ Cameras _ 
-in _ SideScrollers .
- []
-
-LaTeX Info: Redefining \. on input line 534.
-LaTeX Info: Redefining \% on input line 534.
+LaTeX Info: Redefining \. on input line 535.
+LaTeX Info: Redefining \% on input line 535.
 [50]
-LaTeX Info: Redefining \. on input line 542.
-LaTeX Info: Redefining \% on input line 542.
+LaTeX Info: Redefining \. on input line 543.
+LaTeX Info: Redefining \% on input line 543.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [51]
-<./img//Memoria/Aspectos_relevantes/Camaras/PruebaPortalScene.png, id=1074, 426
+<./img//Memoria/Aspectos_relevantes/Camaras/PruebaPortalScene.png, id=1087, 426
 .84468pt x 61.73062pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPortalScene.png Graphic 
 file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPortalScene.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPorta
-lScene.png  used on input line 544.
+lScene.png  used on input line 545.
 (pdftex.def)             Requested size: 426.84364pt x 61.73045pt.
 
-Overfull \hbox (43.84364pt too wide) in paragraph at lines 544--545
+Overfull \hbox (43.84364pt too wide) in paragraph at lines 545--546
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 558.
-LaTeX Info: Redefining \% on input line 558.
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
 [52
 
  <./img//Memoria/Aspectos_relevantes/Camaras/PruebaPortalScene.png>]
-<./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlayerScene.png, id=1081, 426
+<./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlayerScene.png, id=1094, 426
 .84468pt x 112.92188pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlayerScene.png Graphic 
 file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlayerScene.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlaye
-rScene.png  used on input line 562.
+rScene.png  used on input line 563.
 (pdftex.def)             Requested size: 426.84364pt x 112.92159pt.
 
-Overfull \hbox (43.84364pt too wide) in paragraph at lines 562--563
+Overfull \hbox (43.84364pt too wide) in paragraph at lines 563--564
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
+LaTeX Info: Redefining \. on input line 567.
+LaTeX Info: Redefining \% on input line 567.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [53 <./img//Memoria/Aspectos_relevantes/Camaras/PruebaPlayerScene.png>]
-<./img//Memoria/Aspectos_relevantes/Camaras/Camara_PruebaPlayerScene.png, id=10
-88, 277.035pt x 155.07938pt>
+<./img//Memoria/Aspectos_relevantes/Camaras/Camara_PruebaPlayerScene.png, id=11
+01, 277.035pt x 155.07938pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_PruebaPlayerScene.png G
 raphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/Camara_PruebaPlayerScene.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Prue
-baPlayerScene.png  used on input line 568.
+baPlayerScene.png  used on input line 569.
 (pdftex.def)             Requested size: 277.03432pt x 155.07898pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 582.
-LaTeX Info: Redefining \% on input line 582.
+LaTeX Info: Redefining \. on input line 583.
+LaTeX Info: Redefining \% on input line 583.
  [54
 
  <./img//Memoria/Aspectos_relevantes/Camaras/Camara_PruebaPlayerScene.png>]
-LaTeX Info: Redefining \. on input line 586.
-LaTeX Info: Redefining \% on input line 586.
+LaTeX Info: Redefining \. on input line 587.
+LaTeX Info: Redefining \% on input line 587.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [55]
-<./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine.png, id=1099, 39
+<./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine.png, id=1114, 39
 3.72093pt x 220.57407pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine.png Graphic
  file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cine
-machine.png  used on input line 588.
+machine.png  used on input line 589.
 (pdftex.def)             Requested size: 393.71997pt x 220.57352pt.
 
-Overfull \hbox (10.71997pt too wide) in paragraph at lines 588--589
+Overfull \hbox (10.71997pt too wide) in paragraph at lines 589--590
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 607.
-LaTeX Info: Redefining \% on input line 607.
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
 [56
 
  <./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine.png>]
-LaTeX Info: Redefining \. on input line 613.
-LaTeX Info: Redefining \% on input line 613.
+LaTeX Info: Redefining \. on input line 614.
+LaTeX Info: Redefining \% on input line 614.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [57]
 <./img//Memoria/Aspectos_relevantes/Camaras/Cinemachine_Platformer_Microgame.pn
-g, id=1110, 353.82187pt x 197.98969pt>
+g, id=1125, 353.82187pt x 197.98969pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/Cinemachine_Platformer_Microga
 me.png Graphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/Cinemachine_Platformer_Microgam
 e.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/Cinemachine
-_Platformer_Microgame.png  used on input line 615.
+_Platformer_Microgame.png  used on input line 616.
 (pdftex.def)             Requested size: 353.821pt x 197.9892pt.
-LaTeX Info: Redefining \. on input line 622.
-LaTeX Info: Redefining \% on input line 622.
+LaTeX Info: Redefining \. on input line 623.
+LaTeX Info: Redefining \% on input line 623.
  [58
 
  <./img//Memoria/Aspectos_relevantes/Camaras/Cinemachine_Platformer_Microgame.p
 ng>]
 <./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine_juego.png, id=11
-16, 347.79938pt x 194.97844pt>
+31, 347.79938pt x 194.97844pt>
 File: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine_juego.png G
 raphic file (type png)
 <use ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cinemachine_juego.png>
 Package pdftex.def Info: ./img//Memoria/Aspectos_relevantes/Camaras/Camara_Cine
-machine_juego.png  used on input line 624.
+machine_juego.png  used on input line 625.
 (pdftex.def)             Requested size: 347.79852pt x 194.97795pt.
 )
 LaTeX Info: Redefining \. on input line 466.
@@ -2006,7 +2017,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 ]
-<./img//Memoria/Trabajos_relacionados/Celeste.jpg, id=1127, 426.7215pt x 240.13
+<./img//Memoria/Trabajos_relacionados/Celeste.jpg, id=1144, 426.7215pt x 240.13
 35pt>
 File: ./img//Memoria/Trabajos_relacionados/Celeste.jpg Graphic file (type jpg)
 <use ./img//Memoria/Trabajos_relacionados/Celeste.jpg>
@@ -2014,7 +2025,7 @@ Package pdftex.def Info: ./img//Memoria/Trabajos_relacionados/Celeste.jpg  used
  on input line 10.
 (pdftex.def)             Requested size: 213.36023pt x 120.06645pt.
  [61 <./img//Memoria/Trabajos_relacionados/Celeste.jpg>]
-<./img//Memoria/Trabajos_relacionados/Super_meat_boy.png, id=1132, 426.7215pt x
+<./img//Memoria/Trabajos_relacionados/Super_meat_boy.png, id=1151, 426.7215pt x
  240.1335pt>
 File: ./img//Memoria/Trabajos_relacionados/Super_meat_boy.png Graphic file (typ
 e png)
@@ -2027,7 +2038,11 @@ LaTeX Info: Redefining \% on input line 31.
  [62
 
  <./img//Memoria/Trabajos_relacionados/Super_meat_boy.png>]
-<./img//Memoria/Trabajos_relacionados/Nivel_Platformer_Microgame.png, id=1138, 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 36.
+
+<./img//Memoria/Trabajos_relacionados/Nivel_Platformer_Microgame.png, id=1159, 
 426.84468pt x 67.0003pt>
 File: ./img//Memoria/Trabajos_relacionados/Nivel_Platformer_Microgame.png Graph
 ic file (type png)
@@ -2035,8 +2050,12 @@ ic file (type png)
 Package pdftex.def Info: ./img//Memoria/Trabajos_relacionados/Nivel_Platformer_
 Microgame.png  used on input line 41.
 (pdftex.def)             Requested size: 298.78925pt x 46.89987pt.
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+
+LaTeX Warning: Citation `PLATFORMERMICROGAME' on page 63 undefined on input lin
+e 48.
+
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -2049,6 +2068,11 @@ LaTeX Info: Redefining \% on input line 68.
 LaTeX Info: Redefining \. on input line 82.
 LaTeX Info: Redefining \% on input line 82.
 
+
+LaTeX Warning: Citation `PLATFORMERMICROGAME' on page 65 undefined on input lin
+e 82.
+
+
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
@@ -2056,8 +2080,13 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
  [66]
-LaTeX Info: Redefining \. on input line 110.
-LaTeX Info: Redefining \% on input line 110.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+
+
+LaTeX Warning: Citation `PLATFORMERMICROGAME' on page 67 undefined on input lin
+e 107.
+
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
@@ -2110,18 +2139,24 @@ LaTeX Info: Redefining \. on input line 468.
 LaTeX Info: Redefining \% on input line 468.
  [76] (memoria.bbl
 bibitemlist
-)
+[77
+
+
+
+])
 
 Class memoir Warning: The material used in the headers is too large
 (29.85403pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 474.
 
-[77
+LaTeX Info: Redefining \. on input line 474.
+LaTeX Info: Redefining \% on input line 474.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-
-]
+[78]
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
 
@@ -2148,16 +2183,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 979CB4940FE6F7ABCC8315685E5BA144;6545.
+(rerunfilecheck)             Checksum: D7586F679DC849555C55A3247AB62D8D;6871.
  ) 
 Here is how much of TeX's memory you used:
- 16555 strings out of 479334
- 266091 string characters out of 2870772
- 636258 words of memory out of 3000000
- 33202 multiletter control sequences out of 15000+200000
+ 16581 strings out of 479334
+ 266573 string characters out of 2870772
+ 636716 words of memory out of 3000000
+ 33215 multiletter control sequences out of 15000+200000
  484354 words of font info for 155 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,13n,74p,1315b,832s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,13n,74p,1361b,832s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Latex/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Latex/MikTex/fonts/enc/dvip
 s/lm/lm-mathit.enc}{D:/Latex/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{D:/Latex/MikT
 ex/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Latex/MikTex/fonts/enc/dvips/lm/lm-ts1.
@@ -2171,9 +2206,9 @@ pe1/public/lm/lmr8.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmri12.pfb><D:/La
 tex/MikTex/fonts/type1/public/lm/lmro12.pfb><D:/Latex/MikTex/fonts/type1/public
 /lm/lmssbx10.pfb><D:/Latex/MikTex/fonts/type1/public/lm/lmsy10.pfb><D:/Latex/Mi
 kTex/fonts/type1/public/lm/lmtt12.pfb>
-Output written on memoria.pdf (91 pages, 2453912 bytes).
+Output written on memoria.pdf (92 pages, 2460814 bytes).
 PDF statistics:
- 1342 PDF objects out of 1440 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
+ 1375 PDF objects out of 1440 (max. 8388607)
+ 255 named destinations out of 1000 (max. 500000)
  48156 words of extra memory for PDF output out of 51595 (max. 10000000)
 

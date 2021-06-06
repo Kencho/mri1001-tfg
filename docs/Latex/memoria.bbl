@@ -1,14 +1,74 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{TiempoDesarrollo}
+Amerike.
+\newblock ¿cuánto se tarda en desarrollar un videojuego?, 2018.
+\newblock [Internet; Último acceso: 4-junio-2021].
+
+\bibitem{Gamasutra}
+Gamasutra.
+\newblock Página principal de gamasutra, 2021.
+\newblock [Internet; Último acceso: 7-abril-2021].
+
+\bibitem{Celeste}
+Matt~Makes Games.
+\newblock Página de compra de celeste en steam, 2018.
+\newblock [Internet; Último acceso: 22-marzo-2021].
+
+\bibitem{ContinuousCollision}
+GDC.
+\newblock Charla sobre colisiones de la game developers conference, 2018.
+\newblock [Internet; Último acceso: 5-junio-2021].
+
+\bibitem{UnderstandingConstraints}
+GDC.
+\newblock Charla sobre colisiones de la game developers conference, 2018.
+\newblock [Internet; Último acceso: 5-junio-2021].
+
+\bibitem{ConstructoresMonoBehaviour}
+Ilkinulas.
+\newblock Don't use constructors to initialize monobehaviours., 2016.
+\newblock [Internet; Último acceso: 4-junio-2021].
+
+\bibitem{SuperMeatBoy}
+Team Meat.
+\newblock Página de compra de super meat boy en steam, 2008.
+\newblock [Internet; Último acceso: 22-marzo-2021].
+
+\bibitem{Braid}
+Number None.
+\newblock Página de compra de braid en steam, 2009.
+\newblock [Internet; Último acceso: 22-marzo-2021].
 
 \bibitem{2020GamesMoney}
 Dean Takahashi.
 \newblock Estadísticas de ventas de videojuegos en 2020, 2021.
 \newblock [Internet; Último acceso: 5-junio-2021].
 
+\bibitem{PlatformerMicrogame}
+Unity Technologies.
+\newblock Página de descarga del asset asociado a platforme microgame, 2021.
+\newblock [Internet; Último acceso: 22-marzo-2021].
+
+\bibitem{ClaseGameObject}
+Unity.
+\newblock Scripting api: Gameobject, 2020.
+\newblock [Internet; Último acceso: 23-marzo-2021].
+
+\bibitem{ClaseMonobehaviour}
+Unity.
+\newblock Scripting api: Monobehaviour, 2020.
+\newblock [Internet; Último acceso: 3-junio-2021].
+
 \bibitem{Unity}
 Unity.
 \newblock Pagina oficial de unity, 2021.
 \newblock [Internet; Último acceso: 5-junio-2021].
+
+\bibitem{PaqueteCinemachine}
+Unity.
+\newblock Página de unity asociada al paquete cinemachine, 2021.
+\newblock [Internet; Último acceso: 7-abril-2021].
 
 \bibitem{Tennis4two}
 Wikipedia.

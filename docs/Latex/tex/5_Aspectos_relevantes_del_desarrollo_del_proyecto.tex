@@ -73,7 +73,7 @@ Las mecánicas de salto, el acelerón y la mecánica de tiempo bala que puede re
 \caption{Diagrama UML de la implementación de las mecánicas en PlayerController mediante composición}
 \end{figure}
 
-\section{Sistema de colisiones}
+\section{Sistema de colisiones \cite{ContinuousCollision}\cite{UnderstandingConstraints}}
 El objeto Player es un objeto con un Rigidbody2D kinemático. Para que dos objetos choquen al colisionar de manera ideal en el entorno de Unity es necesario que los objetos que colisionan tengan los componentes Collider y Rigidbody. Es necesario que el atributo BodyType del Rigidbody sea de tipo Dinamic. Cuando el Rigidbody es dinámico, Unity simula físicas sobre ese objeto. Como en el juego se va a trabajar con un sistema de físicas propio, el Rigidbody de los objetos con el componente KinematicObject no puede ser dinámico sino kinemático (BodyType = Kinematic). El problema de los RigidBody kinemáticos reside en que cuando se colisiona con objetos no se simula el choque entre ellos. Esto provoca que el Player atraviese el suelo y las paredes a pesar de entrar en contacto con ellos.
 
 \subsection{Solución propuesta para el sistema de colisiones}
@@ -525,7 +525,8 @@ El volumen general se modifica en la clase VolumeSliderBar, que tiene asociado u
 \section{Desarrollo de la gestión de la cámara}
 Se va a documentar en la memoria el proceso de desarrollo de la gestión de la cámara a la vez que se desarrolla, pues se considera un muy buen ejemplo de desarrollo de uno de los elementos de un videojuego y suficientemente representativo como para entender el proceso. Además va a resultar interesante, pues se va a razonar el funcionamiento de las cámaras y las decisiones que se han tomado para escoger un funcionamiento de la cámara y no otro.
 
-La mayoría de la información obtenida para la toma de decisiones durante este proceso ha sido obtenida de la siguiente URL de la página de Gamasutra(1): \url{https://www.gamasutra.com/blogs/ItayKeren/20150511/243083/Scroll_Back_The_Theory_and_Practice_of_Cameras_in_SideScrollers.php}.
+La mayoría de la información obtenida para la toma de decisiones durante este proceso ha sido obtenida de la siguiente URL de la página de Gamasutra \cite{Gamasutra}:\\
+ \url{https://www.gamasutra.com/blogs/ItayKeren/20150511/243083/Scroll_Back_The_Theory_and_Practice_of_Cameras_in_SideScrollers.php}.
  
 Este enlace contiene otro enlace a una charla en la que se explican estos conceptos en video.
 
@@ -578,7 +579,7 @@ Lo más probable es que este problema se solucione con que la cámara sea de un 
 \subsection{Sistema de gestión de cámaras que se va a utilizar}
 La cámara va a constar de dos elementos: el controlador de la cámara y el objetivo de la cámara. El controlador de la cámara se encargará de mover la cámara a donde el objetivo de la cámara se encuentre. El objetivo de la cámara se encargará de hacer los cálculos necesarios para decirle a la cámara donde debe apuntar.\\
 El controlador de la cámara es muy sencillo, pues solo es poner la posición en la misma posición que el objetivo. Lo interesante es el objetivo de la cámara, pues se van a tener en cuenta varias cosas para decidir donde se va a posicionar. La cámara, explicado brevemente, va a funcionar siguiendo el movimiento del jugador.\\
-Inicialmente se planeó crear scripts que se encargasen de la gestión de las cámaras, pero resulta que existe un paquete para Unity que es el paquete “Cinemachine”(2). Este paquete lo utiliza Plataformer Microgame y se ha obtenido conocimiento de él gracias a esta plantilla, que hace uso de una Cinemachine virtual camera. Teniendo en cuenta el tiempo que llevaría diseñar y desarrollar un sistema de gestión de cámaras a mano y la completitud y personalización de cámaras que ofrece este paquete se ha decidido hacer uso de él y adecuar el movimiento de la cámara al juego utilizando este paquete.
+Inicialmente se planeó crear scripts que se encargasen de la gestión de las cámaras, pero resulta que existe un paquete para Unity que es el paquete “Cinemachine” \cite{PaqueteCinemachine}. Este paquete lo utiliza Plataformer Microgame y se ha obtenido conocimiento de él gracias a esta plantilla, que hace uso de una Cinemachine virtual camera. Teniendo en cuenta el tiempo que llevaría diseñar y desarrollar un sistema de gestión de cámaras a mano y la completitud y personalización de cámaras que ofrece este paquete se ha decidido hacer uso de él y adecuar el movimiento de la cámara al juego utilizando este paquete.
 
 Este paquete ofrece un objeto que se llama Cinemachine virtual camera. Este objeto se aplica sobre un objeto de una escena añadiéndolo como un componente al GameObject asociado. Si le añades a una cámara el componente CinemachineBrain, esta cámara será la que pasará a actuar como objetivo de la cámara y el objeto con el componente Cinemachine virtual camera se comportará como el controlador de la cámara con el componente CincemachineBrain.\\
 Una de las cosa que ofrece el objeto Cinemachine Virtual Camera es la capacidad de dividir el espacio que abarca la cámara en distintas regiones que afectaran de distinta forma al movimiento de la cámara. Los nombres que se le va a dar a estas zonas que se van a explicar a continuación son: la death zone, la soft zone y la hard zone. 

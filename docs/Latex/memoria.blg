@@ -8,12 +8,12 @@ A level-1 auxiliary file: ./tex/2_Objetivos_del_proyecto.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: ./tex/3_Conceptos_teoricos.aux
 Case mismatch error between cite keys UNITY and Unity
----line 7 of file ./tex/3_Conceptos_teoricos.aux
+---line 9 of file ./tex/3_Conceptos_teoricos.aux
  : \citation{UNITY
  :                }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys UNITY and Unity
----line 9 of file ./tex/3_Conceptos_teoricos.aux
+---line 11 of file ./tex/3_Conceptos_teoricos.aux
  : \citation{UNITY
  :                }
 I'm skipping whatever remains of this command
@@ -21,53 +21,78 @@ Reallocating 'name_of_file' (item size: 1) to 36 items.
 A level-1 auxiliary file: ./tex/4_Tecnicas_y_herramientas.aux
 Reallocating 'name_of_file' (item size: 1) to 60 items.
 A level-1 auxiliary file: ./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux
+Case mismatch error between cite keys CONTINUOUSCOLLISION and ContinuousCollision
+---line 15 of file ./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux
+ : \citation{CONTINUOUSCOLLISION
+ :                              }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys UNDERSTANDINGCONSTRAINTS and UnderstandingConstraints
+---line 16 of file ./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux
+ : \citation{UNDERSTANDINGCONSTRAINTS
+ :                                   }
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 34 items.
 A level-1 auxiliary file: ./tex/6_Trabajos_relacionados.aux
+Case mismatch error between cite keys PLATFORMERMICROGAME and PlatformerMicrogame
+---line 11 of file ./tex/6_Trabajos_relacionados.aux
+ : \citation{PLATFORMERMICROGAME
+ :                              }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys PLATFORMERMICROGAME and PlatformerMicrogame
+---line 21 of file ./tex/6_Trabajos_relacionados.aux
+ : \citation{PLATFORMERMICROGAME
+ :                              }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys PLATFORMERMICROGAME and PlatformerMicrogame
+---line 28 of file ./tex/6_Trabajos_relacionados.aux
+ : \citation{PLATFORMERMICROGAME
+ :                              }
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 51 items.
 A level-1 auxiliary file: ./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: ./bibliografia.bib
-You've used 3 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            517 strings with 4512 characters,
-and the built_in function-call counts, 638 in all, are:
-= -- 57
-> -- 21
+            569 strings with 5646 characters,
+and the built_in function-call counts, 3112 in all, are:
+= -- 285
+> -- 105
 < -- 0
-+ -- 9
-- -- 6
-* -- 20
-:= -- 111
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 12
++ -- 45
+- -- 30
+* -- 92
+:= -- 521
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 21
-empty$ -- 67
-format.name$ -- 6
-if$ -- 136
+cite$ -- 15
+duplicate$ -- 105
+empty$ -- 331
+format.name$ -- 30
+if$ -- 676
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 15
 missing$ -- 0
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 27
+newline$ -- 78
+num.names$ -- 30
+pop$ -- 135
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 45
 quote$ -- 0
-skip$ -- 21
+skip$ -- 104
 stack$ -- 0
-substring$ -- 15
-swap$ -- 3
+substring$ -- 75
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 60
 warning$ -- 0
-while$ -- 6
-width$ -- 4
-write$ -- 32
-(There were 2 error messages)
+while$ -- 30
+width$ -- 17
+write$ -- 152
+(There were 7 error messages)

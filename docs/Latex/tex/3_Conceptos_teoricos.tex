@@ -7,7 +7,7 @@ Unity(1) es un motor gráfico orientado al desarrollo de videojuegos que permite
 
 Unity tiene una serie de elementos, pero los más destacables son:
 
-\subsection{MonoBehaviour}
+\subsection{MonoBehaviour \cite{ClaseMonobehaviour}}
 MonoBehaviour es la clase de la que (en principio) parten todas las clases que utiliza Unity. Esta clase y sus hijas son las que inicializa Unity al crear una escena. La razón por la que esta clase es tan importante y requiere de explicación son los siguientes métodos:
 
 \textbf{Awake() y Start():} Tanto Awake como Start son métodos que se ejecutan al crear un objeto que herede de MonoBehaviour, sin embargo funcionan de manera ligeramente distinta. 
@@ -62,7 +62,7 @@ Start (también es un método “mensaje”).
 Update (también es un método “mensaje”).
 \end{itemize}
 
-\subsection{GameObject}
+\subsection{GameObject \cite{ClaseGameObject}}
 La clase GameObject es la clase de la que parten todos los objetos que va a utilizar Unity. Todos los elementos que creas en Unity son GameObject. La clase GameObject por defecto añade atributos que ofrecen información básica sobre ese GameObject. Algunos de los más importantes serían: transform para saber qué región del espacio ocupa el GameObject, tag para identificar al GameObject y name para identificar tanto al GameObject como a los componentes de este (todos comparten el mismo nombre).
 GameObject por si sola es una clase inútil. Pero lo importante de GameObject es la capacidad que posee para añadirse componentes a si mimo (con el método GetComponent entre otros). Los componentes, al ser añadidos a la instancia de GameObject que le corresponda ya pueden ser usados por Unity. Los componentes de GameObject pueden ser objetos de cualquier tipo, sin necesidad de heredar de MonoBehaviour.
 
