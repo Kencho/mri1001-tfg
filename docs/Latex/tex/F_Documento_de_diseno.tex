@@ -176,19 +176,17 @@ Habrá, aun así dos interfaces extra disponibles para el jugador. Al no tener l
 \subsection{Pantalla de elección de nivel}
 \imagen{Anexos/Anexo_F/Pantalla_de_elección_de_nivel}{Idea inicial de la pantalla de selección de nivel}
 
-\textit{El sonido de selección de los botones ha sido obtenido del enlace: \url{https://opengameart.org/content/botton-sound-pack}}
-\textit{\\Puedes encontrar al creador en twitter como @listener4me. \url{https://twitter.com/search?q=\%40listener4me&src=typed_query}\\}
-
-\textit{El sonido de desplazamiento entre botones ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/menu-selection-click}}
-
 \subsection{Pantalla de opciones}
 \imagen{Anexos/Anexo_F/Pnatalla_de_opciones}{Idea inicial de la pantalla de opciones}
 
-\textit{Los sonidos de cierre del menú de pausa y de la barra de los menús de opciones pertenecen a Jesús Lastra han sido obtenidos en el siguiente enlace: \url{https://opengameart.org/content/button-clicks-beeps-99-sounds}}
+Estas pantallas \footnotemark \footnotemark son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
 
-\textit{La música que suena mientras se esta en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}}
+\footnotetext{El sonido de selección de los botones ha sido obtenido del enlace: \url{https://opengameart.org/content/botton-sound-pack}.\\
+Puedes encontrar al creador en twitter como @listener4me. \url{https://twitter.com/search?q=\%40listener4me&src=typed_query}.\\
+El sonido de desplazamiento entre botones ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/menu-selection-click}.}
 
-Estas pantallas son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
+\footnotetext{Los sonidos de cierre del menú de pausa y de la barra de los menús de opciones pertenecen a Jesús Lastra han sido obtenidos en el siguiente enlace: \url{https://opengameart.org/content/button-clicks-beeps-99-sounds}.\\
+La música que suena mientras se esta en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}.}
 
 \section{Entidades}
 A continuación se incluirá información más concreta al respecto del diseño de juego como sprites e imágenes que identificarán a una mecánica o elemento del juego en los niveles, configuración de los controles y descripción una por una de cada nivel del juego.
@@ -197,7 +195,7 @@ A continuación se incluirá información más concreta al respecto del diseño 
 \subsubsection{Player}
 Objeto que controlará el jugador. El jugador tendrá la capacidad de hacer que el Player se mueva, salte y pegue acelerones.
 
-El Player se podrá morir en caso de que colisione con un objeto que reduzca su vida a 0. El Player tendrá solo 1 punto de vida y cuando colisione con un objeto que lo “dañe”, su vida se reducirá a 0 y morirá. Cuando el Player muera reaparecerá en un punto de reaparición establecido en la escena.
+El Player \footnotemark se podrá morir en caso de que colisione con un objeto que reduzca su vida a 0. El Player tendrá solo 1 punto de vida y cuando colisione con un objeto que lo “dañe”, su vida se reducirá a 0 y morirá. Cuando el Player muera reaparecerá en un punto de reaparición establecido en la escena.
 
 \begin{figure}[h]
 \centering
@@ -205,40 +203,38 @@ El Player se podrá morir en caso de que colisione con un objeto que reduzca su 
 \caption{Sprite utilizado para el Player}
 \raggedright
 \textit{Los sprites, las animaciones y los sonidos del Player los ofrecía Platformer Microgame para uso libre.}
-
-\textit{La única excepción a lo anteriormente mentado es el acelerón, cuyo audio ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/sci-fi-shwop-1}}
 \end{figure}
+\footnotetext{El audio del acelerón ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/sci-fi-shwop-1}}
 \clearpage
 
 \subsubsection{Enemigos}
 \begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos: Enemigos que no se moverán. Se encontrarán estáticos en un lugar y si el Player los tocase este se muere.
+Obstáculos \footnotemark : Enemigos que no se moverán. Se encontrarán estáticos en un lugar y si el Player los tocase este se muere.
 \end{itemize}
+\footnotetext{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
 \centering
 \includegraphics{Anexos/Anexo_F/Obstaculos_estaticos}
 \caption{Sprite utilizado para el obstáculo estático}
-\raggedright
-\textit{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
 \end{figure}
 
 \begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos que seguirán una rutina: Enemigos que se encontrarán en una zona y recorrerán un camino cíclico continuamente.
+Obstáculos que seguirán una rutina \footnotemark : Enemigos que se encontrarán en una zona y recorrerán un camino cíclico continuamente.
+\footnotetext{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
 \end{itemize}
 \centering
 \includegraphics{Anexos/Anexo_F/Obstaculo_en_rutina}
 \caption{Sprite utilizado para el obstáculo que sigue una rutina}
-\raggedright
-\textit{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
 \end{figure}
 
 \begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos móviles: Enemigos que aparecerán en un extremo de la pantalla y la atravesará hasta el otro extremo. Si en algún momento el obstáculo móvil tocase al Player, este morirá.
+Obstáculos móviles \footnotemark : Enemigos que aparecerán en un extremo de la pantalla y la atravesará hasta el otro extremo. Si en algún momento el obstáculo móvil tocase al Player, este morirá.
+\footnotetext{El sprite utilizado para los obstáculos móviles pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
 \end{itemize}
 \centering
 \includegraphics{Anexos/Anexo_F/Obstaculo_movil_rapido}
@@ -256,7 +252,6 @@ Obstáculos móviles: Enemigos que aparecerán en un extremo de la pantalla y la
 \includegraphics{Anexos/Anexo_F/Obstaculo_movil_lento}
 \caption{Obstáculo móvil lento}
 \raggedright
-\textit{El sprite utilizado para los obstáculos móviles pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
 \end{figure}
 \clearpage
 
@@ -274,63 +269,58 @@ Zonas de victoria
 
 \subsection{Mecánicas}
 \subsubsection{Portal}
-Portal que teletransportará a los objetos que entren manteniendo la dirección del movimiento del objeto.
-
+El portal \footnotemark que teletransportará a los objetos que entren manteniendo la dirección del movimiento del objeto.
+\footnotetext{El sprite utilizado para los portales pertenece a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-portal-or-wormhole-several-variants}.\\
+Enlace al trabajo de Hansjörg Malthaner : \url{http://opengameart.org/users/varkalandar}.\\
+El audio utilizado para los portales pertenece a dklon y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/quick-zap}.\\
+Enlace al trabajo de dklon : \url{https://opengameart.org/users/dklon}}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{Anexos/Anexo_F/Portal}
 \caption{Sprite utilizado para los portales}
-\raggedright
-\textit{El sprite utilizado para los portales pertenece a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-portal-or-wormhole-several-variants}.}
-
-\textit{Enlace al trabajo de Hansjörg Malthaner : \url{http://opengameart.org/users/varkalandar}}
-
-\textit{\\El audio utilizado para los portales pertenece a dklon y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/quick-zap}.}
-\textit{Enlace al trabajo de dklon : \url{https://opengameart.org/users/dklon}}
 \end{figure}
 
 \subsubsection{Creador de impulso}
 El objeto afectado recibirá un impulso en una dirección.
-\begin{figure}[h]
+
 \begin{itemize}
 \item
-Partícula de impulso: objeto que se encontrará en el escenario. Cuando un objeto toque esa partícula recibirá un impulso en la dirección asignada a la partícula.
+Partícula de impulso \footnotemark : objeto que se encontrará en el escenario. Cuando un objeto toque esa partícula recibirá un impulso en la dirección asignada a la partícula.
+\footnotetext{Los sprites utilizados para la partícula de impulso pertenecen a oglsdl y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/glow-arrow}.\\
+El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelsey y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spell-2}.}
 \end{itemize}
+
+\begin{figure}[h]
 \centering
 \includegraphics{Anexos/Anexo_F/Particula_de_impulso}
 \caption{Sprite utilizado para la partícula de impulso}
-\raggedright
-\textit{Los sprites utilizados para la partícula de impulso pertenecen a oglsdl y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/glow-arrow}.}
-
-\textit{El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelsey y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spell-2}}
 \end{figure}
 
-\begin{figure}[h]
 \begin{itemize}
 \item
-Amplificador de impulso: parecido a la partícula de impulso pero escalando el impulso que lleva el objeto.
+Amplificador de impulso \footnotemark : parecido a la partícula de impulso pero escalando el impulso que lleva el objeto.
+\footnotetext{Los sprites utilizados para el amplificador de impulso son una modificación de un Sprite que pertenece a oglsdl que ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/glow-arrow}.\\
+El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelsey y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spell-2}}
 \end{itemize}
-\centering
-\includegraphics{Anexos/Anexo_F/Amplificador_de_impulso}
-\caption{Sprite utilizado para el amplificador de impulso}
-\raggedright
-\textit{Los sprites utilizados para el amplificador de impulso son una modificación de un Sprite que pertenece a oglsdl que ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/glow-arrow}.}
 
-\textit{El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelsey y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spell-2}}
+\clearpage
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{Anexos/Anexo_F/Amplificador_de_impulso}
+\caption{Sprite utilizado para el amplificador de impulso}
 \end{figure}
 
-\begin{figure}[h]
 \begin{itemize}
 \item
-Plataforma de salto: Se define por si sola.
+Plataforma de salto \footnotemark : Se define por si sola.
+\footnotetext{Los sprites utilizados para la plataforma de salto pertenecen a diana23570 y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spring}.\\
+El audio utilizado para la plataforma de salto pertenece a Blender Foundation y ha sido obtenida en el siguiente enlace:  \url{https://opengameart.org/content/sprint-jumpinteraction-sound-yo-frankie}}
 \end{itemize}
-\centering
-\includegraphics{Anexos/Anexo_F/Plataforma_de_salto}
-\caption{Sprite utilizado para el amplificador de impulso}
-\raggedright
-\textit{Los sprites utilizados para la plataforma de salto pertenecen a diana23570 y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spring}.}
 
-\textit{El audio utilizado para la plataforma de salto pertenece a Blender Foundation y ha sido obtenida en el siguiente enlace:  \url{https://opengameart.org/content/sprint-jumpinteraction-sound-yo-frankie}}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{Anexos/Anexo_F/Plataforma_de_salto}
+\caption{Sprite utilizado para la plataforma de salto}
 \end{figure}
 
 \clearpage
@@ -340,15 +330,13 @@ Capacidad de “ralentizar o acelerar el tiempo” influyendo en la velocidad a 
 \item
 Escalar el tiempo: Capacidad del Player para escalar el tiempo que afectará a todos los objeto.
 \item
-Zonas de tiempo escalado: Zonas que escalarán el tiempo de los objetos que entren en la zona de influencia de la zona.
+Zonas de tiempo escalado \footnotemark : Zonas que escalarán el tiempo de los objetos que entren en la zona de influencia de la zona.
 \end{itemize}
-
+\footnotetext{El sprite utilizado para las zonas de tiempo escalado es una modificación de un sprote que pertenece a scenna y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/circle}.}
 \begin{figure}[h]
 \centering
 \includegraphics{Anexos/Anexo_F/Zonas_tiempo_escalado}
 \caption{Sprite utilizado para la zona de tiempo escalado}
-\raggedright
-\textit{El sprite utilizado para las zonas de tiempo escalado es una modificación de un sprote que pertenece a scenna y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/circle}.}
 \end{figure}
 
 \subsubsection{Acelerón}
@@ -359,25 +347,22 @@ Objetos que afectarán a como la gravedad influye sobre ellos u otros objetos.
 \begin{figure}[h]
 \begin{itemize}
 \item
-Inversor de gravedad: volverá la gravedad negativa en positiva y viceversa.
+Inversor de gravedad \footnotemark : volverá la gravedad negativa en positiva y viceversa.
+\footnotetext{El sprite utilizado para los inversores de gravedad pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
 \end{itemize}
+
 \centering
 \includegraphics{Anexos/Anexo_F/Inversor_gravedad}
 \caption{Sprite utilizado para el inversor de gravedad}
-\raggedright
-\textit{El sprite utilizado para los inversores de gravedad pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
-
 \begin{itemize}
 \item
-Obstáculos superdensos: Obstáculos hacia los que atraerán a los objetos debido a su alta gravedad.
+Obstáculos superdensos \footnotemark : Obstáculos hacia los que atraerán a los objetos debido a su alta gravedad.
+\footnotetext{Los sprites utilizados para la plataforma de salto pertenecen a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-charged-bolt}.\\
+Enlace al trabajo de Hansjörg Malthaner: \url{http://opengameart.org/users/varkalandar}.}
 \end{itemize}
 \centering
 \includegraphics{Anexos/Anexo_F/Obstaculo_superdenso}
 \caption{Sprite utilizado para el obstáculo superdenso}
-\raggedright
-\textit{Los sprites utilizados para la plataforma de salto pertenecen a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-charged-bolt}.}
-
-\textit{Enlace al trabajo de Hansjörg Malthaner: \url{http://opengameart.org/users/varkalandar}}
 \end{figure}
 
 \clearpage
