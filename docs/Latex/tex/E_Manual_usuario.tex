@@ -14,7 +14,7 @@ A pesar de que se tiene la firme creencia firme de que puede ejecutar en prácti
 \item
 Procesador Intel Core i7-8750H (6 núcleos, 9 MB Caché, 2.2 GHz hasta 4.1 GHz)
 \item
-Memoria RAM de 16 GB DDR4
+Memoria RAM de 16 GB DDR4 (alcanzando un pico de 141MB cuando se ejecuta)
 \item
 Disco HDD de 1 TB
 \item
@@ -34,21 +34,83 @@ Memoria RAM de 4 GB DDR4
 \item
 Disco SSD de 200 GB
 \item
-Tarjeta gráfica Intel(R) HD Graphics 520
+Tarjeta gráfica Intel HD Graphics 520 (integrada)
 \item
 Sistema operativo Windows 10 Home
 \end{itemize}
 
 En ambos ordenadores el videojuego funciona sin ralentizaciones ni caídas de frames. Es cierto, aun así, que el ordenador de ofimática tarda un par de segundos más en cambiar entre escenas más que el otro ordenador (mucho más potente).
 
-Para sistemas operativos Linux no se va a dar una especificación de requisitos ya, que las pruebas se han realizado sobre una máquina virtual. Sin embargo no deberían de ser muy distintos de las especificaciones de requisitos de Windows, pues las limitaciones están en el hardware y no en el software.
+\subsection{Linux}
+Para sistemas operativos Linux se ha ejecutado el juego en un ordenador con las siguientes especificaciones:
+\begin{itemize}
+\item
+Procesador Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz (4 núcleos)
+\item
+Memoria 8GB (usando algo menos de 116MB cuando se ejecuta)
+\item
+Tarjeta gráfica Intel HD Graphics 5500 (integrada)
+\item
+Sistema operativo Ubuntu 20.04.1
+\end{itemize}
+
+\subsection{Requisitos mínimos}
+Partiendo de las pruebas hechas se puede generar un listado de recursos mínimos que consumirá la ejecución del videojuego:
+\begin{itemize}
+\item
+130 MB de disco duro los ficheros que contienen el juego (en la versión de Linux que es la que más ocupa)
+\item
+150 MB de RAM
+\item
+Un 8\% de la CPU
+\item
+Un 17\% de la GPU
+\end{itemize}
 
 \section{Instalación}
 El usuario no tendrá que instalar nada para poder iniciar el videojuego. Bastará con que se descargue el contenido del repositorio de GitHub asociado al proyecto (\url{https://github.com/Kencho/mri1001-tfg}).
 
-Una vez descargado el repositorio, dentro de la carpeta executables, habrá tres ficheros comprimidos (game\_Windows.zip, game\_Linux.zip y game\_WebGL.zip) que contendrán la estructura de ficheros del videojuego y el ejecutable que permitirá iniciarlo.
+Una vez descargado el repositorio, dentro de la carpeta executables, habrá tres ficheros comprimidos (game\_Windows.zip, game\_Linux.tar.gz y game\_WebGL.zip) que contendrán la estructura de ficheros del videojuego y el ejecutable que permitirá iniciarlo.
 
 El usuario solo tendrá que descomprimir el fichero asociado a su sistema operativo o el fichero de WebGL si no se quiere estar atado a ningún sistema operativo. Después tendrá que entrar en la carpeta generada y ejecutar el fichero .exe. Esto iniciará la ejecución del videojuego.
+
+\subsection{Instalación WebGL}
+Sin embargo, es importante mencionar que para la versión de WebGL es necesario que el buscador con el que lo abres soporte WebGL. Esto se pude comprobar accediendo al siguiente enlace: \url{https://get.webgl.org/}.\\ 
+Al entrar en esta página hay dos opciones: visualizar un cubo rotando o no visualizarlo. Si se visualiza significa que el navegador soporta WebGL.\\
+Lo más probable es que cualquier navegador moderno popular que utilices soporten WebGL. Aun así, se ha comprobado empíricamente que los siguientes navegadores soportan WebGL:
+\begin{itemize}
+\item
+Google Chrome
+\item
+Mozilla Firefox
+\item
+Microsoft Edge
+\item
+Internet Explore
+\item
+Opera
+\end{itemize}
+
+En caso de que no se vea el cubo rotando, lo más probable es que con actualizar los Drivers de la tarjeta gráfica se solucione el problema.
+
+\clearpage
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{Anexos/Anexo_E/Cubo_WebGL}
+\caption{Cubo que rota si el navegador soporta WebGL}
+\end{figure}
+
+Aunque el navegador soporte WebGL, es muy probable que al ejecutar el fichero .html que inicia la ejecución en WebGL salte un error.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{Anexos/Anexo_E/Error_WebGL}
+\caption{Error de la versión del ejecutable de WebGL}
+\end{figure}
+
+Este error no es realmente un error, sino una restricción de permisos. Los navegadores suelen tener una opción de seguridad que impide a las páginas acceder a recursos file://. Sin esta restricción se podría acceder a los ficheros del equipo, lo cual es una gran riesgo.\\
+Para poder ejecutar el juego en WebGL sin hacer uso de un servidor web es necesario desactivar esta opción. Esta opción se puede desactivar siguiendo los pasos de explicados en el siguiente enlace: \url{https://bit.ly/3iEMWAj}.\\
+Esta versión del ejecutable no es recomendable que un usuario que solo quiera disfrutar del videojuego la use. Ha sido añadida como opción para el desarrollo, esperando que se aloje en un servidor web.
 
 \section{Manual del usuario}
 Bienvenido, \textit{\textbf{JUGADOR}}, a nuestro nuevo videojuego. Ha habido un \textcolor{endeavour}{cataclismo intergaláctico} y los \textcolor{azulWorker}{ciber trabajadores espaciales} se han extraviado de camino a sus oficinas.
