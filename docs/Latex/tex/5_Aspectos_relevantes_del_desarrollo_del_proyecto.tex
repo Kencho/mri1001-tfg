@@ -77,43 +77,16 @@ Las mecánicas de salto, el acelerón y la mecánica de tiempo bala que puede re
 El objeto Player es un objeto con un Rigidbody2D kinemático. Para que dos objetos choquen al colisionar de manera ideal en el entorno de Unity es necesario que los objetos que colisionan tengan los componentes Collider y Rigidbody. Es necesario que el atributo BodyType del Rigidbody sea de tipo Dinamic. Cuando el Rigidbody es dinámico, Unity simula físicas sobre ese objeto. Como en el juego se va a trabajar con un sistema de físicas propio, el Rigidbody de los objetos con el componente KinematicObject no puede ser dinámico sino kinemático (BodyType = Kinematic). El problema de los RigidBody kinemáticos reside en que cuando se colisiona con objetos no se simula el choque entre ellos. Esto provoca que el Player atraviese el suelo y las paredes a pesar de entrar en contacto con ellos.
 
 \subsection{Solución propuesta para el sistema de colisiones}
-Para simular el sistema de colisiones se optó por utilizar la velocidad como elemento principal.
+Ha sido necesario desarrollar un algoritmo para saber en cada loop del FixedUpdate si un KinematicObject esta colisionando con un muro. Para ello se hace uso de su velocidad para calcular la próxima posición del KinematicObject.\\
+Con la próxima posición del juego calculada se comprueba si en esa posición hay algún muro, y en caso de ser así, se modifica la velocidad para que no colisione con el muro.
 
-Para saber si un KinematicObject va a colisionar con el suelo o un muro (se identifican los objetos con los que se desea chocar porque tienen asignada la layer “Wall”) se coge la velocidad del KinematicObject (se obtiene del atributo velocity del Rigidbody2D), que está representada en unidades/segundo. Con la velocidad que lleva el KinematicObject y su posición se puede deducir la siguiente posición en la que se encontrará.
+Un ejemplo de la modificación realizada sería:\\
+El Player va a una velocidad de (3,-9.8), y debajo suyo hay un muro. La colisión se detectará y será necesario eliminar el movimiento hacia abajo del Player. Para saber que el movimiento del jugador debe se detenido hacia la abajo y no en el resto de direcciones se utiliza el vector normal del lado del muro más cercano al Player.
 
-Hay un método que se llama Physics2D.BoxCast con el que puedes crear un rectángulo en una región del espacio y comprobar si se colisiona con algún objeto. En caso de colisionar con un objeto se devuelve un objeto de la clase RayCastHit2D con toda la información relativa a la colisión. Hay un método similar a Physics2D.BoxCast que es Physics2D.BoxCastAll que hace lo mismo pero devolviendo un vector de RayCastHit2D con un elemento por cada objeto con el que has colisionado.
+Después de detectar que dirección del movimiento se debe frenar para no colisionar con las paredes, se reducirá la velocidad en esa dirección.\\
+En el ejemplo puesto anteriormente se va a detectar que se debe reducir la velocidad en el eje de las Y, quedando la velocidad en (3, 0).
 
-Se puede filtrar las colisiones por Layer, pudiendo solo tener en cuenta las colisiones con objetos que tengan asociada una Layer con el mismo nombre que el pasado por parámetro en el método. Para el sistema de colisiones solo se han tenido en cuenta los objetos con Layer igual a “Wall”.
-
-Con el método Physics2D.BoxCastAll se va a crear un rectángulo del tamaño del Collider2D del KinematicObject en la siguiente posición en la que se encontrará el objeto y comprobarán cuántos objetos con Layer igual a “Wall” colisionarán en esa posición con el KinematicObject.
-
-\clearpage
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Sistema_Colisiones/Detección_colisiones}
-\caption{Simulación del proceso de detección de colisiones}
-\end{figure}
-
-
-Una vez detectados con que muros se han colisionado (objetos con Layer igual a “Wall”) se va a simular el choque modificando la velocidad del KinematicObject poniendo a cero la velocidad en la dirección de la colisión del muro. Un ejemplo de aplicación sería un KinematicObject yendo a una velocidad marcada por el vector (1, -2), es decir 1 unidad hacia la derecha (eje x) y dos unidades hacia abajo (eje y). Si se detecta que se va a colisionar contra el suelo (un muro que está a los pies del KinematicObject) la velocidad debería establecerse al vector (1,0), es decir continuar el desplazamiento a la derecha pero cesar el movimiento hacia abajo.
-
-Para calcular en qué dirección hay que limitar la velocidad se utiliza el vector normal de la recta creada por la pared más cercana del muro. Ese vector normal lo ofrece el objeto RayCastHit2D en su atributo “normal”.
-Se va a añadir una figura explicativa:
-
-\clearpage
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Sistema_Colisiones/Vector_normal}
-\caption{Vector normal del muro en función de la posición del KinematicObject}
-\end{figure}
-
-De la colisión del KinematicObject se encarga el objeto KinematicObjectCollisionManager, que tiene una referencia a KinematicObject y se encarga de llamar al método Physics2D.BoxCastAll y limitar la velocidad del KinematicObject en caso de colisión.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Sistema_Colisiones/KinematicObjectCollisionManager_UML}
-\caption{Diagrama UML del sistema de colisiones}
-\end{figure}
+En el anexo C se profundiza más en el tema.
 
 \section{Sistema de gestión de las modificaciones gravitatorias}
 Durante la ejecución del juego puede ser que los objetos kinemáticos sufran modificaciones que varíen las fuerzas gravitatorias que los afectan. Estas modificaciones las provocan los modificadores de gravedad y no afectan a todos los elementos del juego sino a un objeto kinemático en concreto.
