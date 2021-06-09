@@ -70,7 +70,7 @@ Contiene los elementos necesarios para el funcionamiento del juego como conjunto
 Objeto que representa el avatar que controlará el jugador.
 
 \subsection{Simulation}
-La clase simulatión es una clase muy útil con una subclase Events. La clase Simulation tiene una cola en la que se encolarán eventos (clases que hereden de Simulation.Event). En cada frame se reproducirán todos los eventos encolados pendientes de ejecutarse.
+La clase Simulatión es una clase muy útil con una subclase Events. La clase Simulation tiene una cola en la que se encolarán eventos (clases que hereden de Simulation.Event). En cada frame se reproducirán todos los eventos encolados pendientes de ejecutarse.
 
 Se explica en profundidad el funcionamiento de esta clase en el anexo C.
 
@@ -83,13 +83,13 @@ Esta clase se encarga de animar y controlar las físicas de los enemigos. Se vio
 Adicionalmente delega a la animación el movimiento de todo el enemigo, lo cual obliga a las animaciones a encargarse del movimiento, tarea que no le corresponde.
 
 \subsubsection{Health}
-Health hereda de MonoBehaviour, pero no tiene necesidad de heredar de esta clase, ni heredar sus métodos y responsabilidades. La única función que sobrescribe de MonoBehaviour es Awake(), función que puede ser perfectamente sustituida por un constructor. Adicionalmente, Health no tiene un método para devolver la salud a un estado inicial o por defecto, haciendo que tanto a la hora de reestablecer la salud de un objeto como a la hora de restablecer la salud del Player cuando reaparece después de morir, se aplique el método Increment(), método que no corresponde a esa acción.
+Health hereda de MonoBehaviour, pero no tiene necesidad de heredar de esta clase, ni heredar sus métodos y responsabilidades. La única función que sobrescribe de MonoBehaviour es Awake, función que puede ser perfectamente sustituida por un constructor. Adicionalmente, Health no tiene un método para devolver la salud a un estado inicial o por defecto, haciendo que tanto a la hora de restablecer la salud de un objeto como a la hora de restablecer la salud del Player cuando reaparece después de morir, se aplique el método Increment, método que no corresponde a esa acción.
 
 \subsubsection{SpawnPoint}
 SpawnPoint es un objeto de la escena supuestamente creado para determinar el punto de aparición del jugador, sin embargo esto solo se aplica cuando el jugador muere, de manera que inicia el juego en una posición y reaparece en otra. Esto hace muy improbable que el punto de reaparición sea el mismo que el punto en el que apareces al entrar a la escena, lo cual (en este tipo de juegos) no tiene sentido.
 
 \subsubsection{JumpState}
-La clase PlayerController maneja los estados de salto mediante una enumeración, manejándolos mediante un switch. Esto viola el principio Open/Close y centraliza toda las operaciones correspondientes a los estado en PlayerController agrandando la clase. 
+La clase PlayerController maneja los estados de salto mediante una enumeración, manejándolos mediante un switch. Esto viola el principio Open/Close y centraliza todas las operaciones correspondientes a los estados en PlayerController agrandando la clase. 
 En lo relativo a la acción de salto el atributo de deceleración (jumpDeceleration) del salto solo se aplica si no se mantiene el botón de salto pulsado hasta el fin de la acción de salto. Esto hace que el salto corto aplique la deceleración pero el salto largo no, de manera que la misma acción puede desenvolverse de dos formas distintas. 
 
 \subsubsection{Rigidbody2D.Cast}
@@ -103,13 +103,13 @@ La clase Simulation es la base del funcionamiento del juego y los eventos la for
 
 En líneas generales, salvo la clase Simulation, cuya implementación me parece correcta y muy útil, el resto de los elementos deberían ser reestructurados para adecuarse al modelo que se desea implementar. Sin embargo gracias a la utilidad de la clase Simulatión y todos los elementos visuales y de interfaz que ofrece por defecto la plantilla se ha tomado la decisión de desarrollar el videojuego partiendo de la plantilla Plataformer Microgame, eso sí, cambiando mucho la estructura de clases.
 
-Algunos de los cambios que habría que realizar sobre las clase que ofrece la plantilla de Plataformer Microgame serían:
+Algunos de los cambios que habría que realizar sobre las clases que ofrece la plantilla de Plataformer Microgame serían:
 
 En el proyecto se delega a los propios sujetos (jugador y enemigos) la labor de simular las físicas que les afectan. Personalmente me parece más conveniente crear una clase a que se encargue de la simulación de las físicas y que los objetos jugador y enemigos sean los que le consulten como afectan las físicas. 
 
 Health no debe heredar de MonoBehaviour. Adicionalmente Health debe añadir un método para devolver el estado de la salud a un estado inicial o por defecto. 
 
-No hay una clase o un script que inicialice el estado del juego, sino que confía en el estado de la escena al ejecutarla, lo cual no me agrada, ya que si quieres añadir cosas al inicio de la ejecución de la escena, como por ejemplo una animación de aparición puede dificultar la labor o segregarlas en distintas clases (haciendo cada clase una serie de operaciones en el método Awake() de la clase y obligando a esas clases a heredar de MonoBehaviour). Añadir una clase que haga esta labor de inicialización no pude empeorar la situación, solo mejorarla. 
+No hay una clase o un script que inicialice el estado del juego, sino que confía en el estado de la escena al ejecutarla, lo cual no me agrada, ya que si quieres añadir cosas al inicio de la ejecución de la escena, como por ejemplo una animación de aparición puede dificultar la labor o segregarlas en distintas clases (haciendo cada clase una serie de operaciones en el método Awake de la clase y obligando a esas clases a heredar de MonoBehaviour). Añadir una clase que haga esta labor de inicialización no pude empeorar la situación, solo mejorarla. 
 
 Hacer una estructura de clases adecuadas a los estados del Player y los comportamientos asociados a estos, aplicando el patrón de diseño Estado. 
 
