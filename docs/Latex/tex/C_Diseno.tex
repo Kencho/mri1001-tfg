@@ -12,11 +12,11 @@ De esta plantilla se ha conservado sobre todo los elementos estéticos, pero tam
 \subsection{Clase Simulation}
 La calse Simulation es una clase encargada de manejar los eventos del juego. El objeto GameController hace uso de esta clase para ir ejecutando los eventos a medida que entran en cola. Esta clase tiene una particularidad de C\#. Simulaion es una “partial class”. Esto permite que la clase Simulation se construya en varios ficheros distintos. Para el funcionamiento de la clase Simulation, esta hace uso de otras dos subclases: Simulation.Event y Simulation.InstanceRegister. Se va a explicar a continuación porque son clases que se consideran importantes y claves para entender el funcionamiento de la arquitectura del videojuego.
 
-Simulation: Este fichero contiene la estructura principal del funcionamiento de Simulation. Simulation es una clase estática con una cola, también estática, que guarda eventos (clase Event) y los libera cuando GameController llama al método tick(). Este fichero tiene el método tick() y los métodos necesarios para añadir y remover elementos de la cola. 
+\textbf{Simulation:} Este fichero contiene la estructura principal del funcionamiento de Simulation. Simulation es una clase estática con una cola, también estática, que guarda eventos (clase Event) y los libera cuando GameController llama al método tick(). Este fichero tiene el método tick() y los métodos necesarios para añadir y remover elementos de la cola. 
 
-Simulation.Event: Contiene la clase interna Event que se encarga de ejecutar el comando asociado a ese evento. De esta clase de la que heredan todos los eventos que saltan durante la ejecución del juego (como por ejemplo EnemyDeath, el evento que salta cuando el jugador muere). Los eventos se guardan en su mayoría en la carpeta Assets/Scripts/Gameplay.
+\textbf{Simulation.Event:} Contiene la clase interna Event que se encarga de ejecutar el comando asociado a ese evento. De esta clase de la que heredan todos los eventos que saltan durante la ejecución del juego (como por ejemplo EnemyDeath, el evento que salta cuando el jugador muere). Los eventos se guardan en su mayoría en la carpeta Assets/Scripts/Gameplay.
 
-Simulation.InstanceRegister: Contiene la clase InstanceRegister. Esta clase simplemente devuelve una instancia nueva de un objeto cualquiera. Esta clase esta creada para que Simulation pueda crear singletons (patrón de diseño) de clases. Es utilizado para que todas las clases trabajen sobre el mismo modelo. Ese modelo es un script denominado PlataformerModel con una clase que exclusivamente tiene una serie de atributos (como el Player, las cámaras o el punto de aparición del jugador) que serán utilizados por varias clases.
+\textbf{Simulation.InstanceRegister:} Contiene la clase InstanceRegister. Esta clase simplemente devuelve una instancia nueva de un objeto cualquiera. Esta clase esta creada para que Simulation pueda crear singletons (patrón de diseño) de clases. Es utilizado para que todas las clases trabajen sobre el mismo modelo. Ese modelo es un script denominado PlataformerModel con una clase que exclusivamente tiene una serie de atributos (como el Player, las cámaras o el punto de aparición del jugador) que serán utilizados por varias clases.
 
 \subsection{Eventos}
 Los eventos son toda las clases que heredan de Simulation.Event. Todos los eventos se encuentran en la carpeta Assets/Scripts/Gameplay. Casi todas las clases evento del proyecto se han mantenido intactas de Platformer Microgame, sin embargo algunes eventos han sido modificados y otros añadidos.
@@ -46,12 +46,6 @@ Se va a mostrar a continuación el pseudocódigo de las mecánicas que se han im
 
 \subsection{Modificaciones gravitatorias}
 \subsubsection{Obstáculo superdenso}
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.6]{Anexos/Anexo_C/Psuedocodigo_superdenso}
-\caption{Pseudocódigo que resume el funcionamiento del obstáculo superdenso}
-\end{figure}
 
 \subsubsection{Inversor de gravedad}
 
@@ -240,8 +234,9 @@ De la colisión del KinematicObject se encarga el objeto KinematicObjectCollisio
 \end{figure}
 
 \subsection{Modificaciones gravitatorias}
-Los objetos kinemáticos pueden recibir modificaciones gravitatorias que alteren su velocidad. De esta labor se encarga la clase KinematicObjectGravityManager.\\
-Esta clase tiene una lista con todas las alteraciones gravitatorias que se aplicarán en ese loop del FixedUpdate. En cada loop del FixedUpdate se aplicarán al KinematicObject asociado a esa instancia de KinematicObjectGravityManager y se vaciará la lista.
+Durante la ejecución del juego puede ser que los objetos kinemáticos sufran modificaciones que varíen las fuerzas gravitatorias que los afectan. Estas modificaciones las provocan los modificadores de gravedad y no afectan a todos los elementos del juego sino a un objeto kinemático en concreto.
+
+Dada esta premisa, se ha creado una clase KinematicObjectGravityManager encargada de la gestión de las modificaciones de gravedad que afectan al KinematicObject.
 
 \begin{figure}[h]
 \centering
@@ -249,11 +244,15 @@ Esta clase tiene una lista con todas las alteraciones gravitatorias que se aplic
 \caption{Diagrama UML de la clase encargada de la gestión de la gravedad del KinematicObject}
 \end{figure}
 
+KinematicObjectGravityManager va a funcionar mediante una lista a la que se van a ir añadiendo objetos de clase Vector2 que representarán las alteraciones de la gravedad. En cada llamada al método FixedUpdate de KinemticObject se recorre la toda la lista acumulando las alteraciones gravitatorias y se aplican esas alteraciones al efecto gravitatorio por defecto (Physics2D.gravity) y se simula la gravedad. Después de este proceso se vacía la lista.
+
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodigo_modificadores_gravedad}
-\caption{Pseudocódigo del proceso de modificación de la gravedad del KinematicObject en cada loop del FixedUpdate}
+\caption{Pseudocódigo del proceso de modificación de la gravedad del KinematicObject}
 \end{figure}
+
+Hay dos tipos de modificadores de gravedad: los obstáculos superdensos y los inversores de gravedad. La diferencia fundamental entre estos modificadores de gravedad es que los obstáculos superdensos aplican una modificación temporal mientras que los inversores de gravedad modifican la gravedad de forma permanente (o hasta que se cancele el efecto).
 
 \subsection{TimeAffectedObjects}
 Hay una serie de objetos que se ven afectados por las modificaciones temporales particulares. Estos objetos heredarán de la clase TimeAffectedObject. 

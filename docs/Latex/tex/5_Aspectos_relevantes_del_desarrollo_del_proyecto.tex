@@ -26,9 +26,10 @@ Los estados que utiliza PlayerController son una aplicación del patrón de dise
 
 A continuación se mostrará un diagrama con los posibles estados y las condiciones permiten pasar de uno a otro:
 
+\clearpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.7]{Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estados}
+\includegraphics[scale=0.6]{Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estados}
 \caption{Diagrama de transición entre estados de PlayerController}
 \end{figure}
 
@@ -89,25 +90,10 @@ En el ejemplo puesto anteriormente se va a detectar que se debe reducir la veloc
 En el anexo C se profundiza más en el tema.
 
 \section{Sistema de gestión de las modificaciones gravitatorias}
-Durante la ejecución del juego puede ser que los objetos kinemáticos sufran modificaciones que varíen las fuerzas gravitatorias que los afectan. Estas modificaciones las provocan los modificadores de gravedad y no afectan a todos los elementos del juego sino a un objeto kinemático en concreto.
+Los objetos kinemáticos pueden recibir modificaciones gravitatorias que alteren su velocidad. De esta labor se encarga la clase KinematicObjectGravityManager.\\
+Esta clase tiene una lista con todas las alteraciones gravitatorias que se aplicarán en ese loop del FixedUpdate. En cada loop del FixedUpdate se aplicarán al KinematicObject asociado a esa instancia de KinematicObjectGravityManager, y se vaciará la lista.
 
-Dada esta premisa, se ha creado una clase KinematicObjectGravityManager encargada de la gestión de las modificaciones de gravedad que afectan al KinematicObject.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/KinematicObjectGravityManager_UML}
-\caption{Diagrama UML de la clase encargada de la gestión de la gravedad del KinematicObject}
-\end{figure}
-
-KinematicObjectGravityManager va a funcionar mediante una lista a la que se van a ir añadiendo objetos de clase Vector2 que representarán las alteraciones de la gravedad. En cada llamada al método FixedUpdate de KinemticObject se recorre la toda la lista acumulando las alteraciones gravitatorias y se aplican esas alteraciones al efecto gravitatorio por defecto (Physics2D.gravity) y se simula la gravedad. Después de este proceso se vacía la lista.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/Pseudocodigo_modificadores_gravedad}
-\caption{Pseudocódigo del proceso de modificación de la gravedad del KinematicObject}
-\end{figure}
-
-Hay dos tipos de modificadores de gravedad: los obstáculos superdensos y los inversores de gravedad. La diferencia fundamental entre estos modificadores de gravedad es que los obstáculos superdensos aplican una modificación temporal mientras que los inversores de gravedad modifican la gravedad de forma permanente (o hasta que se cancele el efecto).
+Se explicasu funcionamiento en profundidad en el anexo C.
 
 \subsection{Obstáculos superdensos}
 Los obstáculos superdensos son GameObject con una región de influencia (delimitada por un Collider2D). Mientras un KinematicObject esté dentro de la región de influencia su gravedad se verá modificada.
