@@ -3,7 +3,7 @@
 \section{Arquitectura del Player}
 Player es el GameObject asociado al avatar que controlará el jugador y posee un componente PlayerController. La clase PlayerController, se encarga del funcionamiento del objeto como avatar controlable por el jugador.
 
-La clase PlayerController hereda de la clase KinematicObject. KinematicObject es una clase que hereda de MonoBehaviour y se encarga de simular la gravedad sobre el objeto y gestionar las colisiones contra obstáculos que puedan afectar al movimiento (se profundizará en este aspecto en el apartado de gestión de las colisiones).
+La clase PlayerController hereda de la clase KinematicObject. KinematicObject es una clase que hereda de MonoBehaviour y se encarga de simular la gravedad sobre el objeto y gestionar las colisiones contra obstáculos que puedan afectar al movimiento (se profundizará en este aspecto en el apartado de gestión de las colisiones de la sección de aspectos relevantes y del anexo C).
 
 \clearpage
 \begin{figure}[h]
@@ -12,7 +12,7 @@ La clase PlayerController hereda de la clase KinematicObject. KinematicObject es
 \caption{Jerarquía de herencia de PlayerController}
 \end{figure}
 
-El PlayerController utiliza el patrón de diseño Estado, de manera que hay acciones generales que realiza la propia clase PlayerControler y otras que delega en las clases que heredan de la interfaz PlayerState
+El PlayerController utiliza el patrón de diseño Estado, de manera que hay acciones generales que realiza la propia clase PlayerController y otras que delega en las clases que heredan de la interfaz PlayerState.
 Las operaciones generales que realiza PlayerController son:
 \begin{itemize}
 \item
@@ -39,7 +39,7 @@ PlayerOnAirState: El Player está en el aire.
 \item
 PlayerMovingState: El Player se está moviendo sobre una superficie.
 \item
-PlayerStopingState: El Player ha cesado el movimiento y se está deteniendo.
+PlayerStoppingState: El Player ha cesado el movimiento y se está deteniendo.
 \item
 PlayerDashingState: El Player está realizando el acelerón.
 \item
@@ -59,24 +59,25 @@ Las mecánicas de salto, el acelerón y la mecánica de tiempo bala que puede re
 \caption{Diagrama UML de la implementación de las mecánicas en PlayerController mediante composición}
 \end{figure}
 
-\section{Sistema de colisiones \cite{ContinuousCollision}\cite{UnderstandingConstraints}}
-El objeto Player es un objeto con un Rigidbody2D kinemático. Para que dos objetos choquen al colisionar de manera ideal en el entorno de Unity es necesario que los objetos que colisionan tengan los componentes Collider y Rigidbody. Es necesario que el atributo BodyType del Rigidbody sea de tipo Dinamic. Cuando el Rigidbody es dinámico, Unity simula físicas sobre ese objeto. Como en el juego se va a trabajar con un sistema de físicas propio, el Rigidbody de los objetos con el componente KinematicObject no puede ser dinámico sino kinemático (BodyType = Kinematic). El problema de los RigidBody kinemáticos reside en que cuando se colisiona con objetos no se simula el choque entre ellos. Esto provoca que el Player atraviese el suelo y las paredes a pesar de entrar en contacto con ellos.
+\section{Sistema de colisiones}
+El objeto Player es un objeto con un Rigidbody2D kinemático. Para que dos objetos choquen al colisionar de manera ideal en el entorno de Unity es necesario que los objetos que colisionan tengan los componentes Collider y Rigidbody. Es necesario que el atributo BodyType del Rigidbody sea de tipo Dynamic. Cuando el Rigidbody es dinámico, Unity simula físicas sobre ese objeto. Como en el juego se va a trabajar con un sistema de físicas propio, el Rigidbody de los objetos con el componente KinematicObject no puede ser dinámico sino kinemático (BodyType = Kinematic). El problema de los RigidBody kinemáticos reside en que cuando se colisiona con objetos no se simula el choque entre ellos. Esto provoca que el Player atraviese el suelo y las paredes a pesar de entrar en contacto con ellos.
 
 \subsection{Solución propuesta para el sistema de colisiones}
-Ha sido necesario desarrollar un algoritmo para saber en cada loop del FixedUpdate si un KinematicObject está colisionando con un muro. Para ello se hace uso de su velocidad para calcular la próxima posición del KinematicObject.\\
-Con la próxima posición del juego calculada se comprueba si en esa posición hay algún muro, y en caso de ser así, se modifica la velocidad para que no colisione con el muro.
+Para el desarrollo del sistema de colisiones se ha tomado como referencia los conocimientos expuestos en \cite{ContinuousCollision} y \cite{UnderstandingConstraints}.
+Ha sido necesario desarrollar un algoritmo para saber en cada iteración del FixedUpdate si un KinematicObject está colisionando con un muro. Para ello se hace uso de su velocidad para calcular la próxima posición del KinematicObject.\\
+Con la próxima posición del juego calculada se comprueba si en esa posición hay algún muro, y en caso de ser así, se modifica la velocidad para que no penetre en el muro.
 
 Un ejemplo de la modificación realizada sería:\\
-El Player va a una velocidad de (3,-9.8), y debajo suyo hay un muro. La colisión se detectará y será necesario eliminar el movimiento hacia abajo del Player. Para saber que el movimiento del jugador debe ser detenido hacia la abajo y no en el resto de direcciones se utiliza el vector normal del lado del muro más cercano al Player.
+El Player va a una velocidad de (3,-9.8), y debajo de él hay un muro. La colisión se detectará y será necesario eliminar el movimiento hacia abajo del Player. Para saber que el movimiento del jugador debe ser detenido hacia la abajo y no en el resto de direcciones se utiliza el vector normal del lado del muro más cercano al Player.
 
 Después de detectar que dirección del movimiento se debe frenar para no colisionar con las paredes, se reducirá la velocidad en esa dirección.\\
-En el ejemplo puesto anteriormente se va a detectar que se debe reducir la velocidad en el eje de las Y, quedando la velocidad en (3, 0).
+En el ejemplo puesto anteriormente se va a detectar que se debe reducir la velocidad en el eje vertical, quedando la velocidad en (3, 0).
 
 En el anexo C se profundiza más en el tema.
 
 \section{Sistema de gestión de las modificaciones gravitatorias}
 Los objetos kinemáticos pueden recibir modificaciones gravitatorias que alteren su velocidad. De esta labor se encarga la clase KinematicObjectGravityManager.\\
-Esta clase tiene una lista con todas las alteraciones gravitatorias que se aplicarán en ese loop del FixedUpdate. En cada loop del FixedUpdate se aplicarán al KinematicObject asociado a esa instancia de KinematicObjectGravityManager, y se vaciará la lista.
+Esta clase tiene una lista con todas las alteraciones gravitatorias que se aplicarán en ese iteración del FixedUpdate. En cada iteración del FixedUpdate se aplicarán al KinematicObject asociado a esa instancia de KinematicObjectGravityManager, y se vaciará la lista.
 
 Se explica su funcionamiento en profundidad en el anexo C.
 
@@ -105,7 +106,7 @@ Mientras se esté dentro de la región de influencia de un obstáculo superdenso
 \subsection{Inversor de gravedad}
 Los inversores de gravedad invierten la gravedad del KinematicObject permanentemente al entrar en contacto con ellos. Para representar este proceso, se ha seguido una estructura de clases muy similar al patrón de diseño Observador. Hay una clase sujeto GravityInverterManager encargada de invertir la gravedad de los KinematicObjects y una clase observador GravityInverter encargada de decirle al sujeto que KinematicObjects tienen que invertir sus gravedades.
 
-Cuando un observador detecta que un KinematicObject entra en contacto con él, le manda este KinematicObject al sujeto que comprueba si el KinematicObject está dentro de su lista y si no lo está lo añade. Si lo esta es removido de la lista.
+Cuando un observador detecta que un KinematicObject entra en contacto con él, le manda este KinematicObject al sujeto que comprueba si el KinematicObject está dentro de su lista y si no lo está lo añade. Si lo esta es eliminado de la lista.
 
 En cada FixedUpdate el GravityInverterManager invierte la gravedad de todos los KinematicObject de la lista.
 
@@ -164,29 +165,29 @@ El obstáculo recorrerá en bucle esta rutina hasta que se salga o reinicie el n
 Se explica en profundidad el movimiento de los obstáculos que siguen una rutina en el anexo C.
 
 \subsection{Obstáculos móviles}
-Los obstáculos móviles son obstáculos que parten de un punto inicial y avanzan indefinidamente de izquierda a derecha a una velocidad establecida. La posición del obstáculo móvil en el frame actual se calcula añadiendo a la posición actual el vector dirección (Vector2.lef) por la velocidad establecida y por el tiempo entre frames (Time. fixedDeltaTime).
+Los obstáculos móviles son obstáculos que parten de un punto inicial y avanzan indefinidamente siguiendo una dirección constante a una velocidad establecida. La posición del obstáculo móvil en el frame actual se calcula añadiendo a la posición actual el vector dirección (Vector2.left) por la velocidad establecida y por el tiempo entre frames (Time. fixedDeltaTime).
 
 Esto se lleva a cabo mediante la instrucción ejecutada en cada FixedUpdate:
 
 this.transform.position += (Vector3) Vector2.left * speed * Time.fixedDeltaTime;
 
-\subsection{Clase ObstacleFabric}
-Ante la necesidad de crear obstáculos móviles durante tiempo de ejecución se creó la clase ObstacleFabric. Esta clase es una aplicación del patrón de diseño Método Fábrica. ObstacleFabric tiene un método SpawnObject que devuelve una instancia del prefab establecido en la posición en la que se encuentra la fábrica.
+\subsection{Clase ObstacleFactory}
+Ante la necesidad de crear obstáculos móviles durante tiempo de ejecución se creó la clase ObstacleFactory. Esta clase es una aplicación del patrón de diseño Método Fábrica. ObstacleFactory tiene un método SpawnObject que devuelve una instancia del prefab establecido en la posición en la que se encuentra la fábrica.
 
-De ObstacleFabric hereda una clase TriggerObstacleFabric que tiene asociada una clase PlayerTrigger. La clase PlayerTrigger es una clase que tiene asociado un Collider2D. PlayerTrigger tiene un atributo booleano isTrigger y mientras una instancia de PlayerController este en contacto con el collider de PlayerTrigger isTrigger será true y el resto del tiempo a false.
+De ObstacleFactory hereda una clase TriggerObstacleFactory que tiene asociada una clase PlayerTrigger. La clase PlayerTrigger es una clase que tiene asociado un Collider2D. PlayerTrigger tiene un atributo booleano isTrigger y mientras una instancia de PlayerController este en contacto con el collider de PlayerTrigger isTrigger será true y el resto del tiempo a false.
 
-Cuando el Player entre en la zona de activación de PlayerTrigger (delimitada por el collider), TriggerObstacleFabric creará una instancia del prefab.
+Cuando el Player entre en la zona de activación de PlayerTrigger (delimitada por el collider), TriggerObstacleFactory creará una instancia del prefab.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.8]{Memoria/Aspectos_relevantes/Obstáculos/ObstacleFabric_UML}
+\includegraphics[scale=0.5]{Memoria/Aspectos_relevantes/Obstáculos/ObstacleFabric_UML}
 \caption{Diagrama UML de la estructura de las fábricas de obstáculos}
 \end{figure}
 
-La intención de ObstacleFabric era que solo pudiese instanciar obstáculos, pero al elegir el obstáculo que se desea instanciar mediante la elección de un prefab lo que se pasa a instanciar es un GameObject y no un obstáculo, haciendo que aunque la fábrica se utilice exclusivamente para instanciar obstáculos, realmente se puede instanciar cualquier GameObject.
+La intención de ObstacleFactory era que solo pudiese instanciar obstáculos, pero al elegir el obstáculo que se desea instanciar mediante la elección de un prefab lo que se pasa a instanciar es un GameObject y no un obstáculo, haciendo que aunque la fábrica se utilice exclusivamente para instanciar obstáculos, realmente se puede instanciar cualquier GameObject.
 
 \subsection{Clase ObstacleDestroyer}
-Los obstáculos móviles tienen una vida útil muy corta pues solo son necesarios desde que aparecen hasta que han atravesado toda la pantalla. Sin embargo cuando han perdido utilidad siguen desplazándose hacia la derecha consumiendo recursos de manera similar a como lo haría un proceso zombie. Para evitar esto se ha creado una clase ObstacleDetroyer que tiene asociado un Collider2D. Cuando los obstáculos entran en contacto con el collider del ObstacleDestroyer, el obstáculo se destruye liberando los recursos ocupados en él.
+Los obstáculos móviles tienen una vida útil muy corta pues solo son necesarios desde que aparecen hasta que han atravesado toda la pantalla. Sin embargo cuando han perdido utilidad siguen desplazándose consumiendo recursos de manera similar a como lo haría un proceso zombie. Para evitar esto se ha creado una clase ObstacleDestroyer que tiene asociado un Collider2D. Cuando los obstáculos entran en contacto con el collider del ObstacleDestroyer, el obstáculo se destruye liberando los recursos ocupados en él.
 
 \section{Implementcación de los portales}
 Los portales son GameObject organizados por parejas que permiten convertir la posición de un KinematicObject que entra a un portal en la posición del portal parejo al portal de aquel por el que se ha entrado (simulando la teletransportación entre portales).\\
@@ -217,7 +218,7 @@ Para los creadores de impulso se ha decidido aplicar el patrón de diseño Puent
 \caption{Estructura de relaciones del GameObject PortalCouple}
 \end{figure}
 
-No se ha decidido aplicar el patrón Puente porque el funcionamiento de los creadores de impulso vaya a cambiar en tiempo de ejecución (que no lo hace), sino para reforzar la separación ente las clases encargadas de detectar las colisiones y las clases encargadas de aplicar el impulso evitando un vínculo permanente entre estas dos jerarquías de clases que haga más engorroso el proceso de adición o modificación de clases en una de las dos jerarquías establecidas.
+Se ha decidido aplicar el patrón Puente para reforzar la separación ente las clases encargadas de detectar las colisiones y las clases encargadas de aplicar el impulso evitando un vínculo permanente entre estas dos jerarquías de clases que haga más engorroso el proceso de adición o modificación de clases en una de las dos jerarquías establecidas.
 
 \subsection{Sistema de gestión de las colisiones con los creadores de impulso}
 Las colisiones de los creadores de impulso con los KinematicObject se han implementado siguiendo el mismo modelo que la colisión con los “Wall” (paredes y muros). La clase KinematicObjectCollisionManager llama al método BoxCastAll en la posición en la que se va a encontrar el KinematicObject en el siguiente frame. Si va a haber colisión con un creador de impulso se invoca al método ApplyKinematicObjectCollision del ImpulseCreatorCollider que delega la labor de aplicar el impulso a la instancia de ImpulseCreator que tiene asociada.\\
@@ -274,7 +275,7 @@ Para saber si hay que pasar a renderizar el siguiente Sprite se consulta la vari
 \end{figure}
 
 \section{Clase GameController y estado de juego estable}
-Se ha desarrollado una arquitectura específica para asegurar que los niveles jugables tienen están siempre en un estado estable de juego, y un proceso a seguir cada vez que se reinicia el nivel a su estado inicial.\\
+Se ha desarrollado una arquitectura específica para asegurar que los niveles jugables están siempre en un estado estable de juego, y un proceso a seguir cada vez que se reinicia el nivel a su estado inicial.\\
 Con este propósito se ha creado la clase GameController. El funcionamiento de esta clase se explica en profundidad en el anexo C.
 
 \begin{figure}[h]
@@ -286,7 +287,7 @@ Con este propósito se ha creado la clase GameController. El funcionamiento de e
 Esta clase contiene dos elementos distintos al servicio del mismo propósito
 
 \subsection{Variables de PlatformerModel}
-La clase GameController contendrá una serie de atributos que, al iniciar la escena copiará en la clase PlatformerModel esos atributos. Estas variables son variables relevantes del nivel. Son movidas a la clase PlatformerModel para que todos los objetos de la escena puedan acceder a estas variables fácilmente sin generar cadenas de mensajes para tener acceso a ellas.
+La clase GameController contendrá una serie de atributos que serán copiados en la clase PlatformerModel al iniciarse la escena. Estas variables son variables relevantes del nivel. Son movidas a la clase PlatformerModel para que todos los objetos de la escena puedan acceder a estas variables fácilmente sin generar cadenas de mensajes para tener acceso a ellas.
 
 Las variables de GameController que serán copiadas a PlatformerModel serán:
 \begin{itemize}
@@ -316,20 +317,21 @@ Instanciar objetos que estaban al inicio del nivel pero que ya no están instanc
 Devolver el Player a su posición inicial.
 \end{itemize}
 
-En la implementación del programa, se han tratado todos los objetos que debían ser devueltos a su estado inicial (salvo al Player) como el mismo tipo de objetos. Han sido guardados en una clase envoltorio que guarda el estado inicial del objeto. Estos objetos no serán los que estén en la escena, sino que en el estado inicial del juego se generarán clones de él en la escena.\\
-Todos los objetos instanciados serán guardados en la lista instancedObjects para poder destruirlos cuando haya que reiniciar el nivel. Los objetos que se instancien durante la escena también serán añadidos a isntancedObjects.
+En la implementación del programa, se han tratado todos los objetos que debían ser devueltos a su estado inicial (salvo al Player) como el mismo tipo de objetos. Han sido guardados en una clase envoltorio que guarda el estado inicial del objeto. Estos objetos no serán los que estén en la escena, sino que en el estado inicial del juego se generarán clones de los mismos en la escena.\\
+Todos los objetos instanciados serán guardados en la lista instancedObjects para poder destruirlos cuando haya que reiniciar el nivel. Los objetos que se instancien durante la escena también serán añadidos a instancedObjects.
 
 \section{Mecánicas de tiempo bala}
 Se han implementado una serie de mecánicas encargadas de escalar la velocidad a la que pasa el tiempo y como esto afecta a los objetos en la escena. Hay dos mecánicas de tiempo bala: escalar el tiempo a nivel global y escalar el tiempo de los objetos dentro de una zona. De los dos escalados de tiempo se encarga la clase TimeManager.
 
 \clearpage
 \begin{figure}[h]
+\centering
 \includegraphics[scale=1]{Memoria/Aspectos_relevantes/Tiempo_bala/TimeManager_UML}
 \caption{Diagrama UML de la clase TimeManager}
 \end{figure}
 
 \subsection{Escalado de tiempo global}
-Es escalado de tiempo global es muy sencillo, pues Unity ya ofrece una herramienta que modifica el tiempo de todos los objetos. Se trata de la variable Time.scaleTime y todos los objetos relacionados con Unity se ven afectados por esta variable, incluidos los eventos (no los de la clase Simulation sino los propios de Unity).
+El escalado de tiempo global es muy sencillo, pues Unity ya ofrece una herramienta que modifica el tiempo de todos los objetos. Se trata de la variable Time.scaleTime y todos los objetos relacionados con Unity se ven afectados por esta variable, incluidos los eventos (no los de la clase Simulation sino los propios de Unity).
 
 A grandes rasgos Time.timeScale funciona multiplicando su valor por el “tiempo que tardará en llevarse a cabo la acción”. Siendo que si se tarda en ir de un punto ‘A’ a uno ‘B’ en X tiempo, se tardará en verdad X*Time.timeScale unidades de tiempo.
 
@@ -345,7 +347,7 @@ Las zonas de tiempo escalado son objetos con un Collider2D. Cuando entre un Time
 \caption{Estructura del GameObject asociado a las zonas de tiempo escalado}
 \end{figure}
 
-TimeAfectedObject es una clase abstracta de la que heredan los objetos que van a ser afectadas por las zonas de escalado de tiempo. TimeAfectedObject tiene el método abstracto Move, que es el que implementarán las clases con la intención de modificar el movimiento del objeto para adecuarse a la escala de tiempo que le ha sido aplicada.\\
+TimeAfectedObject es una clase abstracta de la que heredan los objetos que van a ser afectados por las zonas de escalado de tiempo. TimeAfectedObject tiene el método abstracto Move, que es el que implementarán las clases con la intención de modificar el movimiento del objeto para adecuarse a la escala de tiempo que le ha sido aplicada.\\
 Las zonas de escalado de tiempo imponen su escalado de tiempo a través de la clase TimeManager. Esto se debe a que TimeManager asume la responsabilidad de resetear el escalado de tiempo de todos los TimeAfectedObject. Esta necesidad surge de asegurar que en el estado de juego estable del GameController no haya TimeAfectedObject con el tiempo escalado. Es por ello que TimeManager tiene una lista de TimeAfectedObject en la que estarán todos los TimeAfectedObject cuyo tiempo haya sido escalado.
 
 Se profundiza en la estructura de los TimeAffectedObject en el anexo C.
@@ -386,7 +388,7 @@ Lo que se hace en verdad al abrir y cerrar el menú de pausa es activar y desact
 \end{figure}
 
 \subsection{Método de selección de elementos UI}
-Para navegar entre los elementos del menú se utiliza un objeto de la clase EventSystem. Este objeto se encarga de manejar eventos de Unity (que no tienen nada que ver con los eventos de Simulation). Este objeto se utiliza para captar los botones de navegación pulsados y navegar al elemento UI correspondiente. Es por esto que al abrir y cerrar el menú de opciones también se activa y desactiva el EventSystem. Si no se desactiva el EventSystem los elementos del menú de opciones variarán en función de los botones pulsado a pesar de estar cerrado (por ejemplo modificando el volumen del juego sin abrir el menú de opciones). 
+Para navegar entre los elementos del menú se utiliza un objeto de la clase EventSystem. Este objeto se encarga de manejar eventos de Unity (que no tienen nada que ver con los eventos de Simulation). Este objeto se utiliza para captar los botones de navegación pulsados y navegar al elemento UI correspondiente. Es por esto que al abrir y cerrar el menú de opciones también se activa y desactiva el EventSystem. Si no se desactiva el EventSystem los elementos del menú de opciones variarán en función de los botones pulsados a pesar de estar cerrado (por ejemplo modificando el volumen del juego sin abrir el menú de opciones). 
 
 \subsection{Patrón de colores utilizados}
 El patrón de colores utilizado para los elementos UI es el siguiente:
@@ -416,22 +418,20 @@ Las escenas GameMenu y OptionsScene comparten canción, de manera que aunque se 
 El volumen general se modifica en la clase VolumeSliderBar, que tiene asociado un elemento UI Slider. VolumeSliderBar consulta el valor del Slider y se lo asigna al volumen de VolumeManager. VolumeSliderBar es una clase abstracta con dos hijos: GeneralVolumeSliderBar para modificar el volumen general y MusicVolumeSliderBar para el volumen de las canciones que suenan.
 
 \section{Desarrollo de la gestión de la cámara}
-Se va a documentar en la memoria el proceso de desarrollo de la gestión de la cámara a la vez que se desarrolla, pues se considera un muy buen ejemplo de desarrollo de uno de los elementos de un videojuego y suficientemente representativo como para entender el proceso. Además va a resultar interesante, pues se va a razonar el funcionamiento de las cámaras y las decisiones que se han tomado para escoger un funcionamiento de la cámara y no otro.
-
 La mayoría de la información obtenida para la toma de decisiones durante este proceso ha sido obtenida de la siguiente URL de la página de Gamasutra \cite{Gamasutra}:\\
  \url{https://www.gamasutra.com/blogs/ItayKeren/20150511/243083/Scroll_Back_The_Theory_and_Practice_of_Cameras_in_SideScrollers.php}.
  
 Este enlace contiene otro enlace a una charla en la que se explican estos conceptos en video.
 
 \subsection{Introducción al sistema gestor de cámaras}
-La cámara va a ser el elemento encargado de mostrar por pantalla la región del espacio del nivel que se desea mostrar. El principal conflicto que afecta a la cámara es que en distintos momentos del juego se quiere mostrar espacios distintos del escenario. Por suerte este problema es más sencillo de lo que parece en un principio, pues la mayoría del rato las distintas regiones del espacio que se deseen mostrar estarán condicionados por un elemento principal que se mueven en el espacio (en el caso de este juego y la mayoría, ese elemento será el avatar que utilice el jugador). Ese problema tiene una solución relativamente sencilla y, sobre todo explorada por juegos hechos en el pasado, que es hacer que la cámara siga a ese elemento principal.
+La cámara va a ser el elemento encargado de encuadrar en la pantalla la región del nivel que se desea mostrar. El principal conflicto que afecta a la cámara es que en distintos momentos del juego se quiere mostrar espacios distintos del escenario. Por suerte este problema es más sencillo de lo que parece en un principio, pues la mayoría del rato las distintas regiones del espacio que se deseen mostrar estarán condicionados por un elemento principal que se mueven en el espacio (en el caso de este juego y la mayoría, ese elemento será el avatar que utilice el jugador). Ese problema tiene una solución relativamente sencilla y, sobre todo explorada por juegos hechos en el pasado, que es hacer que la cámara siga a ese elemento principal.
 
 En este videojuego, afortunadamente, el único elemento principal que hay que seguir es el jugador. En otros videojuegos esta tarea puede ser más compleja, ya sea debido a que cambia el objetivo principal (a un elemento que hay que perseguir o una pantalla que avanza con el tiempo por ejemplo) o que hay varios objetivos principales (como en un juego multijugador local o en una batalla contra un jefe, donde los objetivos principales son tanto el jugador, como el jefe).
 
-Sin embargo, aunque solo haya un objetivo principal en el juego (el jugador), puede ser que en el haya objetivos secundarios que no merezcan que la cámara los siga específicamente a ellos, pero sí tenerlos en cuenta. En lo que se lleva de desarrollo hasta ahora hay dos objetivos secundarios que generan conflicto: los portales y los obstáculos. Estos objetivos secundarios son variados y generan conflictos distintos sobre la cámara. Se van a explicar a continuación.
+Sin embargo, aunque solo haya un objetivo principal en el juego (el jugador), puede ser que en el haya objetivos secundarios que no merezcan que la cámara los siga específicamente a ellos, pero sí tenerlos en cuenta. En este trabajo hay dos objetivos secundarios que generan conflicto: los portales y los obstáculos. Estos objetivos secundarios son variados y generan conflictos distintos sobre la cámara. Se van a explicar a continuación.
 
 \subsection{Conflictos con los portales}
-Los portales son los elementos que más dudas me generan acerca de cómo afrontarlos. El problema de los portales es que trabajan en parejas. Al entrar por un portal, sales por el portal pareja de este, independientemente de si está en el rango de lo que permite ver la cámara. Con el sistema de gestión de cámaras que ofrece Plataformer Microgame (el usado hasta ahora) la cámara apunta exactamente al punto donde está el jugador. Esto para los portales resulta bastante conveniente, pues según el jugador atraviesa el portal la cámara sigue apuntando a la posición del jugador, dando visión instantáneamente del jugador dificultar la visión de lo que el jugador tiene ahora en su nuevo entorno. En términos de ofrecer visión al jugador es una solución bastante eficaz, pero adolece de un gran problema: el jugador ahora no sabe dónde está. El jugador ahora se haya desorientado. El jugador anteriormente tenía una referencia clara de donde se encontraba (básicamente se había a la derecha del punto de inicio), pero ahora no tiene ni idea de donde está ni adonde tiene que ir. La escena de prueba de los portales es una muy buena práctica para comprobar si el diseño de los portales desorienta o no.
+Los portales son los elementos que más dudas han generado acerca de cómo afrontarlos. El problema de los portales es que trabajan en parejas. Al entrar por un portal, se sale por el portal pareja de este, independientemente de si está en el rango de lo que permite ver la cámara. Con el sistema de gestión de cámaras que ofrece Plataformer Microgame (el usado hasta ahora) la cámara apunta exactamente al punto donde está el jugador. Esto para los portales resulta bastante conveniente, pues según el jugador atraviesa el portal, la cámara apunta a la nueva posición del jugador, desorientandolo. En términos de ofrecer visión al jugador es una solución bastante eficaz, pero adolece de un gran problema: el jugador ahora no sabe dónde está. El jugador anteriormente tenía una referencia clara de donde se encontraba, pero pasará a desconocer donde está ni adonde tiene que ir. La escena de prueba de los portales es una muy buena práctica para comprobar si el diseño de los portales desorienta o no.
 
 \clearpage
 \begin{figure}[h]
@@ -439,17 +439,17 @@ Los portales son los elementos que más dudas me generan acerca de cómo afronta
 \caption{Escena PruebaPortalScene}
 \end{figure}
 
-En la imagen se ha dibujado flecha en cada plataforma con el sentido que se espera que siga el jugador para llegar hasta la zona de victoria. En esta escena el jugador no solo no puede ver los dos portales que forman una pareja de portales y deducir por donde de donde ha venido, sino que además se está cambiando continuamente la dirección que se espera que tome el jugador tome. Un jugador probablemente no sea capaz de deducir que camino ha de tomar de manera intuitiva.
+En la imagen se ha dibujado flecha en cada plataforma con el sentido que se espera que siga el jugador para llegar hasta la zona de victoria. En esta escena el jugador no solo no puede ver los dos portales que forman una pareja de portales y deducir de donde ha venido, sino que además se está cambiando continuamente la dirección que se espera que tome el jugador. Un jugador probablemente no sea capaz de deducir que camino ha de tomar de manera intuitiva.
 
-Una solución parcial a este problema podría ser al principio del nivel mostrar el nivel entero e ir haciendo Zoom-in hasta llegar al jugador y dejar la cámara en la posición que tendrá por defecto. Pero esto no es solo un parche improvisado al problema, sino que además en niveles grandes habrá demasiados elementos como para que ese recurso permita ver nada y mucho menos permitir al jugador deducir el camino que debe seguir.\\
+Una solución parcial a este problema podría ser mostrando al principio el nivel entero e ir haciendo Zoom-in hasta llegar al jugador y dejar la cámara en la posición que tendrá por defecto. Pero esto no es solo un parche improvisado al problema, sino que además en niveles grandes habrá demasiados elementos como para que ese recurso permita ver nada y mucho menos permitir al jugador deducir el camino que debe seguir.\\
 Este problema no desaparece con este sistema de gestión de cámaras y se ha de tener en cuenta en el nuevo que se va a implementar.
 
-El segundo problema que provocan los portales es una premonición del sistema que probablemente se acabe implementando. Se pretende que la cámara siga al jugador, no que apunte estrictamente a él. Con los portales surge el problema de que, al mover al jugador a una posición alejada del punto en el que se encontraba un frame antes, la cámara ahora se tiene que mover hasta ahí pudiendo hacer que en lo que llega la cámara ocurra algo que el jugador no haya visto. Reduces “innecesariamente” la información que el jugador puede obtener a través de la cámara. El problema de orientación del jugador que se soluciona con el sistema de cámara que se planea implementar se sustituye por este. Este problema se puede solucionar haciendo que no suceda nada en las cercanías de los portales, pero a costa de limitar la creatividad y variedad que los portales ofrecen al salir de uno.
+El segundo problema que provocan los portales que se pretende que la cámara siga al jugador, no que apunte estrictamente a él. Con los portales surge el problema de que, al mover al jugador a una posición alejada del punto en el que se encontraba un frame antes, la cámara ahora se tiene que mover hasta ahí pudiendo hacer que en lo que llega la cámara ocurra algo que el jugador no haya visto. Se reduce “innecesariamente” la información que el jugador puede obtener a través de la cámara. El problema de orientación del jugador que se soluciona con el sistema de cámara se sustituye por este. Este problema se puede solucionar haciendo que no suceda nada en las cercanías de los portales, pero a costa de limitar la creatividad y variedad que los portales ofrecen al salir de uno.
 
 \subsection{Conflictos con los obstáculos}
 Aquí el problema es solo uno: Puede ser que el tiempo de reacción ante la aparición de un obstáculo y el espacio que la cámara ofrece para que el jugador se dé cuenta de que está en riesgo de colisionar con un obstáculo sean demasiado pequeños. Este problema se va a separar en tres tipos de obstáculos y como estos manifiestan el problema recién explicado.
 
-\textbf{Obstáculos estáticos:} Los obstáculos que probablemente menos conflictos generen son los obstáculos estáticos. En principio casi cualquier tamaño de cámara permitiría ver y reaccionar ante este obstáculo. Pero en el juego que se está desarrollando no se va a tener en todo claro que velocidad va a llevar el jugador y es posible que algún obstáculo se haga excesivamente difícil de esquivar solo por un mal implementado sistema de gestión de la cámara. Unity adicionalmente puede provocar confusión al respecto, ya que las distancias pueden llegar a percibirse distintas en el editor que en la pantalla de juego.\\
+\textbf{Obstáculos estáticos:} Los obstáculos que probablemente menos conflictos generen son los obstáculos estáticos. En principio casi cualquier tamaño de cámara permitiría ver y reaccionar ante este obstáculo. Pero en el juego no se va a tener en todo momento claro que velocidad va a llevar el jugador y es posible que algún obstáculo se haga excesivamente difícil de esquivar solo por un mal implementado sistema de gestión de la cámara. Unity adicionalmente puede provocar confusión al respecto, ya que las distancias pueden llegar a percibirse distintas en el editor que en la pantalla de juego.\\
 Por ejemplo la escena PruebaPlayerScene en el editor da la impresión de haber suficiente distancia entre el jugador y el obstáculo, pero en la pantalla de juego se ve como la distancia es menor y dependiendo de la velocidad con la que el jugador llegue puede ser que el jugador no tenga suficiente tiempo de respuesta como para esquivar el obstáculo.
 
 \begin{figure}[h]
@@ -467,14 +467,14 @@ Por ejemplo la escena PruebaPlayerScene en el editor da la impresión de haber s
 La posición del obstáculo que sigue un patrón está determinada por el patrón de movimiento que sigue y este puede ser muy variado y recorrer un gran espacio del nivel, haciendo un difícil deducir si la cámara debe centrarse en incluir el obstáculo en la cámara o no.
 
 \textbf{Obstáculos móviles:} Estos son los obstáculos más problemáticos (sobre todo los obstáculos móviles veloces) pues van de un extremo al otro de la cámara y no hay forma de saber cuándo hay un obstáculo y cuando no. Hay herramientas que pueden facilitar saber si uno de esos obstáculos se acercan o no al jugador como, por ejemplo, utilizar sonidos que identifiquen si hay un obstáculo móvil o no y jugar con el volumen de este sonido para que el jugador pueda intuir la distancia a la que se encuentra. Es cierto que estas medidas son más eficaces que un buen sistema gestor de cámaras. Pero uno de los objetivos del sistema gestor de cámaras es no resultar tan inconveniente como para que resulte imposible esquivar los obstáculos móviles.\\
-Lo más probable es que este problema se solucione con que la cámara sea de un tamaño lo suficientemente grande como para ofrecer suficiente tiempo de respuesta permitiendo esquivar los obstáculos. Pero en caso de no ser suficiente igual es necesario hacer algún cambio sobre el sistema de gestión de cámaras para solucionar este posible problema.
+Este problema se solucionará con que la cámara sea de un tamaño lo suficientemente grande como para ofrecer suficiente tiempo de respuesta permitiendo esquivar los obstáculos.
 
 \subsection{Sistema de gestión de cámaras que se va a utilizar}
 La cámara va a constar de dos elementos: el controlador de la cámara y el objetivo de la cámara. El controlador de la cámara se encargará de mover la cámara a donde el objetivo de la cámara se encuentre. El objetivo de la cámara se encargará de hacer los cálculos necesarios para decirle a la cámara donde debe apuntar.\\
-El controlador de la cámara es muy sencillo, pues solo es poner la posición en la misma posición que el objetivo. Lo interesante es el objetivo de la cámara, pues se van a tener en cuenta varias cosas para decidir donde se va a posicionar. La cámara, explicado brevemente, va a funcionar siguiendo el movimiento del jugador.\\
+El controlador de la cámara es muy sencillo, pues solo es necesario poner la posición en la misma posición que el objetivo. Lo interesante es el objetivo de la cámara, pues se van a tener en cuenta varias cosas para decidir donde se va a posicionar. La cámara, explicado brevemente, va a funcionar siguiendo el movimiento del jugador.\\
 Inicialmente se planeó crear scripts que se encargasen de la gestión de las cámaras, pero resulta que existe un paquete para Unity que es el paquete “Cinemachine” \cite{PaqueteCinemachine}. Este paquete lo utiliza Plataformer Microgame y se ha obtenido conocimiento de él gracias a esta plantilla, que hace uso de una Cinemachine virtual camera. Teniendo en cuenta el tiempo que llevaría diseñar y desarrollar un sistema de gestión de cámaras a mano y la completitud y personalización de cámaras que ofrece este paquete se ha decidido hacer uso de él y adecuar el movimiento de la cámara al juego utilizando este paquete.
 
-Este paquete ofrece un objeto que se llama Cinemachine virtual camera. Este objeto se aplica sobre un objeto de una escena añadiéndolo como un componente al GameObject asociado. Si le añades a una cámara el componente CinemachineBrain, esta cámara será la que pasará a actuar como objetivo de la cámara y el objeto con el componente Cinemachine virtual camera se comportará como el controlador de la cámara con el componente CincemachineBrain.\\
+Este paquete ofrece un objeto que se llama Cinemachine virtual camera. Este objeto se aplica sobre un objeto de una escena añadiéndolo como un componente al GameObject asociado. Si se añade a una cámara el componente CinemachineBrain, esta cámara será la que pasará a actuar como objetivo de la cámara y el objeto con el componente Cinemachine virtual camera se comportará como el controlador de la cámara con el componente CincemachineBrain.\\
 Una de las cosas que ofrece el objeto Cinemachine Virtual Camera es la capacidad de dividir el espacio que abarca la cámara en distintas regiones que afectaran de distinta forma al movimiento de la cámara. Los nombres que se le va a dar a estas zonas que se van a explicar a continuación son: la death zone, la soft zone y la hard zone. 
 
 \clearpage
@@ -497,9 +497,9 @@ La hard zone (zona roja).
 El objetivo a seguir es el objetivo principal mencionado en la introducción. El objetivo principal es el objeto que se ha de mostrar en todo momento en cámara y que la Cinemachine virtual camera se encargará de mostrar por cámara siempre.\\
 La death zone es la zona por la que se podrá mover el objetivo principal sin que la cámara se mueva. En cuanto el objetivo principal salga de la death zone la cámara se empezará a mover. El objetivo principal no es el objeto entero que se establece como objeto a seguir, sino el vector que representa su posición (se puede obtener mediante gameobject.transform.position), de manera que los límites del objeto pueden sí salirse de la death zone sin compromiso, pero solo mientras su posición que permanezca dentro de la death zone. Esto será así también para la soft zone y la hard zone.\\
 Una vez el objetivo principal entre en la soft zone, la cámara comenzará a moverse hacia el objetivo principal hasta volver a meterlo en la death zone. La velocidad con la que la cámara persigue al objetivo principal depende de la distancia a la que este se encuentre (cuanto más lejos del centro de la cámara el objetivo principal, mayor será la velocidad de la cámara). El objetivo principal puede moverse por la soft zone sin que la cámara lo alcance mientras la cámara no tenga la velocidad necesaria para devolverlo a la death zone.
-La hard zone es una zona por la que el objetivo principal no podrá desplazarse. En cuanto este alcance la hardzone, la cámara para devolver a la soft zone al objetivo principal. En realidad lo que hace la cámara es cambiar su posición a una en la que se encuentre el objetivo principal de la manera lo más consistente posible. Sinceramente, la Cinemachine virtual camera es bastante consistente a la hora de cambiar su posición a otra. Sin embargo, esta es la causa de uno de los dos problemas con los portales. Al cambiar la posición del objetivo principal a una que está en la hard zone, la cámara se mueve de una posición a otra sin hacer el recorrido que lleva de la posición anterior a la nueva, desorientando al jugador y haciendo que no sepa de donde ha venido.
+La hard zone es una zona por la que el objetivo principal no podrá desplazarse. En cuanto este alcance la hardzone, la cámara se desplazará instantáneamente para devolver a la soft zone al objetivo principal. En realidad lo que hace la cámara es cambiar su posición a una en la que se encuentre el objetivo principal de la manera lo más consistente posible. Sin embargo, esta es la causa de uno de los dos problemas con los portales. Al cambiar la posición del objetivo principal a una que está en la hard zone, la cámara se mueve de una posición a otra sin hacer el recorrido que lleva de la posición anterior a la nueva, desorientando al jugador y haciendo que no sepa de donde ha venido.
 
-Un sistema de gestión de cámara ideal sería uno que no posea hard zone, solo soft zone y death zone, de manera que al atravesar un portal la cámara también realice el recorrido de un portal a otro. A malas, este problema se puede solucionar haciendo que los portales no teletransporten al jugador de un punto a otro, sino que simplemente lo muevan muy rápido. Esta puede ser una medida que se tome si no se logra aplicar el sistema gestor de cámaras deseado.
+Un sistema de gestión de cámara ideal sería uno que no posea hard zone, solo soft zone y death zone, de manera que al atravesar un portal la cámara también realice el recorrido de un portal a otro. A malas, este problema se puede solucionar haciendo que los portales no teletransporten al jugador de un punto a otro, sino que simplemente lo muevan muy rápido.
 
 \subsection{Sistema de gestión de cámaras final}
 El sistema de gestión de cámara que traía por defecto la plantilla de Platformer Microgame es la siguiente:
@@ -519,4 +519,4 @@ La otra decisión ha sido desplazar la soft zone y la death zone un poco hacia l
 \caption{Sistema de gestión de cámaras final aplicado}
 \end{figure}
 
-Ninguno de estos cambios solucionan el problema de los portales. Esto se debe a que, haciendo que la cámara siga la trayectoria entre portales, si los portales están a demasiada distancia (la principal razón para hacer que la cámara siga la trayectoria entre portales) el movimiento entre frames de la cámara es demasiado grande, desorientando al jugador más de lo que le ayuda a saber que camino ha recorrido. Se ha decidido solucionar este problema de otra forma, como por ejemplo dibujar líneas que conecten portales pareja.
+Ninguno de estos cambios solucionan el problema de los portales. Esto se debe a que, haciendo que la cámara siga la trayectoria entre portales, si los portales están a demasiada distancia (la principal razón para hacer que la cámara siga la trayectoria entre portales) el movimiento entre frames de la cámara es demasiado grande, desorientando al jugador más de lo que le ayuda a saber que camino ha recorrido. Se ha considerado solucionar este problema de otra forma, como por ejemplo dibujar líneas que conecten portales pareja, pero finalmente no ha podido ser puesta en práctica.

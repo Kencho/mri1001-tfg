@@ -4,7 +4,7 @@ El proyecto ha sido llevado a cabo satisfactoriamente. Se han implementado todas
 
 Este proyecto ha resultado apropiado para aplicar todos los conocimientos aprendidos durante la carrera sobre gestión de proyectos y buenas prácticas para el desarrollo del software. 
 
-\section{¿Qué he aprendido sobre el desarrollo de videojuegos (como producto software)?}
+\section{Particularidades identificadas en el desarrollo de videojuegos como producto software}
 Un videojuego es un producto software muy particular por las siguientes razones:
 
 \subsection{Pruebas}
@@ -26,7 +26,7 @@ Son estas pequeñas diferencias (además de que el videojuego lo ha desarrollado
 \subsection{Calidad del código}
 Los videojuegos son productos cuyos requisitos cambian continuamente y la implementación de las mecánicas también para adecuarse a estos cambios. Es por ello que es importantísimo que la calidad del código sea la mejor posible y plantearse seriamente si realizar refactorizaciones antes de añadir cada nueva funcionalidad.
 
-Mencionar además que al comienzo del proyecto no se le dio la suficiente importancia a la implementación de las mecánicas como conjunto en vez de como elementos independientes entre sí. Esto ha generado que el producto arrastre una serie de problemas que han dificultado la implementación de las mecánicas y son el origen de la mayoría de bugs del juego.
+Mencionar además que al comienzo del proyecto no se le dio la suficiente importancia a la implementación de las mecánicas como conjunto en vez de como elementos independientes entre sí. Esto ha generado que el producto arrastre una serie de problemas que han dificultado la implementación de las mecánicas y son el origen de la mayoría de errores del juego.
 Se debería haber planeado el flujo de ejecución de las físicas y mecánicas correspondientes a la ejecución de un frame que les diese estabilidad. Este error de planificación es la causa de la mayoría de las líneas de trabajo futuras.
 
 \section{Opinión sobre Unity}
@@ -47,7 +47,7 @@ Pero los prefabs resultan ideales solo para los GameObjects que están implement
 Se pensó en generar una clase hija de GameObject exclusiva para los obstáculos haciendo así que la fábrica instancie esa clase hija y no GameObjects, pero no se puede heredar de GameObject.
 
 \subsection{MonoBehaviour}
-La clase MonoBehaviour es la clase general que ofrece Unity para los objetos afectados por el flujo de ejecución del videojuego. Esta clase es gigantesca además de que las clases hijas ni usan ni implementan el 90\% de los métodos que ofrece. Es entendible que el tamaño de esta clase sea tan grande una vez se comprende la cantidad de responsabilidades que maneja esta clase (lo cual es una violación del principio de responsabilidad única del principio S de los principios SOLID). Además de la responsabilidad anteriormente explicada MonoBehaviour se encarga de controlar los mensajes que afectan al GameObject al que están asociados y se encarga de responsabilidades menores como representar los Gizmos. Son muchas responsabilidades y de muy distinta índole que probablemente hagan esta clase más compleja de lo que debiera.
+La clase MonoBehaviour es la clase general que ofrece Unity para los objetos afectados por el flujo de ejecución del videojuego. Esta clase es gigantesca además de que las clases hijas ni usan ni implementan el 90\% de los métodos que ofrece. Es entendible que el tamaño de esta clase sea tan grande una vez se comprende la cantidad de responsabilidades que maneja esta clase (lo cual es una violación del principio de responsabilidad única del principio S Single Responsibility Principle de los principios SOLID). Además de la responsabilidad anteriormente explicada MonoBehaviour se encarga de controlar los mensajes que afectan al GameObject al que están asociados y se encarga de responsabilidades menores como representar los Gizmos. Son muchas responsabilidades y de muy distinta índole que probablemente hagan esta clase más compleja de lo que debiera.
 
 Otra de las características de MonoBehaviour es que su constructor funciona de forma anómala \cite{ConstructoresMonoBehaviour} llamándose varias veces a pesar de haberse construido (además de la llamada al constructor que se da cada vez que se entra al editor o se vuelve a este desde la ejecución de prueba del juego), convirtiendo al constructor en un método poco fiable el cometido que le corresponde. Este comportamiento tan extraño se soluciona llamando a los métodos Awake y Start en vez de al constructor, pero a costa de dejar de lado el constructor. En líneas generales estos métodos solucionan por completo el problema, pero ha habido clases en las que se ha intentado aplicar el patrón de diseño Singelton resultando imposible su implementación de manera limpia. Debido a esto, las clases a las que se aplicó el patrón de diseño Singleton sí que pueden tener varias instancias de esa clase, pero se fuerza que solo se pueda tener acceso a una de ellas. Esto provoca que pueda haber varias instancias de una clase realizando operaciones, pero que solo una de ellas tenga relevancia en la ejecución del programa. Es una solución poco eficiente y no completamente segura, pero es la única solución viable si se desea implementar un Singleton.
 
@@ -76,7 +76,7 @@ A pesar de lo dicho anteriormente, sí que hay una serie de líneas de trabajo f
 
 \begin{itemize}
 \item
-Como se ha mencionado en el apartado de ''¿Qué he aprendido sobre el desarrollo de videojuegos?'' Este producto adolece de un planteamiento a nivel global del funcionamiento del videojuego. Sería muy recomendable planear e implementar un sistema de jerarquía de llamadas que ordene y desacoplar la influencia que tienen distintos elementos entre sí.
+Como se ha mencionado en el apartado de ''Particularidades identificadas en el desarrollo de videojuegos como producto software'' Este producto adolece de un planteamiento a nivel global del funcionamiento del videojuego. Sería muy recomendable planear e implementar un sistema de jerarquía de llamadas que ordene y desacoplar la influencia que tienen distintos elementos entre sí.
 
 Un primer acercamiento a esta jerarquía podría ser:
 \begin{enumerate}
@@ -90,7 +90,7 @@ Aplicar mecánicas del Player
 Aplicar efectos generados por la colisión entre los objetos
 \end{enumerate}
 
-Este cambio solucionaría bugs muy complejos de solucionar actualmente como el hecho de que cuando se entra en una zona de tiempo reducido no se puede saltar, que es provocado debido al solapamiento de las mecánicas que modifican la velocidad del Player.
+Este cambio solucionaría errores muy complejos de solucionar actualmente como el hecho de que cuando se entra en una zona de tiempo reducido no se puede saltar, que es provocado debido al solapamiento de las mecánicas que modifican la velocidad del Player.
 
 \item
 Estudiar la posibilidad delegar la reproducción de canciones a elementos externos a Unity como la librería System.Media y no a GameOjects implementados en las escenas que ofrecen un funcionamiento válido pero con defectos importantes como que las canciones que suenan en varias escenas se paran y luego reanudan generando una retroalimentación sonora desagradable al cambiar entre escenas.
