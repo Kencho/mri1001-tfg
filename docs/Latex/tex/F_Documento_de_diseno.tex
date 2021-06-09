@@ -53,7 +53,7 @@ El jugador controlará un avatar que es capaz de moverse hacia la derecha e izqu
 
 Si el jugador colisionase con un obstáculo que le haga daño, el jugador morirá y reaparecerá en la zona inicial del nivel.
 
-El jugador además tendrá la habilidad de dar un acelerón hacia la izquierda o la derecha. Este acelerón se realizará en una dirección horizontal, sin variar la posición vertical. Si el acelerón te desplazase X unidades hacia la derecha y se estuviese en el punto (1,1), el jugador acabará el acelerón en la posición (1, 1+X). El acelerón lo podrás hacer una sola vez mientras estés en el aire, y en cuanto toques el suelo podrás volver a utilizarlo. En el suelo podrás hacerlo ilimitadamente. Parte de la gracia de este acelerón, es que después de terminarlo se mantendrá la velocidad que se llevaba durante el acelerón, ahora sí, variando esta según las leyes que rigen el videojuego.
+El jugador además tendrá la habilidad de dar un acelerón hacia la izquierda o la derecha. Este acelerón se realizará en una dirección horizontal, sin variar la posición vertical. Si el acelerón te desplazase X unidades hacia la derecha y se estuviese en el punto (1,1), el jugador acabará el acelerón en la posición (1, 1+X). El acelerón se podrá realizar una sola vez mientras estés en el aire, y en cuanto toques el suelo podrás volver a utilizarlo. En el suelo podrás hacerlo ilimitadamente. Parte de la gracia de este acelerón, es que después de terminarlo se mantendrá la velocidad que se llevaba durante el acelerón, ahora sí, variando esta según las leyes que rigen el videojuego.
 
 La última herramienta con la que contará el jugador es el tiempo bala. Esta mecánica permitirá reducir la velocidad a la que pasa el tiempo en el nivel permitiendo al jugador actuar con la precisión que ofrece que todo el nivel se reproduzca menor velocidad.
 
@@ -77,7 +77,7 @@ Partícula de impulso: Consistirá en un elemento estático en el mapa. Cuando e
 \item
 Amplificador de impulso: Consistirá en un elemento estático, al igual que la partícula, pero con un funcionamiento ligeramente distinto. Cuando el elemento afectado por físicas entra en contacto con el amplificador, la velocidad que lleva el elemento afectado por físicas se verá escalada. Dos ejemplos de amplificador serían: amplificador positivo de impulso (velocidad = velocidad * X) y amplificador negativo de impulso (velocidad = velocidad/X). Los amplificadores tendrán cada uno un valor particular de escalado del impulso que no tiene por qué coincidir con el resto de amplificadores de impulso.
 \item
-Plataforma de salto: La típica plataforma de salto que propulsará al jugador cuando entra en contacto con esta. Puede no parecer un elemento creador de impulso, y puede que no lo sea, pero como su funcionamiento será igual al de un creador de impulso, se va a considerar un creador de impulso.
+Plataforma de salto: Plataforma de salto que propulsará al jugador cuando entra en contacto con esta. Se va a considerar un caso especial de creador de impulso.
 \end{itemize}
 
 \subsection{Modificadores de gravedad}

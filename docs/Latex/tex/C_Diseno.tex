@@ -3,8 +3,8 @@
 \section{Introducción}
 En este apartado se van a explicar elementos del diseño del proyecto que explican su funcionamiento y estructura.
 
-\section{Trabajo propio vs. trabajo ajeno}
-Antes de nada es necesario mencionar que este trabajo ha partido de una platilla que ofrece Unity como punto de partida. Esa plantilla se llama Platformer Microgame y se puede añadir a tus assets en el siguiente enlace:\\
+\section{Plantilla base de la que se ha partido}
+Antes de nada es necesario mencionar que este trabajo ha partido de una platilla que ofrece Unity como punto de partida. Esa plantilla se llama Platformer Microgame y se puede añadir a la lista de assets en el siguiente enlace:\\
  \url{https://bit.ly/3wZEU8W}.\\ 
 De esta plantilla se ha conservado sobre todo los elementos estéticos, pero también se ha conservado la clase Simulation y los eventos que esta lanza.
 
@@ -18,7 +18,7 @@ La calse Simulation es una clase encargada de manejar los eventos del juego. El 
 \textbf{Simulation.InstanceRegister:} Contiene la clase InstanceRegister. Esta clase simplemente devuelve una instancia nueva de un objeto cualquiera. Esta clase está creada para que Simulation pueda crear singletons (patrón de diseño) de clases. Es utilizado para que todas las clases trabajen sobre el mismo modelo. Ese modelo es un script denominado PlataformerModel con una clase que exclusivamente tiene una serie de atributos (como el Player, las cámaras o el punto de aparición del jugador) que serán utilizados por varias clases.
 
 \subsection{Eventos}
-Los eventos son toda las clases que heredan de Simulation.Event. Todos los eventos se encuentran en la carpeta Assets/Scripts/Gameplay. Casi todas las clases evento del proyecto se han mantenido intactas de Platformer Microgame, sin embargo algunas eventos han sido modificados y otros añadidos.
+Los eventos son toda las clases que heredan de Simulation.Event. Todos los eventos se encuentran en la carpeta Assets/Scripts/Gameplay. Casi todas las clases evento del proyecto se han mantenido intactas de Platformer Microgame, sin embargo algunas eventos han sido modificados y otros añadidos.\\
 Eventos modificados:
 \begin{itemize}
 \item
@@ -95,7 +95,7 @@ Para simular el sistema de colisiones se optó por utilizar la velocidad como el
 
 Para saber si un KinematicObject va a colisionar con el suelo o un muro (se identifican los objetos con los que se desea chocar porque tienen asignada la layer “Wall”) se coge la velocidad del KinematicObject (se obtiene del atributo velocity del Rigidbody2D), que está representada en unidades/segundo. Con la velocidad que lleva el KinematicObject y su posición se puede deducir la siguiente posición en la que se encontrará.
 
-Hay un método que se llama Physics2D.BoxCast con el que puedes crear un rectángulo en una región del espacio y comprobar si se colisiona con algún objeto. En caso de colisionar con un objeto se devuelve un objeto de la clase RayCastHit2D con toda la información relativa a la colisión. Hay un método similar a Physics2D.BoxCast que es Physics2D.BoxCastAll que hace lo mismo, pero devolviendo un vector de RayCastHit2D con un elemento por cada objeto con el que has colisionado.
+Hay un método que se llama Physics2D.BoxCast con el que se puede crear un rectángulo en una región del espacio y comprobar si se colisiona con algún objeto. En caso de colisionar con un objeto se devuelve un objeto de la clase RayCastHit2D con toda la información relativa a la colisión. Hay un método similar a Physics2D.BoxCast que es Physics2D.BoxCastAll que hace lo mismo, pero devolviendo un vector de RayCastHit2D con un elemento por cada objeto con el que has colisionado.
 
 Se puede filtrar las colisiones por Layer, pudiendo solo tener en cuenta las colisiones con objetos que tengan asociada una Layer con el mismo nombre que el pasado por parámetro en el método. Para el sistema de colisiones solo se han tenido en cuenta los objetos con Layer igual a “Wall”.
 
@@ -135,7 +135,7 @@ Dada esta premisa, se ha creado una clase KinematicObjectGravityManager encargad
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/KinematicObjectGravityManager_UML}
+\includegraphics[scale=0.6]{Memoria/Aspectos_relevantes/Modificaciones_gravitatorias/KinematicObjectGravityManager_UML}
 \caption{Diagrama UML de la clase encargada de la gestión de la gravedad del KinematicObject}
 \end{figure}
 
@@ -208,7 +208,7 @@ El GameController de la escena (PlatformerModel.gameController).
 \item
 El GravityInverterManager asociado a la escena \\ (PlatformerModel.gravityInverterManager).
 \end{itemize}
-Esta clase es muy útil para asegurar que todas las clases trabajan sobre los mismos objetos, sobre todo los eventos, pues puede resultar inadecuado hacer una cadena de mensajes para que los eventos tengan referencias a todos los objetos que puedan necesitar para realizar las operaciones que tienen que llevar a cabo.
+Esta clase es muy útil para asegurar que todas las clases trabajan sobre los mismos objetos, sobre todo los eventos, pues puede resultar inadecuado hacer una cadena de mensajes para consultar los elementos principales de los niveles cada vez que sea necesario.
 
 \subsubsection{Clase Simulation}
 La clase Simulation está explicada más detalladamente en la sección de Trabajos relacionados. Pero a grandes rasgos la clase Simulation es una clase estática con una estructura de datos similar a una cola que alberga eventos y un método Tick. Ese método lo que hace es ir avanzando eventos en la cola y ejecutándolos hasta que la cola esté vacía o hasta que se encuentre un evento que debe ser ejecutado en un momento de la ejecución posterior al momento en el que se encuentra el programa.
@@ -253,17 +253,17 @@ PlayerDeadState y PlayerVictoryState son dos estados cuya principal función es 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player}
-\caption{Diagrama de transición entre estados de PlayerController}
+\caption{Diagrama de herencia de los estados de PlayerController}
 \end{figure}
 
-Adicionalmente la interfaz PlayerState añade los métodos EnterPlayerState y ExitPlayerState donde los hijos implementan las instrucciones que es necesario hacer para que al entrar y salir del estado el Player se mantenga consistente.
+Adicionalmente la interfaz PlayerState añade los métodos EnterPlayerState y ExitPlayerState donde los hijos implementan las instrucciones que es necesario hacer para que al entrar y salir del estado el Player se mantenga consistente, dando una implementación similar al patrón de diseño Método Plantilla.
 
 \clearpage
 Las instrucciones que se llevan a cabo cada vez que se cambia de estado son las siguientes:
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_estado}
-\caption{Diagrama de transición entre estados de PlayerController}
+\caption{Código del Método Plantilla ChangeState}
 \end{figure}
 
 \subsection{Obstáculos que siguen una rutina y la clase PatrolPath}
