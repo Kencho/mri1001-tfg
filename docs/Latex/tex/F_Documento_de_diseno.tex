@@ -171,7 +171,9 @@ Evidentemente estos niveles estarán regidos por algunas limitaciones como no ut
 \section{Interfaces}
 El patrón de pantalla que más se va a repetir será el nivel sin ningún elemento extradiegético que afecte a la pantalla del nivel. No se incluirán elementos HUD (Head-Up Display) que monitoricen la vida ni otros elementos, prácticamente por su ausencia (siendo el estado de los elementos variables, si se podrá saltar o si se estará el acelerón disponible para su uso, muy sencillos de mantener en mente y notificar con sonidos o animaciones).
 
-Habrá, aun así dos interfaces extra disponibles para el jugador. Al no tener las interfaces todavía desarrolladas se va a añadir a continuación un esquema de cómo serán estas interfaces.
+Habrá, aun así dos interfaces \footnote{El sonido de selección de los botones ha sido obtenido del enlace: \url{https://opengameart.org/content/botton-sound-pack}.\\
+Puedes encontrar al creador en twitter como @listener4me. \url{https://twitter.com/search?q=\%40listener4me&src=typed_query}.\\
+El sonido de desplazamiento entre botones ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/menu-selection-click}.} extra disponibles para el jugador. Al no tener las interfaces todavía desarrolladas se va a añadir a continuación un esquema de cómo serán estas interfaces.
 
 \subsection{Pantalla de elección de nivel}
 \imagen{Anexos/Anexo_F/Pantalla_de_elección_de_nivel}{Idea inicial de la pantalla de selección de nivel}
@@ -179,14 +181,8 @@ Habrá, aun así dos interfaces extra disponibles para el jugador. Al no tener l
 \subsection{Pantalla de opciones}
 \imagen{Anexos/Anexo_F/Pnatalla_de_opciones}{Idea inicial de la pantalla de opciones}
 
-Estas pantallas \footnotemark \footnotemark son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores, pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
-
-\footnotetext{El sonido de selección de los botones ha sido obtenido del enlace: \url{https://opengameart.org/content/botton-sound-pack}.\\
-Puedes encontrar al creador en twitter como @listener4me. \url{https://twitter.com/search?q=\%40listener4me&src=typed_query}.\\
-El sonido de desplazamiento entre botones ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/menu-selection-click}.}
-
-\footnotetext{Los sonidos de cierre del menú de pausa y de la barra de los menús de opciones pertenecen a Jesús Lastra han sido obtenidos en el siguiente enlace: \url{https://opengameart.org/content/button-clicks-beeps-99-sounds}.\\
-La música que suena mientras se está en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}.}
+Estas pantallas \footnote{Los sonidos de cierre del menú de pausa y de la barra de los menús de opciones pertenecen a Jesús Lastra han sido obtenidos en el siguiente enlace: \url{https://opengameart.org/content/button-clicks-beeps-99-sounds}.\\
+La música que suena mientras se está en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}.} son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores, pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
 
 \section{Entidades}
 A continuación se incluirá información más concreta al respecto del diseño de juego como sprites e imágenes que identificarán a una mecánica o elemento del juego en los niveles, configuración de los controles y descripción una por una de cada nivel del juego.
@@ -208,34 +204,34 @@ El Player \footnotemark se podrá morir en caso de que colisione con un objeto q
 \clearpage
 
 \subsubsection{Enemigos}
-\begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos \footnotemark : Enemigos que no se moverán. Se encontrarán estáticos en un lugar y si el Player los tocase este se muere.
+Obstáculos \footnote{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.} : Enemigos que no se moverán. Se encontrarán estáticos en un lugar y si el Player los tocase este se muere.
 \end{itemize}
-\footnotetext{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
+
+\begin{figure}[h]
 \centering
-\includegraphics{Anexos/Anexo_F/Obstaculos_estaticos}
+\includegraphics[scale=1]{Anexos/Anexo_F/Obstaculos_estaticos}
 \caption{Sprite utilizado para el obstáculo estático}
 \end{figure}
 
-\begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos que seguirán una rutina \footnotemark : Enemigos que se encontrarán en una zona y recorrerán un camino cíclico continuamente.
-\footnotetext{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.}
+Obstáculos que seguirán una rutina \footnote{El sprite utilizado para los obstáculos pertenece a Daniel Cook y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/iron-plague-teleportbmp}.} : Enemigos que se encontrarán en una zona y recorrerán un camino cíclico continuamente.
 \end{itemize}
+
+\begin{figure}[h]
 \centering
-\includegraphics{Anexos/Anexo_F/Obstaculo_en_rutina}
+\includegraphics[scale=0.9]{Anexos/Anexo_F/Obstaculo_en_rutina}
 \caption{Sprite utilizado para el obstáculo que sigue una rutina}
 \end{figure}
 
-\begin{figure}[h]
 \begin{itemize}
 \item
-Obstáculos móviles \footnotemark : Enemigos que aparecerán en un extremo de la pantalla y la atravesará hasta el otro extremo. Si en algún momento el obstáculo móvil tocase al Player, este morirá.
-\footnotetext{El sprite utilizado para los obstáculos móviles pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
-\end{itemize}
+Obstáculos móviles \footnote{El sprite utilizado para los obstáculos móviles pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
+\end{itemize} : Enemigos que aparecerán en un extremo de la pantalla y la atravesará hasta el otro extremo. Si en algún momento el obstáculo móvil tocase al Player, este morirá.
+
+\begin{figure}[h]
 \centering
 \includegraphics{Anexos/Anexo_F/Obstaculo_movil_rapido}
 \caption{Obstáculo móvil rápido}
@@ -344,24 +340,27 @@ El jugador realizará un acelerón en la dirección en la que esté mirando.
 
 \subsubsection{Modificadores de gravedad}
 Objetos que afectarán a como la gravedad influye sobre ellos u otros objetos.
-\begin{figure}[h]
+
 \begin{itemize}
 \item
-Inversor de gravedad \footnotemark : volverá la gravedad negativa en positiva y viceversa.
-\footnotetext{El sprite utilizado para los inversores de gravedad pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.}
+Inversor de gravedad \footnote{El sprite utilizado para los inversores de gravedad pertenece a Rawdanitsu y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/lasers-and-beams}.} : volverá la gravedad negativa en positiva y viceversa.
 \end{itemize}
 
+\begin{figure}[h]
 \centering
-\includegraphics{Anexos/Anexo_F/Inversor_gravedad}
+\includegraphics[scale=0.8]{Anexos/Anexo_F/Inversor_gravedad}
 \caption{Sprite utilizado para el inversor de gravedad}
+\end{figure}
+
 \begin{itemize}
 \item
-Obstáculos superdensos \footnotemark : Obstáculos hacia los que atraerán a los objetos debido a su alta gravedad.
-\footnotetext{Los sprites utilizados para la plataforma de salto pertenecen a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-charged-bolt}.\\
-Enlace al trabajo de Hansjörg Malthaner: \url{http://opengameart.org/users/varkalandar}.}
+Obstáculos superdensos \footnote{Los sprites utilizados para la plataforma de salto pertenecen a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-charged-bolt}.\\
+Enlace al trabajo de Hansjörg Malthaner: \url{http://opengameart.org/users/varkalandar}.} : Obstáculos hacia los que atraerán a los objetos debido a su alta gravedad.
 \end{itemize}
+
+\begin{figure}[h]
 \centering
-\includegraphics{Anexos/Anexo_F/Obstaculo_superdenso}
+\includegraphics[scale=0.8]{Anexos/Anexo_F/Obstaculo_superdenso}
 \caption{Sprite utilizado para el obstáculo superdenso}
 \end{figure}
 
