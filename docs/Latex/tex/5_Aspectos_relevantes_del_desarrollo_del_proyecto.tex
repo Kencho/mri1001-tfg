@@ -12,7 +12,7 @@ La clase PlayerController hereda de la clase KinematicObject. KinematicObject es
 \caption{Jerarquía de herencia de PlayerController}
 \end{figure}
 
-El PlayerController utiliza elpatron de diseño Estado, de manera que hay acciones generales que realiza la propia clase PlayerControler y otras que delega en las clases que heredan de la interfaz PlayerState
+El PlayerController utiliza el patrón de diseño Estado, de manera que hay acciones generales que realiza la propia clase PlayerControler y otras que delega en las clases que heredan de la interfaz PlayerState
 Las operaciones generales que realiza PlayerController son:
 \begin{itemize}
 \item
@@ -22,48 +22,33 @@ Para el método FixedUpdate se actualizan las banderas y en caso de haber pulsad
 \end{itemize}
 
 \subsection{Estados del Player}
-Los estados que utiliza PlayerController son una aplicación del patrón de diseño Estado que modificará el comportamiento del Player. Se ha tomado esta decisión porque las operaciones a realizar por PlayerController variarán en función de en qué situación se encuentre. Las situaciones en las que se encontrará el Player pueden cambiar en tiempo de ejecución y obligarán a realizar operaciones distintas.
+El Player se comportará de distinta forma en función de en que situación se encuentre. Para facilitar la lógica del Player y el cambio en tiempo de ejecución del comportamiento de este, se ha aplicado el patrón de diseño Estado.
 
-A continuación se mostrará un diagrama con los posibles estados y las condiciones permiten pasar de uno a otro:
-
-\clearpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{Memoria/Aspectos_relevantes/Arquitectura_Player/Diagrama_de_estados}
-\caption{Diagrama de transición entre estados de PlayerController}
+\includegraphics[scale=0.85]{Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player}
+\caption{Diagrama UML de la aplicación del patrón de diseño Estado en el Player}
 \end{figure}
 
-Todos los estados heredan de la interfaz PlayerState, que implementa los métodos UpdateState y FixedUpdateState. UpdateState será llamado en el método Update de PlayerController y FixedUpdateState será llamado por el método FixedUpdate de PlayerController. Los estados realizan las siguientes operaciones:
+El Player puede estar en los siguientes estados:
 \begin{itemize}
 \item
-PlayerIdleState en realidad no realiza ninguna acción pues cuando el avatar está quieto no realiza ninguna acción, pero se encarga de pasar a otros estados cuando toque. De PlayerIdleState se puede pasar a PlayerMovingState si se pulsan los botones de movimiento. También se puede pasar a PlayerOnAirState si el Player no está en contacto con el suelo. De primeras puede parecer una transición innecesaria, pues estando quieto es improbable que se pase de estar tocando el suelo a no estar tocándolo. Esta transición principalmente se ha añadido porque PlayerIdleState es el estado por defecto. Se va a instanciar PlayerController con el estado PlayerIdleState y cada vez que se modifique el estado de PlayerController de manera externa a esta clase (por ejemplo cuando se reaparece después de morir) se asignará el estado PlayerIdleState a PlayerController. Añadiendo esa transición se asegura mantener un estado acorde con la situación para todos los casos, se asigne en el momento en el que se asigne el estado PlayerIdleState.
+PlayerIdleState: El Player está detenido sobre una superficie.
 \item
-PlayerOnAirState es el estado que se adoptará siempre que no se esté en contacto con el suelo (excepto cuando se esté realizando el acelerón). Este estado realiza una acción que es controlar el movimiento del Player en el aire, pues es ligeramente distinto al movimiento en el suelo. De este estado solo se puede pasar al estado PlayerStopingState cuando se toque el suelo.
+PlayerOnAirState: El Player está en el aire.
 \item
-PlayerMovingState es el estado en el que se está cuando el Player se está moviendo por el suelo. Este estado se encarga de variar la velocidad del Player cuando se está moviendo en función de que botones de movimiento se están pulsando. Se puede pasar a los estados PlayerOnAirState, si al moverse el Player deja de estar en contacto con el suelo (caerse por un precipicio, por ejemplo) o al estado PlayerStopingState si el jugador deja de pulsar los botones de movimiento.
+PlayerMovingState: El Player se está moviendo sobre una superficie.
 \item
-PlayerStopingState se encarga de, cuando se cesa el movimiento, se realice una deceleración sobre el Player generando un efecto de parada orgánico. De este estado se puede volver al estado de PlayerMovingState si se vuelve a pulsar los botones de movimiento. A PlayerOnAirState se puede pasar si durante la deceleración se deja de tocar el suelo. Cuando se termine de decelerar y el Player se quede quieto se pasa al estado PlayerIdleState.
+PlayerStopingState: El Player ha cesado el movimiento y se está deteniendo.
 \item
-PlayerDashingState es un estado un poco particular que no puede ser pisado por ningún otro. PlayerDashingState hace que el jugador valla a una velocidad constante durante un periodo de tiempo determinado sin verse afectado por las físicas como la gravedad. Aunque el Player no se vea afectado por las físicas durante el acelerón, las colisiones sí que se aplicarán sobre él. Cuando se termina de hacer el acelerón se pasa al estado PlayerStopingState.
+PlayerDashingState: El Player está realizando el acelerón.
 \item
-PlayerDeadState y PlayerVictoryState son dos estados cuya principal función es que el Player no realice ninguna función mientras se encuentren en ese estado. PlayerDeadState es un estado que se activa cuando el Player muere y se sale de el al hacer reaparecer al Player en la zona de reaparición, donde el Player pasará al estado PlayerIdleState. PlayerVictoryState es el estado final que alcanza el Player. Cuando se llega a la zona de victoria se pasa al estado PlayerVictoryState y no se sale de él, pues no hace falta. Cuando se llegue a la zona de victoria y se pase al PlayerVictoryState se pasará al siguiente nivel y por tanto no hará falta gestionar más los estados (los Player son independientes en cada nivel).
+PlayerVictoryState: El Player ha llegado a la meta.
+\item
+PlayerDeadState: El Player está muerto.
 \end{itemize}
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Arquitectura_Player/Estados_Player}
-\caption{Diagrama de transición entre estados de PlayerController}
-\end{figure}
-
-Adicionalmente la interfaz PlayerState añade los métodos EnterPlayerState y ExitPlayerState donde los hijos implementan las instrucciones que es necesario hacer para que al entrar y salir del estado el Player se mantenga consistente.
-
-Las instrucciones que se llevan a cabo cada vez que se cambia de estado son las siguientes:
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Arquitectura_Player/Codigo_cambio_estado}
-\caption{Diagrama de transición entre estados de PlayerController}
-\end{figure}
+En el anexo C se da una explicación detallada de la implementación hecha del patrón de diseño estado.
 
 \subsection{Interfaz PlayerMechanic}
 Las mecánicas de salto, el acelerón y la mecánica de tiempo bala que puede realizar el Player han sido implementadas en tres clases que heredan de la interfaz PlayerMechanic. Esta interfaz incluye tres métodos: ManageInput para encargarse de comprobar si están pulsando los botones necesarios para llevar a cabo la mecánica, ManageFlags para gestionar los booleanos utilizados para saber si se va a llevar a cabo la mecánica o no, y ExecuteMechanic para ejecutar la mecánica (si se cumplen las condiciones necesarias para llevarla a cabo).
@@ -173,45 +158,10 @@ La estructura del obstáculo estático y la clase Obstacle son sencillas pero im
 \end{figure}
 
 \subsection{Obstáculos que siguen una rutina}
-Son obstáculos que viajan a través de una serie de puntos a una velocidad constante en un intervalo de tiempo marcado de manera repetitiva hasta el final de la ejecución de la escena. El punto de inicio y fin de la rutina coinciden. 
+Los obstáculos que siguen una rutina son un tipo especial de obstáculos que tienen una rutina definida. Esta rutina estará conformada por una lista de puntos en el mapa. El obstáculo irá desde un punto al siguiente de la lista haciendo una recta que sigue el camino más corto.\\
+El obstáculo recorrerá en bucle esta rutina hasta que se salga o reinicie el nivel.
 
-Realmente el obstáculo que sigue una rutina (PatrolObstacle) no calcula a donde tiene que moverse, sino que delega esta labor a la clase PatrolPath y mueve su posición a donde le indica el PatrolPath.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Obstáculos/PatrolPath_UML}
-\caption{Diagrama UML de la clase PatrolObstacle}
-\end{figure}
-
-PatrolPath recibe en el constructor la rutina que va a seguir el PatrolObstacle y el tiempo que tardará en recorrerla. PatrolPath calcula el tiempo que le llevará recorrer cada sección. Siendo que se tarda en hacer toda la rutina \textit{t} segundos, cada sección se tardará en recorrer $\dfrac{dy*d}{t}$
-
-Siendo \textit{dy} la distancia euclidiana de la sección y \textit{d} la distancia total.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_asignar_duraciones}
-\caption{Pseudocódigo de cálculo del tiempo que lleva recorrer cada sección}
-\end{figure}
-
-\clearpage
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Obstáculos/Diagrama_distancias_recorridas}
-\caption{Cálculo del tiempo que se tarda en atravesar cada sección}
-\end{figure}
-
-PatrolPath sigue un diseño muy parecido al de un Iterador en el sentido de que el de la posición actual solo se puede obtener la siguiente y nada más.
-La próxima posición del obstáculo que sigue una rutina (calculada en cada Update) se calcula sumando a la posición actual la distancia que se recorrerá cada frame (cada Time.deltaTime segundos).
-La distancia que se recorre cada frame se puede obtener mediante la formula $\dfrac{(v1-v2)t}{ty}$
-
-Siendo \textit{v1} el punto del que se parte, \textit{v2} el punto al que se quiere llegar, \textit{t} la fracción de espacio que se quiere recorrer (Time.deltaTime) en unidades de tiempo normalizado con\textit{ty} (el tiempo que se tarda en recorrer la sección) (en un frame se recorre un \textit{t/ty} sobre 1 de la distancia a recorrer).
-
-\clearpage
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Obstáculos/Pseudocodigo_siguiente_posicion}
-\caption{Calcular la siguiente posición a la que debe moverse el obstáculo que sigue una rutina}
-\end{figure}
+Se explica en profundidad el movimiento de los obstáculos que siguen una rutina en el anexo C.
 
 \subsection{Obstáculos móviles}
 Los obstáculos móviles son obstáculos que parten de un punto inicial y avanzan indefinidamente de izquierda a derecha a una velocidad establecida. La posición del obstáculo móvil en el frame actual se calcula añadiendo a la posición actual el vector dirección (Vector2.lef) por la velocidad establecida y por el tiempo entre frames (Time. fixedDeltaTime).
@@ -324,32 +274,21 @@ Para saber si hay que pasar a renderizar el siguiente Sprite se consulta la vari
 \end{figure}
 
 \section{Clase GameController y estado de juego estable}
-Durante la ejecución de las escenas hay elementos que se requiere que estén en una posición inicial y que se pueda volver a ella cuando se requiera (concretamente cuando el Player muera y se tenga que volver al estado inicial de la escena).\\
-Los objetos que gestiona el GameController puede ser cualquier GameObject, pero no todos necesitarán ser reiniciados, pues tendrán un estado estable durante toda la ejecución de la escena. Por ejemplo, los obstáculos móviles se desplazan horizontal y pueden incluso ser destruidos, pero cuando el Player muera el obstáculo móvil tiene que volver a la posición inicial en la que se encontraba al cargar la escena. De esta labor se encargará el GameController. Sin embargo, el obstáculo inmóvil se mantiene siempre estático en la misma posición y no puede ser destruido, con lo que el GameController no tiene que preocuparse por devolverlo a un estado estable, pues es el único estado en el que puede estar.
+Se ha desarrollado una arquitectura específica para asegurar que los niveles jugables tienen están siempre en un estado estable de juego, y un proceso a seguir cada vez que se reinicia el nivel a su estado inicial.\\
+Con este propósito se ha creado la clase GameController. El funcionamiento de esta clase se explica en profundidad en el anexo C.
 
 \begin{figure}[h]
+\centering
 \includegraphics[scale=1]{Memoria/Aspectos_relevantes/GameController/GameController}
-\caption{Diseño de la clase GameController}
+\caption{Diagrama UML de la clase GameController}
 \end{figure}
 
-GameController está implementado de manera que simule el patrón de diseño Singleton, en la medida en la que Unity lo permite, llamándose en el método Awake al método GetInstance() para asegurarse de que siempre se trabaja siempre sobre el mismo GameController, a pesar de que haya varias instancias de él.
+Esta clase contiene dos elementos distintos al servicio del mismo propósito
 
-\subsection{Funcionamiento del estado estable}
-GameObject tiene tres atributos lista: initialObjects, initialStartingObjects e instancedObjects. De estas tres listas la única pública es initialObjects. La intención de esta lista es que se añada en el editor de Unity todos los elementos cuyo estado se desea que sean devueltos a un estado estable.\\
-Cuando se llama al método Awake el contenido de initialObjects se vuelca en initialStartingObjects. InitialStartingObjects no es una lista de GameObject sino una lista de StartingObject. La clase StartingObject es una clase que contiene dos atributos: el GameObject que se desea poder devolver a un estado estable y un atributo Transform con la información necesaria para devolver el GameObject a la posición inicial.\\
-Por último la lista instancedObject contiene los objetos que hay que se han devuelto al estado estable.
+\subsection{Variables de PlatformerModel}
+La clase GameController contendrá una serie de atributos que, al iniciar la escena copiará en la clase PlatformerModel esos atributos. Estas variables son variables relevantes del nivel. Son movidas a la clase PlatformerModel para que todos los objetos de la escena puedan acceder a estas variables facilmente sin generar cadenas de mensajes para tener acceso a ellas.
 
-Estas tres listas pueden parecer redundantes, pero no lo son. Es cierto que entre intialObjects e initialStartingObjects no hay mucha diferencia, pero al ser pública la lista initialObjects se ha preferido crear una lista con un nivel de encapsulamiento privado y que haya tratado los elementos de initialObjects para adaptarse a la aplicación del estado estable. Los elementos de StartingObjects en realidad van a hacer la labor de prototipo. Esto se refiere a que los elementos de initialStartingObjects no van a aparecer en la escena, sino que van a ser utilizados para clonar GameObjects en el estado inicial deseado para que parezca que todos los elementos vuelven a su estado inicial, cuando en realidad están siendo destruidos e instanciados objetos iguales a los eliminados (esto es lo que hace el método SetStartingState).
-
-Los elementos que tiene la lista instancedObjects son todos los GameObject que se van a destruir cuando se llame al método SetStartingState. InstancedObjects por supuesto tendrá todos los objetos clonados de initialStartingObjects, pero también contiene GameObjects que pueden ser creados en tiempo de ejecución pero que al volver el juego a un estado inicial tienen que ser destruidos (como por ejemplo los obstáculos móviles que instancian las fábricas de obstáculos).
-
-\begin{figure}[h]
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/GameController/Pseudocodigo_starting_objects}
-\caption{Pseudocódigo que refleja todas las operaciones que hay que realizar para establecer un estado de juego inicial estable}
-\end{figure}
-
-\subsection{Clase PlatformerModel}
-La clase PlatformerModel es una clase estática con atributos estáticos y sin métodos. La intención de esta clase es ofrecer acceso a una serie de objetos que pueden ser necesitados por cualquier clase en la escena. La única clase que debería asignar valores a PlatformerModel es GameObject, que lo hará exclusivamente en la llamada al método Awake y realizará la asignación una sola vez y no modificará en ningún momento más durante la ejecución los valores de los atributos de PlatformerModel. Los objetos que se podrán consultar mediante PlatformerModel son:
+Las variables de GameController que serán copiadas a PlatformerModel serán:
 \begin{itemize}
 \item
 La CinemachineVirtualCamera que utiliza la escena (PlatformerModel.virtualCamera).
@@ -362,18 +301,23 @@ El GameController de la escena (PlatformerModel.gameController).
 \item
 El GravityInverterManager asociado a la escena \\ (PlatformerModel.gravityInverterManager).
 \end{itemize}
-Esta clase es muy útil para asegurar que todas las clases trabajan sobre los mismos objetos , sobre todo los eventos, pues puede resultar inadecuado hacer una cadena de mensajes para que los eventos tengan referencias a todos los objetos que puedan necesitar para realizar la operaciones que tienen que llevar a cabo.
 
-\subsection{Clase Simulation}
-La clase Simulation esta explicada más detalladamente en la sección de Trabajos relacionados. Pero a grandes rasgos la clase Simulation es una clase estática con una estructura de datos similar a una cola que alberga eventos y un método Tick. Ese método lo que hace es ir avanzando eventos en la cola y ejecutándolos hasta que la cola este vacía o hasta que se encuentre un evento que debe ser ejecutado en un momento de la ejecución posterior al momento en el que se encuentra el programa.
+\subsection{Estado inicial de juego}
+Cuando el Player muera será necesario devolver el nivel al estado inicial en el que se encontraba al acceder a esa escena.\\
+Para volver a este estado inicial será necesario:
+\begin{itemize}
+\item
+Eliminar los objetos creados que no estaban instanciados al inicio del nivel.
+\item
+Devolver los objetos cuyo estado haya variado durante la ejecución del nivel a su estado inicial (un ejemplo sería devolver un obstáculo que sigue una rutina del punto en el que se encuentra al punto en el que empieza el juego).
+\item
+Instanciar objetos que estaban al inicio del nivel pero que ya no están instanciados.
+\item
+Devolver el Player a su posición inicial.
+\end{itemize}
 
-\clearpage
-\begin{figure}[h]
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/GameController/Flujo_simulation}
-\caption{Diagrama que representa un ejemplo de las operaciones llevadas a cabo en la llamada al método Tick}
-\end{figure}
-
-La clase GameController llama al método Tick de Simulation en cada llamada al Update.
+En la implementación del programa, se han tratado todos los objetos que debían ser devueltos a su estado inicial (salvo al Player) como el mismo tipo de objetos. Han sido guardados en una clase envoltorio que guarda el estado inicial del objeto. Estos objetos no serán los que estén en la escena, sino que en el estado inicial del juego se generarán clones de él en la escena.\\
+Todos los objetos instanciados serán guardados en la lista instancedObjects para poder destruirlos cuando haya que reiniciar el nivel. Los objetos que se instancien durante la escena también serán añadidos a isntancedObjects.
 
 \section{Mecánicas de tiempo bala}
 Se han implementado una serie de mecánicas encargadas de escalar la velocidad a la que pasa el tiempo y como esto afecta a los objetos en la escena. Hay dos mecánicas de tiempo bala: escalar el tiempo a nivel global y escalar el tiempo de los objetos dentro de una zona. De los dos escalados de tiempo se encarga la clase TimeManager.
@@ -401,20 +345,10 @@ Las zonas de tiempo escalado son objetos con un Collider2D. Cuando entre un Time
 \caption{Estructura del GameObject asociado a las zonas de tiempo escalado}
 \end{figure}
 
-TimeAfectedObject es una clase abstracta de la que heredan los objetos que van a ser afectadas por las zonas de escalado de tiempo. TimeAfectedObject tiene el método abstracto Move, que es el que implementarán las clases con la intención de modificar el movimiento del objeto para adecuarse a la escala de tiempo que le ha sido aplicada.
-
-\clearpage
-\begin{figure}[h]
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Tiempo_bala/Herencia_TimeAffectedObject}
-\caption{Estructura de herencia de TimeAfectedObject}
-\end{figure}
-
+TimeAfectedObject es una clase abstracta de la que heredan los objetos que van a ser afectadas por las zonas de escalado de tiempo. TimeAfectedObject tiene el método abstracto Move, que es el que implementarán las clases con la intención de modificar el movimiento del objeto para adecuarse a la escala de tiempo que le ha sido aplicada.\\
 Las zonas de escalado de tiempo imponen su escalado de tiempo a través de la clase TimeManager. Esto se debe a que TimeManager asume la responsabilidad de resetear el escalado de tiempo de todos los TimeAfectedObject. Esta necesidad surge de asegurar que en el estado de juego estable del GameController no haya TimeAfectedObject con el tiempo escalado. Es por ello que TimeManager tiene una lista de TimeAfectedObject en la que estarán todos los TimeAfectedObject cuyo tiempo haya sido escalado.
 
-\begin{figure}[h]
-\includegraphics[scale=1]{Memoria/Aspectos_relevantes/Tiempo_bala/Pseudocodigo_TimeAffectedObject}
-\caption{Pseudocódigo del método llamado para resetear los TimeAfectedObject}
-\end{figure}
+Se profundiza en la estructura de los TimeAffectedObject en el anexo C.
 
 \section{Menús de los juegos}
 Se ha desarrollado un sistema de menús de juego y transiciones entre escenas.
