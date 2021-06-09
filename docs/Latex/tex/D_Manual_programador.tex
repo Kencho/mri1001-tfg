@@ -1,7 +1,7 @@
 \apendice{Documentación técnica de programación}
 
 \section{Introducción}
-Hay una serie de elementos relativos al proyecto que no tiene que ver estrictamente con el desarrollo pero que pueden ser útiles conocer (tales como la estructura de ficheros, la importación y exportación del proyecto o la pruebas de sistema). Se explicaran a continuación. 
+Hay una serie de elementos relativos al proyecto que no tiene que ver estrictamente con el desarrollo, pero que pueden ser útiles conocer (tales como la estructura de ficheros, la importación y exportación del proyecto o la pruebas de sistema). Se explicarán a continuación. 
 
 \section{Estructura de directorios}
 Se va a comentar la estructura de ficheros del repositorio de GitHub que contiene todos los materiales relativos al proyecto.
@@ -78,7 +78,7 @@ Consola interna de Unity que mostrará los print realizados por las clases Monob
 \end{figure}
 
 \subsubsection{Project}
-Ventana que muestra todo el sistema de ficheros del proyecto que se esta desarrollando.
+Ventana que muestra todo el sistema de ficheros del proyecto que se está desarrollando.
 
 \begin{figure}[h]
 \centering
@@ -109,11 +109,11 @@ SpawnPoint: Punto de aparición del Player. También reaparecerá en este punto 
 \item
 Player: Avatar que controlará el jugador.
 \item
-CineachineConfiner: La cámara no se podrá desplazar más allá de los limites marcados por este objeto.
+CineachineConfiner: La cámara no se podrá desplazar más allá de los límites marcados por este objeto.
 \item
 CM vcam1: Objeto encargado del control del movimiento de la cámara.
 \item
-Grid: Contiene los Tilemaps que construyen el nivel. Tiene 4 objetos hijos: FarBackgroundTilemap para elementos muy alejados del nivel (montañas), BackgroundTilemap para elementos alejados del nivel (nubes), LevelTilemap para elementos que forman parte del nivel y se espera poder interactuar con ellos (suelos y paredes) y ElementsTilemap para elementos que forman parte del nivel pero son puramente estéticos (arboles y edificios).
+Grid: Contiene los Tilemaps que construyen el nivel. Tiene 4 objetos hijos: FarBackgroundTilemap para elementos muy alejados del nivel (montañas), BackgroundTilemap para elementos alejados del nivel (nubes), LevelTilemap para elementos que forman parte del nivel y se espera poder interactuar con ellos (suelos y paredes) y ElementsTilemap para elementos que forman parte del nivel, pero son puramente estéticos (árboles y edificios).
 \item
 Zones: zonas relevantes del nivel. Podrán ser de tres tipos: muros o suelos, zonas de muerte y zonas de victoria.
 \end{itemize}
@@ -137,7 +137,7 @@ Ventana que muestra como se verá el juego en ejecución. Si se ejecuta el proye
 \end{figure}
 
 \subsubsection{Scene}
-Ventana que muestra como visualmente donde estaría cada objeto de "Hierarchy" en un entorno físico. Como el desarrollo es de un Plataformas 2D se mostrará el entorno físico en dos dimensiones, pero también es posible generar el entorno en 3D (en realidad el entorno generado es 3D pero con una colocación de cámara que simula ser 2D).
+Ventana que muestra como visualmente donde estaría cada objeto de "Hierarchy" en un entorno físico. Como el desarrollo es de un Plataformas 2D se mostrará el entorno físico en dos dimensiones, pero también es posible generar el entorno en 3D (en realidad el entorno generado es 3D, pero con una colocación de cámara que simula ser 2D).
 
 \clearpage
 \begin{figure}[h]
@@ -147,7 +147,7 @@ Ventana que muestra como visualmente donde estaría cada objeto de "Hierarchy" e
 \end{figure}
 
 \subsection{Importación del proyecto}
-El proyecto de Unity esta en la carpeta game del repositorio de Github y será necesario guardado en el ordenador en el que se desee importar para poder importarlo.
+El proyecto de Unity está en la carpeta game del repositorio de Github y será necesario guardado en el ordenador en el que se desee importar para poder importarlo.
 Para importar el proyecto lo único que hay que hacer es, en el apartado "Proyects" del Unity Hub pulsar el botón de "ADD".
 
 \begin{figure}[h]
@@ -157,7 +157,7 @@ Para importar el proyecto lo único que hay que hacer es, en el apartado "Proyec
 \end{figure}
 \clearpage
 
-Después de pulsar el botón se pedirá una ruta. Introducir la ruta donde este guardada la carpeta game del repositorio de GitHub.
+Después de pulsar el botón se pedirá una ruta. Introducir la ruta donde esté guardada la carpeta game del repositorio de GitHub.
 
 \begin{figure}[h]
 \centering
@@ -176,7 +176,7 @@ Se añadirá a tu lista de proyectos de Unity el proyecto importado y ya se podr
 Al abrir el proyecto por primera vez saldrá una escena por defecto vacía. Con seleccionar cualquier otra escena será suficiente para que desaparezca esa escena y el funcionamiento sea el normal.
 
 \subsection{Exportación del proyecto}
-Para exportar el proyecto y generar el videojuego con su correspondiente ejecutable solo es necesario ir a la pestaña de File -> Build Settings de la barra de herramientas superior del editor de Unity.\\
+Para exportar el proyecto y generar el videojuego con su correspondiente ejecutable solo es necesario ir a la pestaña de File → Build Settings de la barra de herramientas superior del editor de Unity.\\
 Al hacerlo aparecerá la siguiente ventana:
 
 \begin{figure}[h]
@@ -193,7 +193,7 @@ Esta ventana da la opción de elegir a que sistema operativo y plataforma export
 \caption{Seleción de plataforma y Sistema operativo}
 \end{figure}
 
-Es muy importante que el tick este en todas las escenas a las que se desee transicionar para poder viajar a ellas.
+Es muy importante que el tick esté en todas las escenas a las que se desee transicionar para poder viajar a ellas.
 
 \begin{figure}[h]
 \centering
@@ -201,7 +201,7 @@ Es muy importante que el tick este en todas las escenas a las que se desee trans
 \caption{Escenas seleccionadas para exportar}
 \end{figure}
 
-Una vez hecha esta comprobación se puede dar al botón "Build" para comenzar la exportación del juego. Pedirá una ruta para exportar el juego construido construido.
+Una vez hecha esta comprobación se puede dar al botón "Build" para comenzar la exportación del juego. Pedirá una ruta para exportar el juego construido.
 
 \begin{figure}[h]
 \centering
@@ -234,7 +234,7 @@ Para instalar La versión de Unity que queramos hay que abrir el Unity Hub y acc
 \caption{Unity Hub}
 \end{figure}
 
-Una vez en esa pestaña pulsar el botón de add y elegir la verisón de Unity que se desea descargar
+Una vez en esa pestaña pulsar el botón de add y elegir la versión de Unity que se desea descargar.
 
 \begin{figure}[h]
 \centering
@@ -264,7 +264,7 @@ La instalación también se puede llevar a cabo después de importar el proyecto
 
 \subsection{Compilación}
 Unity se compila automáticamente. Cada vez que se modifiquen los scripts utilizados en el proyecto y se vuelva a la ventana de la aplicación de Unity se guardarán los cambios y compilará el proyecto. Si surgen errores se mostrarán en la consola que ofrece Unity.
- Adiconalmente la consola de Unity añade las opciones "Clear" para limpiar el contenido de la consola, "Clear on Play" para limpiar el contenido de la consola cada vez que se ejecute el juego en el editor, "Collapse" para juntar los mensajes de la consola que sean iguales en solo uno, "Clear on Build", para limpiar el contenido de la consola cada vez que se exporte el proyecto, y "Error pause" para pausar la ejecución del programa cuando salte un error de ejecución.
+ Adicionalmente la consola de Unity añade las opciones "Clear" para limpiar el contenido de la consola, "Clear on Play" para limpiar el contenido de la consola cada vez que se ejecute el juego en el editor, "Collapse" para juntar los mensajes de la consola que sean iguales en solo uno, "Clear on Build", para limpiar el contenido de la consola cada vez que se exporte el proyecto, y "Error pause" para pausar la ejecución del programa cuando salte un error de ejecución.
 
 \begin{figure}[h]
 \centering
@@ -272,7 +272,7 @@ Unity se compila automáticamente. Cada vez que se modifiquen los scripts utiliz
 \caption{Consola de Unity}
 \end{figure}
 
-Es posible que la consola no se encuentre en esa posición exacta de la ventana de Unity, pero siempre se podrá acceder a ella a través de la pestaña de Window -> Windows -> Console de la barra de herramientas superior de Unity.
+Es posible que la consola no se encuentre en esa posición exacta de la ventana de Unity, pero siempre se podrá acceder a ella a través de la pestaña de Window → Windows → Console de la barra de herramientas superior de Unity.
 
 \subsection{Ejecución del proyecto}
 El proyecto se puede ejecutar antes de exportarlo para tener una aproximación a los que será el producto exportado. Para ello se ha de pulsar el botón de "Play" del editor de Unity. La ejecución se parará cuando se vuelva a pulsar el botón de "Play". Tener en cuenta que las instrucciones de cierre del programa no funcionarán en el editor pero si en la exportación.\\
@@ -285,9 +285,9 @@ La ejecución del programa se puede pausar desde el botón de "Pause". Cuando se
 \end{figure}
 
 \section{Pruebas del sistema}
-Como se ha mencionado en la memoria la realización de pruebas durante el desarrollo de un videojuego es un tema complejo. Debido a ello no ha sido posible realizar pruebas automáticas. Sin embargo, se ha querido representar el funcionamiento básico de videojuego (deducido a partir de los casos de uso y el documento de diseño de juego), que si bien no sirven como sistema de pruebas, formalizan el funcionamiento esperado del programa, permitiendo comprobar si se esta realizando una correcta implementación del programa o allanando en el terreno por si en el futuro fuese posible implementar pruebas automáticas.
+Como se ha mencionado en la memoria la realización de pruebas durante el desarrollo de un videojuego es un tema complejo. Debido a ello no ha sido posible realizar pruebas automáticas. Sin embargo, se ha querido representar el funcionamiento básico de videojuego (deducido a partir de los casos de uso y el documento de diseño de juego), que si bien no sirven como sistema de pruebas, formalizan el funcionamiento esperado del programa, permitiendo comprobar si se está realizando una correcta implementación del programa o allanando en el terreno por si en el futuro fuese posible implementar pruebas automáticas.
 
-Para este propósito se ha seguido el sistema de representación de test Given-When-Then \cite{GWT}. Este sistema de representación se sive de tres premisas para estructurar los test:
+Para este propósito se ha seguido el sistema de representación de test Given-When-Then \cite{GWT}. Este sistema de representación se sirve de tres premisas para estructurar los test:
 \begin{itemize}
 \item
 Given: Para describir el estado del programa antes de realizar la acción que se desea probar.
@@ -314,7 +314,7 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 \textbf{Then:} Se ha viajado al menú de opciones (OptionsScene)
 
 \subsection{Modificar una opción}
-\textbf{Given:} Se esta en el menú principal sobre la opción de Volumen general, que tiene el valor de 100.
+\textbf{Given:} Se está en el menú principal sobre la opción de Volumen general, que tiene el valor de 100.
 
 \textbf{When:} Mover la barra de desplazamiento lo máximo hacia la izquierda.
 
@@ -330,7 +330,7 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 \subsection{Cerrar el menú de pausa}
 \textbf{Given:} Estar en un nivel jugable (PruebaPlayerScene) con el menú de opciones abierto.
 
-\textbf{When:} Se pulsará el botón del controlador que se este usando asociado al cierre del menú de pausa o se pulsará el botón del menú de pausa asociado con el cierre del menú de pausa.
+\textbf{When:} Se pulsará el botón del controlador que se esté usando asociado al cierre del menú de pausa o se pulsará el botón del menú de pausa asociado con el cierre del menú de pausa.
 
 \textbf{Then:} Se ha cerrado el menú de pausa y la ejecución del nivel se habrá retomado (Time.timeScale será 1).
 
@@ -363,7 +363,7 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 \textbf{Then:} La escala de tiempo del Player pasa a ser la escala de tiempo por defecto * la modificación a la escala temporal de la zona de modificación temporal.
 
 \subsection{Salir de una zona de modificación temporal}
-\textbf{Given:} Estar en un nivel jugable con una zona de modificación temporal (PruebaTimeModifiersScene). .El Player se encuentra en una zona de modificación temporal. La escala de tiempo del Player es la por defecto * la modificación a la escala temporal de la zona de modificación temporal.
+\textbf{Given:} Estar en un nivel jugable con una zona de modificación temporal (PruebaTimeModifiersScene). El Player se encuentra en una zona de modificación temporal. La escala de tiempo del Player es la por defecto * la modificación a la escala temporal de la zona de modificación temporal.
 
 \textbf{When:} El Player se desplaza hasta salir de la zona de tiempo invertido.
 
@@ -381,7 +381,7 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 
 \textbf{When:} El Player entra en contacto con la plataforma de salto.
 
-\textbf{Then:} El Player sale impulsado hacia arriba. Su velocidad (la RigidBody2D.Velocity del Player) habrá variado en el eje de las Y pero no en el de las X. RigidBody2D.Velocity.Y del Player será ahora RigidBody2D.Velocity.Y + impulso de la plataforma de salto. RigidBody2D.Velocity.X deberá seguir siendo la misma.
+\textbf{Then:} El Player sale impulsado hacia arriba. Su velocidad (la RigidBody2D.Velocity del Player) habrá variado en el eje de las Y, pero no en el de las X. RigidBody2D.Velocity.Y del Player será ahora RigidBody2D.Velocity.Y + impulso de la plataforma de salto. RigidBody2D.Velocity.X deberá seguir siendo la misma.
 
 \subsection{Utilizar una partícula de impulso}
 \textbf{Given:} Estar en un nivel jugable con una partícula de impulso (PruebaImpulseCreatorsScene).
@@ -400,16 +400,16 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 \subsection{Colisionar con una pared}
 \textbf{Given:} Estar en un nivel jugable con paredes (PruebaPlayerScene). El Player lleva una velocidad de 6 en el eje de las X y -3 en el de las Y.
 
-\textbf{When:} El Player colisiona con una pared a su derecha (la dirección en el eje de las X en el que se esta desplazando).
+\textbf{When:} El Player colisiona con una pared a su derecha (la dirección en el eje de las X en el que se está desplazando).
 
 \textbf{Then:} El Player debe estar al lado de la pared. La velocidad en la dirección del muro debe cesar pero el resto continuar. La velocidad del Player será ahora 0 en el eje de las X y -3 en el eje de las Y.
 
 \subsection{Colisionar con el suelo}
 \textbf{Given:} Estar en un nivel jugable con suelos (PruebaPlayerScene). El Player lleva una velocidad de 6 en el eje de las X y -3 en el de las Y.
 
-\textbf{When:} El Player colisiona con el suelo que hay a sus pies (la dirección en el eje de las Y en el que se esta desplazando).
+\textbf{When:} El Player colisiona con el suelo que hay a sus pies (la dirección en el eje de las Y en el que se está desplazando).
 
-\textbf{Then:} El Player debe estar encima del suelo. La velocidad en la dirección del suele debe cesar pero el resto continuar. La velocidad del Player será ahora 6 en el eje de las X y 0 en el eje de las Y.
+\textbf{Then:} El Player debe estar encima del suelo. La velocidad en la dirección del suelo debe cesar pero el resto continuar. La velocidad del Player será ahora 6 en el eje de las X y 0 en el eje de las Y.
 
 \subsection{Entrar por un portal}
 \textbf{Given:} Estar en un nivel jugable con un par de portales enlazados (portal1 y portal2) (PruebaPortalesScene).
@@ -444,7 +444,7 @@ Se mostrarán a continuación las representaciones de los test desarrolladas:
 
 \textbf{When:} El Player pulsa el botón del acelerón.
 
-\textbf{Then:} La velocidad del Player pasará a ser constante siendo 0 en el eje de las Y y +(velocidad del aceleron) en el eje de las X en caso de haber estado yendo hacia la derecha o -(velocidad del aceleron) en el eje de las X en caso de haber estado yendo hacia la izquierda. El Player realizará el salto.
+\textbf{Then:} La velocidad del Player pasará a ser constante siendo 0 en el eje de las Y, y +(velocidad del aceleron) en el eje de las X en caso de haber estado yendo hacia la derecha o -(velocidad del aceleron) en el eje de las X en caso de haber estado yendo hacia la izquierda. El Player realizará el salto.
 
 \subsection{Muerte contra un obstáculo}
 \textbf{Given:} Estar en un nivel jugable con obstáculos (PruebaPlayerScene).

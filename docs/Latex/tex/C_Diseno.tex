@@ -3,22 +3,22 @@
 \section{Introducción}
 En este apartado se van a explicar elementos del diseño del proyecto que explican su funcionamiento y estructura.
 
-\section{Trabajo propio vs trabajo ajeno}
+\section{Trabajo propio vs. trabajo ajeno}
 Antes de nada es necesario mencionar que este trabajo ha partido de una platilla que ofrece Unity como punto de partida. Esa plantilla se llama Platformer Microgame y se puede añadir a tus assets en el siguiente enlace:\\
  \url{https://bit.ly/3wZEU8W}.\\ 
 De esta plantilla se ha conservado sobre todo los elementos estéticos, pero también se ha conservado la clase Simulation y los eventos que esta lanza.
 
 \subsection{Clase Simulation}
-La calse Simulation es una clase encargada de manejar los eventos del juego. El objeto GameController hace uso de esta clase para ir ejecutando los eventos a medida que entran en cola. Esta clase tiene una particularidad de C\#. Simulaion es una “partial class”. Esto permite que la clase Simulation se construya en varios ficheros distintos. Para el funcionamiento de la clase Simulation, esta hace uso de otras dos subclases: Simulation.Event y Simulation.InstanceRegister. Se va a explicar a continuación porque son clases que se consideran importantes y claves para entender el funcionamiento de la arquitectura del videojuego.
+La calse Simulation es una clase encargada de manejar los eventos del juego. El objeto GameController hace uso de esta clase para ir ejecutando los eventos a medida que entran en cola. Esta clase tiene una particularidad de C\#. Simulaion es una “partial class”. Esto permite que la clase Simulation se construya en varios ficheros distintos. Para el funcionamiento de la clase Simulation, esta hace uso de otras dos subclases: Simulation.Event y Simulation.InstanceRegister. Se va a explicar a continuación por qué son clases que se consideran importantes y claves para entender el funcionamiento de la arquitectura del videojuego.
 
 \textbf{Simulation:} Este fichero contiene la estructura principal del funcionamiento de Simulation. Simulation es una clase estática con una cola, también estática, que guarda eventos (clase Event) y los libera cuando GameController llama al método tick(). Este fichero tiene el método tick() y los métodos necesarios para añadir y remover elementos de la cola. 
 
 \textbf{Simulation.Event:} Contiene la clase interna Event que se encarga de ejecutar el comando asociado a ese evento. De esta clase de la que heredan todos los eventos que saltan durante la ejecución del juego (como por ejemplo EnemyDeath, el evento que salta cuando el jugador muere). Los eventos se guardan en su mayoría en la carpeta Assets/Scripts/Gameplay.
 
-\textbf{Simulation.InstanceRegister:} Contiene la clase InstanceRegister. Esta clase simplemente devuelve una instancia nueva de un objeto cualquiera. Esta clase esta creada para que Simulation pueda crear singletons (patrón de diseño) de clases. Es utilizado para que todas las clases trabajen sobre el mismo modelo. Ese modelo es un script denominado PlataformerModel con una clase que exclusivamente tiene una serie de atributos (como el Player, las cámaras o el punto de aparición del jugador) que serán utilizados por varias clases.
+\textbf{Simulation.InstanceRegister:} Contiene la clase InstanceRegister. Esta clase simplemente devuelve una instancia nueva de un objeto cualquiera. Esta clase está creada para que Simulation pueda crear singletons (patrón de diseño) de clases. Es utilizado para que todas las clases trabajen sobre el mismo modelo. Ese modelo es un script denominado PlataformerModel con una clase que exclusivamente tiene una serie de atributos (como el Player, las cámaras o el punto de aparición del jugador) que serán utilizados por varias clases.
 
 \subsection{Eventos}
-Los eventos son toda las clases que heredan de Simulation.Event. Todos los eventos se encuentran en la carpeta Assets/Scripts/Gameplay. Casi todas las clases evento del proyecto se han mantenido intactas de Platformer Microgame, sin embargo algunes eventos han sido modificados y otros añadidos.
+Los eventos son toda las clases que heredan de Simulation.Event. Todos los eventos se encuentran en la carpeta Assets/Scripts/Gameplay. Casi todas las clases evento del proyecto se han mantenido intactas de Platformer Microgame, sin embargo algunas eventos han sido modificados y otros añadidos.
 Eventos modificados:
 \begin{itemize}
 \item
@@ -30,6 +30,7 @@ PlayerDeath.
 \item
 PlayerEnteredVictoryZone.
 \end{itemize}
+
 Eventos añadidos:
 \begin{itemize}
 \item
@@ -46,7 +47,7 @@ Los datos necesarios para el desarrollo de un videojuego son los Sprites y los a
 Para utilizar estos recursos en Unity se hace uso de los AudioSources \cite{AudioSource} y los SpriteRenderers \cite{SpriteRenderer}.
 
 \subsection{AudioSource}
-La clase AudioSource es la case de la que hace uso Unity para reproducir audios. Esta clase tiene un atributo público AudioClip que contendrá el audio que se va a reproducir. Se puede saber si el audio se esta reproduciendo con el atributo booleano isPlaying.\\
+La clase AudioSource es la clase de la que hace uso Unity para reproducir audios. Esta clase tiene un atributo público AudioClip que contendrá el audio que se va a reproducir. Se puede saber si el audio se está reproduciendo con el atributo booleano isPlaying.\\
 Se puede modificar el volumen de reproducción de todo audio reproducido con ese AudioSource.
 
 Los métodos de reproducción de audios son los siguientes:
@@ -56,7 +57,7 @@ Play: reproduce el audio asociado al AudioSource (AudioSource.AudioClip).
 \item
 PlayDelayed: reproduce el audio asociado al AudioSource despues del tiempo pasado por parámetros.
 \item
-PlayOneShot: permite reproducir cualquier audio pasado como parámetro. El audio que se desea reproducir deberá estar encapsulado en una instancia de la clase AudioClip \cite{AudioClip} .
+PlayOneShot: permite reproducir cualquier audio pasado como parámetro. El audio que se desea reproducir deberá estar encapsulado en una instancia de la clase AudioClip \cite{AudioClip}.
 \end{itemize}
 
 En el proyecto desarrollado AudioSource se ha usado para controlar el volumen del juego. Se ha creado una clase VolumeManager encargada de guardar y modificar el volumen general del juego y el volumen de la música.\\
@@ -94,7 +95,7 @@ Para simular el sistema de colisiones se optó por utilizar la velocidad como el
 
 Para saber si un KinematicObject va a colisionar con el suelo o un muro (se identifican los objetos con los que se desea chocar porque tienen asignada la layer “Wall”) se coge la velocidad del KinematicObject (se obtiene del atributo velocity del Rigidbody2D), que está representada en unidades/segundo. Con la velocidad que lleva el KinematicObject y su posición se puede deducir la siguiente posición en la que se encontrará.
 
-Hay un método que se llama Physics2D.BoxCast con el que puedes crear un rectángulo en una región del espacio y comprobar si se colisiona con algún objeto. En caso de colisionar con un objeto se devuelve un objeto de la clase RayCastHit2D con toda la información relativa a la colisión. Hay un método similar a Physics2D.BoxCast que es Physics2D.BoxCastAll que hace lo mismo pero devolviendo un vector de RayCastHit2D con un elemento por cada objeto con el que has colisionado.
+Hay un método que se llama Physics2D.BoxCast con el que puedes crear un rectángulo en una región del espacio y comprobar si se colisiona con algún objeto. En caso de colisionar con un objeto se devuelve un objeto de la clase RayCastHit2D con toda la información relativa a la colisión. Hay un método similar a Physics2D.BoxCast que es Physics2D.BoxCastAll que hace lo mismo, pero devolviendo un vector de RayCastHit2D con un elemento por cada objeto con el que has colisionado.
 
 Se puede filtrar las colisiones por Layer, pudiendo solo tener en cuenta las colisiones con objetos que tengan asociada una Layer con el mismo nombre que el pasado por parámetro en el método. Para el sistema de colisiones solo se han tenido en cuenta los objetos con Layer igual a “Wall”.
 
@@ -176,7 +177,7 @@ Los objetos que gestiona el GameController puede ser cualquier GameObject, pero 
 \caption{Diseño de la clase GameController}
 \end{figure}
 
-GameController está implementado de manera que simule el patrón de diseño Singleton, en la medida en la que Unity lo permite, llamándose en el método Awake al método GetInstance() para asegurarse de que siempre se trabaja siempre sobre el mismo GameController, a pesar de que haya varias instancias de él.
+GameController está implementado de manera que simule el patrón de diseño Singleton, en la medida en la que Unity lo permite, llamándose en el método Awake al método GetInstance para asegurarse de que siempre se trabaja siempre sobre el mismo GameController, a pesar de que haya varias instancias de él.
 
 \subsubsection{Funcionamiento del estado estable}
 GameObject tiene tres atributos lista: initialObjects, initialStartingObjects e instancedObjects. De estas tres listas la única pública es initialObjects. La intención de esta lista es que se añada en el editor de Unity todos los elementos cuyo estado se desea que sean devueltos a un estado estable.\\
@@ -185,7 +186,7 @@ Por último la lista instancedObject contiene los objetos que hay que se han dev
 
 Estas tres listas pueden parecer redundantes, pero no lo son. Es cierto que entre intialObjects e initialStartingObjects no hay mucha diferencia, pero al ser pública la lista initialObjects se ha preferido crear una lista con un nivel de encapsulamiento privado y que haya tratado los elementos de initialObjects para adaptarse a la aplicación del estado estable. Los elementos de StartingObjects en realidad van a hacer la labor de prototipo. Esto se refiere a que los elementos de initialStartingObjects no van a aparecer en la escena, sino que van a ser utilizados para clonar GameObjects en el estado inicial deseado para que parezca que todos los elementos vuelven a su estado inicial, cuando en realidad están siendo destruidos e instanciados objetos iguales a los eliminados (esto es lo que hace el método SetStartingState).
 
-Los elementos que tiene la lista instancedObjects son todos los GameObject que se van a destruir cuando se llame al método SetStartingState. InstancedObjects por supuesto tendrá todos los objetos clonados de initialStartingObjects, pero también contiene GameObjects que pueden ser creados en tiempo de ejecución pero que al volver el juego a un estado inicial tienen que ser destruidos (como por ejemplo los obstáculos móviles que instancian las fábricas de obstáculos).
+Los elementos que tiene la lista instancedObjects son todos los GameObject que se van a destruir cuando se llame al método SetStartingState. InstancedObjects por supuesto tendrá todos los objetos clonados de initialStartingObjects, pero también contiene GameObjects que pueden ser creados en tiempo de ejecución, pero que al volver el juego a un estado inicial tienen que ser destruidos (como por ejemplo los obstáculos móviles que instancian las fábricas de obstáculos).
 
 \begin{figure}[h]
 \centering
@@ -207,10 +208,10 @@ El GameController de la escena (PlatformerModel.gameController).
 \item
 El GravityInverterManager asociado a la escena \\ (PlatformerModel.gravityInverterManager).
 \end{itemize}
-Esta clase es muy útil para asegurar que todas las clases trabajan sobre los mismos objetos , sobre todo los eventos, pues puede resultar inadecuado hacer una cadena de mensajes para que los eventos tengan referencias a todos los objetos que puedan necesitar para realizar la operaciones que tienen que llevar a cabo.
+Esta clase es muy útil para asegurar que todas las clases trabajan sobre los mismos objetos, sobre todo los eventos, pues puede resultar inadecuado hacer una cadena de mensajes para que los eventos tengan referencias a todos los objetos que puedan necesitar para realizar las operaciones que tienen que llevar a cabo.
 
 \subsubsection{Clase Simulation}
-La clase Simulation esta explicada más detalladamente en la sección de Trabajos relacionados. Pero a grandes rasgos la clase Simulation es una clase estática con una estructura de datos similar a una cola que alberga eventos y un método Tick. Ese método lo que hace es ir avanzando eventos en la cola y ejecutándolos hasta que la cola este vacía o hasta que se encuentre un evento que debe ser ejecutado en un momento de la ejecución posterior al momento en el que se encuentra el programa.
+La clase Simulation está explicada más detalladamente en la sección de Trabajos relacionados. Pero a grandes rasgos la clase Simulation es una clase estática con una estructura de datos similar a una cola que alberga eventos y un método Tick. Ese método lo que hace es ir avanzando eventos en la cola y ejecutándolos hasta que la cola esté vacía o hasta que se encuentre un evento que debe ser ejecutado en un momento de la ejecución posterior al momento en el que se encuentra el programa.
 
 \begin{figure}[h]
 \centering
@@ -246,7 +247,7 @@ PlayerStopingState se encarga de, cuando se cesa el movimiento, se realice una d
 \item
 PlayerDashingState es un estado un poco particular que no puede ser pisado por ningún otro. PlayerDashingState hace que el jugador valla a una velocidad constante durante un periodo de tiempo determinado sin verse afectado por las físicas como la gravedad. Aunque el Player no se vea afectado por las físicas durante el acelerón, las colisiones sí que se aplicarán sobre él. Cuando se termina de hacer el acelerón se pasa al estado PlayerStopingState.
 \item
-PlayerDeadState y PlayerVictoryState son dos estados cuya principal función es que el Player no realice ninguna función mientras se encuentren en ese estado. PlayerDeadState es un estado que se activa cuando el Player muere y se sale de el al hacer reaparecer al Player en la zona de reaparición, donde el Player pasará al estado PlayerIdleState. PlayerVictoryState es el estado final que alcanza el Player. Cuando se llega a la zona de victoria se pasa al estado PlayerVictoryState y no se sale de él, pues no hace falta. Cuando se llegue a la zona de victoria y se pase al PlayerVictoryState se pasará al siguiente nivel y por tanto no hará falta gestionar más los estados (los Player son independientes en cada nivel).
+PlayerDeadState y PlayerVictoryState son dos estados cuya principal función es que el Player no realice ninguna función mientras se encuentren en ese estado. PlayerDeadState es un estado que se activa cuando el Player muere y se sale de él al hacer reaparecer al Player en la zona de reaparición, donde el Player pasará al estado PlayerIdleState. PlayerVictoryState es el estado final que alcanza el Player. Cuando se llega a la zona de victoria se pasa al estado PlayerVictoryState y no se sale de él, pues no hace falta. Cuando se llegue a la zona de victoria y se pase al PlayerVictoryState se pasará al siguiente nivel y por tanto no hará falta gestionar más los estados (los Player son independientes en cada nivel).
 \end{itemize}
 
 \begin{figure}[h]
@@ -295,7 +296,7 @@ Siendo \textit{dy} la distancia euclidiana de la sección y \textit{d} la distan
 
 PatrolPath sigue un diseño muy parecido al de un Iterador en el sentido de que el de la posición actual solo se puede obtener la siguiente y nada más.
 La próxima posición del obstáculo que sigue una rutina (calculada en cada Update) se calcula sumando a la posición actual la distancia que se recorrerá cada frame (cada Time.deltaTime segundos).
-La distancia que se recorre cada frame se puede obtener mediante la formula $\dfrac{(v1-v2)t}{ty}$
+La distancia que se recorre cada frame se puede obtener mediante la fórmula $\dfrac{(v1-v2)t}{ty}$
 
 Siendo \textit{v1} el punto del que se parte, \textit{v2} el punto al que se quiere llegar, \textit{t} la fracción de espacio que se quiere recorrer (Time.deltaTime) en unidades de tiempo normalizado con\textit{ty} (el tiempo que se tarda en recorrer la sección) (en un frame se recorre un \textit{t/ty} sobre 1 de la distancia a recorrer).
 

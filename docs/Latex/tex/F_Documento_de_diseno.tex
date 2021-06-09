@@ -34,7 +34,7 @@ Las distintas mecánicas con las que podrá interactuar el jugador son:
 \item
 Un portal que teletransportará al jugador de un punto a otro del nivel.
 \item
-Un creador de impulso que empujará al jugador en un dirección determinada. Esta mecánica se puede manifestar de distintas formas, como una plataforma de salto o una elemento del nivel que escala la velocidad que lleva el jugador.
+Un creador de impulso que empujará al jugador en una dirección determinada. Esta mecánica se puede manifestar de distintas formas, como una plataforma de salto o una elemento del nivel que escala la velocidad que lleva el jugador.
 \item
 Tiempo bala, que ralentizará o acelerará el tiempo de uno o más elementos del nivel, haciendo que se muevan más rápido o más lento.
 \item
@@ -49,7 +49,7 @@ El juego consistirá en un plataformas 2D de viajes en el tiempo en el que el ju
 
 \section{Mecánicas del juego}
 \subsection{Jugador}
-El jugador controlará un avatar que es capaz de moverse hacia la derecha e izquierda. También puede saltar. El salto es uniforme, se saltará cada vez que se pulsa el botón de saltar (espacio en teclado y botón X en el mando) y saltará la misma distancia siempre (la fuerza del salto no varíará en función de cuánto tiempo se mantenga pulsado el botón de salto). 
+El jugador controlará un avatar que es capaz de moverse hacia la derecha e izquierda. También puede saltar. El salto es uniforme, se saltará cada vez que se pulsa el botón de saltar (espacio en teclado y botón X en el mando) y saltará la misma distancia siempre (la fuerza del salto no variará en función de cuánto tiempo se mantenga pulsado el botón de salto). 
 
 Si el jugador colisionase con un obstáculo que le haga daño, el jugador morirá y reaparecerá en la zona inicial del nivel.
 
@@ -116,12 +116,12 @@ Como ejemplo se va a poner el nivel de prueba de la mecánica de los portales:
 
 Este nivel se usará para comprobar el correcto funcionamiento de los portales. Pero adicionalmente introducirá una serie de conceptos interesantes de manera sencilla y “natural” que pueden servir como tutorial de esta mecánica al jugador. 
 
-Los conceptos que introducirá este nivel y lo hace un buen tutorial es que el jugador no tendrá mecánicas ajenas interponiéndose en el tutorial (y las que lo harán, como el salto, son mecánicas que el jugador ya tendrá interiorizado. Otro punto fuerte del nivel reside en que solucionará dudas lógicas al jugador del tipo ¿Cómo puedo saber dónde voy a salir si entro por el portal y cómo diferencio pares de portales? Por último, este nivel no podrá ser superado sin hacer uso de la mecánica que se desea explicar.
+Los conceptos que introducirá este nivel y lo hace un buen tutorial es que el jugador no tendrá mecánicas ajenas interponiéndose en el tutorial (y las que lo harán, como el salto, son mecánicas que el jugador ya tendrá interiorizadas). Otro punto fuerte del nivel reside en que solucionará dudas lógicas al jugador del tipo ¿Cómo puedo saber dónde voy a salir si entro por el portal y cómo diferencio pares de portales? Por último, este nivel no podrá ser superado sin hacer uso de la mecánica que se desea explicar.
 
-Esta ejemplificación es importante porque todos los niveles tutorial seguirán (en mayor o menor medida) esta estructura.
+Esta ejemplificación es importante porque todos los niveles tutoriales seguirán (en mayor o menor medida) esta estructura.
 
 \subsection{Niveles desafiantes}
-El tercer tipo de nivel no dice mucho por su nombre, siendo este demasiado general. Esto no es algo malo, ya que este tercer apartado abarcará todos los niveles que no tienen un propósito explicito. El objetivo de este nivel será exclusivamente alcanzar la zona de victoria. La dificultad de estos niveles podrá ser variable y las mecánicas ser combinadas sin compromiso. 
+El tercer tipo de nivel no dice mucho por su nombre, siendo este demasiado general. Esto no es algo malo, ya que este tercer apartado abarcará todos los niveles que no tienen un propósito explícito. El objetivo de este nivel será exclusivamente alcanzar la zona de victoria. La dificultad de estos niveles podrá ser variable y las mecánicas ser combinadas sin compromiso. 
 Evidentemente estos niveles estarán regidos por algunas limitaciones como no utilizar mecánicas que no hayan sido presentadas en un tutorial todavía o que (preferentemente) la dificultad de los niveles sea mayor en los últimos niveles antes que en los primeros.
 
 \subsection{Pantallas implementadas}
@@ -179,14 +179,14 @@ Habrá, aun así dos interfaces extra disponibles para el jugador. Al no tener l
 \subsection{Pantalla de opciones}
 \imagen{Anexos/Anexo_F/Pnatalla_de_opciones}{Idea inicial de la pantalla de opciones}
 
-Estas pantallas \footnotemark \footnotemark son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
+Estas pantallas \footnotemark \footnotemark son orientativas y susceptibles de cambios. De la misma forma no se tiene que seguir ciegamente el patrón de colores, pero se ha de entender la existencia de un patrón de colores y como este se va a aplicar.
 
 \footnotetext{El sonido de selección de los botones ha sido obtenido del enlace: \url{https://opengameart.org/content/botton-sound-pack}.\\
 Puedes encontrar al creador en twitter como @listener4me. \url{https://twitter.com/search?q=\%40listener4me&src=typed_query}.\\
 El sonido de desplazamiento entre botones ha sido obtenido en el siguiente enlace: \url{https://opengameart.org/content/menu-selection-click}.}
 
 \footnotetext{Los sonidos de cierre del menú de pausa y de la barra de los menús de opciones pertenecen a Jesús Lastra han sido obtenidos en el siguiente enlace: \url{https://opengameart.org/content/button-clicks-beeps-99-sounds}.\\
-La música que suena mientras se esta en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}.}
+La música que suena mientras se está en estas escenas es 01 B-arb del album B-arb, pertenece a Axel Bermudez y se puede encontrar en el siguiente enlace (junto con el resto de canciones del album del que se ha sacado la canción): \url{https://axelbermudez.bandcamp.com/releases}.}
 
 \section{Entidades}
 A continuación se incluirá información más concreta al respecto del diseño de juego como sprites e imágenes que identificarán a una mecánica o elemento del juego en los niveles, configuración de los controles y descripción una por una de cada nivel del juego.
@@ -271,9 +271,9 @@ Zonas de victoria
 \subsubsection{Portal}
 El portal \footnotemark que teletransportará a los objetos que entren manteniendo la dirección del movimiento del objeto.
 \footnotetext{El sprite utilizado para los portales pertenece a Hansjörg Malthaner y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/animated-portal-or-wormhole-several-variants}.\\
-Enlace al trabajo de Hansjörg Malthaner : \url{http://opengameart.org/users/varkalandar}.\\
+Enlace al trabajo de Hansjörg Malthaner: \url{http://opengameart.org/users/varkalandar}.\\
 El audio utilizado para los portales pertenece a dklon y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/quick-zap}.\\
-Enlace al trabajo de dklon : \url{https://opengameart.org/users/dklon}}
+Enlace al trabajo de dklon: \url{https://opengameart.org/users/dklon}}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{Anexos/Anexo_F/Portal}
@@ -298,7 +298,7 @@ El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelse
 
 \begin{itemize}
 \item
-Amplificador de impulso \footnotemark : parecido a la partícula de impulso pero escalando el impulso que lleva el objeto.
+Amplificador de impulso \footnotemark : parecido a la partícula de impulso, pero escalando el impulso que lleva el objeto.
 \footnotetext{Los sprites utilizados para el amplificador de impulso son una modificación de un Sprite que pertenece a oglsdl que ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/glow-arrow}.\\
 El audio utilizado para la partícula de impulso de salto pertenece a Bart Kelsey y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/spell-2}}
 \end{itemize}
@@ -332,7 +332,7 @@ Escalar el tiempo: Capacidad del Player para escalar el tiempo que afectará a t
 \item
 Zonas de tiempo escalado \footnotemark : Zonas que escalarán el tiempo de los objetos que entren en la zona de influencia de la zona.
 \end{itemize}
-\footnotetext{El sprite utilizado para las zonas de tiempo escalado es una modificación de un sprote que pertenece a scenna y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/circle}.}
+\footnotetext{El sprite utilizado para las zonas de tiempo escalado es una modificación de un sprite que pertenece a scenna y ha sido obtenida en el siguiente enlace: \url{https://opengameart.org/content/circle}.}
 \begin{figure}[h]
 \centering
 \includegraphics{Anexos/Anexo_F/Zonas_tiempo_escalado}
