@@ -1,0 +1,6 @@
+var namespace_platformer_1_1_mechanics_1_1_kinematic_objects =
+[
+    [ "KinematicObject", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object.html", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object" ],
+    [ "KinematicObjectCollisionManager", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object_collision_manager.html", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object_collision_manager" ],
+    [ "KinematicObjectGravityManager", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object_gravity_manager.html", "class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object_gravity_manager" ]
+];

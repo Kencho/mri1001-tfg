@@ -1,0 +1,16 @@
+digraph "Platformer.Mechanics.Player.PlayerController"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Platformer.Mechanics.Player.\lPlayerController",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Class that manages Player behaviour"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="KinematicObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_kinematic_objects_1_1_kinematic_object.html",tooltip="Class associated to objects tah simulates physics"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TimeAffectedObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_time_modifiers_1_1_time_affected_object.html",tooltip="Class of the objects that can be affected by time modifications"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" health" ,fontname="Helvetica"];
+  Node5 [label="Platformer.Mechanics.Health",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_health.html",tooltip="Represebts the current vital statistics of some game entity."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

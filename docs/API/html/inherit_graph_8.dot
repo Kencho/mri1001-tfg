@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Platformer.Mechanics.Player.\lPlayerMechanics.PlayerMechanic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_platformer_1_1_mechanics_1_1_player_1_1_player_mechanics_1_1_player_mechanic.html",tooltip="interface from which mechanics moved to a class will inherit"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Platformer.Mechanics.Player.\lPlayerMechanics.BulletTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_player_1_1_player_mechanics_1_1_bullet_time.html",tooltip="Class that manages the bullet time mechanic of the PlayerController"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Platformer.Mechanics.Player.\lPlayerMechanics.Dash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_player_1_1_player_mechanics_1_1_dash.html",tooltip="Class that manages the Dash of the PlayerController"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Platformer.Mechanics.Player.\lPlayerMechanics.Jump",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_player_1_1_player_mechanics_1_1_jump.html",tooltip="Class that manages the jump of the PlayerController"];
+}

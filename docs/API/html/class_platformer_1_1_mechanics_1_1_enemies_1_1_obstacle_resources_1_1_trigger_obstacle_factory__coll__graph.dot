@@ -1,0 +1,14 @@
+digraph "Platformer.Mechanics.Enemies.ObstacleResources.TriggerObstacleFactory"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Platformer.Mechanics.Enemies.\lObstacleResources.TriggerObstacle\lFactory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Instantiates a Obstacle when PlayerController collides with the PlayerTrigger of the TriggerObstacleF..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ObstacleFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_enemies_1_1_obstacle_resources_1_1_obstacle_factory.html",tooltip="Class that instantiates Obstacles accord to factory method design pattern"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" trigger" ,fontname="Helvetica"];
+  Node4 [label="Platformer.Mechanics.Resources.\lPlayerTrigger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_resources_1_1_player_trigger.html",tooltip="Class that checks if a PlayerController is located in the colliders area"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

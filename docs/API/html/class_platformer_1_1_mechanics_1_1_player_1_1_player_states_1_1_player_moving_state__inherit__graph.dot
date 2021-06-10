@@ -1,0 +1,9 @@
+digraph "Platformer.Mechanics.Player.PlayerStates.PlayerMovingState"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Platformer.Mechanics.Player.\lPlayerStates.PlayerMovingState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="State the PlayerController is in when it is moving in the ground"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PlayerState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_platformer_1_1_mechanics_1_1_player_1_1_player_states_1_1_player_state.html",tooltip="interface from which states that the Player can be will inherit"];
+}

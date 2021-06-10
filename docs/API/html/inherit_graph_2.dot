@@ -1,0 +1,54 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Event",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Platformer.Core.Simulation.\lEvent\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip="An event is something that happens at a point in time in a simulation. The Precondition method is use..."];
+  Node4 [label="System.IComparable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Platformer.Core.Simulation.\lEvent\< PlayerDeath \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Platformer.Gameplay.Player\lEvents.PlayerDeath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_death.html",tooltip="Fired when the player has died."];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Platformer.Gameplay.Scene\lEvents.LoadGameMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_scene_events_1_1_load_game_menu.html",tooltip="Event that changes the escene to GameMenu scene"];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Platformer.Core.Simulation.\lEvent\< HealthIsZero \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Platformer.Gameplay.Player\lEvents.HealthIsZero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_health_is_zero.html",tooltip="Fired when the player health reaches 0."];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Platformer.Core.Simulation.\lEvent\< EnablePlayerInput \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Platformer.Gameplay.Player\lEvents.EnablePlayerInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_enable_player_input.html",tooltip="Enables the simulating of the physics and the capture of the controller´s input"];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Platformer.Core.Simulation.\lEvent\< PlayerSpawn \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Platformer.Gameplay.Player\lEvents.PlayerSpawn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_spawn.html",tooltip="Fired when the player is spawned after dying."];
+  Node4 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Platformer.Core.Simulation.\lEvent\< PlayerEnteredDeathZone \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Platformer.Gameplay.Player\lEvents.PlayerEnteredDeathZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_entered_death_zone.html",tooltip="Fired when a player enters a trigger with a DeathZone component."];
+  Node4 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Platformer.Core.Simulation.\lEvent\< DisablePlayerInput \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Platformer.Gameplay.Player\lEvents.DisablePlayerInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_disable_player_input.html",tooltip="Event that disables the simulating of the physics and the capture of the controller inputs"];
+  Node4 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Platformer.Core.Simulation.\lEvent\< PlayerJumped \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Platformer.Gameplay.Player\lEvents.PlayerJumped",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_jumped.html",tooltip="Fired when the player performs a Jump."];
+  Node4 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Platformer.Core.Simulation.\lEvent\< PlayerEnteredVictoryZone \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="Platformer.Gameplay.Player\lEvents.PlayerEnteredVictoryZone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_entered_victory_zone.html",tooltip="This event is triggered when the player character enters a trigger with a VictoryZone component."];
+  Node4 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="Platformer.Core.Simulation.\lEvent\< SetGameInitialState \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node22 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="Platformer.Gameplay.Game\lEvents.SetGameInitialState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_game_events_1_1_set_game_initial_state.html",tooltip="Event that notyfis the GameController to set the initial state"];
+  Node4 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="Platformer.Core.Simulation.\lEvent\< PlayerObstacleCollision \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_core_1_1_simulation_1_1_event.html",tooltip=" "];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="Platformer.Gameplay.Player\lEvents.PlayerObstacleCollision",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_gameplay_1_1_player_events_1_1_player_obstacle_collision.html",tooltip="Event fired when PlayerCotroller collide with Obstacles"];
+  Node4 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

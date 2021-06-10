@@ -1,0 +1,9 @@
+digraph "Platformer.Mechanics.PatrolPath.PatrolPath"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Platformer.Mechanics.Patrol\lPath.PatrolPath",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Class that calculates the position of a object that follows a path in a instance of time"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Platformer.Mechanics.Patrol\lPath.TimeAffectedPatrolPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_patrol_path_1_1_time_affected_patrol_path.html",tooltip="PatrolPath that variates the time that takes to travel the path based on a time scale"];
+}

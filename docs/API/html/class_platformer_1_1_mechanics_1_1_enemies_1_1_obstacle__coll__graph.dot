@@ -1,0 +1,11 @@
+digraph "Platformer.Mechanics.Enemies.Obstacle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Platformer.Mechanics.Enemies.\lObstacle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Obstacle static in a location that kills PlayerController when collides with him"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TimeAffectedObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_platformer_1_1_mechanics_1_1_time_modifiers_1_1_time_affected_object.html",tooltip="Class of the objects that can be affected by time modifications"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}
